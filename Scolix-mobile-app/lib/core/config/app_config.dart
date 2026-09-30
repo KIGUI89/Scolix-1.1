@@ -23,13 +23,13 @@ class AppConfig {
 
   /// IP locale du PC de développement sur le réseau Wi-Fi (même routeur que
   /// le téléphone). À adapter si l'IP du PC change (voir `ipconfig`).
-  static const String _devHostLanIp = '192.168.1.65';
+  static const String _devHostLanIp = 'https://scolix-1-1.onrender.com';
 
   static String get apiBaseUrl {
     if (_override.isNotEmpty) return _override;
-    if (kIsWeb) return 'http://localhost:8000/api';
-    if (Platform.isAndroid) return 'http://$_devHostLanIp:8000/api';
-    return 'http://localhost:8000/api';
+    if (kIsWeb) return 'https://scolix-1-1.onrender.com/api';
+    if (Platform.isAndroid) return 'http://$_devHostLanIp/api';
+    return 'https://scolix-1-1.onrender.com/api';
   }
 
   static const bool isProd = bool.fromEnvironment('PROD', defaultValue: false);
