@@ -18,7 +18,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-4-4ryxsuvj^+dj9up*2*ng-29*$kep(o1d66pzgw+%@40-xq3j"
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://scolix-1-1.onrender.com"]
+ALLOWED_HOSTS = ["scolix-1-1.onrender.com"]
 
 
 # APPLICATIONS
