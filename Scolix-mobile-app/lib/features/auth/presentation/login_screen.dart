@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -19,8 +21,14 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
   final _passwordController = TextEditingController();
   bool _obscurePassword = true;
 
+  /// Passe à true si le login dure plus de quelques secondes : l'API Render
+  /// (plan gratuit) est probablement en train de sortir de veille.
+  bool _serverWakingUp = false;
+  Timer? _wakeUpTimer;
+
   @override
   void dispose() {
+    _wakeUpTimer?.cancel();
     _emailController.dispose();
     _passwordController.dispose();
     super.dispose();
@@ -28,10 +36,19 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
 
   Future<void> _submit() async {
     if (!_formKey.currentState!.validate()) return;
-    await ref.read(authControllerProvider.notifier).login(
-          email: _emailController.text.trim(),
-          password: _passwordController.text,
-        );
+    _wakeUpTimer?.cancel();
+    _wakeUpTimer = Timer(const Duration(seconds: 5), () {
+      if (mounted) setState(() => _serverWakingUp = true);
+    });
+    try {
+      await ref.read(authControllerProvider.notifier).login(
+            email: _emailController.text.trim(),
+            password: _passwordController.text,
+          );
+    } finally {
+      _wakeUpTimer?.cancel();
+      if (mounted) setState(() => _serverWakingUp = false);
+    }
   }
 
   @override
@@ -173,6 +190,16 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                             )
                           : const Text('Se connecter'),
                     ),
+                    if (isLoading && _serverWakingUp) ...[
+                      const SizedBox(height: 12),
+                      Text(
+                        'Le serveur démarre, veuillez patienter…',
+                        textAlign: TextAlign.center,
+                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                              color: Theme.of(context).colorScheme.onSurfaceVariant,
+                            ),
+                      ),
+                    ],
                       ],
                     ),
                   ),

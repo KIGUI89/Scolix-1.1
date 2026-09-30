@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 
+import '../../../core/network/api_client.dart' show kSkipAuth;
 import '../../../core/storage/token_storage.dart';
 import 'models/app_user.dart';
 
@@ -16,6 +17,7 @@ class AuthRepository {
     final response = await _dio.post(
       '/auth/login/',
       data: {'email': email, 'password': password},
+      options: Options(extra: {kSkipAuth: true}),
     );
 
     final data = response.data as Map<String, dynamic>;

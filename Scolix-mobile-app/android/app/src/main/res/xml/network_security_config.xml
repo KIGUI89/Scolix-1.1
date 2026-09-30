@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Depuis Android 9 (API 28), le HTTP en clair est bloqué par défaut.
-  Le backend Django de développement local n'est pas servi en HTTPS
-  (voir AppConfig.apiBaseUrl) : on autorise donc le cleartext, mais
-  uniquement vers les hôtes de dev connus, jamais globalement — en
-  production l'API sera servie en HTTPS (AppConfig.isProd) et ce fichier
-  n'entrera pas en jeu.
+  Release : l'API (https://scolix-1-1.onrender.com) est servie en HTTPS.
+  Aucun trafic HTTP en clair n'est autorisé ; HTTPS utilise les autorités de
+  certification système. Les hôtes de dev locaux (cleartext) ne sont
+  autorisés qu'en debug : voir src/debug/res/xml/network_security_config.xml.
 -->
 <network-security-config>
-    <domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="false">localhost</domain>
-        <domain includeSubdomains="false">10.0.2.2</domain>
-        <!-- IP LAN du PC hôte — à tenir synchronisée avec
-             AppConfig._devHostLanIp si elle change (voir ipconfig). -->
-        <domain includeSubdomains="false">192.168.1.65</domain>
-    </domain-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system"/>
+        </trust-anchors>
+    </base-config>
 </network-security-config>

@@ -1,35 +1,26 @@
-import 'dart:io' show Platform;
-
-import 'package:flutter/foundation.dart' show kIsWeb;
-
-/// Configuration d'environnement, injectée à la compilation via --dart-define
-/// (jamais en dur dans le code) :
+/// Configuration d'environnement, injectée à la compilation via --dart-define :
 ///
-///   flutter run --dart-define=API_BASE_URL=https://api.scolix.example/api
+///   flutter build apk --release --dart-define=API_URL=https://scolix-1-1.onrender.com
 ///
-/// Sans valeur fournie, on retombe sur des défauts de développement local
-/// cohérents avec le backend Django lancé sur la machine hôte (voir
-/// edu-eval-backend : `python manage.py runserver 0.0.0.0:8000`) :
-///   - Web/desktop : http://localhost:8000/api
-///   - Téléphone physique (Wi-Fi ou USB avec `adb reverse`) : IP locale du PC
-///     hôte sur le réseau (ex. http://192.168.1.65:8000/api)
-///   - Émulateur Android : http://10.0.2.2:8000/api (alias de l'hôte) —
-///     à passer explicitement via --dart-define si besoin
-///   - Simulateur iOS : http://localhost:8000/api
+/// API_URL est l'origine du back-end Django (schéma + hôte, sans slash final
+/// ni préfixe /api). Sans valeur fournie, on pointe sur l'API Render en HTTPS.
+/// Pour un back-end local (debug uniquement, voir
+/// android/app/src/debug/res/xml/network_security_config.xml) :
+///   --dart-define=API_URL=http://10.0.2.2:8000   (émulateur Android)
+///   --dart-define=API_URL=http://localhost:8000  (web / desktop)
 class AppConfig {
   AppConfig._();
 
-  static const String _override = String.fromEnvironment('API_BASE_URL');
+  static const String apiUrl = String.fromEnvironment(
+    'API_URL',
+    defaultValue: 'https://scolix-1-1.onrender.com',
+  );
 
-  /// IP locale du PC de développement sur le réseau Wi-Fi (même routeur que
-  /// le téléphone). À adapter si l'IP du PC change (voir `ipconfig`).
-  static const String _devHostLanIp = 'https://scolix-1-1.onrender.com';
-
+  /// Base de tous les appels dio : les chemins des repositories commencent
+  /// par "/" (ex. '/auth/login/') et le préfixe /api n'est ajouté qu'ici.
   static String get apiBaseUrl {
-    if (_override.isNotEmpty) return _override;
-    if (kIsWeb) return 'https://scolix-1-1.onrender.com/api';
-    if (Platform.isAndroid) return 'http://$_devHostLanIp/api';
-    return 'https://scolix-1-1.onrender.com/api';
+    final origin = apiUrl.endsWith('/') ? apiUrl.substring(0, apiUrl.length - 1) : apiUrl;
+    return origin.endsWith('/api') ? origin : '$origin/api';
   }
 
   static const bool isProd = bool.fromEnvironment('PROD', defaultValue: false);
