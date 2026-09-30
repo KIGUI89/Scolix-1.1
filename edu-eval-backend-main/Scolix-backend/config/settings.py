@@ -171,6 +171,7 @@ SPECTACULAR_SETTINGS = {
 
 # CORS — REACT WEB + FLUTTER WEB
 CORS_ALLOWED_ORIGINS = [
+    "https://scolix-1-1.onrender.com",
     # React CRA
     "http://localhost:3000",
     "http://127.0.0.1:3000",
