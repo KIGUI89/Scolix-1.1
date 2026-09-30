@@ -1,0 +1,1189 @@
+{
+ "_type": "Project",
+ "_id": "SCOLIX0000000001",
+ "name": "Scolix — Séquence — S'authentifier",
+ "documentation": "Modélisation UML de Scolix (plateforme d'évaluation des enseignants).",
+ "ownedElements": [
+  {
+   "_type": "UMLModel",
+   "_id": "SCOLIX0000000723",
+   "_parent": {
+    "$ref": "SCOLIX0000000001"
+   },
+   "name": "Modèle des cas d'utilisation",
+   "ownedElements": [
+    {
+     "_type": "UMLPackage",
+     "_id": "SCOLIX0000000724",
+     "_parent": {
+      "$ref": "SCOLIX0000000723"
+     },
+     "name": "Acteurs",
+     "ownedElements": [
+      {
+       "_type": "UMLActor",
+       "_id": "SCOLIX0000000725",
+       "_parent": {
+        "$ref": "SCOLIX0000000724"
+       },
+       "name": "Utilisateur",
+       "documentation": "Toute personne disposant d'un compte Scolix.",
+       "isAbstract": true,
+       "ownedElements": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "_type": "UMLModel",
+   "_id": "SCXDYN0000000101",
+   "_parent": {
+    "$ref": "SCOLIX0000000001"
+   },
+   "name": "Modèle dynamique",
+   "ownedElements": [
+    {
+     "_type": "UMLPackage",
+     "_id": "SCXDYN0000000407",
+     "_parent": {
+      "$ref": "SCXDYN0000000101"
+     },
+     "name": "Participants des séquences",
+     "ownedElements": [
+      {
+       "_type": "UMLClass",
+       "_id": "SCXDYN0000000408",
+       "_parent": {
+        "$ref": "SCXDYN0000000407"
+       },
+       "name": "Application Scolix",
+       "documentation": "Interface web (React) ou mobile (Flutter)."
+      },
+      {
+       "_type": "UMLClass",
+       "_id": "SCXDYN0000000410",
+       "_parent": {
+        "$ref": "SCXDYN0000000407"
+       },
+       "name": "LoginView",
+       "documentation": "Vue DRF POST /api/auth/login/."
+      },
+      {
+       "_type": "UMLClass",
+       "_id": "SCXDYN0000000411",
+       "_parent": {
+        "$ref": "SCXDYN0000000407"
+       },
+       "name": "LoginSerializer",
+       "documentation": "Contrôle des identifiants (authenticate)."
+      },
+      {
+       "_type": "UMLClass",
+       "_id": "SCXDYN0000000419",
+       "_parent": {
+        "$ref": "SCXDYN0000000407"
+       },
+       "name": "Base de données PostgreSQL",
+       "documentation": "Persistance via l'ORM Django."
+      }
+     ]
+    },
+    {
+     "_type": "UMLCollaboration",
+     "_id": "SCXDYN0000000420",
+     "_parent": {
+      "$ref": "SCXDYN0000000101"
+     },
+     "name": "Séquence — S'authentifier",
+     "attributes": [
+      {
+       "_type": "UMLAttribute",
+       "_id": "SCXDYN0000000423",
+       "_parent": {
+        "$ref": "SCXDYN0000000420"
+       },
+       "name": "utilisateur",
+       "type": {
+        "$ref": "SCOLIX0000000725"
+       }
+      },
+      {
+       "_type": "UMLAttribute",
+       "_id": "SCXDYN0000000425",
+       "_parent": {
+        "$ref": "SCXDYN0000000420"
+       },
+       "name": "app",
+       "type": {
+        "$ref": "SCXDYN0000000408"
+       }
+      },
+      {
+       "_type": "UMLAttribute",
+       "_id": "SCXDYN0000000427",
+       "_parent": {
+        "$ref": "SCXDYN0000000420"
+       },
+       "name": "vue",
+       "type": {
+        "$ref": "SCXDYN0000000410"
+       }
+      },
+      {
+       "_type": "UMLAttribute",
+       "_id": "SCXDYN0000000429",
+       "_parent": {
+        "$ref": "SCXDYN0000000420"
+       },
+       "name": "serializer",
+       "type": {
+        "$ref": "SCXDYN0000000411"
+       }
+      },
+      {
+       "_type": "UMLAttribute",
+       "_id": "SCXDYN0000000431",
+       "_parent": {
+        "$ref": "SCXDYN0000000420"
+       },
+       "name": "bd",
+       "type": {
+        "$ref": "SCXDYN0000000419"
+       }
+      }
+     ],
+     "ownedElements": [
+      {
+       "_type": "UMLInteraction",
+       "_id": "SCXDYN0000000421",
+       "_parent": {
+        "$ref": "SCXDYN0000000420"
+       },
+       "name": "Séquence — S'authentifier",
+       "messages": [
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000443",
+         "_parent": {
+          "$ref": "SCXDYN0000000421"
+         },
+         "name": "saisirIdentifiants",
+         "source": {
+          "$ref": "SCXDYN0000000424"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000426"
+         },
+         "messageSort": "synchCall",
+         "arguments": "email, motDePasse"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000444",
+         "_parent": {
+          "$ref": "SCXDYN0000000421"
+         },
+         "name": "POST /api/auth/login/",
+         "source": {
+          "$ref": "SCXDYN0000000426"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000428"
+         },
+         "messageSort": "synchCall",
+         "arguments": "email, motDePasse"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000445",
+         "_parent": {
+          "$ref": "SCXDYN0000000421"
+         },
+         "name": "is_valid",
+         "source": {
+          "$ref": "SCXDYN0000000428"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000430"
+         },
+         "messageSort": "synchCall"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000446",
+         "_parent": {
+          "$ref": "SCXDYN0000000421"
+         },
+         "name": "authenticate",
+         "source": {
+          "$ref": "SCXDYN0000000430"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000432"
+         },
+         "messageSort": "synchCall",
+         "arguments": "email, motDePasse"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000447",
+         "_parent": {
+          "$ref": "SCXDYN0000000421"
+         },
+         "name": "utilisateur ou null",
+         "source": {
+          "$ref": "SCXDYN0000000432"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000430"
+         },
+         "messageSort": "reply"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000448",
+         "_parent": {
+          "$ref": "SCXDYN0000000421"
+         },
+         "name": "ValidationError",
+         "source": {
+          "$ref": "SCXDYN0000000430"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000428"
+         },
+         "messageSort": "reply"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000449",
+         "_parent": {
+          "$ref": "SCXDYN0000000421"
+         },
+         "name": "400 « Email ou mot de passe incorrect »",
+         "source": {
+          "$ref": "SCXDYN0000000428"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000426"
+         },
+         "messageSort": "reply"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000450",
+         "_parent": {
+          "$ref": "SCXDYN0000000421"
+         },
+         "name": "afficherErreur",
+         "source": {
+          "$ref": "SCXDYN0000000426"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000424"
+         },
+         "messageSort": "reply"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000451",
+         "_parent": {
+          "$ref": "SCXDYN0000000421"
+         },
+         "name": "utilisateur",
+         "source": {
+          "$ref": "SCXDYN0000000430"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000428"
+         },
+         "messageSort": "reply"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000452",
+         "_parent": {
+          "$ref": "SCXDYN0000000421"
+         },
+         "name": "RefreshToken.for_user",
+         "source": {
+          "$ref": "SCXDYN0000000428"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000428"
+         },
+         "messageSort": "synchCall",
+         "arguments": "utilisateur"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000453",
+         "_parent": {
+          "$ref": "SCXDYN0000000421"
+         },
+         "name": "200 {access, refresh, user}",
+         "source": {
+          "$ref": "SCXDYN0000000428"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000426"
+         },
+         "messageSort": "reply"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000454",
+         "_parent": {
+          "$ref": "SCXDYN0000000421"
+         },
+         "name": "stockerJetons",
+         "source": {
+          "$ref": "SCXDYN0000000426"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000426"
+         },
+         "messageSort": "synchCall"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000455",
+         "_parent": {
+          "$ref": "SCXDYN0000000421"
+         },
+         "name": "ouvrirEspaceDuRole",
+         "source": {
+          "$ref": "SCXDYN0000000426"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000424"
+         },
+         "messageSort": "reply"
+        }
+       ],
+       "participants": [
+        {
+         "_type": "UMLLifeline",
+         "_id": "SCXDYN0000000424",
+         "_parent": {
+          "$ref": "SCXDYN0000000421"
+         },
+         "name": "utilisateur",
+         "represent": {
+          "$ref": "SCXDYN0000000423"
+         }
+        },
+        {
+         "_type": "UMLLifeline",
+         "_id": "SCXDYN0000000426",
+         "_parent": {
+          "$ref": "SCXDYN0000000421"
+         },
+         "name": "app",
+         "represent": {
+          "$ref": "SCXDYN0000000425"
+         }
+        },
+        {
+         "_type": "UMLLifeline",
+         "_id": "SCXDYN0000000428",
+         "_parent": {
+          "$ref": "SCXDYN0000000421"
+         },
+         "name": "vue",
+         "represent": {
+          "$ref": "SCXDYN0000000427"
+         }
+        },
+        {
+         "_type": "UMLLifeline",
+         "_id": "SCXDYN0000000430",
+         "_parent": {
+          "$ref": "SCXDYN0000000421"
+         },
+         "name": "serializer",
+         "represent": {
+          "$ref": "SCXDYN0000000429"
+         }
+        },
+        {
+         "_type": "UMLLifeline",
+         "_id": "SCXDYN0000000432",
+         "_parent": {
+          "$ref": "SCXDYN0000000421"
+         },
+         "name": "bd",
+         "represent": {
+          "$ref": "SCXDYN0000000431"
+         }
+        }
+       ],
+       "fragments": [
+        {
+         "_type": "UMLCombinedFragment",
+         "_id": "SCXDYN0000000482",
+         "_parent": {
+          "$ref": "SCXDYN0000000421"
+         },
+         "name": "",
+         "interactionOperator": "alt",
+         "operands": [
+          {
+           "_type": "UMLInteractionOperand",
+           "_id": "SCXDYN0000000484",
+           "_parent": {
+            "$ref": "SCXDYN0000000482"
+           },
+           "name": "",
+           "guard": "identifiants invalides ou compte désactivé"
+          },
+          {
+           "_type": "UMLInteractionOperand",
+           "_id": "SCXDYN0000000486",
+           "_parent": {
+            "$ref": "SCXDYN0000000482"
+           },
+           "name": "",
+           "guard": "identifiants valides"
+          }
+         ]
+        }
+       ],
+       "ownedElements": [
+        {
+         "_type": "UMLSequenceDiagram",
+         "_id": "SCXDYN0000000422",
+         "_parent": {
+          "$ref": "SCXDYN0000000421"
+         },
+         "name": "Séquence — S'authentifier",
+         "ownedViews": [
+          {
+           "_type": "UMLFrameView",
+           "_id": "SCXDYN0000000489",
+           "_parent": {
+            "$ref": "SCXDYN0000000422"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000421"
+           },
+           "left": 10,
+           "top": 10,
+           "width": 1292,
+           "height": 770
+          },
+          {
+           "_type": "UMLSeqLifelineView",
+           "_id": "SCXDYN0000000434",
+           "_parent": {
+            "$ref": "SCXDYN0000000422"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000424"
+           },
+           "left": 40,
+           "top": 40,
+           "width": 206,
+           "height": 730,
+           "subViews": [
+            {
+             "_type": "UMLLinePartView",
+             "_id": "SCXDYN0000000433",
+             "model": {
+              "$ref": "SCXDYN0000000424"
+             },
+             "_parent": {
+              "$ref": "SCXDYN0000000434"
+             }
+            }
+           ],
+           "linePart": {
+            "$ref": "SCXDYN0000000433"
+           },
+           "fillColor": "#FFFFFF",
+           "stereotypeDisplay": "icon"
+          },
+          {
+           "_type": "UMLSeqLifelineView",
+           "_id": "SCXDYN0000000436",
+           "_parent": {
+            "$ref": "SCXDYN0000000422"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000426"
+           },
+           "left": 286,
+           "top": 40,
+           "width": 199,
+           "height": 730,
+           "subViews": [
+            {
+             "_type": "UMLLinePartView",
+             "_id": "SCXDYN0000000435",
+             "model": {
+              "$ref": "SCXDYN0000000426"
+             },
+             "_parent": {
+              "$ref": "SCXDYN0000000436"
+             }
+            }
+           ],
+           "linePart": {
+            "$ref": "SCXDYN0000000435"
+           },
+           "fillColor": "#FFFFFF"
+          },
+          {
+           "_type": "UMLSeqLifelineView",
+           "_id": "SCXDYN0000000438",
+           "_parent": {
+            "$ref": "SCXDYN0000000422"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000428"
+           },
+           "left": 551,
+           "top": 40,
+           "width": 140,
+           "height": 730,
+           "subViews": [
+            {
+             "_type": "UMLLinePartView",
+             "_id": "SCXDYN0000000437",
+             "model": {
+              "$ref": "SCXDYN0000000428"
+             },
+             "_parent": {
+              "$ref": "SCXDYN0000000438"
+             }
+            }
+           ],
+           "linePart": {
+            "$ref": "SCXDYN0000000437"
+           },
+           "fillColor": "#FFFFFF"
+          },
+          {
+           "_type": "UMLSeqLifelineView",
+           "_id": "SCXDYN0000000440",
+           "_parent": {
+            "$ref": "SCXDYN0000000422"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000430"
+           },
+           "left": 741,
+           "top": 40,
+           "width": 229,
+           "height": 730,
+           "subViews": [
+            {
+             "_type": "UMLLinePartView",
+             "_id": "SCXDYN0000000439",
+             "model": {
+              "$ref": "SCXDYN0000000430"
+             },
+             "_parent": {
+              "$ref": "SCXDYN0000000440"
+             }
+            }
+           ],
+           "linePart": {
+            "$ref": "SCXDYN0000000439"
+           },
+           "fillColor": "#FFFFFF"
+          },
+          {
+           "_type": "UMLSeqLifelineView",
+           "_id": "SCXDYN0000000442",
+           "_parent": {
+            "$ref": "SCXDYN0000000422"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000432"
+           },
+           "left": 1010,
+           "top": 40,
+           "width": 252,
+           "height": 730,
+           "subViews": [
+            {
+             "_type": "UMLLinePartView",
+             "_id": "SCXDYN0000000441",
+             "model": {
+              "$ref": "SCXDYN0000000432"
+             },
+             "_parent": {
+              "$ref": "SCXDYN0000000442"
+             }
+            }
+           ],
+           "linePart": {
+            "$ref": "SCXDYN0000000441"
+           },
+           "fillColor": "#FFFFFF"
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000457",
+           "_parent": {
+            "$ref": "SCXDYN0000000422"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000443"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000433"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000435"
+           },
+           "lineStyle": 0,
+           "points": "143:140;386:140",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000456",
+             "model": {
+              "$ref": "SCXDYN0000000443"
+             },
+             "left": 378.5,
+             "top": 140,
+             "width": 14,
+             "height": 322,
+             "_parent": {
+              "$ref": "SCXDYN0000000457"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000456"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000459",
+           "_parent": {
+            "$ref": "SCXDYN0000000422"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000444"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000435"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000437"
+           },
+           "lineStyle": 0,
+           "points": "386:178;621:178",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000458",
+             "model": {
+              "$ref": "SCXDYN0000000444"
+             },
+             "left": 614.0,
+             "top": 178,
+             "width": 14,
+             "height": 246,
+             "_parent": {
+              "$ref": "SCXDYN0000000459"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000458"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000461",
+           "_parent": {
+            "$ref": "SCXDYN0000000422"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000445"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000437"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000439"
+           },
+           "lineStyle": 0,
+           "points": "621:216;856:216",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000460",
+             "model": {
+              "$ref": "SCXDYN0000000445"
+             },
+             "left": 848.5,
+             "top": 216,
+             "width": 14,
+             "height": 170,
+             "_parent": {
+              "$ref": "SCXDYN0000000461"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000460"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000463",
+           "_parent": {
+            "$ref": "SCXDYN0000000422"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000446"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000439"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000441"
+           },
+           "lineStyle": 0,
+           "points": "856:254;1136:254",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000462",
+             "model": {
+              "$ref": "SCXDYN0000000446"
+             },
+             "left": 1129.0,
+             "top": 254,
+             "width": 14,
+             "height": 38,
+             "_parent": {
+              "$ref": "SCXDYN0000000463"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000462"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000465",
+           "_parent": {
+            "$ref": "SCXDYN0000000422"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000447"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000441"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000439"
+           },
+           "lineStyle": 0,
+           "points": "1136:292;856:292",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000464",
+             "model": {
+              "$ref": "SCXDYN0000000447"
+             },
+             "left": 848.5,
+             "top": 292,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000465"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000464"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000467",
+           "_parent": {
+            "$ref": "SCXDYN0000000422"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000448"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000439"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000437"
+           },
+           "lineStyle": 0,
+           "points": "856:386;621:386",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000466",
+             "model": {
+              "$ref": "SCXDYN0000000448"
+             },
+             "left": 614.0,
+             "top": 386,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000467"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000466"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000469",
+           "_parent": {
+            "$ref": "SCXDYN0000000422"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000449"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000437"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000435"
+           },
+           "lineStyle": 0,
+           "points": "621:424;386:424",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000468",
+             "model": {
+              "$ref": "SCXDYN0000000449"
+             },
+             "left": 378.5,
+             "top": 424,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000469"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000468"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000471",
+           "_parent": {
+            "$ref": "SCXDYN0000000422"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000450"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000435"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000433"
+           },
+           "lineStyle": 0,
+           "points": "386:462;143:462",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000470",
+             "model": {
+              "$ref": "SCXDYN0000000450"
+             },
+             "left": 136.0,
+             "top": 462,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000471"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000470"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000473",
+           "_parent": {
+            "$ref": "SCXDYN0000000422"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000451"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000439"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000437"
+           },
+           "lineStyle": 0,
+           "points": "856:514;621:514",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000472",
+             "model": {
+              "$ref": "SCXDYN0000000451"
+             },
+             "left": 614.0,
+             "top": 514,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000473"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000472"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000475",
+           "_parent": {
+            "$ref": "SCXDYN0000000422"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000452"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000437"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000437"
+           },
+           "lineStyle": 0,
+           "points": "621:552;651:552;651:570;621:570",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000474",
+             "model": {
+              "$ref": "SCXDYN0000000452"
+             },
+             "left": 614.0,
+             "top": 552,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000475"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000474"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000477",
+           "_parent": {
+            "$ref": "SCXDYN0000000422"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000453"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000437"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000435"
+           },
+           "lineStyle": 0,
+           "points": "621:608;386:608",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000476",
+             "model": {
+              "$ref": "SCXDYN0000000453"
+             },
+             "left": 378.5,
+             "top": 608,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000477"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000476"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000479",
+           "_parent": {
+            "$ref": "SCXDYN0000000422"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000454"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000435"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000435"
+           },
+           "lineStyle": 0,
+           "points": "386:646;416:646;416:664;386:664",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000478",
+             "model": {
+              "$ref": "SCXDYN0000000454"
+             },
+             "left": 378.5,
+             "top": 646,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000479"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000478"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000481",
+           "_parent": {
+            "$ref": "SCXDYN0000000422"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000455"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000435"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000433"
+           },
+           "lineStyle": 0,
+           "points": "386:702;143:702",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000480",
+             "model": {
+              "$ref": "SCXDYN0000000455"
+             },
+             "left": 136.0,
+             "top": 702,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000481"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000480"
+           }
+          },
+          {
+           "_type": "UMLCombinedFragmentView",
+           "_id": "SCXDYN0000000488",
+           "_parent": {
+            "$ref": "SCXDYN0000000422"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000482"
+           },
+           "left": 48.0,
+           "top": 326,
+           "width": 902.5,
+           "height": 392,
+           "subViews": [
+            {
+             "_type": "UMLInteractionOperandCompartmentView",
+             "_id": "SCXDYN0000000483",
+             "model": {
+              "$ref": "SCXDYN0000000482"
+             },
+             "subViews": [
+              {
+               "_type": "UMLInteractionOperandView",
+               "_id": "SCXDYN0000000485",
+               "_parent": {
+                "$ref": "SCXDYN0000000483"
+               },
+               "model": {
+                "$ref": "SCXDYN0000000484"
+               },
+               "left": 48.0,
+               "top": 350,
+               "width": 902.5,
+               "height": 128
+              },
+              {
+               "_type": "UMLInteractionOperandView",
+               "_id": "SCXDYN0000000487",
+               "_parent": {
+                "$ref": "SCXDYN0000000483"
+               },
+               "model": {
+                "$ref": "SCXDYN0000000486"
+               },
+               "left": 48.0,
+               "top": 478,
+               "width": 902.5,
+               "height": 240
+              }
+             ],
+             "_parent": {
+              "$ref": "SCXDYN0000000488"
+             }
+            }
+           ],
+           "operandCompartment": {
+            "$ref": "SCXDYN0000000483"
+           }
+          },
+          {
+           "_type": "UMLNoteView",
+           "_id": "SCXDYN0000000490",
+           "_parent": {
+            "$ref": "SCXDYN0000000422"
+           },
+           "left": 20,
+           "top": 800,
+           "width": 560,
+           "height": 44,
+           "text": "Jeton d'accès valable 30 minutes ; sur une réponse 401, l'application rafraîchit le jeton (POST /api/auth/refresh/) puis rejoue la requête."
+          }
+         ],
+         "defaultDiagram": true
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

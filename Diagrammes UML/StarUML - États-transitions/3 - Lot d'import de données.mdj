@@ -1,0 +1,739 @@
+{
+ "_type": "Project",
+ "_id": "SCOLIX0000000001",
+ "name": "Scolix — États — Lot d'import de données",
+ "documentation": "Modélisation UML de Scolix (plateforme d'évaluation des enseignants).",
+ "ownedElements": [
+  {
+   "_type": "UMLModel",
+   "_id": "SCOLIX0000000002",
+   "_parent": {
+    "$ref": "SCOLIX0000000001"
+   },
+   "name": "Modèle de classes",
+   "ownedElements": [
+    {
+     "_type": "UMLPackage",
+     "_id": "SCOLIX0000000003",
+     "_parent": {
+      "$ref": "SCOLIX0000000002"
+     },
+     "name": "Énumérations",
+     "ownedElements": [
+      {
+       "_type": "UMLEnumeration",
+       "_id": "SCOLIX0000000079",
+       "_parent": {
+        "$ref": "SCOLIX0000000003"
+       },
+       "name": "TypeImport",
+       "literals": [
+        {
+         "_type": "UMLEnumerationLiteral",
+         "_id": "SCOLIX0000000080",
+         "_parent": {
+          "$ref": "SCOLIX0000000079"
+         },
+         "name": "TEACHER"
+        },
+        {
+         "_type": "UMLEnumerationLiteral",
+         "_id": "SCOLIX0000000081",
+         "_parent": {
+          "$ref": "SCOLIX0000000079"
+         },
+         "name": "STUDENT"
+        },
+        {
+         "_type": "UMLEnumerationLiteral",
+         "_id": "SCOLIX0000000082",
+         "_parent": {
+          "$ref": "SCOLIX0000000079"
+         },
+         "name": "COURSE"
+        },
+        {
+         "_type": "UMLEnumerationLiteral",
+         "_id": "SCOLIX0000000083",
+         "_parent": {
+          "$ref": "SCOLIX0000000079"
+         },
+         "name": "ENROLLMENT"
+        }
+       ]
+      },
+      {
+       "_type": "UMLEnumeration",
+       "_id": "SCOLIX0000000084",
+       "_parent": {
+        "$ref": "SCOLIX0000000003"
+       },
+       "name": "StatutImport",
+       "literals": [
+        {
+         "_type": "UMLEnumerationLiteral",
+         "_id": "SCOLIX0000000085",
+         "_parent": {
+          "$ref": "SCOLIX0000000084"
+         },
+         "name": "UPLOADED"
+        },
+        {
+         "_type": "UMLEnumerationLiteral",
+         "_id": "SCOLIX0000000086",
+         "_parent": {
+          "$ref": "SCOLIX0000000084"
+         },
+         "name": "VALIDATED"
+        },
+        {
+         "_type": "UMLEnumerationLiteral",
+         "_id": "SCOLIX0000000087",
+         "_parent": {
+          "$ref": "SCOLIX0000000084"
+         },
+         "name": "COMMITTED"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "_type": "UMLPackage",
+     "_id": "SCOLIX0000000112",
+     "_parent": {
+      "$ref": "SCOLIX0000000002"
+     },
+     "name": "Référentiel universitaire",
+     "ownedElements": [
+      {
+       "_type": "UMLClass",
+       "_id": "SCOLIX0000000174",
+       "_parent": {
+        "$ref": "SCOLIX0000000112"
+       },
+       "name": "LotImport",
+       "attributes": [
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000175",
+         "_parent": {
+          "$ref": "SCOLIX0000000174"
+         },
+         "name": "id",
+         "visibility": "private",
+         "type": "UUID",
+         "isID": true
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000176",
+         "_parent": {
+          "$ref": "SCOLIX0000000174"
+         },
+         "name": "typeEntite",
+         "visibility": "private",
+         "type": {
+          "$ref": "SCOLIX0000000079"
+         }
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000177",
+         "_parent": {
+          "$ref": "SCOLIX0000000174"
+         },
+         "name": "nomFichier",
+         "visibility": "private",
+         "type": "String"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000178",
+         "_parent": {
+          "$ref": "SCOLIX0000000174"
+         },
+         "name": "statut",
+         "visibility": "private",
+         "type": {
+          "$ref": "SCOLIX0000000084"
+         }
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000179",
+         "_parent": {
+          "$ref": "SCOLIX0000000174"
+         },
+         "name": "entetes",
+         "visibility": "private",
+         "type": "JSON"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000180",
+         "_parent": {
+          "$ref": "SCOLIX0000000174"
+         },
+         "name": "lignes",
+         "visibility": "private",
+         "type": "JSON"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000181",
+         "_parent": {
+          "$ref": "SCOLIX0000000174"
+         },
+         "name": "correspondance",
+         "visibility": "private",
+         "type": "JSON"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000182",
+         "_parent": {
+          "$ref": "SCOLIX0000000174"
+         },
+         "name": "validation",
+         "visibility": "private",
+         "type": "JSON"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000183",
+         "_parent": {
+          "$ref": "SCOLIX0000000174"
+         },
+         "name": "dateCreation",
+         "visibility": "private",
+         "type": "DateTime"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000184",
+         "_parent": {
+          "$ref": "SCOLIX0000000174"
+         },
+         "name": "dateIntegration",
+         "visibility": "private",
+         "type": "DateTime"
+        }
+       ],
+       "operations": [],
+       "ownedElements": [
+        {
+         "_type": "UMLStateMachine",
+         "_id": "SCXEXT0000000324",
+         "_parent": {
+          "$ref": "SCOLIX0000000174"
+         },
+         "name": "Lot d'import de données",
+         "regions": [
+          {
+           "_type": "UMLRegion",
+           "_id": "SCXEXT0000000325",
+           "_parent": {
+            "$ref": "SCXEXT0000000324"
+           },
+           "vertices": [
+            {
+             "_type": "UMLPseudostate",
+             "_id": "SCXEXT0000000327",
+             "_parent": {
+              "$ref": "SCXEXT0000000325"
+             },
+             "name": "",
+             "kind": "initial"
+            },
+            {
+             "_type": "UMLState",
+             "_id": "SCXEXT0000000329",
+             "_parent": {
+              "$ref": "SCXEXT0000000325"
+             },
+             "name": "Téléversé (UPLOADED)"
+            },
+            {
+             "_type": "UMLState",
+             "_id": "SCXEXT0000000331",
+             "_parent": {
+              "$ref": "SCXEXT0000000325"
+             },
+             "name": "Validé (VALIDATED)"
+            },
+            {
+             "_type": "UMLState",
+             "_id": "SCXEXT0000000333",
+             "_parent": {
+              "$ref": "SCXEXT0000000325"
+             },
+             "name": "Intégré (COMMITTED)"
+            },
+            {
+             "_type": "UMLFinalState",
+             "_id": "SCXEXT0000000335",
+             "_parent": {
+              "$ref": "SCXEXT0000000325"
+             },
+             "name": ""
+            },
+            {
+             "_type": "UMLFinalState",
+             "_id": "SCXEXT0000000337",
+             "_parent": {
+              "$ref": "SCXEXT0000000325"
+             },
+             "name": ""
+            }
+           ],
+           "transitions": [
+            {
+             "_type": "UMLTransition",
+             "_id": "SCXEXT0000000339",
+             "_parent": {
+              "$ref": "SCXEXT0000000325"
+             },
+             "source": {
+              "$ref": "SCXEXT0000000327"
+             },
+             "target": {
+              "$ref": "SCXEXT0000000329"
+             },
+             "guard": "format valide",
+             "triggers": [
+              {
+               "_type": "UMLEvent",
+               "_id": "SCXEXT0000000340",
+               "_parent": {
+                "$ref": "SCXEXT0000000339"
+               },
+               "name": "téléverser un fichier"
+              }
+             ],
+             "effects": [
+              {
+               "_type": "UMLOpaqueBehavior",
+               "_id": "SCXEXT0000000341",
+               "_parent": {
+                "$ref": "SCXEXT0000000339"
+               },
+               "name": "proposer la correspondance"
+              }
+             ]
+            },
+            {
+             "_type": "UMLTransition",
+             "_id": "SCXEXT0000000343",
+             "_parent": {
+              "$ref": "SCXEXT0000000325"
+             },
+             "source": {
+              "$ref": "SCXEXT0000000329"
+             },
+             "target": {
+              "$ref": "SCXEXT0000000331"
+             },
+             "guard": "",
+             "triggers": [
+              {
+               "_type": "UMLEvent",
+               "_id": "SCXEXT0000000344",
+               "_parent": {
+                "$ref": "SCXEXT0000000343"
+               },
+               "name": "valider la correspondance"
+              }
+             ],
+             "effects": [
+              {
+               "_type": "UMLOpaqueBehavior",
+               "_id": "SCXEXT0000000345",
+               "_parent": {
+                "$ref": "SCXEXT0000000343"
+               },
+               "name": "contrôler chaque ligne"
+              }
+             ]
+            },
+            {
+             "_type": "UMLTransition",
+             "_id": "SCXEXT0000000347",
+             "_parent": {
+              "$ref": "SCXEXT0000000325"
+             },
+             "source": {
+              "$ref": "SCXEXT0000000331"
+             },
+             "target": {
+              "$ref": "SCXEXT0000000331"
+             },
+             "guard": "nouvelle correspondance",
+             "triggers": [
+              {
+               "_type": "UMLEvent",
+               "_id": "SCXEXT0000000348",
+               "_parent": {
+                "$ref": "SCXEXT0000000347"
+               },
+               "name": "revalider"
+              }
+             ],
+             "effects": []
+            },
+            {
+             "_type": "UMLTransition",
+             "_id": "SCXEXT0000000350",
+             "_parent": {
+              "$ref": "SCXEXT0000000325"
+             },
+             "source": {
+              "$ref": "SCXEXT0000000331"
+             },
+             "target": {
+              "$ref": "SCXEXT0000000333"
+             },
+             "guard": "",
+             "triggers": [
+              {
+               "_type": "UMLEvent",
+               "_id": "SCXEXT0000000351",
+               "_parent": {
+                "$ref": "SCXEXT0000000350"
+               },
+               "name": "lancer l'import"
+              }
+             ],
+             "effects": [
+              {
+               "_type": "UMLOpaqueBehavior",
+               "_id": "SCXEXT0000000352",
+               "_parent": {
+                "$ref": "SCXEXT0000000350"
+               },
+               "name": "créer ou mettre à jour les enregistrements"
+              }
+             ]
+            },
+            {
+             "_type": "UMLTransition",
+             "_id": "SCXEXT0000000354",
+             "_parent": {
+              "$ref": "SCXEXT0000000325"
+             },
+             "source": {
+              "$ref": "SCXEXT0000000333"
+             },
+             "target": {
+              "$ref": "SCXEXT0000000335"
+             },
+             "guard": "",
+             "triggers": [],
+             "effects": []
+            },
+            {
+             "_type": "UMLTransition",
+             "_id": "SCXEXT0000000356",
+             "_parent": {
+              "$ref": "SCXEXT0000000325"
+             },
+             "source": {
+              "$ref": "SCXEXT0000000329"
+             },
+             "target": {
+              "$ref": "SCXEXT0000000337"
+             },
+             "guard": "",
+             "triggers": [
+              {
+               "_type": "UMLEvent",
+               "_id": "SCXEXT0000000357",
+               "_parent": {
+                "$ref": "SCXEXT0000000356"
+               },
+               "name": "annuler"
+              }
+             ],
+             "effects": [
+              {
+               "_type": "UMLOpaqueBehavior",
+               "_id": "SCXEXT0000000358",
+               "_parent": {
+                "$ref": "SCXEXT0000000356"
+               },
+               "name": "supprimer le lot"
+              }
+             ]
+            },
+            {
+             "_type": "UMLTransition",
+             "_id": "SCXEXT0000000360",
+             "_parent": {
+              "$ref": "SCXEXT0000000325"
+             },
+             "source": {
+              "$ref": "SCXEXT0000000331"
+             },
+             "target": {
+              "$ref": "SCXEXT0000000337"
+             },
+             "guard": "",
+             "triggers": [
+              {
+               "_type": "UMLEvent",
+               "_id": "SCXEXT0000000361",
+               "_parent": {
+                "$ref": "SCXEXT0000000360"
+               },
+               "name": "annuler"
+              }
+             ],
+             "effects": [
+              {
+               "_type": "UMLOpaqueBehavior",
+               "_id": "SCXEXT0000000362",
+               "_parent": {
+                "$ref": "SCXEXT0000000360"
+               },
+               "name": "supprimer le lot"
+              }
+             ]
+            }
+           ]
+          }
+         ],
+         "ownedElements": [
+          {
+           "_type": "UMLStatechartDiagram",
+           "_id": "SCXEXT0000000326",
+           "_parent": {
+            "$ref": "SCXEXT0000000324"
+           },
+           "name": "États — Lot d'import de données",
+           "ownedViews": [
+            {
+             "_type": "UMLPseudostateView",
+             "_id": "SCXEXT0000000328",
+             "_parent": {
+              "$ref": "SCXEXT0000000326"
+             },
+             "left": 40,
+             "top": 134,
+             "width": 22,
+             "height": 22,
+             "model": {
+              "$ref": "SCXEXT0000000327"
+             }
+            },
+            {
+             "_type": "UMLStateView",
+             "_id": "SCXEXT0000000330",
+             "_parent": {
+              "$ref": "SCXEXT0000000326"
+             },
+             "left": 520,
+             "top": 120,
+             "width": 190,
+             "height": 50,
+             "model": {
+              "$ref": "SCXEXT0000000329"
+             },
+             "fillColor": "#FFFFFF"
+            },
+            {
+             "_type": "UMLStateView",
+             "_id": "SCXEXT0000000332",
+             "_parent": {
+              "$ref": "SCXEXT0000000326"
+             },
+             "left": 1060,
+             "top": 120,
+             "width": 190,
+             "height": 50,
+             "model": {
+              "$ref": "SCXEXT0000000331"
+             },
+             "fillColor": "#FFFFFF"
+            },
+            {
+             "_type": "UMLStateView",
+             "_id": "SCXEXT0000000334",
+             "_parent": {
+              "$ref": "SCXEXT0000000326"
+             },
+             "left": 1600,
+             "top": 120,
+             "width": 190,
+             "height": 50,
+             "model": {
+              "$ref": "SCXEXT0000000333"
+             },
+             "fillColor": "#FFFFFF"
+            },
+            {
+             "_type": "UMLFinalStateView",
+             "_id": "SCXEXT0000000336",
+             "_parent": {
+              "$ref": "SCXEXT0000000326"
+             },
+             "left": 1900,
+             "top": 133,
+             "width": 26,
+             "height": 26,
+             "model": {
+              "$ref": "SCXEXT0000000335"
+             }
+            },
+            {
+             "_type": "UMLFinalStateView",
+             "_id": "SCXEXT0000000338",
+             "_parent": {
+              "$ref": "SCXEXT0000000326"
+             },
+             "left": 1142,
+             "top": 360,
+             "width": 26,
+             "height": 26,
+             "model": {
+              "$ref": "SCXEXT0000000337"
+             }
+            },
+            {
+             "_type": "UMLTransitionView",
+             "_id": "SCXEXT0000000342",
+             "_parent": {
+              "$ref": "SCXEXT0000000326"
+             },
+             "tail": {
+              "$ref": "SCXEXT0000000328"
+             },
+             "head": {
+              "$ref": "SCXEXT0000000330"
+             },
+             "lineStyle": 1,
+             "model": {
+              "$ref": "SCXEXT0000000339"
+             },
+             "points": "51:145;615:145"
+            },
+            {
+             "_type": "UMLTransitionView",
+             "_id": "SCXEXT0000000346",
+             "_parent": {
+              "$ref": "SCXEXT0000000326"
+             },
+             "tail": {
+              "$ref": "SCXEXT0000000330"
+             },
+             "head": {
+              "$ref": "SCXEXT0000000332"
+             },
+             "lineStyle": 1,
+             "model": {
+              "$ref": "SCXEXT0000000343"
+             },
+             "points": "615:145;1155:145"
+            },
+            {
+             "_type": "UMLTransitionView",
+             "_id": "SCXEXT0000000349",
+             "_parent": {
+              "$ref": "SCXEXT0000000326"
+             },
+             "tail": {
+              "$ref": "SCXEXT0000000332"
+             },
+             "head": {
+              "$ref": "SCXEXT0000000332"
+             },
+             "lineStyle": 1,
+             "model": {
+              "$ref": "SCXEXT0000000347"
+             },
+             "points": "1110:120;1110:70;1200:70;1200:120"
+            },
+            {
+             "_type": "UMLTransitionView",
+             "_id": "SCXEXT0000000353",
+             "_parent": {
+              "$ref": "SCXEXT0000000326"
+             },
+             "tail": {
+              "$ref": "SCXEXT0000000332"
+             },
+             "head": {
+              "$ref": "SCXEXT0000000334"
+             },
+             "lineStyle": 1,
+             "model": {
+              "$ref": "SCXEXT0000000350"
+             },
+             "points": "1155:145;1695:145"
+            },
+            {
+             "_type": "UMLTransitionView",
+             "_id": "SCXEXT0000000355",
+             "_parent": {
+              "$ref": "SCXEXT0000000326"
+             },
+             "tail": {
+              "$ref": "SCXEXT0000000334"
+             },
+             "head": {
+              "$ref": "SCXEXT0000000336"
+             },
+             "lineStyle": 1,
+             "model": {
+              "$ref": "SCXEXT0000000354"
+             },
+             "points": "1695:145;1913:146"
+            },
+            {
+             "_type": "UMLTransitionView",
+             "_id": "SCXEXT0000000359",
+             "_parent": {
+              "$ref": "SCXEXT0000000326"
+             },
+             "tail": {
+              "$ref": "SCXEXT0000000330"
+             },
+             "head": {
+              "$ref": "SCXEXT0000000338"
+             },
+             "lineStyle": 1,
+             "model": {
+              "$ref": "SCXEXT0000000356"
+             },
+             "points": "615:170;615:373;1142:373"
+            },
+            {
+             "_type": "UMLTransitionView",
+             "_id": "SCXEXT0000000363",
+             "_parent": {
+              "$ref": "SCXEXT0000000326"
+             },
+             "tail": {
+              "$ref": "SCXEXT0000000332"
+             },
+             "head": {
+              "$ref": "SCXEXT0000000338"
+             },
+             "lineStyle": 1,
+             "model": {
+              "$ref": "SCXEXT0000000360"
+             },
+             "points": "1155:145;1155:373"
+            }
+           ],
+           "defaultDiagram": true
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1313 @@
+{
+ "_type": "Project",
+ "_id": "SCOLIX0000000001",
+ "name": "Scolix — Séquence — Activer une campagne",
+ "documentation": "Modélisation UML de Scolix (plateforme d'évaluation des enseignants).",
+ "ownedElements": [
+  {
+   "_type": "UMLModel",
+   "_id": "SCOLIX0000000723",
+   "_parent": {
+    "$ref": "SCOLIX0000000001"
+   },
+   "name": "Modèle des cas d'utilisation",
+   "ownedElements": [
+    {
+     "_type": "UMLPackage",
+     "_id": "SCOLIX0000000724",
+     "_parent": {
+      "$ref": "SCOLIX0000000723"
+     },
+     "name": "Acteurs",
+     "ownedElements": [
+      {
+       "_type": "UMLActor",
+       "_id": "SCOLIX0000000728",
+       "_parent": {
+        "$ref": "SCOLIX0000000724"
+       },
+       "name": "Gestionnaire",
+       "documentation": "Rôle regroupant l'Administrateur et le Directeur (permission IsAdminOrDirector).",
+       "isAbstract": true,
+       "ownedElements": []
+      },
+      {
+       "_type": "UMLActor",
+       "_id": "SCOLIX0000000732",
+       "_parent": {
+        "$ref": "SCOLIX0000000724"
+       },
+       "name": "Serveur de messagerie SMTP",
+       "documentation": "Envoi des e-mails de notification (Gmail SMTP).",
+       "stereotype": "système externe",
+       "ownedElements": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "_type": "UMLModel",
+   "_id": "SCXDYN0000000101",
+   "_parent": {
+    "$ref": "SCOLIX0000000001"
+   },
+   "name": "Modèle dynamique",
+   "ownedElements": [
+    {
+     "_type": "UMLPackage",
+     "_id": "SCXDYN0000000407",
+     "_parent": {
+      "$ref": "SCXDYN0000000101"
+     },
+     "name": "Participants des séquences",
+     "ownedElements": [
+      {
+       "_type": "UMLClass",
+       "_id": "SCXDYN0000000409",
+       "_parent": {
+        "$ref": "SCXDYN0000000407"
+       },
+       "name": "Application web Scolix",
+       "documentation": "Interface web React (espaces direction et administration)."
+      },
+      {
+       "_type": "UMLClass",
+       "_id": "SCXDYN0000000414",
+       "_parent": {
+        "$ref": "SCXDYN0000000407"
+       },
+       "name": "EvaluationCampaignViewSet",
+       "documentation": "Vue DRF /api/campaigns/."
+      },
+      {
+       "_type": "UMLClass",
+       "_id": "SCXDYN0000000415",
+       "_parent": {
+        "$ref": "SCXDYN0000000407"
+       },
+       "name": "CampaignService",
+       "documentation": "Cycle de vie des campagnes."
+      },
+      {
+       "_type": "UMLClass",
+       "_id": "SCXDYN0000000416",
+       "_parent": {
+        "$ref": "SCXDYN0000000407"
+       },
+       "name": "NotificationService",
+       "documentation": "Création et envoi des notifications."
+      },
+      {
+       "_type": "UMLClass",
+       "_id": "SCXDYN0000000419",
+       "_parent": {
+        "$ref": "SCXDYN0000000407"
+       },
+       "name": "Base de données PostgreSQL",
+       "documentation": "Persistance via l'ORM Django."
+      }
+     ]
+    },
+    {
+     "_type": "UMLCollaboration",
+     "_id": "SCXDYN0000000577",
+     "_parent": {
+      "$ref": "SCXDYN0000000101"
+     },
+     "name": "Séquence — Activer une campagne",
+     "attributes": [
+      {
+       "_type": "UMLAttribute",
+       "_id": "SCXDYN0000000580",
+       "_parent": {
+        "$ref": "SCXDYN0000000577"
+       },
+       "name": "gestionnaire",
+       "type": {
+        "$ref": "SCOLIX0000000728"
+       }
+      },
+      {
+       "_type": "UMLAttribute",
+       "_id": "SCXDYN0000000582",
+       "_parent": {
+        "$ref": "SCXDYN0000000577"
+       },
+       "name": "app",
+       "type": {
+        "$ref": "SCXDYN0000000409"
+       }
+      },
+      {
+       "_type": "UMLAttribute",
+       "_id": "SCXDYN0000000584",
+       "_parent": {
+        "$ref": "SCXDYN0000000577"
+       },
+       "name": "vue",
+       "type": {
+        "$ref": "SCXDYN0000000414"
+       }
+      },
+      {
+       "_type": "UMLAttribute",
+       "_id": "SCXDYN0000000586",
+       "_parent": {
+        "$ref": "SCXDYN0000000577"
+       },
+       "name": "service",
+       "type": {
+        "$ref": "SCXDYN0000000415"
+       }
+      },
+      {
+       "_type": "UMLAttribute",
+       "_id": "SCXDYN0000000588",
+       "_parent": {
+        "$ref": "SCXDYN0000000577"
+       },
+       "name": "notifications",
+       "type": {
+        "$ref": "SCXDYN0000000416"
+       }
+      },
+      {
+       "_type": "UMLAttribute",
+       "_id": "SCXDYN0000000590",
+       "_parent": {
+        "$ref": "SCXDYN0000000577"
+       },
+       "name": "bd",
+       "type": {
+        "$ref": "SCXDYN0000000419"
+       }
+      },
+      {
+       "_type": "UMLAttribute",
+       "_id": "SCXDYN0000000592",
+       "_parent": {
+        "$ref": "SCXDYN0000000577"
+       },
+       "name": "smtp",
+       "type": {
+        "$ref": "SCOLIX0000000732"
+       }
+      }
+     ],
+     "ownedElements": [
+      {
+       "_type": "UMLInteraction",
+       "_id": "SCXDYN0000000578",
+       "_parent": {
+        "$ref": "SCXDYN0000000577"
+       },
+       "name": "Séquence — Activer une campagne",
+       "messages": [
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000608",
+         "_parent": {
+          "$ref": "SCXDYN0000000578"
+         },
+         "name": "activerCampagne",
+         "source": {
+          "$ref": "SCXDYN0000000581"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000583"
+         },
+         "messageSort": "synchCall"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000609",
+         "_parent": {
+          "$ref": "SCXDYN0000000578"
+         },
+         "name": "POST /api/campaigns/{id}/activate/",
+         "source": {
+          "$ref": "SCXDYN0000000583"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000585"
+         },
+         "messageSort": "synchCall"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000610",
+         "_parent": {
+          "$ref": "SCXDYN0000000578"
+         },
+         "name": "activate_campaign",
+         "source": {
+          "$ref": "SCXDYN0000000585"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000587"
+         },
+         "messageSort": "synchCall",
+         "arguments": "campagne"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000611",
+         "_parent": {
+          "$ref": "SCXDYN0000000578"
+         },
+         "name": "ValidationError",
+         "source": {
+          "$ref": "SCXDYN0000000587"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000585"
+         },
+         "messageSort": "reply"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000612",
+         "_parent": {
+          "$ref": "SCXDYN0000000578"
+         },
+         "name": "400 {detail}",
+         "source": {
+          "$ref": "SCXDYN0000000585"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000583"
+         },
+         "messageSort": "reply"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000613",
+         "_parent": {
+          "$ref": "SCXDYN0000000578"
+         },
+         "name": "statut = ACTIVE",
+         "source": {
+          "$ref": "SCXDYN0000000587"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000591"
+         },
+         "messageSort": "synchCall"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000614",
+         "_parent": {
+          "$ref": "SCXDYN0000000578"
+         },
+         "name": "notify_students_campaign_opened",
+         "source": {
+          "$ref": "SCXDYN0000000587"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000589"
+         },
+         "messageSort": "synchCall",
+         "arguments": "campagne"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000615",
+         "_parent": {
+          "$ref": "SCXDYN0000000578"
+         },
+         "name": "créer 4 notifications par étudiant inscrit",
+         "source": {
+          "$ref": "SCXDYN0000000589"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000591"
+         },
+         "messageSort": "synchCall"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000616",
+         "_parent": {
+          "$ref": "SCXDYN0000000578"
+         },
+         "name": "notifications",
+         "source": {
+          "$ref": "SCXDYN0000000589"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000587"
+         },
+         "messageSort": "reply"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000617",
+         "_parent": {
+          "$ref": "SCXDYN0000000578"
+         },
+         "name": "campagne",
+         "source": {
+          "$ref": "SCXDYN0000000587"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000585"
+         },
+         "messageSort": "reply"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000618",
+         "_parent": {
+          "$ref": "SCXDYN0000000578"
+         },
+         "name": "200 campagne ACTIVE",
+         "source": {
+          "$ref": "SCXDYN0000000585"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000583"
+         },
+         "messageSort": "reply"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000619",
+         "_parent": {
+          "$ref": "SCXDYN0000000578"
+         },
+         "name": "send_mail (après validation de la transaction, en arrière-plan)",
+         "source": {
+          "$ref": "SCXDYN0000000589"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000593"
+         },
+         "messageSort": "asynchCall",
+         "arguments": "destinataire, titre, message"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000620",
+         "_parent": {
+          "$ref": "SCXDYN0000000578"
+         },
+         "name": "afficherStatut",
+         "source": {
+          "$ref": "SCXDYN0000000583"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000581"
+         },
+         "messageSort": "reply"
+        }
+       ],
+       "participants": [
+        {
+         "_type": "UMLLifeline",
+         "_id": "SCXDYN0000000581",
+         "_parent": {
+          "$ref": "SCXDYN0000000578"
+         },
+         "name": "gestionnaire",
+         "represent": {
+          "$ref": "SCXDYN0000000580"
+         }
+        },
+        {
+         "_type": "UMLLifeline",
+         "_id": "SCXDYN0000000583",
+         "_parent": {
+          "$ref": "SCXDYN0000000578"
+         },
+         "name": "app",
+         "represent": {
+          "$ref": "SCXDYN0000000582"
+         }
+        },
+        {
+         "_type": "UMLLifeline",
+         "_id": "SCXDYN0000000585",
+         "_parent": {
+          "$ref": "SCXDYN0000000578"
+         },
+         "name": "vue",
+         "represent": {
+          "$ref": "SCXDYN0000000584"
+         }
+        },
+        {
+         "_type": "UMLLifeline",
+         "_id": "SCXDYN0000000587",
+         "_parent": {
+          "$ref": "SCXDYN0000000578"
+         },
+         "name": "service",
+         "represent": {
+          "$ref": "SCXDYN0000000586"
+         }
+        },
+        {
+         "_type": "UMLLifeline",
+         "_id": "SCXDYN0000000589",
+         "_parent": {
+          "$ref": "SCXDYN0000000578"
+         },
+         "name": "notifications",
+         "represent": {
+          "$ref": "SCXDYN0000000588"
+         }
+        },
+        {
+         "_type": "UMLLifeline",
+         "_id": "SCXDYN0000000591",
+         "_parent": {
+          "$ref": "SCXDYN0000000578"
+         },
+         "name": "bd",
+         "represent": {
+          "$ref": "SCXDYN0000000590"
+         }
+        },
+        {
+         "_type": "UMLLifeline",
+         "_id": "SCXDYN0000000593",
+         "_parent": {
+          "$ref": "SCXDYN0000000578"
+         },
+         "name": "smtp",
+         "represent": {
+          "$ref": "SCXDYN0000000592"
+         }
+        }
+       ],
+       "fragments": [
+        {
+         "_type": "UMLCombinedFragment",
+         "_id": "SCXDYN0000000647",
+         "_parent": {
+          "$ref": "SCXDYN0000000578"
+         },
+         "name": "",
+         "interactionOperator": "alt",
+         "operands": [
+          {
+           "_type": "UMLInteractionOperand",
+           "_id": "SCXDYN0000000649",
+           "_parent": {
+            "$ref": "SCXDYN0000000647"
+           },
+           "name": "",
+           "guard": "statut ≠ DRAFT / CLOSED ou date de fin dépassée"
+          },
+          {
+           "_type": "UMLInteractionOperand",
+           "_id": "SCXDYN0000000651",
+           "_parent": {
+            "$ref": "SCXDYN0000000647"
+           },
+           "name": "",
+           "guard": "activation possible"
+          }
+         ]
+        }
+       ],
+       "ownedElements": [
+        {
+         "_type": "UMLSequenceDiagram",
+         "_id": "SCXDYN0000000579",
+         "_parent": {
+          "$ref": "SCXDYN0000000578"
+         },
+         "name": "Séquence — Activer une campagne",
+         "ownedViews": [
+          {
+           "_type": "UMLFrameView",
+           "_id": "SCXDYN0000000654",
+           "_parent": {
+            "$ref": "SCXDYN0000000579"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000578"
+           },
+           "left": 10,
+           "top": 10,
+           "width": 2021,
+           "height": 734
+          },
+          {
+           "_type": "UMLSeqLifelineView",
+           "_id": "SCXDYN0000000595",
+           "_parent": {
+            "$ref": "SCXDYN0000000579"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000581"
+           },
+           "left": 40,
+           "top": 40,
+           "width": 222,
+           "height": 694,
+           "subViews": [
+            {
+             "_type": "UMLLinePartView",
+             "_id": "SCXDYN0000000594",
+             "model": {
+              "$ref": "SCXDYN0000000581"
+             },
+             "_parent": {
+              "$ref": "SCXDYN0000000595"
+             }
+            }
+           ],
+           "linePart": {
+            "$ref": "SCXDYN0000000594"
+           },
+           "fillColor": "#FFFFFF",
+           "stereotypeDisplay": "icon"
+          },
+          {
+           "_type": "UMLSeqLifelineView",
+           "_id": "SCXDYN0000000597",
+           "_parent": {
+            "$ref": "SCXDYN0000000579"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000583"
+           },
+           "left": 302,
+           "top": 40,
+           "width": 229,
+           "height": 694,
+           "subViews": [
+            {
+             "_type": "UMLLinePartView",
+             "_id": "SCXDYN0000000596",
+             "model": {
+              "$ref": "SCXDYN0000000583"
+             },
+             "_parent": {
+              "$ref": "SCXDYN0000000597"
+             }
+            }
+           ],
+           "linePart": {
+            "$ref": "SCXDYN0000000596"
+           },
+           "fillColor": "#FFFFFF"
+          },
+          {
+           "_type": "UMLSeqLifelineView",
+           "_id": "SCXDYN0000000599",
+           "_parent": {
+            "$ref": "SCXDYN0000000579"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000585"
+           },
+           "left": 571,
+           "top": 40,
+           "width": 252,
+           "height": 694,
+           "subViews": [
+            {
+             "_type": "UMLLinePartView",
+             "_id": "SCXDYN0000000598",
+             "model": {
+              "$ref": "SCXDYN0000000585"
+             },
+             "_parent": {
+              "$ref": "SCXDYN0000000599"
+             }
+            }
+           ],
+           "linePart": {
+            "$ref": "SCXDYN0000000598"
+           },
+           "fillColor": "#FFFFFF"
+          },
+          {
+           "_type": "UMLSeqLifelineView",
+           "_id": "SCXDYN0000000601",
+           "_parent": {
+            "$ref": "SCXDYN0000000579"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000587"
+           },
+           "left": 863,
+           "top": 40,
+           "width": 206,
+           "height": 694,
+           "subViews": [
+            {
+             "_type": "UMLLinePartView",
+             "_id": "SCXDYN0000000600",
+             "model": {
+              "$ref": "SCXDYN0000000587"
+             },
+             "_parent": {
+              "$ref": "SCXDYN0000000601"
+             }
+            }
+           ],
+           "linePart": {
+            "$ref": "SCXDYN0000000600"
+           },
+           "fillColor": "#FFFFFF"
+          },
+          {
+           "_type": "UMLSeqLifelineView",
+           "_id": "SCXDYN0000000603",
+           "_parent": {
+            "$ref": "SCXDYN0000000579"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000589"
+           },
+           "left": 1109,
+           "top": 40,
+           "width": 282,
+           "height": 694,
+           "subViews": [
+            {
+             "_type": "UMLLinePartView",
+             "_id": "SCXDYN0000000602",
+             "model": {
+              "$ref": "SCXDYN0000000589"
+             },
+             "_parent": {
+              "$ref": "SCXDYN0000000603"
+             }
+            }
+           ],
+           "linePart": {
+            "$ref": "SCXDYN0000000602"
+           },
+           "fillColor": "#FFFFFF"
+          },
+          {
+           "_type": "UMLSeqLifelineView",
+           "_id": "SCXDYN0000000605",
+           "_parent": {
+            "$ref": "SCXDYN0000000579"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000591"
+           },
+           "left": 1432,
+           "top": 40,
+           "width": 252,
+           "height": 694,
+           "subViews": [
+            {
+             "_type": "UMLLinePartView",
+             "_id": "SCXDYN0000000604",
+             "model": {
+              "$ref": "SCXDYN0000000591"
+             },
+             "_parent": {
+              "$ref": "SCXDYN0000000605"
+             }
+            }
+           ],
+           "linePart": {
+            "$ref": "SCXDYN0000000604"
+           },
+           "fillColor": "#FFFFFF"
+          },
+          {
+           "_type": "UMLSeqLifelineView",
+           "_id": "SCXDYN0000000607",
+           "_parent": {
+            "$ref": "SCXDYN0000000579"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000593"
+           },
+           "left": 1724,
+           "top": 40,
+           "width": 267,
+           "height": 694,
+           "subViews": [
+            {
+             "_type": "UMLLinePartView",
+             "_id": "SCXDYN0000000606",
+             "model": {
+              "$ref": "SCXDYN0000000593"
+             },
+             "_parent": {
+              "$ref": "SCXDYN0000000607"
+             }
+            }
+           ],
+           "linePart": {
+            "$ref": "SCXDYN0000000606"
+           },
+           "fillColor": "#FFFFFF",
+           "stereotypeDisplay": "icon"
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000622",
+           "_parent": {
+            "$ref": "SCXDYN0000000579"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000608"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000594"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000596"
+           },
+           "lineStyle": 0,
+           "points": "151:140;416:140",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000621",
+             "model": {
+              "$ref": "SCXDYN0000000608"
+             },
+             "left": 409.5,
+             "top": 140,
+             "width": 14,
+             "height": 536,
+             "_parent": {
+              "$ref": "SCXDYN0000000622"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000621"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000624",
+           "_parent": {
+            "$ref": "SCXDYN0000000579"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000609"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000596"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000598"
+           },
+           "lineStyle": 0,
+           "points": "416:178;697:178",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000623",
+             "model": {
+              "$ref": "SCXDYN0000000609"
+             },
+             "left": 690.0,
+             "top": 178,
+             "width": 14,
+             "height": 170,
+             "_parent": {
+              "$ref": "SCXDYN0000000624"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000623"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000626",
+           "_parent": {
+            "$ref": "SCXDYN0000000579"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000610"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000598"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000600"
+           },
+           "lineStyle": 0,
+           "points": "697:216;966:216",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000625",
+             "model": {
+              "$ref": "SCXDYN0000000610"
+             },
+             "left": 959.0,
+             "top": 216,
+             "width": 14,
+             "height": 94,
+             "_parent": {
+              "$ref": "SCXDYN0000000626"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000625"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000628",
+           "_parent": {
+            "$ref": "SCXDYN0000000579"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000611"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000600"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000598"
+           },
+           "lineStyle": 0,
+           "points": "966:310;697:310",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000627",
+             "model": {
+              "$ref": "SCXDYN0000000611"
+             },
+             "left": 690.0,
+             "top": 310,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000628"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000627"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000630",
+           "_parent": {
+            "$ref": "SCXDYN0000000579"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000612"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000598"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000596"
+           },
+           "lineStyle": 0,
+           "points": "697:348;416:348",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000629",
+             "model": {
+              "$ref": "SCXDYN0000000612"
+             },
+             "left": 409.5,
+             "top": 348,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000630"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000629"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000632",
+           "_parent": {
+            "$ref": "SCXDYN0000000579"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000613"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000600"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000604"
+           },
+           "lineStyle": 0,
+           "points": "966:400;1558:400",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000631",
+             "model": {
+              "$ref": "SCXDYN0000000613"
+             },
+             "left": 1551.0,
+             "top": 400,
+             "width": 14,
+             "height": 84,
+             "_parent": {
+              "$ref": "SCXDYN0000000632"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000631"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000634",
+           "_parent": {
+            "$ref": "SCXDYN0000000579"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000614"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000600"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000602"
+           },
+           "lineStyle": 0,
+           "points": "966:438;1250:438",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000633",
+             "model": {
+              "$ref": "SCXDYN0000000614"
+             },
+             "left": 1243.0,
+             "top": 438,
+             "width": 14,
+             "height": 76,
+             "_parent": {
+              "$ref": "SCXDYN0000000634"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000633"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000636",
+           "_parent": {
+            "$ref": "SCXDYN0000000579"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000615"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000602"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000604"
+           },
+           "lineStyle": 0,
+           "points": "1250:476;1558:476",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000635",
+             "model": {
+              "$ref": "SCXDYN0000000615"
+             },
+             "left": 1551.0,
+             "top": 476,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000636"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000635"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000638",
+           "_parent": {
+            "$ref": "SCXDYN0000000579"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000616"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000602"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000600"
+           },
+           "lineStyle": 0,
+           "points": "1250:514;966:514",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000637",
+             "model": {
+              "$ref": "SCXDYN0000000616"
+             },
+             "left": 959.0,
+             "top": 514,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000638"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000637"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000640",
+           "_parent": {
+            "$ref": "SCXDYN0000000579"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000617"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000600"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000598"
+           },
+           "lineStyle": 0,
+           "points": "966:552;697:552",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000639",
+             "model": {
+              "$ref": "SCXDYN0000000617"
+             },
+             "left": 690.0,
+             "top": 552,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000640"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000639"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000642",
+           "_parent": {
+            "$ref": "SCXDYN0000000579"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000618"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000598"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000596"
+           },
+           "lineStyle": 0,
+           "points": "697:590;416:590",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000641",
+             "model": {
+              "$ref": "SCXDYN0000000618"
+             },
+             "left": 409.5,
+             "top": 590,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000642"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000641"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000644",
+           "_parent": {
+            "$ref": "SCXDYN0000000579"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000619"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000602"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000606"
+           },
+           "lineStyle": 0,
+           "points": "1250:628;1858:628",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000643",
+             "model": {
+              "$ref": "SCXDYN0000000619"
+             },
+             "left": 1850.5,
+             "top": 628,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000644"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000643"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000646",
+           "_parent": {
+            "$ref": "SCXDYN0000000579"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000620"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000596"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000594"
+           },
+           "lineStyle": 0,
+           "points": "416:676;151:676",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000645",
+             "model": {
+              "$ref": "SCXDYN0000000620"
+             },
+             "left": 144.0,
+             "top": 676,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000646"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000645"
+           }
+          },
+          {
+           "_type": "UMLCombinedFragmentView",
+           "_id": "SCXDYN0000000653",
+           "_parent": {
+            "$ref": "SCXDYN0000000579"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000647"
+           },
+           "left": 321.5,
+           "top": 250,
+           "width": 1631.0,
+           "height": 394,
+           "subViews": [
+            {
+             "_type": "UMLInteractionOperandCompartmentView",
+             "_id": "SCXDYN0000000648",
+             "model": {
+              "$ref": "SCXDYN0000000647"
+             },
+             "subViews": [
+              {
+               "_type": "UMLInteractionOperandView",
+               "_id": "SCXDYN0000000650",
+               "_parent": {
+                "$ref": "SCXDYN0000000648"
+               },
+               "model": {
+                "$ref": "SCXDYN0000000649"
+               },
+               "left": 321.5,
+               "top": 274,
+               "width": 1631.0,
+               "height": 90
+              },
+              {
+               "_type": "UMLInteractionOperandView",
+               "_id": "SCXDYN0000000652",
+               "_parent": {
+                "$ref": "SCXDYN0000000648"
+               },
+               "model": {
+                "$ref": "SCXDYN0000000651"
+               },
+               "left": 321.5,
+               "top": 364,
+               "width": 1631.0,
+               "height": 280
+              }
+             ],
+             "_parent": {
+              "$ref": "SCXDYN0000000653"
+             }
+            }
+           ],
+           "operandCompartment": {
+            "$ref": "SCXDYN0000000648"
+           }
+          },
+          {
+           "_type": "UMLNoteView",
+           "_id": "SCXDYN0000000655",
+           "_parent": {
+            "$ref": "SCXDYN0000000579"
+           },
+           "left": 20,
+           "top": 764,
+           "width": 560,
+           "height": 44,
+           "text": "L'envoi des e-mails est lancé par transaction.on_commit dans un fil d'exécution séparé : la réponse HTTP n'attend jamais le serveur SMTP. Les canaux SMS et Push sont simulés (MVP)."
+          }
+         ],
+         "defaultDiagram": true
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

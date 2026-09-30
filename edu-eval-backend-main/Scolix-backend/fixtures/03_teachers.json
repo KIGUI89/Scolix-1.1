@@ -1,0 +1,322 @@
+[
+  {
+    "model": "sync.teachersync",
+    "pk": "f78010e8-ff32-4f09-9fca-f5175bd63690",
+    "fields": {
+      "university_id": "ERP-ENS-001",
+      "matricule": "ENS-001",
+      "first_name": "Marie",
+      "last_name": "ALLODE",
+      "email": "marie.allode1@edu-eval.local",
+      "phone": "+22891419610",
+      "department": "f6dadf9b-a630-4e42-b7bf-dc5dd1e4d9c2",
+      "grade": "Docteur",
+      "specialty": "Base de données",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.teachersync",
+    "pk": "07a10af4-f79c-42c2-9747-36880ab21ce1",
+    "fields": {
+      "university_id": "ERP-ENS-002",
+      "matricule": "ENS-002",
+      "first_name": "Michel",
+      "last_name": "KIGUI",
+      "email": "michel.kigui2@edu-eval.local",
+      "phone": "+22892719583",
+      "department": "e25b2977-7d61-49db-a29b-d53ae077514b",
+      "grade": "Ingénieur Enseignant",
+      "specialty": "Spring Boot",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.teachersync",
+    "pk": "c28cadd3-2f17-46dd-8621-0d3ad1458bbf",
+    "fields": {
+      "university_id": "ERP-ENS-003",
+      "matricule": "ENS-003",
+      "first_name": "Abla",
+      "last_name": "NIKA",
+      "email": "abla.nika3@edu-eval.local",
+      "phone": "+22891533224",
+      "department": "b2427d5b-ebab-48cd-bd04-b307839f8870",
+      "grade": "Assistant",
+      "specialty": "Spring Boot",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.teachersync",
+    "pk": "e2a49b85-e834-43f7-a152-8e2d7cc5554d",
+    "fields": {
+      "university_id": "ERP-ENS-004",
+      "matricule": "ENS-004",
+      "first_name": "David",
+      "last_name": "ADJOVI",
+      "email": "david.adjovi4@edu-eval.local",
+      "phone": "+22899478454",
+      "department": "e25b2977-7d61-49db-a29b-d53ae077514b",
+      "grade": "Ingénieur Enseignant",
+      "specialty": "Django REST",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.teachersync",
+    "pk": "7e788912-5edf-47b5-852b-cbc34b2c3726",
+    "fields": {
+      "university_id": "ERP-ENS-005",
+      "matricule": "ENS-005",
+      "first_name": "Afi",
+      "last_name": "KOFFI",
+      "email": "afi.koffi5@edu-eval.local",
+      "phone": "+22898038374",
+      "department": "e25b2977-7d61-49db-a29b-d53ae077514b",
+      "grade": "Maître Assistant",
+      "specialty": "Cloud Computing",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.teachersync",
+    "pk": "4d5fc85a-ff7e-42bc-81d1-d9c281260106",
+    "fields": {
+      "university_id": "ERP-ENS-006",
+      "matricule": "ENS-006",
+      "first_name": "Abla",
+      "last_name": "MENSAH",
+      "email": "abla.mensah6@edu-eval.local",
+      "phone": "+22891109031",
+      "department": "d8b475df-dd8c-416b-86d8-377e5ab141a2",
+      "grade": "Maître Assistant",
+      "specialty": "Sécurité informatique",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.teachersync",
+    "pk": "427bcd47-58b8-4d62-b42d-acd536426258",
+    "fields": {
+      "university_id": "ERP-ENS-007",
+      "matricule": "ENS-007",
+      "first_name": "Eric",
+      "last_name": "AKAKPO",
+      "email": "eric.akakpo7@edu-eval.local",
+      "phone": "+22893608513",
+      "department": "d8b475df-dd8c-416b-86d8-377e5ab141a2",
+      "grade": "Maître Assistant",
+      "specialty": "Génie logiciel",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.teachersync",
+    "pk": "d3b902bd-a7a0-48e8-aa1e-96b3f3e952c6",
+    "fields": {
+      "university_id": "ERP-ENS-008",
+      "matricule": "ENS-008",
+      "first_name": "Yao",
+      "last_name": "AGBODJAN",
+      "email": "yao.agbodjan8@edu-eval.local",
+      "phone": "+22897374122",
+      "department": "f6dadf9b-a630-4e42-b7bf-dc5dd1e4d9c2",
+      "grade": "Assistant",
+      "specialty": "Génie logiciel",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.teachersync",
+    "pk": "921ccc0d-6418-4f07-acf2-13b8cca9c37e",
+    "fields": {
+      "university_id": "ERP-ENS-009",
+      "matricule": "ENS-009",
+      "first_name": "Prisca",
+      "last_name": "TCHAKALA",
+      "email": "prisca.tchakala9@edu-eval.local",
+      "phone": "+22895437923",
+      "department": "d8b475df-dd8c-416b-86d8-377e5ab141a2",
+      "grade": "Assistant",
+      "specialty": "Cloud Computing",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.teachersync",
+    "pk": "1ac989f4-e655-4879-8bc3-aab9addfe9bb",
+    "fields": {
+      "university_id": "ERP-ENS-010",
+      "matricule": "ENS-010",
+      "first_name": "Afi",
+      "last_name": "LAWSON",
+      "email": "afi.lawson10@edu-eval.local",
+      "phone": "+22897350753",
+      "department": "f6dadf9b-a630-4e42-b7bf-dc5dd1e4d9c2",
+      "grade": "Assistant",
+      "specialty": "Data Science",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.teachersync",
+    "pk": "b5c2ad0b-ce1d-4bf4-b0cb-ee7d18e3666b",
+    "fields": {
+      "university_id": "ERP-ENS-011",
+      "matricule": "ENS-011",
+      "first_name": "Samuel",
+      "last_name": "KPODAR",
+      "email": "samuel.kpodar11@edu-eval.local",
+      "phone": "+22894226067",
+      "department": "d8b475df-dd8c-416b-86d8-377e5ab141a2",
+      "grade": "Assistant",
+      "specialty": "Django REST",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.teachersync",
+    "pk": "39884e6f-039d-437e-a971-52e375567e29",
+    "fields": {
+      "university_id": "ERP-ENS-012",
+      "matricule": "ENS-012",
+      "first_name": "Grace",
+      "last_name": "AKPABIE",
+      "email": "grace.akpabie12@edu-eval.local",
+      "phone": "+22895855124",
+      "department": "e25b2977-7d61-49db-a29b-d53ae077514b",
+      "grade": "Assistant",
+      "specialty": "Base de données",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.teachersync",
+    "pk": "37f0a649-7173-4da8-b5ef-17fa8601c9e8",
+    "fields": {
+      "university_id": "ERP-ENS-013",
+      "matricule": "ENS-013",
+      "first_name": "Prisca",
+      "last_name": "DOGBE",
+      "email": "prisca.dogbe13@edu-eval.local",
+      "phone": "+22897377459",
+      "department": "f6dadf9b-a630-4e42-b7bf-dc5dd1e4d9c2",
+      "grade": "Docteur",
+      "specialty": "Cloud Computing",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.teachersync",
+    "pk": "76d46dd4-e90f-48e5-82bf-7016df33d7d5",
+    "fields": {
+      "university_id": "ERP-ENS-014",
+      "matricule": "ENS-014",
+      "first_name": "Marie",
+      "last_name": "AMEGAN",
+      "email": "marie.amegan14@edu-eval.local",
+      "phone": "+22893728882",
+      "department": "d8b475df-dd8c-416b-86d8-377e5ab141a2",
+      "grade": "Docteur",
+      "specialty": "Génie logiciel",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.teachersync",
+    "pk": "52ded30b-d1b8-4c77-8865-ba404d0d2665",
+    "fields": {
+      "university_id": "ERP-ENS-015",
+      "matricule": "ENS-015",
+      "first_name": "David",
+      "last_name": "ADJETE",
+      "email": "david.adjete15@edu-eval.local",
+      "phone": "+22892197935",
+      "department": "d8b475df-dd8c-416b-86d8-377e5ab141a2",
+      "grade": "Ingénieur Enseignant",
+      "specialty": "Réseaux Cisco",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.teachersync",
+    "pk": "2a38c99b-f22d-484f-8ec2-40e07cca9905",
+    "fields": {
+      "university_id": "ERP-ENS-016",
+      "matricule": "ENS-016",
+      "first_name": "Afi",
+      "last_name": "BOKO",
+      "email": "afi.boko16@edu-eval.local",
+      "phone": "+22893741438",
+      "department": "e25b2977-7d61-49db-a29b-d53ae077514b",
+      "grade": "Professeur",
+      "specialty": "Sécurité informatique",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.teachersync",
+    "pk": "154f14db-b6df-4af9-842b-a24da4ba5ff8",
+    "fields": {
+      "university_id": "ERP-ENS-017",
+      "matricule": "ENS-017",
+      "first_name": "Daniel",
+      "last_name": "TETE",
+      "email": "daniel.tete17@edu-eval.local",
+      "phone": "+22896440561",
+      "department": "e25b2977-7d61-49db-a29b-d53ae077514b",
+      "grade": "Assistant",
+      "specialty": "Base de données",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.teachersync",
+    "pk": "f2a0118a-3dc8-44d5-af68-5bab724b0aa9",
+    "fields": {
+      "university_id": "ERP-ENS-018",
+      "matricule": "ENS-018",
+      "first_name": "Ruth",
+      "last_name": "KOMI",
+      "email": "ruth.komi18@edu-eval.local",
+      "phone": "+22896292423",
+      "department": "f6dadf9b-a630-4e42-b7bf-dc5dd1e4d9c2",
+      "grade": "Professeur",
+      "specialty": "IA appliquée",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.teachersync",
+    "pk": "deff2ad8-41a1-4e47-83ef-34681b95abcc",
+    "fields": {
+      "university_id": "ERP-ENS-019",
+      "matricule": "ENS-019",
+      "first_name": "Kodjo",
+      "last_name": "SOGLO",
+      "email": "kodjo.soglo19@edu-eval.local",
+      "phone": "+22896279418",
+      "department": "e25b2977-7d61-49db-a29b-d53ae077514b",
+      "grade": "Maître Assistant",
+      "specialty": "Cloud Computing",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.teachersync",
+    "pk": "a4e3d98e-8e01-426e-9154-790cf274c952",
+    "fields": {
+      "university_id": "ERP-ENS-020",
+      "matricule": "ENS-020",
+      "first_name": "Patrick",
+      "last_name": "AYITE",
+      "email": "patrick.ayite20@edu-eval.local",
+      "phone": "+22893396987",
+      "department": "b2427d5b-ebab-48cd-bd04-b307839f8870",
+      "grade": "Docteur",
+      "specialty": "Réseaux Cisco",
+      "is_active": true
+    }
+  }
+]

@@ -1,0 +1,1517 @@
+{
+ "_type": "Project",
+ "_id": "SCOLIX0000000001",
+ "name": "Scolix — Cas d'utilisation — Gestionnaire (Directeur, Administrateur)",
+ "documentation": "Modélisation UML de Scolix (plateforme d'évaluation des enseignants).",
+ "ownedElements": [
+  {
+   "_type": "UMLModel",
+   "_id": "SCOLIX0000000723",
+   "_parent": {
+    "$ref": "SCOLIX0000000001"
+   },
+   "name": "Modèle des cas d'utilisation",
+   "ownedElements": [
+    {
+     "_type": "UMLPackage",
+     "_id": "SCOLIX0000000724",
+     "_parent": {
+      "$ref": "SCOLIX0000000723"
+     },
+     "name": "Acteurs",
+     "ownedElements": [
+      {
+       "_type": "UMLActor",
+       "_id": "SCOLIX0000000728",
+       "_parent": {
+        "$ref": "SCOLIX0000000724"
+       },
+       "name": "Gestionnaire",
+       "documentation": "Rôle regroupant l'Administrateur et le Directeur (permission IsAdminOrDirector).",
+       "isAbstract": true,
+       "ownedElements": [
+        {
+         "_type": "UMLAssociation",
+         "_id": "SCOLIX0000000809",
+         "_parent": {
+          "$ref": "SCOLIX0000000728"
+         },
+         "end1": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000810",
+          "_parent": {
+           "$ref": "SCOLIX0000000809"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000728"
+          }
+         },
+         "end2": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000811",
+          "_parent": {
+           "$ref": "SCOLIX0000000809"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000753"
+          }
+         }
+        },
+        {
+         "_type": "UMLAssociation",
+         "_id": "SCOLIX0000000812",
+         "_parent": {
+          "$ref": "SCOLIX0000000728"
+         },
+         "end1": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000813",
+          "_parent": {
+           "$ref": "SCOLIX0000000812"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000728"
+          }
+         },
+         "end2": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000814",
+          "_parent": {
+           "$ref": "SCOLIX0000000812"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000754"
+          }
+         }
+        },
+        {
+         "_type": "UMLAssociation",
+         "_id": "SCOLIX0000000818",
+         "_parent": {
+          "$ref": "SCOLIX0000000728"
+         },
+         "end1": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000819",
+          "_parent": {
+           "$ref": "SCOLIX0000000818"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000728"
+          }
+         },
+         "end2": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000820",
+          "_parent": {
+           "$ref": "SCOLIX0000000818"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000756"
+          }
+         }
+        },
+        {
+         "_type": "UMLAssociation",
+         "_id": "SCOLIX0000000821",
+         "_parent": {
+          "$ref": "SCOLIX0000000728"
+         },
+         "end1": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000822",
+          "_parent": {
+           "$ref": "SCOLIX0000000821"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000728"
+          }
+         },
+         "end2": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000823",
+          "_parent": {
+           "$ref": "SCOLIX0000000821"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000757"
+          }
+         }
+        },
+        {
+         "_type": "UMLAssociation",
+         "_id": "SCOLIX0000000824",
+         "_parent": {
+          "$ref": "SCOLIX0000000728"
+         },
+         "end1": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000825",
+          "_parent": {
+           "$ref": "SCOLIX0000000824"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000728"
+          }
+         },
+         "end2": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000826",
+          "_parent": {
+           "$ref": "SCOLIX0000000824"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000760"
+          }
+         }
+        },
+        {
+         "_type": "UMLAssociation",
+         "_id": "SCOLIX0000000827",
+         "_parent": {
+          "$ref": "SCOLIX0000000728"
+         },
+         "end1": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000828",
+          "_parent": {
+           "$ref": "SCOLIX0000000827"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000728"
+          }
+         },
+         "end2": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000829",
+          "_parent": {
+           "$ref": "SCOLIX0000000827"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000761"
+          }
+         }
+        },
+        {
+         "_type": "UMLAssociation",
+         "_id": "SCOLIX0000000830",
+         "_parent": {
+          "$ref": "SCOLIX0000000728"
+         },
+         "end1": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000831",
+          "_parent": {
+           "$ref": "SCOLIX0000000830"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000728"
+          }
+         },
+         "end2": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000832",
+          "_parent": {
+           "$ref": "SCOLIX0000000830"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000762"
+          }
+         }
+        },
+        {
+         "_type": "UMLAssociation",
+         "_id": "SCOLIX0000000833",
+         "_parent": {
+          "$ref": "SCOLIX0000000728"
+         },
+         "end1": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000834",
+          "_parent": {
+           "$ref": "SCOLIX0000000833"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000728"
+          }
+         },
+         "end2": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000835",
+          "_parent": {
+           "$ref": "SCOLIX0000000833"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000763"
+          }
+         }
+        },
+        {
+         "_type": "UMLAssociation",
+         "_id": "SCOLIX0000000836",
+         "_parent": {
+          "$ref": "SCOLIX0000000728"
+         },
+         "end1": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000837",
+          "_parent": {
+           "$ref": "SCOLIX0000000836"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000728"
+          }
+         },
+         "end2": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000838",
+          "_parent": {
+           "$ref": "SCOLIX0000000836"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000764"
+          }
+         }
+        },
+        {
+         "_type": "UMLAssociation",
+         "_id": "SCOLIX0000000839",
+         "_parent": {
+          "$ref": "SCOLIX0000000728"
+         },
+         "end1": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000840",
+          "_parent": {
+           "$ref": "SCOLIX0000000839"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000728"
+          }
+         },
+         "end2": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000841",
+          "_parent": {
+           "$ref": "SCOLIX0000000839"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000765"
+          }
+         }
+        },
+        {
+         "_type": "UMLAssociation",
+         "_id": "SCOLIX0000000842",
+         "_parent": {
+          "$ref": "SCOLIX0000000728"
+         },
+         "end1": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000843",
+          "_parent": {
+           "$ref": "SCOLIX0000000842"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000728"
+          }
+         },
+         "end2": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000844",
+          "_parent": {
+           "$ref": "SCOLIX0000000842"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000766"
+          }
+         }
+        },
+        {
+         "_type": "UMLAssociation",
+         "_id": "SCOLIX0000000845",
+         "_parent": {
+          "$ref": "SCOLIX0000000728"
+         },
+         "end1": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000846",
+          "_parent": {
+           "$ref": "SCOLIX0000000845"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000728"
+          }
+         },
+         "end2": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000847",
+          "_parent": {
+           "$ref": "SCOLIX0000000845"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000767"
+          }
+         }
+        }
+       ]
+      },
+      {
+       "_type": "UMLActor",
+       "_id": "SCOLIX0000000729",
+       "_parent": {
+        "$ref": "SCOLIX0000000724"
+       },
+       "name": "Directeur",
+       "documentation": "Compte de rôle DIRECTOR.",
+       "ownedElements": [
+        {
+         "_type": "UMLGeneralization",
+         "_id": "SCOLIX0000000737",
+         "_parent": {
+          "$ref": "SCOLIX0000000729"
+         },
+         "source": {
+          "$ref": "SCOLIX0000000729"
+         },
+         "target": {
+          "$ref": "SCOLIX0000000728"
+         }
+        }
+       ]
+      },
+      {
+       "_type": "UMLActor",
+       "_id": "SCOLIX0000000730",
+       "_parent": {
+        "$ref": "SCOLIX0000000724"
+       },
+       "name": "Administrateur",
+       "documentation": "Compte de rôle ADMIN : droits du gestionnaire, plus la gestion des comptes et des présences.",
+       "ownedElements": [
+        {
+         "_type": "UMLGeneralization",
+         "_id": "SCOLIX0000000738",
+         "_parent": {
+          "$ref": "SCOLIX0000000730"
+         },
+         "source": {
+          "$ref": "SCOLIX0000000730"
+         },
+         "target": {
+          "$ref": "SCOLIX0000000728"
+         }
+        }
+       ]
+      },
+      {
+       "_type": "UMLActor",
+       "_id": "SCOLIX0000000731",
+       "_parent": {
+        "$ref": "SCOLIX0000000724"
+       },
+       "name": "Système ERP universitaire",
+       "documentation": "Source des données du référentiel (fichiers CSV / Excel importés).",
+       "stereotype": "système externe",
+       "ownedElements": [
+        {
+         "_type": "UMLAssociation",
+         "_id": "SCOLIX0000000857",
+         "_parent": {
+          "$ref": "SCOLIX0000000731"
+         },
+         "end1": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000858",
+          "_parent": {
+           "$ref": "SCOLIX0000000857"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000731"
+          }
+         },
+         "end2": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000859",
+          "_parent": {
+           "$ref": "SCOLIX0000000857"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000755"
+          }
+         }
+        }
+       ]
+      },
+      {
+       "_type": "UMLActor",
+       "_id": "SCOLIX0000000732",
+       "_parent": {
+        "$ref": "SCOLIX0000000724"
+       },
+       "name": "Serveur de messagerie SMTP",
+       "documentation": "Envoi des e-mails de notification (Gmail SMTP).",
+       "stereotype": "système externe",
+       "ownedElements": [
+        {
+         "_type": "UMLAssociation",
+         "_id": "SCOLIX0000000860",
+         "_parent": {
+          "$ref": "SCOLIX0000000732"
+         },
+         "end1": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000861",
+          "_parent": {
+           "$ref": "SCOLIX0000000860"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000732"
+          }
+         },
+         "end2": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000862",
+          "_parent": {
+           "$ref": "SCOLIX0000000860"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000759"
+          }
+         }
+        },
+        {
+         "_type": "UMLAssociation",
+         "_id": "SCOLIX0000000863",
+         "_parent": {
+          "$ref": "SCOLIX0000000732"
+         },
+         "end1": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000864",
+          "_parent": {
+           "$ref": "SCOLIX0000000863"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000732"
+          }
+         },
+         "end2": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000865",
+          "_parent": {
+           "$ref": "SCOLIX0000000863"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000760"
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "_type": "UMLUseCaseSubject",
+     "_id": "SCOLIX0000000739",
+     "_parent": {
+      "$ref": "SCOLIX0000000723"
+     },
+     "name": "Scolix",
+     "ownedElements": [
+      {
+       "_type": "UMLUseCase",
+       "_id": "SCOLIX0000000753",
+       "_parent": {
+        "$ref": "SCOLIX0000000739"
+       },
+       "name": "Consulter les recommandations de formation"
+      },
+      {
+       "_type": "UMLUseCase",
+       "_id": "SCOLIX0000000754",
+       "_parent": {
+        "$ref": "SCOLIX0000000739"
+       },
+       "name": "Gérer le référentiel universitaire"
+      },
+      {
+       "_type": "UMLUseCase",
+       "_id": "SCOLIX0000000755",
+       "_parent": {
+        "$ref": "SCOLIX0000000739"
+       },
+       "name": "Importer des données (CSV / Excel)",
+       "ownedElements": [
+        {
+         "_type": "UMLExtend",
+         "_id": "SCOLIX0000000869",
+         "_parent": {
+          "$ref": "SCOLIX0000000755"
+         },
+         "source": {
+          "$ref": "SCOLIX0000000755"
+         },
+         "target": {
+          "$ref": "SCOLIX0000000754"
+         }
+        }
+       ]
+      },
+      {
+       "_type": "UMLUseCase",
+       "_id": "SCOLIX0000000756",
+       "_parent": {
+        "$ref": "SCOLIX0000000739"
+       },
+       "name": "Gérer les critères d'évaluation"
+      },
+      {
+       "_type": "UMLUseCase",
+       "_id": "SCOLIX0000000757",
+       "_parent": {
+        "$ref": "SCOLIX0000000739"
+       },
+       "name": "Gérer les campagnes d'évaluation",
+       "ownedElements": [
+        {
+         "_type": "UMLInclude",
+         "_id": "SCOLIX0000000866",
+         "_parent": {
+          "$ref": "SCOLIX0000000757"
+         },
+         "source": {
+          "$ref": "SCOLIX0000000757"
+         },
+         "target": {
+          "$ref": "SCOLIX0000000758"
+         }
+        }
+       ]
+      },
+      {
+       "_type": "UMLUseCase",
+       "_id": "SCOLIX0000000758",
+       "_parent": {
+        "$ref": "SCOLIX0000000739"
+       },
+       "name": "Pondérer les critères d'une campagne"
+      },
+      {
+       "_type": "UMLUseCase",
+       "_id": "SCOLIX0000000759",
+       "_parent": {
+        "$ref": "SCOLIX0000000739"
+       },
+       "name": "Activer, clôturer ou annuler une campagne",
+       "ownedElements": [
+        {
+         "_type": "UMLExtend",
+         "_id": "SCOLIX0000000868",
+         "_parent": {
+          "$ref": "SCOLIX0000000759"
+         },
+         "source": {
+          "$ref": "SCOLIX0000000759"
+         },
+         "target": {
+          "$ref": "SCOLIX0000000757"
+         }
+        }
+       ]
+      },
+      {
+       "_type": "UMLUseCase",
+       "_id": "SCOLIX0000000760",
+       "_parent": {
+        "$ref": "SCOLIX0000000739"
+       },
+       "name": "Relancer les étudiants"
+      },
+      {
+       "_type": "UMLUseCase",
+       "_id": "SCOLIX0000000761",
+       "_parent": {
+        "$ref": "SCOLIX0000000739"
+       },
+       "name": "Consulter les tableaux de bord analytiques"
+      },
+      {
+       "_type": "UMLUseCase",
+       "_id": "SCOLIX0000000762",
+       "_parent": {
+        "$ref": "SCOLIX0000000739"
+       },
+       "name": "Configurer la classification des enseignants"
+      },
+      {
+       "_type": "UMLUseCase",
+       "_id": "SCOLIX0000000763",
+       "_parent": {
+        "$ref": "SCOLIX0000000739"
+       },
+       "name": "Lancer les analyses IA (clustering, biais, prédictions)"
+      },
+      {
+       "_type": "UMLUseCase",
+       "_id": "SCOLIX0000000764",
+       "_parent": {
+        "$ref": "SCOLIX0000000739"
+       },
+       "name": "Consulter les signalements"
+      },
+      {
+       "_type": "UMLUseCase",
+       "_id": "SCOLIX0000000765",
+       "_parent": {
+        "$ref": "SCOLIX0000000739"
+       },
+       "name": "Consulter les alertes de présence"
+      },
+      {
+       "_type": "UMLUseCase",
+       "_id": "SCOLIX0000000766",
+       "_parent": {
+        "$ref": "SCOLIX0000000739"
+       },
+       "name": "Exporter des rapports (CSV, Excel, PDF)"
+      },
+      {
+       "_type": "UMLUseCase",
+       "_id": "SCOLIX0000000767",
+       "_parent": {
+        "$ref": "SCOLIX0000000739"
+       },
+       "name": "Consulter le journal d'audit"
+      }
+     ]
+    },
+    {
+     "_type": "UMLUseCaseDiagram",
+     "_id": "SCXDYN0000000046",
+     "_parent": {
+      "$ref": "SCOLIX0000000723"
+     },
+     "name": "CU — Gestionnaire (Directeur, Administrateur)",
+     "ownedViews": [
+      {
+       "_type": "UMLUseCaseSubjectView",
+       "_id": "SCXDYN0000000047",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "left": 280,
+       "top": 20,
+       "width": 950,
+       "height": 816,
+       "model": {
+        "$ref": "SCOLIX0000000739"
+       },
+       "containedViews": [
+        {
+         "$ref": "SCXDYN0000000048"
+        },
+        {
+         "$ref": "SCXDYN0000000049"
+        },
+        {
+         "$ref": "SCXDYN0000000050"
+        },
+        {
+         "$ref": "SCXDYN0000000051"
+        },
+        {
+         "$ref": "SCXDYN0000000052"
+        },
+        {
+         "$ref": "SCXDYN0000000053"
+        },
+        {
+         "$ref": "SCXDYN0000000054"
+        },
+        {
+         "$ref": "SCXDYN0000000055"
+        },
+        {
+         "$ref": "SCXDYN0000000056"
+        },
+        {
+         "$ref": "SCXDYN0000000057"
+        },
+        {
+         "$ref": "SCXDYN0000000058"
+        },
+        {
+         "$ref": "SCXDYN0000000059"
+        },
+        {
+         "$ref": "SCXDYN0000000060"
+        },
+        {
+         "$ref": "SCXDYN0000000061"
+        },
+        {
+         "$ref": "SCXDYN0000000062"
+        }
+       ],
+       "fillColor": "#FAFBFC"
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "SCXDYN0000000048",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "left": 330,
+       "top": 70,
+       "width": 320,
+       "height": 44,
+       "model": {
+        "$ref": "SCOLIX0000000754"
+       },
+       "fillColor": "#FFFFFF",
+       "suppressAttributes": true,
+       "suppressOperations": true,
+       "containerView": {
+        "$ref": "SCXDYN0000000047"
+       }
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "SCXDYN0000000049",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "left": 330,
+       "top": 132,
+       "width": 320,
+       "height": 44,
+       "model": {
+        "$ref": "SCOLIX0000000756"
+       },
+       "fillColor": "#FFFFFF",
+       "suppressAttributes": true,
+       "suppressOperations": true,
+       "containerView": {
+        "$ref": "SCXDYN0000000047"
+       }
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "SCXDYN0000000050",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "left": 330,
+       "top": 194,
+       "width": 320,
+       "height": 44,
+       "model": {
+        "$ref": "SCOLIX0000000757"
+       },
+       "fillColor": "#FFFFFF",
+       "suppressAttributes": true,
+       "suppressOperations": true,
+       "containerView": {
+        "$ref": "SCXDYN0000000047"
+       }
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "SCXDYN0000000051",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "left": 330,
+       "top": 256,
+       "width": 320,
+       "height": 44,
+       "model": {
+        "$ref": "SCOLIX0000000761"
+       },
+       "fillColor": "#FFFFFF",
+       "suppressAttributes": true,
+       "suppressOperations": true,
+       "containerView": {
+        "$ref": "SCXDYN0000000047"
+       }
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "SCXDYN0000000052",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "left": 330,
+       "top": 318,
+       "width": 320,
+       "height": 44,
+       "model": {
+        "$ref": "SCOLIX0000000762"
+       },
+       "fillColor": "#FFFFFF",
+       "suppressAttributes": true,
+       "suppressOperations": true,
+       "containerView": {
+        "$ref": "SCXDYN0000000047"
+       }
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "SCXDYN0000000053",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "left": 330,
+       "top": 380,
+       "width": 320,
+       "height": 44,
+       "model": {
+        "$ref": "SCOLIX0000000763"
+       },
+       "fillColor": "#FFFFFF",
+       "suppressAttributes": true,
+       "suppressOperations": true,
+       "containerView": {
+        "$ref": "SCXDYN0000000047"
+       }
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "SCXDYN0000000054",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "left": 330,
+       "top": 442,
+       "width": 320,
+       "height": 44,
+       "model": {
+        "$ref": "SCOLIX0000000764"
+       },
+       "fillColor": "#FFFFFF",
+       "suppressAttributes": true,
+       "suppressOperations": true,
+       "containerView": {
+        "$ref": "SCXDYN0000000047"
+       }
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "SCXDYN0000000055",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "left": 330,
+       "top": 504,
+       "width": 320,
+       "height": 44,
+       "model": {
+        "$ref": "SCOLIX0000000765"
+       },
+       "fillColor": "#FFFFFF",
+       "suppressAttributes": true,
+       "suppressOperations": true,
+       "containerView": {
+        "$ref": "SCXDYN0000000047"
+       }
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "SCXDYN0000000056",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "left": 330,
+       "top": 566,
+       "width": 320,
+       "height": 44,
+       "model": {
+        "$ref": "SCOLIX0000000766"
+       },
+       "fillColor": "#FFFFFF",
+       "suppressAttributes": true,
+       "suppressOperations": true,
+       "containerView": {
+        "$ref": "SCXDYN0000000047"
+       }
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "SCXDYN0000000057",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "left": 330,
+       "top": 628,
+       "width": 320,
+       "height": 44,
+       "model": {
+        "$ref": "SCOLIX0000000767"
+       },
+       "fillColor": "#FFFFFF",
+       "suppressAttributes": true,
+       "suppressOperations": true,
+       "containerView": {
+        "$ref": "SCXDYN0000000047"
+       }
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "SCXDYN0000000058",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "left": 330,
+       "top": 690,
+       "width": 320,
+       "height": 44,
+       "model": {
+        "$ref": "SCOLIX0000000753"
+       },
+       "fillColor": "#FFFFFF",
+       "suppressAttributes": true,
+       "suppressOperations": true,
+       "containerView": {
+        "$ref": "SCXDYN0000000047"
+       }
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "SCXDYN0000000059",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "left": 330,
+       "top": 752,
+       "width": 320,
+       "height": 44,
+       "model": {
+        "$ref": "SCOLIX0000000760"
+       },
+       "fillColor": "#FFFFFF",
+       "suppressAttributes": true,
+       "suppressOperations": true,
+       "containerView": {
+        "$ref": "SCXDYN0000000047"
+       }
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "SCXDYN0000000060",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "left": 800,
+       "top": 70,
+       "width": 320,
+       "height": 44,
+       "model": {
+        "$ref": "SCOLIX0000000755"
+       },
+       "fillColor": "#FFFFFF",
+       "suppressAttributes": true,
+       "suppressOperations": true,
+       "containerView": {
+        "$ref": "SCXDYN0000000047"
+       }
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "SCXDYN0000000061",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "left": 800,
+       "top": 163,
+       "width": 320,
+       "height": 44,
+       "model": {
+        "$ref": "SCOLIX0000000758"
+       },
+       "fillColor": "#FFFFFF",
+       "suppressAttributes": true,
+       "suppressOperations": true,
+       "containerView": {
+        "$ref": "SCXDYN0000000047"
+       }
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "SCXDYN0000000062",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "left": 800,
+       "top": 225,
+       "width": 320,
+       "height": 44,
+       "model": {
+        "$ref": "SCOLIX0000000759"
+       },
+       "fillColor": "#FFFFFF",
+       "suppressAttributes": true,
+       "suppressOperations": true,
+       "containerView": {
+        "$ref": "SCXDYN0000000047"
+       }
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "SCXDYN0000000063",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "left": 150,
+       "top": 393,
+       "width": 40,
+       "height": 80,
+       "model": {
+        "$ref": "SCOLIX0000000728"
+       },
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "SCXDYN0000000064",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "left": 1320,
+       "top": 52,
+       "width": 40,
+       "height": 80,
+       "model": {
+        "$ref": "SCOLIX0000000731"
+       },
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "SCXDYN0000000065",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "left": 1320,
+       "top": 470,
+       "width": 40,
+       "height": 80,
+       "model": {
+        "$ref": "SCOLIX0000000732"
+       },
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "SCXDYN0000000066",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "tail": {
+        "$ref": "SCXDYN0000000063"
+       },
+       "head": {
+        "$ref": "SCXDYN0000000048"
+       },
+       "lineStyle": 1,
+       "model": {
+        "$ref": "SCOLIX0000000812"
+       },
+       "points": "170:433;300:92;490:92"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "SCXDYN0000000067",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "tail": {
+        "$ref": "SCXDYN0000000063"
+       },
+       "head": {
+        "$ref": "SCXDYN0000000049"
+       },
+       "lineStyle": 1,
+       "model": {
+        "$ref": "SCOLIX0000000818"
+       },
+       "points": "170:433;300:154;490:154"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "SCXDYN0000000068",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "tail": {
+        "$ref": "SCXDYN0000000063"
+       },
+       "head": {
+        "$ref": "SCXDYN0000000050"
+       },
+       "lineStyle": 1,
+       "model": {
+        "$ref": "SCOLIX0000000821"
+       },
+       "points": "170:433;300:216;490:216"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "SCXDYN0000000069",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "tail": {
+        "$ref": "SCXDYN0000000063"
+       },
+       "head": {
+        "$ref": "SCXDYN0000000051"
+       },
+       "lineStyle": 1,
+       "model": {
+        "$ref": "SCOLIX0000000827"
+       },
+       "points": "170:433;300:278;490:278"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "SCXDYN0000000070",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "tail": {
+        "$ref": "SCXDYN0000000063"
+       },
+       "head": {
+        "$ref": "SCXDYN0000000052"
+       },
+       "lineStyle": 1,
+       "model": {
+        "$ref": "SCOLIX0000000830"
+       },
+       "points": "170:433;300:340;490:340"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "SCXDYN0000000071",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "tail": {
+        "$ref": "SCXDYN0000000063"
+       },
+       "head": {
+        "$ref": "SCXDYN0000000053"
+       },
+       "lineStyle": 1,
+       "model": {
+        "$ref": "SCOLIX0000000833"
+       },
+       "points": "170:433;300:402;490:402"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "SCXDYN0000000072",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "tail": {
+        "$ref": "SCXDYN0000000063"
+       },
+       "head": {
+        "$ref": "SCXDYN0000000054"
+       },
+       "lineStyle": 1,
+       "model": {
+        "$ref": "SCOLIX0000000836"
+       },
+       "points": "170:433;300:464;490:464"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "SCXDYN0000000073",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "tail": {
+        "$ref": "SCXDYN0000000063"
+       },
+       "head": {
+        "$ref": "SCXDYN0000000055"
+       },
+       "lineStyle": 1,
+       "model": {
+        "$ref": "SCOLIX0000000839"
+       },
+       "points": "170:433;300:526;490:526"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "SCXDYN0000000074",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "tail": {
+        "$ref": "SCXDYN0000000063"
+       },
+       "head": {
+        "$ref": "SCXDYN0000000056"
+       },
+       "lineStyle": 1,
+       "model": {
+        "$ref": "SCOLIX0000000842"
+       },
+       "points": "170:433;300:588;490:588"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "SCXDYN0000000075",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "tail": {
+        "$ref": "SCXDYN0000000063"
+       },
+       "head": {
+        "$ref": "SCXDYN0000000057"
+       },
+       "lineStyle": 1,
+       "model": {
+        "$ref": "SCOLIX0000000845"
+       },
+       "points": "170:433;300:650;490:650"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "SCXDYN0000000076",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "tail": {
+        "$ref": "SCXDYN0000000063"
+       },
+       "head": {
+        "$ref": "SCXDYN0000000058"
+       },
+       "lineStyle": 1,
+       "model": {
+        "$ref": "SCOLIX0000000809"
+       },
+       "points": "170:433;300:712;490:712"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "SCXDYN0000000077",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "tail": {
+        "$ref": "SCXDYN0000000063"
+       },
+       "head": {
+        "$ref": "SCXDYN0000000059"
+       },
+       "lineStyle": 1,
+       "model": {
+        "$ref": "SCOLIX0000000824"
+       },
+       "points": "170:433;300:774;490:774"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "SCXDYN0000000078",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "tail": {
+        "$ref": "SCXDYN0000000064"
+       },
+       "head": {
+        "$ref": "SCXDYN0000000060"
+       },
+       "lineStyle": 1,
+       "model": {
+        "$ref": "SCOLIX0000000857"
+       },
+       "points": "1340:92;1215:92;960:92"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "SCXDYN0000000079",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "tail": {
+        "$ref": "SCXDYN0000000065"
+       },
+       "head": {
+        "$ref": "SCXDYN0000000062"
+       },
+       "lineStyle": 1,
+       "model": {
+        "$ref": "SCOLIX0000000860"
+       },
+       "points": "1340:510;1215:247;960:247"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "SCXDYN0000000080",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "tail": {
+        "$ref": "SCXDYN0000000065"
+       },
+       "head": {
+        "$ref": "SCXDYN0000000059"
+       },
+       "lineStyle": 1,
+       "model": {
+        "$ref": "SCOLIX0000000863"
+       },
+       "points": "1340:510;1215:774;490:774"
+      },
+      {
+       "_type": "UMLExtendView",
+       "_id": "SCXDYN0000000081",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "tail": {
+        "$ref": "SCXDYN0000000062"
+       },
+       "head": {
+        "$ref": "SCXDYN0000000050"
+       },
+       "lineStyle": 1,
+       "model": {
+        "$ref": "SCOLIX0000000868"
+       },
+       "points": "960:247;490:216"
+      },
+      {
+       "_type": "UMLExtendView",
+       "_id": "SCXDYN0000000082",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "tail": {
+        "$ref": "SCXDYN0000000060"
+       },
+       "head": {
+        "$ref": "SCXDYN0000000048"
+       },
+       "lineStyle": 1,
+       "model": {
+        "$ref": "SCOLIX0000000869"
+       },
+       "points": "960:92;490:92"
+      },
+      {
+       "_type": "UMLIncludeView",
+       "_id": "SCXDYN0000000083",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "tail": {
+        "$ref": "SCXDYN0000000050"
+       },
+       "head": {
+        "$ref": "SCXDYN0000000061"
+       },
+       "lineStyle": 1,
+       "model": {
+        "$ref": "SCOLIX0000000866"
+       },
+       "points": "490:216;960:185"
+      },
+      {
+       "_type": "UMLNoteView",
+       "_id": "SCXDYN0000000084",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "left": 280,
+       "top": 851,
+       "width": 520,
+       "height": 44,
+       "text": "Le Gestionnaire est un acteur abstrait : Directeur et Administrateur héritent de tous ces cas d'utilisation (permission IsAdminOrDirector)."
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "SCXDYN0000000085",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "left": 40,
+       "top": 563,
+       "width": 40,
+       "height": 80,
+       "model": {
+        "$ref": "SCOLIX0000000729"
+       },
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLGeneralizationView",
+       "_id": "SCXDYN0000000086",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "tail": {
+        "$ref": "SCXDYN0000000085"
+       },
+       "head": {
+        "$ref": "SCXDYN0000000063"
+       },
+       "lineStyle": 1,
+       "model": {
+        "$ref": "SCOLIX0000000737"
+       },
+       "points": "60:603;170:433"
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "SCXDYN0000000087",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "left": 150,
+       "top": 563,
+       "width": 40,
+       "height": 80,
+       "model": {
+        "$ref": "SCOLIX0000000730"
+       },
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLGeneralizationView",
+       "_id": "SCXDYN0000000088",
+       "_parent": {
+        "$ref": "SCXDYN0000000046"
+       },
+       "tail": {
+        "$ref": "SCXDYN0000000087"
+       },
+       "head": {
+        "$ref": "SCXDYN0000000063"
+       },
+       "lineStyle": 1,
+       "model": {
+        "$ref": "SCOLIX0000000738"
+       },
+       "points": "170:603;170:433"
+      }
+     ],
+     "defaultDiagram": true
+    }
+   ]
+  }
+ ]
+}

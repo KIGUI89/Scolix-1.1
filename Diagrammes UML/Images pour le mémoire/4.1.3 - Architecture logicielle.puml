@@ -1,0 +1,60 @@
+@startuml Architecture_logicielle
+!pragma layout smetana
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam shadowing false
+skinparam nodesep 30
+skinparam ranksep 45
+skinparam rectangle {
+  BackgroundColor #FFFFFF
+  BorderColor #2B3A55
+}
+skinparam package {
+  BackgroundColor #FAFBFC
+  BorderColor #2B3A55
+}
+skinparam database {
+  BackgroundColor #E5EDF8
+  BorderColor #2B3A55
+}
+skinparam ArrowColor #2B3A55
+
+package "Couche de présentation" {
+  package "Application web (React, TypeScript)" as WEBAPP {
+    rectangle "Pages et composants" as WP
+    rectangle "État et cache\n(Zustand, TanStack Query)" as WS
+    rectangle "Services d'accès à l'API\n(Axios)" as WA
+  }
+  package "Application mobile (Flutter, Dart)" as MOBAPP {
+    rectangle "Écrans (presentation)" as MP
+    rectangle "Contrôleurs d'état\n(application, Riverpod)" as MS
+    rectangle "Accès aux données\n(data, Dio + stockage sécurisé)" as MA
+  }
+}
+
+package "Couche métier : API REST (Django REST Framework)" as BACK {
+  rectangle "Routeur\n(config.urls)" as URL
+  rectangle "Authentification JWT\net permissions par rôle" as AUTH
+  rectangle "Vues\n(ViewSets, APIView)" as VIEW
+  rectangle "Sérialiseurs\n(validation des données)" as SER
+  rectangle "Services\n(règles métier)" as SVC
+  rectangle "Modèles\n(ORM Django)" as MOD
+}
+
+package "Couche de persistance" {
+  database "PostgreSQL" as DB
+}
+
+WP --> WS
+WS --> WA
+MP --> MS
+MS --> MA
+WA --> URL : HTTPS / JSON
+MA --> URL : HTTPS / JSON
+URL --> AUTH
+AUTH --> VIEW
+VIEW --> SER
+SER --> SVC
+SVC --> MOD
+MOD --> DB : SQL
+@enduml

@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "scolix-web-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "../Scolix-frontend", "run", "dev"],
+      "port": 5173
+    },
+    {
+      "name": "bibliotheque-demo-php",
+      "runtimeExecutable": "php",
+      "runtimeArgs": ["-S", "localhost:8899", "-t", "C:/Users/OTH-PC/AppData/Local/Temp/claude/C--Users-OTH-PC-OneDrive---IPNET-INSTITUTE-OF-TECHNOLOGY-Bureau-Cours-Universitaire-parcour-Licence-MEMOIRE-EduEval-Scolix-mobile-app/34ac188d-83c6-48ff-b3b3-8ac13ab4f677/scratchpad/bibliotheque-app"],
+      "port": 8899
+    }
+  ]
+}

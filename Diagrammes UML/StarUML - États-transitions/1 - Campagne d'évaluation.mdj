@@ -1,0 +1,858 @@
+{
+ "_type": "Project",
+ "_id": "SCOLIX0000000001",
+ "name": "Scolix — États — Campagne d'évaluation",
+ "documentation": "Modélisation UML de Scolix (plateforme d'évaluation des enseignants).",
+ "ownedElements": [
+  {
+   "_type": "UMLModel",
+   "_id": "SCOLIX0000000002",
+   "_parent": {
+    "$ref": "SCOLIX0000000001"
+   },
+   "name": "Modèle de classes",
+   "ownedElements": [
+    {
+     "_type": "UMLPackage",
+     "_id": "SCOLIX0000000003",
+     "_parent": {
+      "$ref": "SCOLIX0000000002"
+     },
+     "name": "Énumérations",
+     "ownedElements": [
+      {
+       "_type": "UMLEnumeration",
+       "_id": "SCOLIX0000000015",
+       "_parent": {
+        "$ref": "SCOLIX0000000003"
+       },
+       "name": "StatutCampagne",
+       "literals": [
+        {
+         "_type": "UMLEnumerationLiteral",
+         "_id": "SCOLIX0000000016",
+         "_parent": {
+          "$ref": "SCOLIX0000000015"
+         },
+         "name": "DRAFT"
+        },
+        {
+         "_type": "UMLEnumerationLiteral",
+         "_id": "SCOLIX0000000017",
+         "_parent": {
+          "$ref": "SCOLIX0000000015"
+         },
+         "name": "ACTIVE"
+        },
+        {
+         "_type": "UMLEnumerationLiteral",
+         "_id": "SCOLIX0000000018",
+         "_parent": {
+          "$ref": "SCOLIX0000000015"
+         },
+         "name": "CLOSED"
+        },
+        {
+         "_type": "UMLEnumerationLiteral",
+         "_id": "SCOLIX0000000019",
+         "_parent": {
+          "$ref": "SCOLIX0000000015"
+         },
+         "name": "CANCELLED"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "_type": "UMLPackage",
+     "_id": "SCOLIX0000000199",
+     "_parent": {
+      "$ref": "SCOLIX0000000002"
+     },
+     "name": "Campagnes et évaluations",
+     "ownedElements": [
+      {
+       "_type": "UMLClass",
+       "_id": "SCOLIX0000000200",
+       "_parent": {
+        "$ref": "SCOLIX0000000199"
+       },
+       "name": "Campagne",
+       "attributes": [
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000201",
+         "_parent": {
+          "$ref": "SCOLIX0000000200"
+         },
+         "name": "id",
+         "visibility": "private",
+         "type": "UUID",
+         "isID": true
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000202",
+         "_parent": {
+          "$ref": "SCOLIX0000000200"
+         },
+         "name": "titre",
+         "visibility": "private",
+         "type": "String"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000203",
+         "_parent": {
+          "$ref": "SCOLIX0000000200"
+         },
+         "name": "description",
+         "visibility": "private",
+         "type": "Text"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000204",
+         "_parent": {
+          "$ref": "SCOLIX0000000200"
+         },
+         "name": "dateDebut",
+         "visibility": "private",
+         "type": "DateTime"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000205",
+         "_parent": {
+          "$ref": "SCOLIX0000000200"
+         },
+         "name": "dateFin",
+         "visibility": "private",
+         "type": "DateTime"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000206",
+         "_parent": {
+          "$ref": "SCOLIX0000000200"
+         },
+         "name": "statut",
+         "visibility": "private",
+         "type": {
+          "$ref": "SCOLIX0000000015"
+         }
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000207",
+         "_parent": {
+          "$ref": "SCOLIX0000000200"
+         },
+         "name": "estSupprimee",
+         "visibility": "private",
+         "type": "Boolean"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000208",
+         "_parent": {
+          "$ref": "SCOLIX0000000200"
+         },
+         "name": "dateRappel",
+         "visibility": "private",
+         "type": "DateTime"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000209",
+         "_parent": {
+          "$ref": "SCOLIX0000000200"
+         },
+         "name": "dateCreation",
+         "visibility": "private",
+         "type": "DateTime"
+        }
+       ],
+       "operations": [
+        {
+         "_type": "UMLOperation",
+         "_id": "SCOLIX0000000210",
+         "_parent": {
+          "$ref": "SCOLIX0000000200"
+         },
+         "name": "estOuverte",
+         "visibility": "public",
+         "parameters": [
+          {
+           "_type": "UMLParameter",
+           "_id": "SCOLIX0000000211",
+           "_parent": {
+            "$ref": "SCOLIX0000000210"
+           },
+           "name": "",
+           "type": "Boolean",
+           "direction": "return"
+          }
+         ]
+        },
+        {
+         "_type": "UMLOperation",
+         "_id": "SCOLIX0000000212",
+         "_parent": {
+          "$ref": "SCOLIX0000000200"
+         },
+         "name": "validerDates",
+         "visibility": "public",
+         "parameters": []
+        }
+       ],
+       "ownedElements": [
+        {
+         "_type": "UMLStateMachine",
+         "_id": "SCXEXT0000000243",
+         "_parent": {
+          "$ref": "SCOLIX0000000200"
+         },
+         "name": "Campagne d'évaluation",
+         "regions": [
+          {
+           "_type": "UMLRegion",
+           "_id": "SCXEXT0000000244",
+           "_parent": {
+            "$ref": "SCXEXT0000000243"
+           },
+           "vertices": [
+            {
+             "_type": "UMLPseudostate",
+             "_id": "SCXEXT0000000246",
+             "_parent": {
+              "$ref": "SCXEXT0000000244"
+             },
+             "name": "",
+             "kind": "initial"
+            },
+            {
+             "_type": "UMLState",
+             "_id": "SCXEXT0000000248",
+             "_parent": {
+              "$ref": "SCXEXT0000000244"
+             },
+             "name": "Brouillon (DRAFT)"
+            },
+            {
+             "_type": "UMLState",
+             "_id": "SCXEXT0000000250",
+             "_parent": {
+              "$ref": "SCXEXT0000000244"
+             },
+             "name": "Active (ACTIVE)"
+            },
+            {
+             "_type": "UMLState",
+             "_id": "SCXEXT0000000252",
+             "_parent": {
+              "$ref": "SCXEXT0000000244"
+             },
+             "name": "Clôturée (CLOSED)"
+            },
+            {
+             "_type": "UMLState",
+             "_id": "SCXEXT0000000254",
+             "_parent": {
+              "$ref": "SCXEXT0000000244"
+             },
+             "name": "Annulée (CANCELLED)"
+            },
+            {
+             "_type": "UMLFinalState",
+             "_id": "SCXEXT0000000256",
+             "_parent": {
+              "$ref": "SCXEXT0000000244"
+             },
+             "name": ""
+            }
+           ],
+           "transitions": [
+            {
+             "_type": "UMLTransition",
+             "_id": "SCXEXT0000000258",
+             "_parent": {
+              "$ref": "SCXEXT0000000244"
+             },
+             "source": {
+              "$ref": "SCXEXT0000000246"
+             },
+             "target": {
+              "$ref": "SCXEXT0000000248"
+             },
+             "guard": "",
+             "triggers": [
+              {
+               "_type": "UMLEvent",
+               "_id": "SCXEXT0000000259",
+               "_parent": {
+                "$ref": "SCXEXT0000000258"
+               },
+               "name": "créer"
+              }
+             ],
+             "effects": []
+            },
+            {
+             "_type": "UMLTransition",
+             "_id": "SCXEXT0000000261",
+             "_parent": {
+              "$ref": "SCXEXT0000000244"
+             },
+             "source": {
+              "$ref": "SCXEXT0000000248"
+             },
+             "target": {
+              "$ref": "SCXEXT0000000250"
+             },
+             "guard": "date de fin non dépassée",
+             "triggers": [
+              {
+               "_type": "UMLEvent",
+               "_id": "SCXEXT0000000262",
+               "_parent": {
+                "$ref": "SCXEXT0000000261"
+               },
+               "name": "activer"
+              }
+             ],
+             "effects": [
+              {
+               "_type": "UMLOpaqueBehavior",
+               "_id": "SCXEXT0000000263",
+               "_parent": {
+                "$ref": "SCXEXT0000000261"
+               },
+               "name": "notifier les étudiants inscrits"
+              }
+             ]
+            },
+            {
+             "_type": "UMLTransition",
+             "_id": "SCXEXT0000000265",
+             "_parent": {
+              "$ref": "SCXEXT0000000244"
+             },
+             "source": {
+              "$ref": "SCXEXT0000000250"
+             },
+             "target": {
+              "$ref": "SCXEXT0000000252"
+             },
+             "guard": "",
+             "triggers": [
+              {
+               "_type": "UMLEvent",
+               "_id": "SCXEXT0000000266",
+               "_parent": {
+                "$ref": "SCXEXT0000000265"
+               },
+               "name": "clôturer"
+              }
+             ],
+             "effects": []
+            },
+            {
+             "_type": "UMLTransition",
+             "_id": "SCXEXT0000000268",
+             "_parent": {
+              "$ref": "SCXEXT0000000244"
+             },
+             "source": {
+              "$ref": "SCXEXT0000000252"
+             },
+             "target": {
+              "$ref": "SCXEXT0000000250"
+             },
+             "guard": "date de fin non dépassée",
+             "triggers": [
+              {
+               "_type": "UMLEvent",
+               "_id": "SCXEXT0000000269",
+               "_parent": {
+                "$ref": "SCXEXT0000000268"
+               },
+               "name": "activer"
+              }
+             ],
+             "effects": [
+              {
+               "_type": "UMLOpaqueBehavior",
+               "_id": "SCXEXT0000000270",
+               "_parent": {
+                "$ref": "SCXEXT0000000268"
+               },
+               "name": "notifier les étudiants"
+              }
+             ]
+            },
+            {
+             "_type": "UMLTransition",
+             "_id": "SCXEXT0000000272",
+             "_parent": {
+              "$ref": "SCXEXT0000000244"
+             },
+             "source": {
+              "$ref": "SCXEXT0000000248"
+             },
+             "target": {
+              "$ref": "SCXEXT0000000252"
+             },
+             "guard": "",
+             "triggers": [
+              {
+               "_type": "UMLEvent",
+               "_id": "SCXEXT0000000273",
+               "_parent": {
+                "$ref": "SCXEXT0000000272"
+               },
+               "name": "clôturer"
+              }
+             ],
+             "effects": []
+            },
+            {
+             "_type": "UMLTransition",
+             "_id": "SCXEXT0000000275",
+             "_parent": {
+              "$ref": "SCXEXT0000000244"
+             },
+             "source": {
+              "$ref": "SCXEXT0000000248"
+             },
+             "target": {
+              "$ref": "SCXEXT0000000254"
+             },
+             "guard": "",
+             "triggers": [
+              {
+               "_type": "UMLEvent",
+               "_id": "SCXEXT0000000276",
+               "_parent": {
+                "$ref": "SCXEXT0000000275"
+               },
+               "name": "annuler"
+              }
+             ],
+             "effects": []
+            },
+            {
+             "_type": "UMLTransition",
+             "_id": "SCXEXT0000000278",
+             "_parent": {
+              "$ref": "SCXEXT0000000244"
+             },
+             "source": {
+              "$ref": "SCXEXT0000000250"
+             },
+             "target": {
+              "$ref": "SCXEXT0000000254"
+             },
+             "guard": "",
+             "triggers": [
+              {
+               "_type": "UMLEvent",
+               "_id": "SCXEXT0000000279",
+               "_parent": {
+                "$ref": "SCXEXT0000000278"
+               },
+               "name": "annuler"
+              }
+             ],
+             "effects": []
+            },
+            {
+             "_type": "UMLTransition",
+             "_id": "SCXEXT0000000281",
+             "_parent": {
+              "$ref": "SCXEXT0000000244"
+             },
+             "source": {
+              "$ref": "SCXEXT0000000250"
+             },
+             "target": {
+              "$ref": "SCXEXT0000000250"
+             },
+             "guard": "clôture dans moins de 24 h",
+             "triggers": [
+              {
+               "_type": "UMLEvent",
+               "_id": "SCXEXT0000000282",
+               "_parent": {
+                "$ref": "SCXEXT0000000281"
+               },
+               "name": "relance automatique"
+              }
+             ],
+             "effects": [
+              {
+               "_type": "UMLOpaqueBehavior",
+               "_id": "SCXEXT0000000283",
+               "_parent": {
+                "$ref": "SCXEXT0000000281"
+               },
+               "name": "relancer les retardataires"
+              }
+             ]
+            },
+            {
+             "_type": "UMLTransition",
+             "_id": "SCXEXT0000000285",
+             "_parent": {
+              "$ref": "SCXEXT0000000244"
+             },
+             "source": {
+              "$ref": "SCXEXT0000000252"
+             },
+             "target": {
+              "$ref": "SCXEXT0000000256"
+             },
+             "guard": "",
+             "triggers": [
+              {
+               "_type": "UMLEvent",
+               "_id": "SCXEXT0000000286",
+               "_parent": {
+                "$ref": "SCXEXT0000000285"
+               },
+               "name": "supprimer"
+              }
+             ],
+             "effects": []
+            },
+            {
+             "_type": "UMLTransition",
+             "_id": "SCXEXT0000000288",
+             "_parent": {
+              "$ref": "SCXEXT0000000244"
+             },
+             "source": {
+              "$ref": "SCXEXT0000000254"
+             },
+             "target": {
+              "$ref": "SCXEXT0000000256"
+             },
+             "guard": "",
+             "triggers": [
+              {
+               "_type": "UMLEvent",
+               "_id": "SCXEXT0000000289",
+               "_parent": {
+                "$ref": "SCXEXT0000000288"
+               },
+               "name": "supprimer"
+              }
+             ],
+             "effects": []
+            }
+           ]
+          }
+         ],
+         "ownedElements": [
+          {
+           "_type": "UMLStatechartDiagram",
+           "_id": "SCXEXT0000000245",
+           "_parent": {
+            "$ref": "SCXEXT0000000243"
+           },
+           "name": "États — Campagne d'évaluation",
+           "ownedViews": [
+            {
+             "_type": "UMLPseudostateView",
+             "_id": "SCXEXT0000000247",
+             "_parent": {
+              "$ref": "SCXEXT0000000245"
+             },
+             "left": 40,
+             "top": 214,
+             "width": 22,
+             "height": 22,
+             "model": {
+              "$ref": "SCXEXT0000000246"
+             }
+            },
+            {
+             "_type": "UMLStateView",
+             "_id": "SCXEXT0000000249",
+             "_parent": {
+              "$ref": "SCXEXT0000000245"
+             },
+             "left": 140,
+             "top": 200,
+             "width": 170,
+             "height": 50,
+             "model": {
+              "$ref": "SCXEXT0000000248"
+             },
+             "fillColor": "#FFFFFF"
+            },
+            {
+             "_type": "UMLStateView",
+             "_id": "SCXEXT0000000251",
+             "_parent": {
+              "$ref": "SCXEXT0000000245"
+             },
+             "left": 790,
+             "top": 200,
+             "width": 170,
+             "height": 50,
+             "model": {
+              "$ref": "SCXEXT0000000250"
+             },
+             "fillColor": "#FFFFFF"
+            },
+            {
+             "_type": "UMLStateView",
+             "_id": "SCXEXT0000000253",
+             "_parent": {
+              "$ref": "SCXEXT0000000245"
+             },
+             "left": 1440,
+             "top": 200,
+             "width": 170,
+             "height": 50,
+             "model": {
+              "$ref": "SCXEXT0000000252"
+             },
+             "fillColor": "#FFFFFF"
+            },
+            {
+             "_type": "UMLStateView",
+             "_id": "SCXEXT0000000255",
+             "_parent": {
+              "$ref": "SCXEXT0000000245"
+             },
+             "left": 790,
+             "top": 480,
+             "width": 170,
+             "height": 50,
+             "model": {
+              "$ref": "SCXEXT0000000254"
+             },
+             "fillColor": "#FFFFFF"
+            },
+            {
+             "_type": "UMLFinalStateView",
+             "_id": "SCXEXT0000000257",
+             "_parent": {
+              "$ref": "SCXEXT0000000245"
+             },
+             "left": 1512,
+             "top": 492,
+             "width": 26,
+             "height": 26,
+             "model": {
+              "$ref": "SCXEXT0000000256"
+             }
+            },
+            {
+             "_type": "UMLTransitionView",
+             "_id": "SCXEXT0000000260",
+             "_parent": {
+              "$ref": "SCXEXT0000000245"
+             },
+             "tail": {
+              "$ref": "SCXEXT0000000247"
+             },
+             "head": {
+              "$ref": "SCXEXT0000000249"
+             },
+             "lineStyle": 1,
+             "model": {
+              "$ref": "SCXEXT0000000258"
+             },
+             "points": "51:225;225:225"
+            },
+            {
+             "_type": "UMLTransitionView",
+             "_id": "SCXEXT0000000264",
+             "_parent": {
+              "$ref": "SCXEXT0000000245"
+             },
+             "tail": {
+              "$ref": "SCXEXT0000000249"
+             },
+             "head": {
+              "$ref": "SCXEXT0000000251"
+             },
+             "lineStyle": 1,
+             "model": {
+              "$ref": "SCXEXT0000000261"
+             },
+             "points": "225:225;875:225"
+            },
+            {
+             "_type": "UMLTransitionView",
+             "_id": "SCXEXT0000000267",
+             "_parent": {
+              "$ref": "SCXEXT0000000245"
+             },
+             "tail": {
+              "$ref": "SCXEXT0000000251"
+             },
+             "head": {
+              "$ref": "SCXEXT0000000253"
+             },
+             "lineStyle": 1,
+             "model": {
+              "$ref": "SCXEXT0000000265"
+             },
+             "points": "960:215;1440:215"
+            },
+            {
+             "_type": "UMLTransitionView",
+             "_id": "SCXEXT0000000271",
+             "_parent": {
+              "$ref": "SCXEXT0000000245"
+             },
+             "tail": {
+              "$ref": "SCXEXT0000000253"
+             },
+             "head": {
+              "$ref": "SCXEXT0000000251"
+             },
+             "lineStyle": 1,
+             "model": {
+              "$ref": "SCXEXT0000000268"
+             },
+             "points": "1440:240;960:240"
+            },
+            {
+             "_type": "UMLTransitionView",
+             "_id": "SCXEXT0000000274",
+             "_parent": {
+              "$ref": "SCXEXT0000000245"
+             },
+             "tail": {
+              "$ref": "SCXEXT0000000249"
+             },
+             "head": {
+              "$ref": "SCXEXT0000000253"
+             },
+             "lineStyle": 1,
+             "model": {
+              "$ref": "SCXEXT0000000272"
+             },
+             "points": "225:200;225:50;1525:50;1525:200"
+            },
+            {
+             "_type": "UMLTransitionView",
+             "_id": "SCXEXT0000000277",
+             "_parent": {
+              "$ref": "SCXEXT0000000245"
+             },
+             "tail": {
+              "$ref": "SCXEXT0000000249"
+             },
+             "head": {
+              "$ref": "SCXEXT0000000255"
+             },
+             "lineStyle": 1,
+             "model": {
+              "$ref": "SCXEXT0000000275"
+             },
+             "points": "225:250;225:505;790:505"
+            },
+            {
+             "_type": "UMLTransitionView",
+             "_id": "SCXEXT0000000280",
+             "_parent": {
+              "$ref": "SCXEXT0000000245"
+             },
+             "tail": {
+              "$ref": "SCXEXT0000000251"
+             },
+             "head": {
+              "$ref": "SCXEXT0000000255"
+             },
+             "lineStyle": 1,
+             "model": {
+              "$ref": "SCXEXT0000000278"
+             },
+             "points": "875:225;875:505"
+            },
+            {
+             "_type": "UMLTransitionView",
+             "_id": "SCXEXT0000000284",
+             "_parent": {
+              "$ref": "SCXEXT0000000245"
+             },
+             "tail": {
+              "$ref": "SCXEXT0000000251"
+             },
+             "head": {
+              "$ref": "SCXEXT0000000251"
+             },
+             "lineStyle": 1,
+             "model": {
+              "$ref": "SCXEXT0000000281"
+             },
+             "points": "830:200;830:125;920:125;920:200"
+            },
+            {
+             "_type": "UMLTransitionView",
+             "_id": "SCXEXT0000000287",
+             "_parent": {
+              "$ref": "SCXEXT0000000245"
+             },
+             "tail": {
+              "$ref": "SCXEXT0000000253"
+             },
+             "head": {
+              "$ref": "SCXEXT0000000257"
+             },
+             "lineStyle": 1,
+             "model": {
+              "$ref": "SCXEXT0000000285"
+             },
+             "points": "1525:225;1525:505"
+            },
+            {
+             "_type": "UMLTransitionView",
+             "_id": "SCXEXT0000000290",
+             "_parent": {
+              "$ref": "SCXEXT0000000245"
+             },
+             "tail": {
+              "$ref": "SCXEXT0000000255"
+             },
+             "head": {
+              "$ref": "SCXEXT0000000257"
+             },
+             "lineStyle": 1,
+             "model": {
+              "$ref": "SCXEXT0000000288"
+             },
+             "points": "875:505;1525:505"
+            },
+            {
+             "_type": "UMLNoteView",
+             "_id": "SCXEXT0000000291",
+             "_parent": {
+              "$ref": "SCXEXT0000000245"
+             },
+             "left": 40,
+             "top": 600,
+             "width": 560,
+             "height": 44,
+             "text": "La suppression est logique (is_deleted) : la campagne et ses évaluations restent en base."
+            }
+           ],
+           "defaultDiagram": true
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

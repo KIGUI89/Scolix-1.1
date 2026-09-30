@@ -1,0 +1,342 @@
+[
+  {
+    "model": "sync.coursesync",
+    "pk": "1337c10e-0a81-447f-9668-95298aa88f1b",
+    "fields": {
+      "university_id": "ERP-COURS-001",
+      "code": "ALG101",
+      "name": "Algorithmique et Programmation",
+      "description": "Cours de Algorithmique et Programmation pour le niveau L1",
+      "teacher": "f2a0118a-3dc8-44d5-af68-5bab724b0aa9",
+      "department": "f6dadf9b-a630-4e42-b7bf-dc5dd1e4d9c2",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "level": "L1",
+      "cohort": "GL-B",
+      "credit": 3,
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.coursesync",
+    "pk": "1627bde8-2ceb-4285-b554-b83049d4f4d6",
+    "fields": {
+      "university_id": "ERP-COURS-002",
+      "code": "POO201",
+      "name": "Programmation Orientée Objet",
+      "description": "Cours de Programmation Orientée Objet pour le niveau L2",
+      "teacher": "f78010e8-ff32-4f09-9fca-f5175bd63690",
+      "department": "f6dadf9b-a630-4e42-b7bf-dc5dd1e4d9c2",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "level": "L2",
+      "cohort": "GL-B",
+      "credit": 4,
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.coursesync",
+    "pk": "28688cb9-7af6-498c-a98e-b28910e5d821",
+    "fields": {
+      "university_id": "ERP-COURS-003",
+      "code": "WEB301",
+      "name": "Développement Web Avancé",
+      "description": "Cours de Développement Web Avancé pour le niveau L3",
+      "teacher": "f78010e8-ff32-4f09-9fca-f5175bd63690",
+      "department": "f6dadf9b-a630-4e42-b7bf-dc5dd1e4d9c2",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "level": "L3",
+      "cohort": "GL-A",
+      "credit": 4,
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.coursesync",
+    "pk": "79457aa6-badf-4082-b41f-0540f060008e",
+    "fields": {
+      "university_id": "ERP-COURS-004",
+      "code": "ARCH302",
+      "name": "Architecture Logicielle",
+      "description": "Cours de Architecture Logicielle pour le niveau L3",
+      "teacher": "d3b902bd-a7a0-48e8-aa1e-96b3f3e952c6",
+      "department": "f6dadf9b-a630-4e42-b7bf-dc5dd1e4d9c2",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "level": "L3",
+      "cohort": "GL-A",
+      "credit": 3,
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.coursesync",
+    "pk": "a892f19d-7c3e-49d3-927d-e54c25596a86",
+    "fields": {
+      "university_id": "ERP-COURS-005",
+      "code": "MIC401",
+      "name": "Microservices",
+      "description": "Cours de Microservices pour le niveau M1",
+      "teacher": "f78010e8-ff32-4f09-9fca-f5175bd63690",
+      "department": "f6dadf9b-a630-4e42-b7bf-dc5dd1e4d9c2",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "level": "M1",
+      "cohort": "GL-A",
+      "credit": 3,
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.coursesync",
+    "pk": "ce22aa20-403f-428d-8e4c-4b2f86762df4",
+    "fields": {
+      "university_id": "ERP-COURS-006",
+      "code": "NET101",
+      "name": "Introduction aux Réseaux",
+      "description": "Cours de Introduction aux Réseaux pour le niveau L1",
+      "teacher": "39884e6f-039d-437e-a971-52e375567e29",
+      "department": "e25b2977-7d61-49db-a29b-d53ae077514b",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "level": "L1",
+      "cohort": "RS-A",
+      "credit": 5,
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.coursesync",
+    "pk": "13351cd4-a744-4e20-bba1-c4857ee7f800",
+    "fields": {
+      "university_id": "ERP-COURS-007",
+      "code": "NET201",
+      "name": "Routage et Commutation",
+      "description": "Cours de Routage et Commutation pour le niveau L2",
+      "teacher": "39884e6f-039d-437e-a971-52e375567e29",
+      "department": "e25b2977-7d61-49db-a29b-d53ae077514b",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "level": "L2",
+      "cohort": "RS-A",
+      "credit": 5,
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.coursesync",
+    "pk": "829d3697-e5ab-4105-bc56-960cfd5e2111",
+    "fields": {
+      "university_id": "ERP-COURS-008",
+      "code": "LIN301",
+      "name": "Administration Système Linux",
+      "description": "Cours de Administration Système Linux pour le niveau L3",
+      "teacher": "39884e6f-039d-437e-a971-52e375567e29",
+      "department": "e25b2977-7d61-49db-a29b-d53ae077514b",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "level": "L3",
+      "cohort": "RS-B",
+      "credit": 3,
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.coursesync",
+    "pk": "1c07aa1b-81af-4902-80ef-c13b76d2d722",
+    "fields": {
+      "university_id": "ERP-COURS-009",
+      "code": "SEC302",
+      "name": "Sécurité Réseaux",
+      "description": "Cours de Sécurité Réseaux pour le niveau L3",
+      "teacher": "e2a49b85-e834-43f7-a152-8e2d7cc5554d",
+      "department": "e25b2977-7d61-49db-a29b-d53ae077514b",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "level": "L3",
+      "cohort": "RS-A",
+      "credit": 2,
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.coursesync",
+    "pk": "d74292e7-68b7-4b14-b1a4-c92cc553b506",
+    "fields": {
+      "university_id": "ERP-COURS-010",
+      "code": "CLD401",
+      "name": "Cloud et Virtualisation",
+      "description": "Cours de Cloud et Virtualisation pour le niveau M1",
+      "teacher": "deff2ad8-41a1-4e47-83ef-34681b95abcc",
+      "department": "e25b2977-7d61-49db-a29b-d53ae077514b",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "level": "M1",
+      "cohort": "RS-B",
+      "credit": 3,
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.coursesync",
+    "pk": "c85aed9c-fc3b-4c89-8578-334045e290b2",
+    "fields": {
+      "university_id": "ERP-COURS-011",
+      "code": "PYAI201",
+      "name": "Python pour l’IA",
+      "description": "Cours de Python pour l’IA pour le niveau L2",
+      "teacher": "427bcd47-58b8-4d62-b42d-acd536426258",
+      "department": "d8b475df-dd8c-416b-86d8-377e5ab141a2",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "level": "L2",
+      "cohort": "IA-A",
+      "credit": 2,
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.coursesync",
+    "pk": "3346142a-d64f-4e51-b0f4-cb342ecf2a2f",
+    "fields": {
+      "university_id": "ERP-COURS-012",
+      "code": "ML301",
+      "name": "Machine Learning",
+      "description": "Cours de Machine Learning pour le niveau L3",
+      "teacher": "76d46dd4-e90f-48e5-82bf-7016df33d7d5",
+      "department": "d8b475df-dd8c-416b-86d8-377e5ab141a2",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "level": "L3",
+      "cohort": "IA-A",
+      "credit": 2,
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.coursesync",
+    "pk": "d2ba2f05-29ec-4eee-bdfb-2b4c5b002771",
+    "fields": {
+      "university_id": "ERP-COURS-013",
+      "code": "DL401",
+      "name": "Deep Learning",
+      "description": "Cours de Deep Learning pour le niveau M1",
+      "teacher": "b5c2ad0b-ce1d-4bf4-b0cb-ee7d18e3666b",
+      "department": "d8b475df-dd8c-416b-86d8-377e5ab141a2",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "level": "M1",
+      "cohort": "IA-A",
+      "credit": 5,
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.coursesync",
+    "pk": "699c3886-cefc-4707-b5d2-8c34da12ff4d",
+    "fields": {
+      "university_id": "ERP-COURS-014",
+      "code": "MLOPS501",
+      "name": "MLOps",
+      "description": "Cours de MLOps pour le niveau M2",
+      "teacher": "52ded30b-d1b8-4c77-8865-ba404d0d2665",
+      "department": "d8b475df-dd8c-416b-86d8-377e5ab141a2",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "level": "M2",
+      "cohort": "IA-A",
+      "credit": 5,
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.coursesync",
+    "pk": "e5ff7a3a-1103-4a9d-8b7d-90174038c88d",
+    "fields": {
+      "university_id": "ERP-COURS-015",
+      "code": "SI101",
+      "name": "Systèmes d’Information",
+      "description": "Cours de Systèmes d’Information pour le niveau L1",
+      "teacher": "a4e3d98e-8e01-426e-9154-790cf274c952",
+      "department": "b2427d5b-ebab-48cd-bd04-b307839f8870",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "level": "L1",
+      "cohort": "SI-B",
+      "credit": 3,
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.coursesync",
+    "pk": "64f57844-2638-4b02-9b8e-43966c8d785b",
+    "fields": {
+      "university_id": "ERP-COURS-016",
+      "code": "BD201",
+      "name": "Bases de Données",
+      "description": "Cours de Bases de Données pour le niveau L2",
+      "teacher": "a4e3d98e-8e01-426e-9154-790cf274c952",
+      "department": "b2427d5b-ebab-48cd-bd04-b307839f8870",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "level": "L2",
+      "cohort": "SI-B",
+      "credit": 4,
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.coursesync",
+    "pk": "02d304a6-c9d3-4bce-93f4-5d9fd5ca4438",
+    "fields": {
+      "university_id": "ERP-COURS-017",
+      "code": "ERP301",
+      "name": "ERP et Intégration SI",
+      "description": "Cours de ERP et Intégration SI pour le niveau L3",
+      "teacher": "c28cadd3-2f17-46dd-8621-0d3ad1458bbf",
+      "department": "b2427d5b-ebab-48cd-bd04-b307839f8870",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "level": "L3",
+      "cohort": "SI-B",
+      "credit": 5,
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.coursesync",
+    "pk": "d5d28493-055d-47a1-86cd-8e9b754c6501",
+    "fields": {
+      "university_id": "ERP-COURS-018",
+      "code": "GPSI302",
+      "name": "Gestion de Projet SI",
+      "description": "Cours de Gestion de Projet SI pour le niveau L3",
+      "teacher": "c28cadd3-2f17-46dd-8621-0d3ad1458bbf",
+      "department": "b2427d5b-ebab-48cd-bd04-b307839f8870",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "level": "L3",
+      "cohort": "SI-B",
+      "credit": 5,
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.coursesync",
+    "pk": "470058c8-eba1-4b2b-8d81-19fc5073192b",
+    "fields": {
+      "university_id": "ERP-COURS-019",
+      "code": "BI401",
+      "name": "Business Intelligence",
+      "description": "Cours de Business Intelligence pour le niveau M1",
+      "teacher": "c28cadd3-2f17-46dd-8621-0d3ad1458bbf",
+      "department": "b2427d5b-ebab-48cd-bd04-b307839f8870",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "level": "M1",
+      "cohort": "SI-B",
+      "credit": 3,
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.coursesync",
+    "pk": "58f35b19-bdd4-405d-b8e6-526030ea0538",
+    "fields": {
+      "university_id": "ERP-COURS-020",
+      "code": "GOV501",
+      "name": "Gouvernance SI",
+      "description": "Cours de Gouvernance SI pour le niveau M2",
+      "teacher": "a4e3d98e-8e01-426e-9154-790cf274c952",
+      "department": "b2427d5b-ebab-48cd-bd04-b307839f8870",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "level": "M2",
+      "cohort": "SI-B",
+      "credit": 4,
+      "is_active": true
+    }
+  }
+]

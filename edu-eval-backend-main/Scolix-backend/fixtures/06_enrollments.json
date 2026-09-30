@@ -1,0 +1,1972 @@
+[
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "5e032192-36bd-4c66-ba89-0452f0c4a5d6",
+    "fields": {
+      "student": "1de1e4b2-eabd-4096-be1c-2df84f498c69",
+      "course": "79457aa6-badf-4082-b41f-0540f060008e",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "14c2f111-e3bd-48fb-855d-a93e787bd6e1",
+    "fields": {
+      "student": "1de1e4b2-eabd-4096-be1c-2df84f498c69",
+      "course": "1337c10e-0a81-447f-9668-95298aa88f1b",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "05c25cff-7c5b-4e4a-99db-40be4e2a5324",
+    "fields": {
+      "student": "2454bfff-d5e8-4f95-8883-2b8603cd775e",
+      "course": "13351cd4-a744-4e20-bba1-c4857ee7f800",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "4ac1572b-768a-4b27-a381-9704afd3f0df",
+    "fields": {
+      "student": "2454bfff-d5e8-4f95-8883-2b8603cd775e",
+      "course": "ce22aa20-403f-428d-8e4c-4b2f86762df4",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "9d421dbc-b256-4ae3-a096-32fc914a8283",
+    "fields": {
+      "student": "aee66576-d353-48d4-a47c-4ea13b3d2d18",
+      "course": "3346142a-d64f-4e51-b0f4-cb342ecf2a2f",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "d88fc1b4-a850-4f7e-9d50-3d18e46d877c",
+    "fields": {
+      "student": "8478c5f3-7250-49f1-8c31-737712f51861",
+      "course": "470058c8-eba1-4b2b-8d81-19fc5073192b",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "98579bf9-eb84-4379-bf68-fde35caf4d6d",
+    "fields": {
+      "student": "c2fa2889-1abd-492f-9555-d53189ab0c3e",
+      "course": "1627bde8-2ceb-4285-b554-b83049d4f4d6",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "209a5dca-d66b-41c8-9cdb-6b2ad60d3538",
+    "fields": {
+      "student": "c2fa2889-1abd-492f-9555-d53189ab0c3e",
+      "course": "79457aa6-badf-4082-b41f-0540f060008e",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "3c187cd3-ba20-4ec0-abb1-38732a777e2c",
+    "fields": {
+      "student": "c2fa2889-1abd-492f-9555-d53189ab0c3e",
+      "course": "1337c10e-0a81-447f-9668-95298aa88f1b",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "ddbdb98b-7b05-4225-ad1e-1aeab8029274",
+    "fields": {
+      "student": "64aea765-537a-4785-ba76-82a316b0e842",
+      "course": "ce22aa20-403f-428d-8e4c-4b2f86762df4",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "471aa7e3-4825-4bd2-87d0-6c4f1f2f5c91",
+    "fields": {
+      "student": "6a4a5d8f-8508-41cf-9ccf-2bfaefbd8c3d",
+      "course": "c85aed9c-fc3b-4c89-8578-334045e290b2",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "c6e8b36b-1e5e-4053-897e-4415df9be145",
+    "fields": {
+      "student": "6a4a5d8f-8508-41cf-9ccf-2bfaefbd8c3d",
+      "course": "3346142a-d64f-4e51-b0f4-cb342ecf2a2f",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "b1fd881e-fb2a-43c8-b0ce-ad49fa907ae1",
+    "fields": {
+      "student": "4c620403-4f2f-4796-853e-9587d9dd6063",
+      "course": "02d304a6-c9d3-4bce-93f4-5d9fd5ca4438",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "f7058dd6-a60a-452a-bb66-49c1e6eb4d95",
+    "fields": {
+      "student": "4c620403-4f2f-4796-853e-9587d9dd6063",
+      "course": "d5d28493-055d-47a1-86cd-8e9b754c6501",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "e44fd8f8-f802-4ca5-b64b-19d3ea86e6fe",
+    "fields": {
+      "student": "4c620403-4f2f-4796-853e-9587d9dd6063",
+      "course": "64f57844-2638-4b02-9b8e-43966c8d785b",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "2784e8a6-7778-45c3-998d-5dff958b6b6b",
+    "fields": {
+      "student": "ee677db7-2100-4260-a058-4c44edc139d0",
+      "course": "79457aa6-badf-4082-b41f-0540f060008e",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "be99e47d-bd5f-433d-bb4e-cb20b5ee8704",
+    "fields": {
+      "student": "ee677db7-2100-4260-a058-4c44edc139d0",
+      "course": "a892f19d-7c3e-49d3-927d-e54c25596a86",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "3d39f183-d5ad-46e3-97a8-759238a4ce17",
+    "fields": {
+      "student": "717e89e2-eb33-42d1-b786-22321acd5441",
+      "course": "d74292e7-68b7-4b14-b1a4-c92cc553b506",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "503170dc-9879-4ba2-9703-d2263e03e6a1",
+    "fields": {
+      "student": "59f4209b-28f7-4e27-9c06-f0bae6bcd035",
+      "course": "d2ba2f05-29ec-4eee-bdfb-2b4c5b002771",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "15e0457c-d47d-48e7-a990-dd9c2f5426fd",
+    "fields": {
+      "student": "59f4209b-28f7-4e27-9c06-f0bae6bcd035",
+      "course": "c85aed9c-fc3b-4c89-8578-334045e290b2",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "69c0640b-601e-4baa-a3c1-5fbcef956650",
+    "fields": {
+      "student": "d73e9929-9958-4ae8-a39c-425f7be7c49b",
+      "course": "e5ff7a3a-1103-4a9d-8b7d-90174038c88d",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "72bbee4c-655e-435c-84e1-e07d67899668",
+    "fields": {
+      "student": "d73e9929-9958-4ae8-a39c-425f7be7c49b",
+      "course": "470058c8-eba1-4b2b-8d81-19fc5073192b",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "297ecb77-625b-4bf1-b128-625408c1bbcb",
+    "fields": {
+      "student": "d73e9929-9958-4ae8-a39c-425f7be7c49b",
+      "course": "64f57844-2638-4b02-9b8e-43966c8d785b",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "8a85d0aa-4419-48fb-ae0a-cedf32d47fcd",
+    "fields": {
+      "student": "65037be8-1e73-4ba0-ace9-7d4cc4f65bc9",
+      "course": "28688cb9-7af6-498c-a98e-b28910e5d821",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "209f5251-c504-497e-9010-df153ed032c8",
+    "fields": {
+      "student": "65037be8-1e73-4ba0-ace9-7d4cc4f65bc9",
+      "course": "79457aa6-badf-4082-b41f-0540f060008e",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "fe74688c-57f0-4c5a-8bdc-7107906f15ac",
+    "fields": {
+      "student": "c0d1d9cc-3c87-4895-a333-48a39a32d03f",
+      "course": "829d3697-e5ab-4105-bc56-960cfd5e2111",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "a6f590c1-7e65-40cb-badc-bcd2d9f93d0c",
+    "fields": {
+      "student": "c0d1d9cc-3c87-4895-a333-48a39a32d03f",
+      "course": "d74292e7-68b7-4b14-b1a4-c92cc553b506",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "c6e5c78f-1bc7-4ce4-b175-0721215804c5",
+    "fields": {
+      "student": "95182149-d6e3-4c02-b901-eb85f4117735",
+      "course": "699c3886-cefc-4707-b5d2-8c34da12ff4d",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "a06355fa-7cee-4d7a-be75-27ec4c69b037",
+    "fields": {
+      "student": "07d1775c-d718-4c62-bb26-cb5fbe0b1fea",
+      "course": "e5ff7a3a-1103-4a9d-8b7d-90174038c88d",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "52bac1bb-2b93-4693-bbc7-38ee4c97bae4",
+    "fields": {
+      "student": "07d1775c-d718-4c62-bb26-cb5fbe0b1fea",
+      "course": "64f57844-2638-4b02-9b8e-43966c8d785b",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "cf9b245f-03d3-4c13-96a3-43308ea64cdc",
+    "fields": {
+      "student": "551459ad-92d5-4e9a-b683-849a74ab9fe9",
+      "course": "1627bde8-2ceb-4285-b554-b83049d4f4d6",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "d7cb691d-54b9-430b-8cf3-95b20ee10e42",
+    "fields": {
+      "student": "551459ad-92d5-4e9a-b683-849a74ab9fe9",
+      "course": "1337c10e-0a81-447f-9668-95298aa88f1b",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "b3333369-af00-4184-abb8-696d6a327231",
+    "fields": {
+      "student": "ba6dad9b-2a12-46a6-8c34-2a0332241bf2",
+      "course": "829d3697-e5ab-4105-bc56-960cfd5e2111",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "ce968a3b-2c9e-4ee6-a611-a453a0ab9c92",
+    "fields": {
+      "student": "ba6dad9b-2a12-46a6-8c34-2a0332241bf2",
+      "course": "1c07aa1b-81af-4902-80ef-c13b76d2d722",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "3dc5dd5f-db15-47ed-ba26-776e1638f817",
+    "fields": {
+      "student": "9106a800-e2ae-4db7-b475-24f01a2d0901",
+      "course": "d2ba2f05-29ec-4eee-bdfb-2b4c5b002771",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "be0cc84e-243e-4d2c-a23c-36cb444296eb",
+    "fields": {
+      "student": "9106a800-e2ae-4db7-b475-24f01a2d0901",
+      "course": "3346142a-d64f-4e51-b0f4-cb342ecf2a2f",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "94074152-5367-4b1e-800c-562ec90672c0",
+    "fields": {
+      "student": "5df4498a-6b90-4fd5-a50f-daac53d10879",
+      "course": "d5d28493-055d-47a1-86cd-8e9b754c6501",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "7a8c4b33-4785-4436-9d10-dd216de5c768",
+    "fields": {
+      "student": "5df4498a-6b90-4fd5-a50f-daac53d10879",
+      "course": "58f35b19-bdd4-405d-b8e6-526030ea0538",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "842a982e-087b-4d4f-89bf-ed08bb08b5bf",
+    "fields": {
+      "student": "5df4498a-6b90-4fd5-a50f-daac53d10879",
+      "course": "02d304a6-c9d3-4bce-93f4-5d9fd5ca4438",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "02dde7f0-7328-48e9-a85c-258584a6376e",
+    "fields": {
+      "student": "7f8b05b1-18b3-4aa1-b157-857240aa938a",
+      "course": "79457aa6-badf-4082-b41f-0540f060008e",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "2645beae-8cc3-4419-bfcf-765f7b0172d0",
+    "fields": {
+      "student": "7f8b05b1-18b3-4aa1-b157-857240aa938a",
+      "course": "1337c10e-0a81-447f-9668-95298aa88f1b",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "056d69f7-bc73-4d52-a31f-a3bda136e0ca",
+    "fields": {
+      "student": "7f8b05b1-18b3-4aa1-b157-857240aa938a",
+      "course": "a892f19d-7c3e-49d3-927d-e54c25596a86",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "766bd73d-ba88-4b64-8cd0-e8e5b9af1e02",
+    "fields": {
+      "student": "d36f4bbb-a392-40b5-b5ad-e0f1ca35d633",
+      "course": "d74292e7-68b7-4b14-b1a4-c92cc553b506",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "8cd12dab-85a8-4600-aaf2-02489016df5d",
+    "fields": {
+      "student": "d36f4bbb-a392-40b5-b5ad-e0f1ca35d633",
+      "course": "13351cd4-a744-4e20-bba1-c4857ee7f800",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "79337812-3811-48ec-8323-3dcecde4dc5d",
+    "fields": {
+      "student": "4bcfcfaa-4a6a-4bd0-8c83-e8282dcb599f",
+      "course": "3346142a-d64f-4e51-b0f4-cb342ecf2a2f",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "03bc9c81-3b95-4a55-bd2e-38d17bfbae8c",
+    "fields": {
+      "student": "890bcd96-b156-4a0e-8142-b5b3caf38c71",
+      "course": "470058c8-eba1-4b2b-8d81-19fc5073192b",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "eb1dd597-93be-4f6f-97cf-3fe1db4d5240",
+    "fields": {
+      "student": "9e6e1bf8-b70d-43b9-ac4b-64b8a35841bd",
+      "course": "1337c10e-0a81-447f-9668-95298aa88f1b",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "4123e752-39e6-4c46-9b09-3232d5bab2eb",
+    "fields": {
+      "student": "9e6e1bf8-b70d-43b9-ac4b-64b8a35841bd",
+      "course": "28688cb9-7af6-498c-a98e-b28910e5d821",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "c99f625e-4194-4ed9-9e83-ea60f33b16ba",
+    "fields": {
+      "student": "808aff52-88c0-4978-a94c-15e72fe3b5de",
+      "course": "ce22aa20-403f-428d-8e4c-4b2f86762df4",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "86302ee0-c5a2-4154-aa4f-6b74b42cb7aa",
+    "fields": {
+      "student": "71e0e3d1-2014-4570-b760-5f93c1c50d2e",
+      "course": "c85aed9c-fc3b-4c89-8578-334045e290b2",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "f8bd64d8-3c81-4001-946a-a33bfd517001",
+    "fields": {
+      "student": "69e28a8f-0a13-4271-98a9-eb36957bf0dd",
+      "course": "470058c8-eba1-4b2b-8d81-19fc5073192b",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "9f8e0c08-55ea-488a-b851-309b6d2f5216",
+    "fields": {
+      "student": "69e28a8f-0a13-4271-98a9-eb36957bf0dd",
+      "course": "58f35b19-bdd4-405d-b8e6-526030ea0538",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "256eeb8d-4275-49f2-885c-4369aa53d002",
+    "fields": {
+      "student": "90d0a7c5-5652-4a9a-800e-ab7133e22f43",
+      "course": "a892f19d-7c3e-49d3-927d-e54c25596a86",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "502d0f62-c65c-4465-ac40-8767835a7427",
+    "fields": {
+      "student": "90d0a7c5-5652-4a9a-800e-ab7133e22f43",
+      "course": "79457aa6-badf-4082-b41f-0540f060008e",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "1c7941a5-4c40-45e2-a169-345ea51ef081",
+    "fields": {
+      "student": "916f2f9a-9fcc-40f0-b6ed-93a43af54f22",
+      "course": "ce22aa20-403f-428d-8e4c-4b2f86762df4",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "5b27b86d-cf20-4e73-ad9b-cf2b956a2dd9",
+    "fields": {
+      "student": "916f2f9a-9fcc-40f0-b6ed-93a43af54f22",
+      "course": "1c07aa1b-81af-4902-80ef-c13b76d2d722",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "76a8c19f-3dd0-4361-88ef-f76356ebc33e",
+    "fields": {
+      "student": "5e2ffb5e-4049-4e83-804c-e82d645ab9ca",
+      "course": "699c3886-cefc-4707-b5d2-8c34da12ff4d",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "180403b3-61af-4e9a-9a75-bf7b514e2957",
+    "fields": {
+      "student": "8ec0ff3a-ce05-4a11-b5f9-966c99ad2f50",
+      "course": "e5ff7a3a-1103-4a9d-8b7d-90174038c88d",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "b9449a1b-d1ed-49e2-a9c3-1520df7562be",
+    "fields": {
+      "student": "8ec0ff3a-ce05-4a11-b5f9-966c99ad2f50",
+      "course": "64f57844-2638-4b02-9b8e-43966c8d785b",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "695fe6b9-bda4-46dd-a49a-da33c8a634e8",
+    "fields": {
+      "student": "8ec0ff3a-ce05-4a11-b5f9-966c99ad2f50",
+      "course": "02d304a6-c9d3-4bce-93f4-5d9fd5ca4438",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "6dd7f51b-12e0-49d5-ad19-b2bdff6bc757",
+    "fields": {
+      "student": "099acff0-ed6f-4821-849d-46a52f1b5ffe",
+      "course": "79457aa6-badf-4082-b41f-0540f060008e",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "3f19e367-c82e-48b0-ac4e-fcd9f55e6769",
+    "fields": {
+      "student": "099acff0-ed6f-4821-849d-46a52f1b5ffe",
+      "course": "28688cb9-7af6-498c-a98e-b28910e5d821",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "fc515087-69db-4300-be55-cacdb8a32d54",
+    "fields": {
+      "student": "6e73ab68-855a-403a-9764-da75412a726b",
+      "course": "d74292e7-68b7-4b14-b1a4-c92cc553b506",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "db9cfc90-a8c8-4c47-a5c4-a29a11213de7",
+    "fields": {
+      "student": "6e73ab68-855a-403a-9764-da75412a726b",
+      "course": "1c07aa1b-81af-4902-80ef-c13b76d2d722",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "874c7028-5b4d-4268-909a-d63efac27740",
+    "fields": {
+      "student": "306fccb9-127a-4e03-a3ac-ed90f2e8b896",
+      "course": "699c3886-cefc-4707-b5d2-8c34da12ff4d",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "bf953bdf-293b-41fa-baff-024a5c933553",
+    "fields": {
+      "student": "306fccb9-127a-4e03-a3ac-ed90f2e8b896",
+      "course": "3346142a-d64f-4e51-b0f4-cb342ecf2a2f",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "622f3dd6-f5dc-4f8a-81df-90df99000b75",
+    "fields": {
+      "student": "1222751a-15d5-403f-819c-f79ff03c1f06",
+      "course": "e5ff7a3a-1103-4a9d-8b7d-90174038c88d",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "fc41aa16-37d7-47f7-aee1-7df6c5571791",
+    "fields": {
+      "student": "1222751a-15d5-403f-819c-f79ff03c1f06",
+      "course": "d5d28493-055d-47a1-86cd-8e9b754c6501",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "51b53f89-ae62-4cf2-b9b8-d39c9ff5702c",
+    "fields": {
+      "student": "5d5c9dda-f4bd-4483-b248-1e8f47c03af9",
+      "course": "1627bde8-2ceb-4285-b554-b83049d4f4d6",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "0e83b1de-74ba-453d-8347-bbd4066de152",
+    "fields": {
+      "student": "38d9dfce-d74b-4ba8-94f7-913890e08908",
+      "course": "13351cd4-a744-4e20-bba1-c4857ee7f800",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "4de0d64b-7b9b-433b-a8cb-57b0dd6b4d46",
+    "fields": {
+      "student": "38d9dfce-d74b-4ba8-94f7-913890e08908",
+      "course": "ce22aa20-403f-428d-8e4c-4b2f86762df4",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "beb9d34c-da0f-400f-a28d-d3b95f9497f6",
+    "fields": {
+      "student": "38d9dfce-d74b-4ba8-94f7-913890e08908",
+      "course": "1c07aa1b-81af-4902-80ef-c13b76d2d722",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "c79f2725-2299-4f0d-9b90-128e880dab67",
+    "fields": {
+      "student": "d63e63d6-62f8-4d64-ab81-38363cabd5a7",
+      "course": "d2ba2f05-29ec-4eee-bdfb-2b4c5b002771",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "409343fa-1098-4d6e-9d5f-80552b89f46e",
+    "fields": {
+      "student": "d63e63d6-62f8-4d64-ab81-38363cabd5a7",
+      "course": "c85aed9c-fc3b-4c89-8578-334045e290b2",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "382f12a3-faba-4b46-b2ca-8cfb79a024fe",
+    "fields": {
+      "student": "ce1f6926-4728-4d60-b082-dd9a123ac648",
+      "course": "58f35b19-bdd4-405d-b8e6-526030ea0538",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "eafec858-79a8-4ad6-8d98-7925721335f0",
+    "fields": {
+      "student": "ce1f6926-4728-4d60-b082-dd9a123ac648",
+      "course": "e5ff7a3a-1103-4a9d-8b7d-90174038c88d",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "312b2426-3048-465c-86f4-ec02243649b0",
+    "fields": {
+      "student": "f3b54808-18f0-4620-b5bd-39982be86295",
+      "course": "1337c10e-0a81-447f-9668-95298aa88f1b",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "a0181e55-06d0-4672-9a83-3adf02767d32",
+    "fields": {
+      "student": "19507e7a-35bb-4fd7-a3da-6ca5d3dd5bc5",
+      "course": "13351cd4-a744-4e20-bba1-c4857ee7f800",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "7ea8a656-7c92-4d1f-9a9b-7fd6d06d48df",
+    "fields": {
+      "student": "19507e7a-35bb-4fd7-a3da-6ca5d3dd5bc5",
+      "course": "ce22aa20-403f-428d-8e4c-4b2f86762df4",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "8a42a374-7912-4885-8e4b-4367ce67923e",
+    "fields": {
+      "student": "b0a63259-d841-4216-9c09-06f705c6fe22",
+      "course": "d2ba2f05-29ec-4eee-bdfb-2b4c5b002771",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "b5207448-9f3b-45f7-956c-bb85bbd14980",
+    "fields": {
+      "student": "b0a63259-d841-4216-9c09-06f705c6fe22",
+      "course": "3346142a-d64f-4e51-b0f4-cb342ecf2a2f",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "3dde85b9-7ec8-4b2c-80ea-391ec2e9f9fd",
+    "fields": {
+      "student": "65cbc25a-729c-4cd9-8904-d24600f93670",
+      "course": "470058c8-eba1-4b2b-8d81-19fc5073192b",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "cab66453-4ae0-419f-b059-af8ca5b6f3e7",
+    "fields": {
+      "student": "35833fb0-759d-419e-b356-9648f251e921",
+      "course": "28688cb9-7af6-498c-a98e-b28910e5d821",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "f01ab68c-00b0-4815-90d6-0346b534e2cd",
+    "fields": {
+      "student": "35833fb0-759d-419e-b356-9648f251e921",
+      "course": "1627bde8-2ceb-4285-b554-b83049d4f4d6",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "fc4971d5-495e-4564-aa3b-b200ad8ca68f",
+    "fields": {
+      "student": "7a230dae-07bc-406c-a813-844b4ebd2af0",
+      "course": "ce22aa20-403f-428d-8e4c-4b2f86762df4",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "61e76a21-2964-46f2-a4d8-34d0b72f6805",
+    "fields": {
+      "student": "0b6fa79f-d30a-4a33-89a1-11e12979e999",
+      "course": "c85aed9c-fc3b-4c89-8578-334045e290b2",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "ccb4d5fa-8612-4644-a75d-f8ba7cb25214",
+    "fields": {
+      "student": "08b0e7bc-6a92-45f0-a11e-32702c72152f",
+      "course": "58f35b19-bdd4-405d-b8e6-526030ea0538",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "1bfbc0d7-e4ce-4bc5-b288-c677dfe40f6e",
+    "fields": {
+      "student": "08b0e7bc-6a92-45f0-a11e-32702c72152f",
+      "course": "02d304a6-c9d3-4bce-93f4-5d9fd5ca4438",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "1b317832-3d00-4c81-b34d-8b7145dc3cee",
+    "fields": {
+      "student": "08b0e7bc-6a92-45f0-a11e-32702c72152f",
+      "course": "d5d28493-055d-47a1-86cd-8e9b754c6501",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "840a3656-1715-48a7-bbe7-f724af84ab1f",
+    "fields": {
+      "student": "7e0d991d-f696-405c-8b6c-b2b823770f1f",
+      "course": "28688cb9-7af6-498c-a98e-b28910e5d821",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "ca4dd731-7078-4f31-b8a8-f1ffa79a84c6",
+    "fields": {
+      "student": "7e0d991d-f696-405c-8b6c-b2b823770f1f",
+      "course": "a892f19d-7c3e-49d3-927d-e54c25596a86",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "abce01fb-7250-4246-a068-cb8b3fd96846",
+    "fields": {
+      "student": "ef405798-dec7-4a14-83c9-07ed63ba1ab4",
+      "course": "1c07aa1b-81af-4902-80ef-c13b76d2d722",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "752bbee6-a705-4078-889e-f20914a1eaa4",
+    "fields": {
+      "student": "ef405798-dec7-4a14-83c9-07ed63ba1ab4",
+      "course": "13351cd4-a744-4e20-bba1-c4857ee7f800",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "a61c7da5-e034-4899-91e8-e8cfe83f7025",
+    "fields": {
+      "student": "8a7c99b2-8dff-497c-a7e9-8bc57eb7843f",
+      "course": "3346142a-d64f-4e51-b0f4-cb342ecf2a2f",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "11dc5677-c047-4e2e-8742-44cfa0e5343c",
+    "fields": {
+      "student": "4728fb79-e513-4f01-a364-ccc8a4967fb3",
+      "course": "64f57844-2638-4b02-9b8e-43966c8d785b",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "5ed3a811-fc8b-4e68-8c10-4d5f9d4e7c74",
+    "fields": {
+      "student": "4728fb79-e513-4f01-a364-ccc8a4967fb3",
+      "course": "58f35b19-bdd4-405d-b8e6-526030ea0538",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "2c8c1c80-8250-4a95-aac8-8158c81beb9d",
+    "fields": {
+      "student": "53ed44c2-6555-4d5f-84df-c81a51f5b1b2",
+      "course": "79457aa6-badf-4082-b41f-0540f060008e",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "01f46d8f-3df7-41ea-990a-90f35c204c48",
+    "fields": {
+      "student": "53ed44c2-6555-4d5f-84df-c81a51f5b1b2",
+      "course": "28688cb9-7af6-498c-a98e-b28910e5d821",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "aa4f4e6d-e286-444a-ac19-9b47bba9b660",
+    "fields": {
+      "student": "f8b5c353-3c53-408c-b783-bf0caa7c7530",
+      "course": "d74292e7-68b7-4b14-b1a4-c92cc553b506",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "51390389-a983-450d-a25e-df5d87605563",
+    "fields": {
+      "student": "ec8824cd-0035-4f48-911d-6b185048e23e",
+      "course": "699c3886-cefc-4707-b5d2-8c34da12ff4d",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "8b34cb3d-cac6-42c0-84b7-cd0d9897f995",
+    "fields": {
+      "student": "2d4ff646-65c3-4411-9cb1-5c232cbafa37",
+      "course": "d5d28493-055d-47a1-86cd-8e9b754c6501",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "734cbfee-e361-4c0b-8a0b-da7f58c27a85",
+    "fields": {
+      "student": "2d4ff646-65c3-4411-9cb1-5c232cbafa37",
+      "course": "e5ff7a3a-1103-4a9d-8b7d-90174038c88d",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "ce9ce232-3029-4063-a3bf-8caba4ba6a63",
+    "fields": {
+      "student": "1e89938c-ec77-4c3d-9f94-739ed1d1636c",
+      "course": "1627bde8-2ceb-4285-b554-b83049d4f4d6",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "aed6566c-8d51-4e2f-8605-5781aef1c7f0",
+    "fields": {
+      "student": "ae95fc52-48b0-42d9-a210-69b5f6771398",
+      "course": "829d3697-e5ab-4105-bc56-960cfd5e2111",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "7fae6c97-771e-4f97-96cf-241b211a9b92",
+    "fields": {
+      "student": "ae95fc52-48b0-42d9-a210-69b5f6771398",
+      "course": "13351cd4-a744-4e20-bba1-c4857ee7f800",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "532ac15a-72c4-4c92-9479-3993a329a487",
+    "fields": {
+      "student": "ae95fc52-48b0-42d9-a210-69b5f6771398",
+      "course": "1c07aa1b-81af-4902-80ef-c13b76d2d722",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "b5a86b0a-aa83-4967-b9a6-053fce1e68cf",
+    "fields": {
+      "student": "c8c242df-76e3-46b9-b60b-2230b6b2851a",
+      "course": "d2ba2f05-29ec-4eee-bdfb-2b4c5b002771",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "117fd4da-786d-4db1-a327-3931a271d8c4",
+    "fields": {
+      "student": "c8c242df-76e3-46b9-b60b-2230b6b2851a",
+      "course": "c85aed9c-fc3b-4c89-8578-334045e290b2",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "43c954af-e5a2-4bc4-9972-c2df714b2b03",
+    "fields": {
+      "student": "32330906-13a3-4125-9f82-72dc2bbefde1",
+      "course": "58f35b19-bdd4-405d-b8e6-526030ea0538",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "92b6b486-f323-4916-9ab8-5cbb948c5591",
+    "fields": {
+      "student": "32330906-13a3-4125-9f82-72dc2bbefde1",
+      "course": "e5ff7a3a-1103-4a9d-8b7d-90174038c88d",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "b2f19334-190f-4765-8127-0b6b74af031c",
+    "fields": {
+      "student": "09401ee9-f865-4137-879a-d7911c239cad",
+      "course": "1337c10e-0a81-447f-9668-95298aa88f1b",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "9487c5f3-7579-49e9-84bf-3a29d8d90132",
+    "fields": {
+      "student": "c5208235-f65d-4e57-8f76-2685e963b990",
+      "course": "13351cd4-a744-4e20-bba1-c4857ee7f800",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "7ac5a9e4-fe00-4413-80df-e9de37767e81",
+    "fields": {
+      "student": "c5208235-f65d-4e57-8f76-2685e963b990",
+      "course": "829d3697-e5ab-4105-bc56-960cfd5e2111",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "3dfafae0-f06f-423c-8999-324147f4f749",
+    "fields": {
+      "student": "87607b12-b265-4f78-a31c-0999eb32a6ed",
+      "course": "3346142a-d64f-4e51-b0f4-cb342ecf2a2f",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "0a8d26e6-ddb7-4f11-88e6-0457e1b48736",
+    "fields": {
+      "student": "ca50ce20-3a4f-47db-93b7-6764eed5529c",
+      "course": "470058c8-eba1-4b2b-8d81-19fc5073192b",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "18d07b7c-d7e7-48e2-85a1-89098da46aca",
+    "fields": {
+      "student": "ca50ce20-3a4f-47db-93b7-6764eed5529c",
+      "course": "02d304a6-c9d3-4bce-93f4-5d9fd5ca4438",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "43e4e3f6-1ef9-4d72-aa08-80618cde654b",
+    "fields": {
+      "student": "ca50ce20-3a4f-47db-93b7-6764eed5529c",
+      "course": "e5ff7a3a-1103-4a9d-8b7d-90174038c88d",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "44d1d7e6-5522-407e-9f98-312282107c04",
+    "fields": {
+      "student": "c1581bd4-74ab-433e-9413-80979ab36aca",
+      "course": "79457aa6-badf-4082-b41f-0540f060008e",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "4c305295-bfaf-427d-a752-4cb303aa3435",
+    "fields": {
+      "student": "c1581bd4-74ab-433e-9413-80979ab36aca",
+      "course": "1337c10e-0a81-447f-9668-95298aa88f1b",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "cde092ee-4181-4eaa-a155-2a1ab504fe2a",
+    "fields": {
+      "student": "c1581bd4-74ab-433e-9413-80979ab36aca",
+      "course": "a892f19d-7c3e-49d3-927d-e54c25596a86",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "c445bdab-ea9c-4d94-97c0-6393164694fd",
+    "fields": {
+      "student": "0daf72fc-d3e7-4417-ac1e-3d28319751a1",
+      "course": "ce22aa20-403f-428d-8e4c-4b2f86762df4",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "105065a6-deb1-44f8-8b97-a177911ebdcb",
+    "fields": {
+      "student": "0daf72fc-d3e7-4417-ac1e-3d28319751a1",
+      "course": "829d3697-e5ab-4105-bc56-960cfd5e2111",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "aee33d4a-7b1e-4468-8387-bc06a6a56f17",
+    "fields": {
+      "student": "114a7c9b-7ad9-483a-ad74-f8b0523ea022",
+      "course": "699c3886-cefc-4707-b5d2-8c34da12ff4d",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "977adad9-9dd6-436c-a895-f066061271f9",
+    "fields": {
+      "student": "114a7c9b-7ad9-483a-ad74-f8b0523ea022",
+      "course": "c85aed9c-fc3b-4c89-8578-334045e290b2",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "400dddd6-c40a-49f1-bf8d-40c110a1199c",
+    "fields": {
+      "student": "12ef9c56-0f70-4611-a51d-ea0c802732f2",
+      "course": "d5d28493-055d-47a1-86cd-8e9b754c6501",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "aa4d7ca8-4951-42f6-b421-5df0a8e99d2d",
+    "fields": {
+      "student": "12ef9c56-0f70-4611-a51d-ea0c802732f2",
+      "course": "02d304a6-c9d3-4bce-93f4-5d9fd5ca4438",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "40b65cbc-ab91-41d8-94a1-3580073b20b1",
+    "fields": {
+      "student": "24be3430-23bb-4539-ba4b-823042e19d4e",
+      "course": "a892f19d-7c3e-49d3-927d-e54c25596a86",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "d533b205-a984-4b43-a266-02b82967dfe5",
+    "fields": {
+      "student": "24be3430-23bb-4539-ba4b-823042e19d4e",
+      "course": "1337c10e-0a81-447f-9668-95298aa88f1b",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "ed1e9058-372c-4bd5-83ea-fe71fdec5876",
+    "fields": {
+      "student": "c65c0609-6739-48d2-acad-855ecf8d164d",
+      "course": "ce22aa20-403f-428d-8e4c-4b2f86762df4",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "b9e42d9f-1a5c-429c-bf25-6e1a3f9748ab",
+    "fields": {
+      "student": "c65c0609-6739-48d2-acad-855ecf8d164d",
+      "course": "1c07aa1b-81af-4902-80ef-c13b76d2d722",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "820de9fb-5524-45e8-bdd9-d937676e47fc",
+    "fields": {
+      "student": "c65c0609-6739-48d2-acad-855ecf8d164d",
+      "course": "13351cd4-a744-4e20-bba1-c4857ee7f800",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "ae18ca23-bef8-4869-9430-7cacf076a95a",
+    "fields": {
+      "student": "c65c0609-6739-48d2-acad-855ecf8d164d",
+      "course": "d74292e7-68b7-4b14-b1a4-c92cc553b506",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "47df7619-d8aa-41c9-9c06-74ae1e3fadeb",
+    "fields": {
+      "student": "b302afbb-5601-481e-84d8-85ef0fba784f",
+      "course": "3346142a-d64f-4e51-b0f4-cb342ecf2a2f",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "42457279-c3e9-40ec-b990-d03907647df9",
+    "fields": {
+      "student": "b302afbb-5601-481e-84d8-85ef0fba784f",
+      "course": "d2ba2f05-29ec-4eee-bdfb-2b4c5b002771",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "5161e9c4-8ebe-416e-99ea-e608ecd69b7f",
+    "fields": {
+      "student": "b302afbb-5601-481e-84d8-85ef0fba784f",
+      "course": "c85aed9c-fc3b-4c89-8578-334045e290b2",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "37e7da18-7515-4652-8348-317c0989d3af",
+    "fields": {
+      "student": "b302afbb-5601-481e-84d8-85ef0fba784f",
+      "course": "699c3886-cefc-4707-b5d2-8c34da12ff4d",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "b2514495-d87e-4b3a-a253-e67f236cd283",
+    "fields": {
+      "student": "9f9c403d-99aa-4c47-9bd4-8e88f0ee5060",
+      "course": "58f35b19-bdd4-405d-b8e6-526030ea0538",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "2d3074c5-f8c3-4233-92aa-dae9b0eb85d1",
+    "fields": {
+      "student": "9f9c403d-99aa-4c47-9bd4-8e88f0ee5060",
+      "course": "64f57844-2638-4b02-9b8e-43966c8d785b",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "fd485ec3-7298-472d-abf9-7803f840ae64",
+    "fields": {
+      "student": "3c6036a0-acbd-49fc-acc8-91af5d7e82c8",
+      "course": "28688cb9-7af6-498c-a98e-b28910e5d821",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "ecf1e6a5-01ec-4fc8-94f5-840b9f1626aa",
+    "fields": {
+      "student": "3c6036a0-acbd-49fc-acc8-91af5d7e82c8",
+      "course": "1337c10e-0a81-447f-9668-95298aa88f1b",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "c3267eae-2ea9-456b-9ecf-d2718605cb11",
+    "fields": {
+      "student": "3c6036a0-acbd-49fc-acc8-91af5d7e82c8",
+      "course": "1627bde8-2ceb-4285-b554-b83049d4f4d6",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "2e01091a-a768-4243-8853-4335b0486cc3",
+    "fields": {
+      "student": "fa718394-c39a-437d-a156-2020e94926e2",
+      "course": "d74292e7-68b7-4b14-b1a4-c92cc553b506",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "01c7309a-d9b8-4bd7-86e4-1da069ec1b32",
+    "fields": {
+      "student": "4684a178-1842-4700-b0a4-3bb4694701dd",
+      "course": "699c3886-cefc-4707-b5d2-8c34da12ff4d",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "423f9801-cf21-4b31-8fc8-f15eca06b23d",
+    "fields": {
+      "student": "4684a178-1842-4700-b0a4-3bb4694701dd",
+      "course": "3346142a-d64f-4e51-b0f4-cb342ecf2a2f",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "18619ff2-4438-404c-a5e7-e9819dea99b5",
+    "fields": {
+      "student": "751b3d26-016a-4771-8ff8-3065d6a7e924",
+      "course": "470058c8-eba1-4b2b-8d81-19fc5073192b",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "4a9237e8-02a6-41b6-991a-9fc3e417a166",
+    "fields": {
+      "student": "751b3d26-016a-4771-8ff8-3065d6a7e924",
+      "course": "64f57844-2638-4b02-9b8e-43966c8d785b",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "1fd61958-5baf-4b11-9977-575a48c03856",
+    "fields": {
+      "student": "751b3d26-016a-4771-8ff8-3065d6a7e924",
+      "course": "e5ff7a3a-1103-4a9d-8b7d-90174038c88d",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "75e5f486-27f0-46c7-8df5-057475ed0cec",
+    "fields": {
+      "student": "a21e951a-2bf6-42b8-ad91-573ba936d720",
+      "course": "a892f19d-7c3e-49d3-927d-e54c25596a86",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "b6193b23-ac91-43db-9d4f-f17a673452a6",
+    "fields": {
+      "student": "a21e951a-2bf6-42b8-ad91-573ba936d720",
+      "course": "79457aa6-badf-4082-b41f-0540f060008e",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "cf0d7675-5b54-454d-9a40-776cdff392ef",
+    "fields": {
+      "student": "6671c362-e066-40f9-b1b6-019c1ac4f231",
+      "course": "1c07aa1b-81af-4902-80ef-c13b76d2d722",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "6fc6ebcf-09c6-4ea3-a4c1-049dff54fdf1",
+    "fields": {
+      "student": "6671c362-e066-40f9-b1b6-019c1ac4f231",
+      "course": "d74292e7-68b7-4b14-b1a4-c92cc553b506",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "4952fdf5-a1e6-4220-881b-942837cc0ed0",
+    "fields": {
+      "student": "6671c362-e066-40f9-b1b6-019c1ac4f231",
+      "course": "829d3697-e5ab-4105-bc56-960cfd5e2111",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "d3cc7f2f-2f07-4556-986c-74f698e8f10f",
+    "fields": {
+      "student": "e3d0bb81-5a2a-434d-9d5d-1836ee1948fa",
+      "course": "c85aed9c-fc3b-4c89-8578-334045e290b2",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "d560e3cc-328c-42f7-864b-9a8326439901",
+    "fields": {
+      "student": "e3d0bb81-5a2a-434d-9d5d-1836ee1948fa",
+      "course": "699c3886-cefc-4707-b5d2-8c34da12ff4d",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "97bca579-91f8-4ef5-856a-e1b198c61147",
+    "fields": {
+      "student": "e3d0bb81-5a2a-434d-9d5d-1836ee1948fa",
+      "course": "d2ba2f05-29ec-4eee-bdfb-2b4c5b002771",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "49272f40-1e74-4365-b0c8-9d60a60dbf40",
+    "fields": {
+      "student": "981d57b7-88e4-48f3-8e40-0aca72f29544",
+      "course": "58f35b19-bdd4-405d-b8e6-526030ea0538",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "e0461ab5-1e2a-4da4-88cd-53159e1b505d",
+    "fields": {
+      "student": "981d57b7-88e4-48f3-8e40-0aca72f29544",
+      "course": "64f57844-2638-4b02-9b8e-43966c8d785b",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "aa7653ac-c9f0-4dfe-8cc8-97cad54c9316",
+    "fields": {
+      "student": "007d7321-b630-4b1e-a03e-f2b3cb2a91e1",
+      "course": "1337c10e-0a81-447f-9668-95298aa88f1b",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "f387b3a7-90c1-41b6-9f53-f96302841225",
+    "fields": {
+      "student": "fb5aabcb-afaf-4fae-aa21-e93eba66994b",
+      "course": "13351cd4-a744-4e20-bba1-c4857ee7f800",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "d437bb36-7518-4b9f-8eb4-edc4187f1df8",
+    "fields": {
+      "student": "fb5aabcb-afaf-4fae-aa21-e93eba66994b",
+      "course": "829d3697-e5ab-4105-bc56-960cfd5e2111",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "c309612d-f7f1-498e-b7dd-759c0f49ec7f",
+    "fields": {
+      "student": "fb5aabcb-afaf-4fae-aa21-e93eba66994b",
+      "course": "d74292e7-68b7-4b14-b1a4-c92cc553b506",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "aa320484-0d87-4775-9094-2a3fcb40b89a",
+    "fields": {
+      "student": "57239b93-d382-4331-b138-99d6d0f47459",
+      "course": "c85aed9c-fc3b-4c89-8578-334045e290b2",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "adebfb22-0588-4d62-a273-f5c4bf7e53ab",
+    "fields": {
+      "student": "57239b93-d382-4331-b138-99d6d0f47459",
+      "course": "3346142a-d64f-4e51-b0f4-cb342ecf2a2f",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "275018e6-c462-434d-8f78-0f05f5fa0c55",
+    "fields": {
+      "student": "5c6c4fb5-9233-40fa-b69e-ebe53d0b59d0",
+      "course": "58f35b19-bdd4-405d-b8e6-526030ea0538",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "d75da8cf-ce58-4d61-a5f6-38889d901ef5",
+    "fields": {
+      "student": "5c6c4fb5-9233-40fa-b69e-ebe53d0b59d0",
+      "course": "02d304a6-c9d3-4bce-93f4-5d9fd5ca4438",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "4dc870bf-42b1-4418-85d1-c16ca53b9373",
+    "fields": {
+      "student": "7556f453-e21b-4993-a2c3-06e1a3ef28cf",
+      "course": "1337c10e-0a81-447f-9668-95298aa88f1b",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "b78c85a1-94fe-4bdd-a9b6-da2bdbec1cea",
+    "fields": {
+      "student": "7556f453-e21b-4993-a2c3-06e1a3ef28cf",
+      "course": "79457aa6-badf-4082-b41f-0540f060008e",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "7b57f167-ef5d-46d4-ab8f-f0f8e1fc0c16",
+    "fields": {
+      "student": "7556f453-e21b-4993-a2c3-06e1a3ef28cf",
+      "course": "28688cb9-7af6-498c-a98e-b28910e5d821",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "3c03280e-bb8a-4db2-9c93-5478185ad993",
+    "fields": {
+      "student": "262fd448-f619-4ff5-9b93-5cf0000e847f",
+      "course": "ce22aa20-403f-428d-8e4c-4b2f86762df4",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "5d505e51-a592-4dae-8eff-86a0c0870160",
+    "fields": {
+      "student": "262fd448-f619-4ff5-9b93-5cf0000e847f",
+      "course": "1c07aa1b-81af-4902-80ef-c13b76d2d722",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "8362748a-d70e-4c2c-aa05-16093d5a0a83",
+    "fields": {
+      "student": "c7fed57b-63a9-4fb5-9141-dea37c0f9743",
+      "course": "3346142a-d64f-4e51-b0f4-cb342ecf2a2f",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "35cea124-28a2-445b-bfd5-59b5edcb94af",
+    "fields": {
+      "student": "c7fed57b-63a9-4fb5-9141-dea37c0f9743",
+      "course": "c85aed9c-fc3b-4c89-8578-334045e290b2",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "49100ab7-94f4-4ee1-892e-da51530df2c4",
+    "fields": {
+      "student": "8dfb9a65-04be-45cb-b511-7b353306181c",
+      "course": "e5ff7a3a-1103-4a9d-8b7d-90174038c88d",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "fde8ca8c-c6b3-4a1a-afba-1921007e4210",
+    "fields": {
+      "student": "8dfb9a65-04be-45cb-b511-7b353306181c",
+      "course": "64f57844-2638-4b02-9b8e-43966c8d785b",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "992ed79d-ce6a-41aa-8a58-0e49fc033ebc",
+    "fields": {
+      "student": "8dfb9a65-04be-45cb-b511-7b353306181c",
+      "course": "02d304a6-c9d3-4bce-93f4-5d9fd5ca4438",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "09d0cabd-5d3a-45e1-8f11-2c1ba67e6fee",
+    "fields": {
+      "student": "8dfb9a65-04be-45cb-b511-7b353306181c",
+      "course": "d5d28493-055d-47a1-86cd-8e9b754c6501",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "dc610bb1-12a1-4fb7-b5f6-5911cf76bc8d",
+    "fields": {
+      "student": "4ec6de5a-7278-4006-8cfe-82b9755cde3e",
+      "course": "a892f19d-7c3e-49d3-927d-e54c25596a86",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "c667ad21-e01a-476a-b819-365f3c070990",
+    "fields": {
+      "student": "4ec6de5a-7278-4006-8cfe-82b9755cde3e",
+      "course": "1627bde8-2ceb-4285-b554-b83049d4f4d6",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "61dc3984-b2ea-4de8-bc9f-8bfabe3e61fb",
+    "fields": {
+      "student": "00e4de79-054e-4c18-a262-d9eb64716a72",
+      "course": "13351cd4-a744-4e20-bba1-c4857ee7f800",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "95ee418b-f3af-4b3a-97ad-1c8b8bff1c06",
+    "fields": {
+      "student": "dbfb4def-5daa-4cb2-9cc6-f8893d7d9878",
+      "course": "c85aed9c-fc3b-4c89-8578-334045e290b2",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "5544b997-4e62-4b1c-813a-d10a2e2911ca",
+    "fields": {
+      "student": "dbfb4def-5daa-4cb2-9cc6-f8893d7d9878",
+      "course": "699c3886-cefc-4707-b5d2-8c34da12ff4d",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "3feff2dd-8ad0-4d64-8eb2-c9c9691bf247",
+    "fields": {
+      "student": "d37fc12e-7b7e-485d-9a56-94fc2e6a2716",
+      "course": "64f57844-2638-4b02-9b8e-43966c8d785b",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "c479c80b-9e1e-4238-bcdf-7eb3a2645951",
+    "fields": {
+      "student": "5c281293-27cd-4e14-a719-2f73c67aa57d",
+      "course": "28688cb9-7af6-498c-a98e-b28910e5d821",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "98ea6744-993a-4366-818d-4addf7bea63b",
+    "fields": {
+      "student": "5c281293-27cd-4e14-a719-2f73c67aa57d",
+      "course": "a892f19d-7c3e-49d3-927d-e54c25596a86",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "de8e583b-a8ca-4a8c-b670-e70830209070",
+    "fields": {
+      "student": "5c281293-27cd-4e14-a719-2f73c67aa57d",
+      "course": "79457aa6-badf-4082-b41f-0540f060008e",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "84f85dc9-8f3d-452c-96da-278f4a473d9e",
+    "fields": {
+      "student": "ed24d82b-afc7-4bdb-b0db-45c4866372b7",
+      "course": "13351cd4-a744-4e20-bba1-c4857ee7f800",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "1c82e9a1-35e0-46f8-9960-51c0e7affaf1",
+    "fields": {
+      "student": "ed24d82b-afc7-4bdb-b0db-45c4866372b7",
+      "course": "d74292e7-68b7-4b14-b1a4-c92cc553b506",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "bb0baf18-754a-45fe-9e94-a4bba9b64f8e",
+    "fields": {
+      "student": "19000304-d8fa-4ecf-b9d3-6b45f8e46111",
+      "course": "699c3886-cefc-4707-b5d2-8c34da12ff4d",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "5e6fd8bf-a1f9-48e9-bb3a-782caed27ecb",
+    "fields": {
+      "student": "af3c0476-d3ef-48de-9ae4-a9d8c5b3d941",
+      "course": "e5ff7a3a-1103-4a9d-8b7d-90174038c88d",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "83aa444c-7b98-4037-a7b0-bc2bc5f05b7d",
+    "fields": {
+      "student": "af3c0476-d3ef-48de-9ae4-a9d8c5b3d941",
+      "course": "d5d28493-055d-47a1-86cd-8e9b754c6501",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "c4ffe35b-c907-4990-a7cf-2edde07e7f20",
+    "fields": {
+      "student": "18c27d82-9ee5-4421-ab13-38575538d37d",
+      "course": "1627bde8-2ceb-4285-b554-b83049d4f4d6",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "b01119c8-ec88-4b80-8795-a7c9c8318f8e",
+    "fields": {
+      "student": "b2a8cb84-9ccd-45cb-9a6e-8ba4d6ff3557",
+      "course": "1c07aa1b-81af-4902-80ef-c13b76d2d722",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "05930c15-2470-4090-8efb-6163b81367cc",
+    "fields": {
+      "student": "b2a8cb84-9ccd-45cb-9a6e-8ba4d6ff3557",
+      "course": "829d3697-e5ab-4105-bc56-960cfd5e2111",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "edad5f15-9f26-4c29-af11-71a5172e56d7",
+    "fields": {
+      "student": "e2e1e82c-f9c1-4471-a045-cfeea87d889e",
+      "course": "c85aed9c-fc3b-4c89-8578-334045e290b2",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "ad3a856a-9e68-41b3-bce1-413dd76c9f53",
+    "fields": {
+      "student": "e2e1e82c-f9c1-4471-a045-cfeea87d889e",
+      "course": "699c3886-cefc-4707-b5d2-8c34da12ff4d",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "6ee55373-e001-45e8-a606-e6585f8bd3e7",
+    "fields": {
+      "student": "e2e1e82c-f9c1-4471-a045-cfeea87d889e",
+      "course": "d2ba2f05-29ec-4eee-bdfb-2b4c5b002771",
+      "semester": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.studentcourseenrollment",
+    "pk": "9b3fb8d6-2cbf-4e1e-aa02-1fe9e4e473b5",
+    "fields": {
+      "student": "4a1c2ac6-0911-4846-9627-59f744d18254",
+      "course": "58f35b19-bdd4-405d-b8e6-526030ea0538",
+      "semester": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+      "is_active": true
+    }
+  }
+]

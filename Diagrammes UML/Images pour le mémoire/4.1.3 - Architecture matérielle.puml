@@ -1,0 +1,48 @@
+@startuml Architecture_materielle
+!pragma layout smetana
+left to right direction
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam shadowing false
+skinparam nodesep 40
+skinparam ranksep 90
+skinparam node {
+  BackgroundColor #FAFBFC
+  BorderColor #2B3A55
+}
+skinparam artifact {
+  BackgroundColor #FFFFFF
+  BorderColor #2B3A55
+}
+skinparam database {
+  BackgroundColor #E5EDF8
+  BorderColor #2B3A55
+}
+skinparam cloud {
+  BackgroundColor #FFFFFF
+  BorderColor #8A94A6
+}
+skinparam ArrowColor #2B3A55
+
+node "Poste de travail\n(ordinateur)" as PC {
+  artifact "Navigateur web\nApplication web Scolix\n(React)" as WEB
+}
+node "Smartphone\n(Android / iOS)" as PHONE {
+  artifact "Application mobile Scolix\n(Flutter)" as MOB
+}
+cloud "Internet" as NET
+node "Serveur d'application (cloud)" as APP {
+  artifact "API REST Scolix\n(Django REST Framework)" as API
+  artifact "Fichiers de l'application web" as STATIC
+}
+node "Serveur de base de données" as DBS {
+  database "PostgreSQL" as DB
+}
+node "Serveur de messagerie\n(Gmail SMTP)" as SMTP
+
+WEB --> NET : HTTPS
+MOB --> NET : HTTPS
+NET --> APP : HTTPS (JSON, jetons JWT)
+API --> DB : TCP 5432
+API --> SMTP : SMTP / TLS 587
+@enduml

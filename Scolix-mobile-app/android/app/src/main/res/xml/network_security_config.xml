@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Depuis Android 9 (API 28), le HTTP en clair est bloqué par défaut.
+  Le backend Django de développement local n'est pas servi en HTTPS
+  (voir AppConfig.apiBaseUrl) : on autorise donc le cleartext, mais
+  uniquement vers les hôtes de dev connus, jamais globalement — en
+  production l'API sera servie en HTTPS (AppConfig.isProd) et ce fichier
+  n'entrera pas en jeu.
+-->
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">localhost</domain>
+        <domain includeSubdomains="false">10.0.2.2</domain>
+        <!-- IP LAN du PC hôte — à tenir synchronisée avec
+             AppConfig._devHostLanIp si elle change (voir ipconfig). -->
+        <domain includeSubdomains="false">192.168.1.65</domain>
+    </domain-config>
+</network-security-config>

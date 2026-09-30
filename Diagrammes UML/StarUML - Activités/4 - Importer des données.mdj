@@ -1,0 +1,1113 @@
+{
+ "_type": "Project",
+ "_id": "SCOLIX0000000001",
+ "name": "Scolix — Activité — Importer des données",
+ "documentation": "Modélisation UML de Scolix (plateforme d'évaluation des enseignants).",
+ "ownedElements": [
+  {
+   "_type": "UMLModel",
+   "_id": "SCXDYN0000000101",
+   "_parent": {
+    "$ref": "SCOLIX0000000001"
+   },
+   "name": "Modèle dynamique",
+   "ownedElements": [
+    {
+     "_type": "UMLActivity",
+     "_id": "SCXDYN0000000333",
+     "_parent": {
+      "$ref": "SCXDYN0000000101"
+     },
+     "name": "Activité — Importer des données",
+     "nodes": [
+      {
+       "_type": "UMLInitialNode",
+       "_id": "SCXDYN0000000339",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "name": ""
+      },
+      {
+       "_type": "UMLAction",
+       "_id": "SCXDYN0000000341",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "name": "Choisir le type et le fichier"
+      },
+      {
+       "_type": "UMLAction",
+       "_id": "SCXDYN0000000343",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "name": "Lire le fichier (CSV / XLSX)"
+      },
+      {
+       "_type": "UMLDecisionNode",
+       "_id": "SCXDYN0000000345",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "name": ""
+      },
+      {
+       "_type": "UMLAction",
+       "_id": "SCXDYN0000000347",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "name": "Afficher l'erreur de lecture"
+      },
+      {
+       "_type": "UMLActivityFinalNode",
+       "_id": "SCXDYN0000000349",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "name": ""
+      },
+      {
+       "_type": "UMLAction",
+       "_id": "SCXDYN0000000351",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "name": "Proposer la correspondance"
+      },
+      {
+       "_type": "UMLAction",
+       "_id": "SCXDYN0000000353",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "name": "Ajuster la correspondance"
+      },
+      {
+       "_type": "UMLAction",
+       "_id": "SCXDYN0000000355",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "name": "Valider chaque ligne"
+      },
+      {
+       "_type": "UMLAction",
+       "_id": "SCXDYN0000000357",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "name": "Examiner le rapport"
+      },
+      {
+       "_type": "UMLDecisionNode",
+       "_id": "SCXDYN0000000359",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "name": ""
+      },
+      {
+       "_type": "UMLAction",
+       "_id": "SCXDYN0000000361",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "name": "Supprimer le lot"
+      },
+      {
+       "_type": "UMLAction",
+       "_id": "SCXDYN0000000363",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "name": "Importer les lignes valides"
+      },
+      {
+       "_type": "UMLAction",
+       "_id": "SCXDYN0000000365",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "name": "Consulter le bilan de l'import"
+      },
+      {
+       "_type": "UMLActivityFinalNode",
+       "_id": "SCXDYN0000000367",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "name": ""
+      },
+      {
+       "_type": "UMLActivityFinalNode",
+       "_id": "SCXDYN0000000369",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "name": ""
+      }
+     ],
+     "edges": [
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000371",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000339"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000341"
+       },
+       "guard": ""
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000373",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000341"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000343"
+       },
+       "guard": ""
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000375",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000343"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000345"
+       },
+       "guard": ""
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000377",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000345"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000347"
+       },
+       "guard": "fichier invalide"
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000379",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000347"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000349"
+       },
+       "guard": ""
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000381",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000345"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000351"
+       },
+       "guard": "fichier lisible"
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000383",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000351"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000353"
+       },
+       "guard": ""
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000385",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000353"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000355"
+       },
+       "guard": ""
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000387",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000355"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000357"
+       },
+       "guard": ""
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000389",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000357"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000359"
+       },
+       "guard": ""
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000391",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000359"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000353"
+       },
+       "guard": "corriger"
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000393",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000359"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000361"
+       },
+       "guard": "annuler"
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000395",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000361"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000367"
+       },
+       "guard": ""
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000397",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000359"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000363"
+       },
+       "guard": "importer"
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000399",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000363"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000365"
+       },
+       "guard": ""
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000401",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000365"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000369"
+       },
+       "guard": ""
+      }
+     ],
+     "groups": [
+      {
+       "_type": "UMLActivityPartition",
+       "_id": "SCXDYN0000000335",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "name": "Gestionnaire"
+      },
+      {
+       "_type": "UMLActivityPartition",
+       "_id": "SCXDYN0000000337",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "name": "API Scolix"
+      }
+     ],
+     "ownedElements": [
+      {
+       "_type": "UMLActivityDiagram",
+       "_id": "SCXDYN0000000334",
+       "_parent": {
+        "$ref": "SCXDYN0000000333"
+       },
+       "name": "Activité — Importer des données",
+       "ownedViews": [
+        {
+         "_type": "UMLSwimlaneView",
+         "_id": "SCXDYN0000000336",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "left": 20,
+         "top": 20,
+         "width": 320,
+         "height": 1210,
+         "model": {
+          "$ref": "SCXDYN0000000335"
+         },
+         "containedViews": [
+          {
+           "$ref": "SCXDYN0000000340"
+          },
+          {
+           "$ref": "SCXDYN0000000342"
+          },
+          {
+           "$ref": "SCXDYN0000000348"
+          },
+          {
+           "$ref": "SCXDYN0000000350"
+          },
+          {
+           "$ref": "SCXDYN0000000354"
+          },
+          {
+           "$ref": "SCXDYN0000000358"
+          },
+          {
+           "$ref": "SCXDYN0000000360"
+          },
+          {
+           "$ref": "SCXDYN0000000366"
+          },
+          {
+           "$ref": "SCXDYN0000000370"
+          }
+         ],
+         "fillColor": "#FAFBFC"
+        },
+        {
+         "_type": "UMLSwimlaneView",
+         "_id": "SCXDYN0000000338",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "left": 340,
+         "top": 20,
+         "width": 320,
+         "height": 1210,
+         "model": {
+          "$ref": "SCXDYN0000000337"
+         },
+         "containedViews": [
+          {
+           "$ref": "SCXDYN0000000344"
+          },
+          {
+           "$ref": "SCXDYN0000000346"
+          },
+          {
+           "$ref": "SCXDYN0000000352"
+          },
+          {
+           "$ref": "SCXDYN0000000356"
+          },
+          {
+           "$ref": "SCXDYN0000000362"
+          },
+          {
+           "$ref": "SCXDYN0000000364"
+          },
+          {
+           "$ref": "SCXDYN0000000368"
+          }
+         ],
+         "fillColor": "#FAFBFC"
+        },
+        {
+         "_type": "UMLControlNodeView",
+         "_id": "SCXDYN0000000340",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "left": 169,
+         "top": 91,
+         "width": 22,
+         "height": 22,
+         "model": {
+          "$ref": "SCXDYN0000000339"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000336"
+         }
+        },
+        {
+         "_type": "UMLActionView",
+         "_id": "SCXDYN0000000342",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "left": 55,
+         "top": 160,
+         "width": 250,
+         "height": 44,
+         "model": {
+          "$ref": "SCXDYN0000000341"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000336"
+         },
+         "fillColor": "#FFFFFF"
+        },
+        {
+         "_type": "UMLActionView",
+         "_id": "SCXDYN0000000344",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "left": 375,
+         "top": 240,
+         "width": 250,
+         "height": 44,
+         "model": {
+          "$ref": "SCXDYN0000000343"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000338"
+         },
+         "fillColor": "#FFFFFF"
+        },
+        {
+         "_type": "UMLControlNodeView",
+         "_id": "SCXDYN0000000346",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "left": 480,
+         "top": 327,
+         "width": 40,
+         "height": 30,
+         "model": {
+          "$ref": "SCXDYN0000000345"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000338"
+         }
+        },
+        {
+         "_type": "UMLActionView",
+         "_id": "SCXDYN0000000348",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "left": 55,
+         "top": 400,
+         "width": 250,
+         "height": 44,
+         "model": {
+          "$ref": "SCXDYN0000000347"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000336"
+         },
+         "fillColor": "#FFFFFF"
+        },
+        {
+         "_type": "UMLControlNodeView",
+         "_id": "SCXDYN0000000350",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "left": 167,
+         "top": 489,
+         "width": 26,
+         "height": 26,
+         "model": {
+          "$ref": "SCXDYN0000000349"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000336"
+         }
+        },
+        {
+         "_type": "UMLActionView",
+         "_id": "SCXDYN0000000352",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "left": 375,
+         "top": 400,
+         "width": 250,
+         "height": 44,
+         "model": {
+          "$ref": "SCXDYN0000000351"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000338"
+         },
+         "fillColor": "#FFFFFF"
+        },
+        {
+         "_type": "UMLActionView",
+         "_id": "SCXDYN0000000354",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "left": 55,
+         "top": 560,
+         "width": 250,
+         "height": 44,
+         "model": {
+          "$ref": "SCXDYN0000000353"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000336"
+         },
+         "fillColor": "#FFFFFF"
+        },
+        {
+         "_type": "UMLActionView",
+         "_id": "SCXDYN0000000356",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "left": 375,
+         "top": 640,
+         "width": 250,
+         "height": 44,
+         "model": {
+          "$ref": "SCXDYN0000000355"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000338"
+         },
+         "fillColor": "#FFFFFF"
+        },
+        {
+         "_type": "UMLActionView",
+         "_id": "SCXDYN0000000358",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "left": 55,
+         "top": 720,
+         "width": 250,
+         "height": 44,
+         "model": {
+          "$ref": "SCXDYN0000000357"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000336"
+         },
+         "fillColor": "#FFFFFF"
+        },
+        {
+         "_type": "UMLControlNodeView",
+         "_id": "SCXDYN0000000360",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "left": 160,
+         "top": 807,
+         "width": 40,
+         "height": 30,
+         "model": {
+          "$ref": "SCXDYN0000000359"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000336"
+         }
+        },
+        {
+         "_type": "UMLActionView",
+         "_id": "SCXDYN0000000362",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "left": 375,
+         "top": 880,
+         "width": 250,
+         "height": 44,
+         "model": {
+          "$ref": "SCXDYN0000000361"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000338"
+         },
+         "fillColor": "#FFFFFF"
+        },
+        {
+         "_type": "UMLActionView",
+         "_id": "SCXDYN0000000364",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "left": 375,
+         "top": 960,
+         "width": 250,
+         "height": 44,
+         "model": {
+          "$ref": "SCXDYN0000000363"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000338"
+         },
+         "fillColor": "#FFFFFF"
+        },
+        {
+         "_type": "UMLActionView",
+         "_id": "SCXDYN0000000366",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "left": 55,
+         "top": 1040,
+         "width": 250,
+         "height": 44,
+         "model": {
+          "$ref": "SCXDYN0000000365"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000336"
+         },
+         "fillColor": "#FFFFFF"
+        },
+        {
+         "_type": "UMLControlNodeView",
+         "_id": "SCXDYN0000000368",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "left": 632,
+         "top": 1033,
+         "width": 26,
+         "height": 26,
+         "model": {
+          "$ref": "SCXDYN0000000367"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000338"
+         }
+        },
+        {
+         "_type": "UMLControlNodeView",
+         "_id": "SCXDYN0000000370",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "left": 167,
+         "top": 1129,
+         "width": 26,
+         "height": 26,
+         "model": {
+          "$ref": "SCXDYN0000000369"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000336"
+         }
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000372",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000340"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000342"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000371"
+         },
+         "points": "180:102;180:182"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000374",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000342"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000344"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000373"
+         },
+         "points": "180:182;500:182;500:262"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000376",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000344"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000346"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000375"
+         },
+         "points": "500:262;500:342"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000378",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000346"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000348"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000377"
+         },
+         "points": "500:342;180:342;180:422"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000380",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000348"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000350"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000379"
+         },
+         "points": "180:422;180:502"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000382",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000346"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000352"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000381"
+         },
+         "points": "500:342;500:422"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000384",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000352"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000354"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000383"
+         },
+         "points": "500:422;500:534;180:534;180:582"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000386",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000354"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000356"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000385"
+         },
+         "points": "180:582;500:582;500:662"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000388",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000356"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000358"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000387"
+         },
+         "points": "500:662;500:742;180:742"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000390",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000358"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000360"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000389"
+         },
+         "points": "180:742;180:822"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000392",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000360"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000354"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000391"
+         },
+         "points": "180:822;40:822;40:582;180:582"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000394",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000360"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000362"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000393"
+         },
+         "points": "180:822;500:822;500:902"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000396",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000362"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000368"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000395"
+         },
+         "points": "500:902;645:950;645:1046"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000398",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000360"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000364"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000397"
+         },
+         "points": "180:822;180:982;500:982"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000400",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000364"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000366"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000399"
+         },
+         "points": "500:982;500:1062;180:1062"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000402",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000366"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000370"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000401"
+         },
+         "points": "180:1062;180:1142"
+        },
+        {
+         "_type": "UMLNoteView",
+         "_id": "SCXDYN0000000403",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "left": 730,
+         "top": 220,
+         "width": 260,
+         "height": 44,
+         "text": "Refus si le format n'est pas .csv / .xlsx, si le fichier est vide ou trop long."
+        },
+        {
+         "_type": "UMLNoteView",
+         "_id": "SCXDYN0000000404",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "left": 730,
+         "top": 380,
+         "width": 260,
+         "height": 44,
+         "text": "Lot créé au statut UPLOADED, avec une correspondance colonnes → champs suggérée."
+        },
+        {
+         "_type": "UMLNoteView",
+         "_id": "SCXDYN0000000405",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "left": 730,
+         "top": 620,
+         "width": 260,
+         "height": 44,
+         "text": "Contrôle des références, des doublons et des champs ; lot VALIDATED."
+        },
+        {
+         "_type": "UMLNoteView",
+         "_id": "SCXDYN0000000406",
+         "_parent": {
+          "$ref": "SCXDYN0000000334"
+         },
+         "left": 730,
+         "top": 940,
+         "width": 260,
+         "height": 44,
+         "text": "Création ou mise à jour ; lignes en erreur ignorées si demandé."
+        }
+       ],
+       "defaultDiagram": true
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "model": "sync.academicsemester",
+    "pk": "0d48210b-21f8-43ee-9261-d08b13d68c0b",
+    "fields": {
+      "name": "Semestre 1 - 2025/2026",
+      "academic_year": "2025/2026",
+      "start_date": "2025-10-01",
+      "end_date": "2026-02-28",
+      "is_active": false
+    }
+  },
+  {
+    "model": "sync.academicsemester",
+    "pk": "a3b15f5f-12b3-4db2-b052-5eadcc283251",
+    "fields": {
+      "name": "Semestre 2 - 2025/2026",
+      "academic_year": "2025/2026",
+      "start_date": "2026-03-01",
+      "end_date": "2026-07-31",
+      "is_active": true
+    }
+  }
+]

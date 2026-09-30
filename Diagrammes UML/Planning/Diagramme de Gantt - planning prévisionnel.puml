@@ -1,0 +1,34 @@
+@startgantt
+language fr
+printscale weekly
+Project starts 2026-07-15
+saturday are open
+sunday are open
+skinparam defaultFontName Arial
+-- 1. Étude préalable et analyse --
+[Étude de l'existant et recueil des besoins] starts 2026-07-15 and ends 2026-07-21
+[Rédaction du cahier des charges] starts 2026-07-22 and ends 2026-07-25
+[Modélisation UML] starts 2026-07-26 and ends 2026-07-31
+-- 2. Conception UI/UX --
+[Maquettes des applications web et mobile] starts 2026-08-01 and ends 2026-08-05
+[Validation des maquettes] starts 2026-08-06 and ends 2026-08-07
+-- 3. Développement du backend --
+[Authentification et référentiel] starts 2026-08-08 and ends 2026-08-16
+[Assistant d'import de données] starts 2026-08-12 and ends 2026-08-20
+[Campagnes et évaluations] starts 2026-08-17 and ends 2026-08-28
+[Assiduité, notifications, rapports et audit] starts 2026-08-29 and ends 2026-09-07
+-- 4. Fonctionnalités avancées --
+[Tableaux de bord et indicateurs] starts 2026-09-08 and ends 2026-09-14
+[Moteur d'analyse intelligente] starts 2026-09-15 and ends 2026-09-22
+-- 5. Développement des applications clientes --
+[Application mobile (Flutter)] starts 2026-08-21 and ends 2026-09-20
+[Application web (React)] starts 2026-09-01 and ends 2026-09-25
+-- 6. Tests et intégration --
+[Tests unitaires et d'intégration] starts 2026-09-26 and ends 2026-10-02
+[Recette et corrections] starts 2026-10-03 and ends 2026-10-07
+-- 7. Déploiement et documentation --
+[Mise en production] starts 2026-10-08 and ends 2026-10-12
+[Documentation technique et guides] starts 2026-10-13 and ends 2026-10-18
+-- 8. Rédaction du mémoire --
+[Rédaction et relecture] starts 2026-09-15 and ends 2026-10-25
+@endgantt

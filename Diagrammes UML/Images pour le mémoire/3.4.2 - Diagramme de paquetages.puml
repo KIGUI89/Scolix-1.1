@@ -1,0 +1,81 @@
+@startuml Diagramme_de_paquetages
+!pragma layout smetana
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam shadowing false
+skinparam nodesep 70
+skinparam ranksep 80
+skinparam folder {
+  BackgroundColor #FAFBFC
+  BorderColor #2B3A55
+  FontStyle plain
+}
+skinparam ArrowColor #2B3A55
+
+folder CT [
+<b>Communication et traçabilité</b>
+----
+Notification
+DemandeRapport
+JournalAudit
+]
+folder A [
+<b>Authentification</b>
+----
+Utilisateur
+]
+folder CE [
+<b>Campagnes et évaluations</b>
+----
+Campagne
+Critere
+Ponderation
+Evaluation
+Reponse
+Signalement
+AutoEvaluation
+ReponseAutoEvaluation
+]
+folder R [
+<b>Référentiel universitaire</b>
+----
+Departement
+Semestre
+Grade
+Enseignant
+Etudiant
+Cours
+Inscription
+LotImport
+JournalSynchronisation
+]
+folder AS [
+<b>Assiduité</b>
+----
+Presence
+AlertePresence
+]
+folder AI [
+<b>Analytique et IA</b>
+----
+PredictionScore
+ResultatClustering
+ResultatDetectionBiais
+ResultatBiaisEvaluateur
+ConfigBiaisEvaluateur
+ConfigClassification
+Formation
+]
+
+AI ..> CE : <<use>>
+AI ..> AS : <<use>>
+AI ..> R : <<use>>
+CE ..> R : <<use>>
+CE ..> A : <<use>>
+CE ..> CT : <<use>>
+AS ..> R : <<use>>
+AS ..> CT : <<use>>
+CT ..> A : <<use>>
+A ..> R : <<use>>
+R ..> A : <<use>>
+@enduml

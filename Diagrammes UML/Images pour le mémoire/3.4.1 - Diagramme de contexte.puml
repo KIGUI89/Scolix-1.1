@@ -1,0 +1,33 @@
+@startuml Diagramme_de_contexte
+!pragma layout smetana
+left to right direction
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam shadowing false
+skinparam actorStyle default
+skinparam rectangle {
+  BackgroundColor #E5EDF8
+  BorderColor #2B3A55
+  FontStyle bold
+}
+skinparam ArrowColor #2B3A55
+
+actor "Étudiant" as ETU
+actor "Enseignant" as ENS
+actor "Directeur" as DIR
+actor "Administrateur" as ADM
+
+rectangle "<<système>>\n\nScolix" as SYS
+
+actor "Système ERP\nuniversitaire" as ERP <<système externe>>
+actor "Serveur de\nmessagerie SMTP" as SMTP <<système externe>>
+actor "Service SMS / Push\n(simulé)" as SMS <<système externe>>
+
+ETU "0..*" -- "1" SYS : évalue les enseignants
+ENS "0..*" -- "1" SYS : consulte ses résultats
+DIR "0..*" -- "1" SYS : pilote les campagnes
+ADM "1..*" -- "1" SYS : administre la plateforme
+SYS "1" -- "1" ERP : fournit le référentiel
+SYS "1" -- "1" SMTP : achemine les e-mails
+SYS "1" -- "0..1" SMS : achemine SMS et Push
+@enduml

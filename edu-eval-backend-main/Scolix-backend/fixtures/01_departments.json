@@ -1,0 +1,42 @@
+[
+  {
+    "model": "sync.department",
+    "pk": "f6dadf9b-a630-4e42-b7bf-dc5dd1e4d9c2",
+    "fields": {
+      "code": "GL",
+      "name": "Génie Logiciel",
+      "description": "Département Génie Logiciel",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.department",
+    "pk": "e25b2977-7d61-49db-a29b-d53ae077514b",
+    "fields": {
+      "code": "RS",
+      "name": "Réseaux et Systèmes",
+      "description": "Département Réseaux et Systèmes",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.department",
+    "pk": "d8b475df-dd8c-416b-86d8-377e5ab141a2",
+    "fields": {
+      "code": "IA",
+      "name": "Intelligence Artificielle",
+      "description": "Département Intelligence Artificielle",
+      "is_active": true
+    }
+  },
+  {
+    "model": "sync.department",
+    "pk": "b2427d5b-ebab-48cd-bd04-b307839f8870",
+    "fields": {
+      "code": "SI",
+      "name": "Systèmes d’Information",
+      "description": "Département Systèmes d’Information",
+      "is_active": true
+    }
+  }
+]

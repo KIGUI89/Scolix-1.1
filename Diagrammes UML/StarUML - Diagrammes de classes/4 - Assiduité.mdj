@@ -1,0 +1,1044 @@
+{
+ "_type": "Project",
+ "_id": "SCOLIX0000000001",
+ "name": "Scolix — Assiduité",
+ "documentation": "Modélisation UML de Scolix (plateforme d'évaluation des enseignants).",
+ "ownedElements": [
+  {
+   "_type": "UMLModel",
+   "_id": "SCOLIX0000000002",
+   "_parent": {
+    "$ref": "SCOLIX0000000001"
+   },
+   "name": "Modèle de classes",
+   "ownedElements": [
+    {
+     "_type": "UMLPackage",
+     "_id": "SCOLIX0000000003",
+     "_parent": {
+      "$ref": "SCOLIX0000000002"
+     },
+     "name": "Énumérations",
+     "ownedElements": [
+      {
+       "_type": "UMLEnumeration",
+       "_id": "SCOLIX0000000009",
+       "_parent": {
+        "$ref": "SCOLIX0000000003"
+       },
+       "name": "Niveau",
+       "literals": [
+        {
+         "_type": "UMLEnumerationLiteral",
+         "_id": "SCOLIX0000000010",
+         "_parent": {
+          "$ref": "SCOLIX0000000009"
+         },
+         "name": "L1"
+        },
+        {
+         "_type": "UMLEnumerationLiteral",
+         "_id": "SCOLIX0000000011",
+         "_parent": {
+          "$ref": "SCOLIX0000000009"
+         },
+         "name": "L2"
+        },
+        {
+         "_type": "UMLEnumerationLiteral",
+         "_id": "SCOLIX0000000012",
+         "_parent": {
+          "$ref": "SCOLIX0000000009"
+         },
+         "name": "L3"
+        },
+        {
+         "_type": "UMLEnumerationLiteral",
+         "_id": "SCOLIX0000000013",
+         "_parent": {
+          "$ref": "SCOLIX0000000009"
+         },
+         "name": "M1"
+        },
+        {
+         "_type": "UMLEnumerationLiteral",
+         "_id": "SCOLIX0000000014",
+         "_parent": {
+          "$ref": "SCOLIX0000000009"
+         },
+         "name": "M2"
+        }
+       ]
+      },
+      {
+       "_type": "UMLEnumeration",
+       "_id": "SCOLIX0000000029",
+       "_parent": {
+        "$ref": "SCOLIX0000000003"
+       },
+       "name": "StatutPresence",
+       "literals": [
+        {
+         "_type": "UMLEnumerationLiteral",
+         "_id": "SCOLIX0000000030",
+         "_parent": {
+          "$ref": "SCOLIX0000000029"
+         },
+         "name": "ON_TIME"
+        },
+        {
+         "_type": "UMLEnumerationLiteral",
+         "_id": "SCOLIX0000000031",
+         "_parent": {
+          "$ref": "SCOLIX0000000029"
+         },
+         "name": "LATE"
+        },
+        {
+         "_type": "UMLEnumerationLiteral",
+         "_id": "SCOLIX0000000032",
+         "_parent": {
+          "$ref": "SCOLIX0000000029"
+         },
+         "name": "ABSENT"
+        }
+       ]
+      },
+      {
+       "_type": "UMLEnumeration",
+       "_id": "SCOLIX0000000033",
+       "_parent": {
+        "$ref": "SCOLIX0000000003"
+       },
+       "name": "TypeAlerte",
+       "literals": [
+        {
+         "_type": "UMLEnumerationLiteral",
+         "_id": "SCOLIX0000000034",
+         "_parent": {
+          "$ref": "SCOLIX0000000033"
+         },
+         "name": "LATE_THRESHOLD"
+        },
+        {
+         "_type": "UMLEnumerationLiteral",
+         "_id": "SCOLIX0000000035",
+         "_parent": {
+          "$ref": "SCOLIX0000000033"
+         },
+         "name": "ABSENCE_THRESHOLD"
+        }
+       ]
+      },
+      {
+       "_type": "UMLEnumeration",
+       "_id": "SCOLIX0000000036",
+       "_parent": {
+        "$ref": "SCOLIX0000000003"
+       },
+       "name": "StatutAlerte",
+       "literals": [
+        {
+         "_type": "UMLEnumerationLiteral",
+         "_id": "SCOLIX0000000037",
+         "_parent": {
+          "$ref": "SCOLIX0000000036"
+         },
+         "name": "PENDING"
+        },
+        {
+         "_type": "UMLEnumerationLiteral",
+         "_id": "SCOLIX0000000038",
+         "_parent": {
+          "$ref": "SCOLIX0000000036"
+         },
+         "name": "SENT"
+        },
+        {
+         "_type": "UMLEnumerationLiteral",
+         "_id": "SCOLIX0000000039",
+         "_parent": {
+          "$ref": "SCOLIX0000000036"
+         },
+         "name": "RESOLVED"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "_type": "UMLPackage",
+     "_id": "SCOLIX0000000112",
+     "_parent": {
+      "$ref": "SCOLIX0000000002"
+     },
+     "name": "Référentiel universitaire",
+     "ownedElements": [
+      {
+       "_type": "UMLClass",
+       "_id": "SCOLIX0000000133",
+       "_parent": {
+        "$ref": "SCOLIX0000000112"
+       },
+       "name": "Enseignant",
+       "attributes": [
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000134",
+         "_parent": {
+          "$ref": "SCOLIX0000000133"
+         },
+         "name": "id",
+         "visibility": "private",
+         "type": "UUID",
+         "isID": true
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000135",
+         "_parent": {
+          "$ref": "SCOLIX0000000133"
+         },
+         "name": "identifiantUniversite",
+         "visibility": "private",
+         "type": "String",
+         "isUnique": true
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000136",
+         "_parent": {
+          "$ref": "SCOLIX0000000133"
+         },
+         "name": "matricule",
+         "visibility": "private",
+         "type": "String",
+         "isUnique": true
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000137",
+         "_parent": {
+          "$ref": "SCOLIX0000000133"
+         },
+         "name": "prenom",
+         "visibility": "private",
+         "type": "String"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000138",
+         "_parent": {
+          "$ref": "SCOLIX0000000133"
+         },
+         "name": "nom",
+         "visibility": "private",
+         "type": "String"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000139",
+         "_parent": {
+          "$ref": "SCOLIX0000000133"
+         },
+         "name": "email",
+         "visibility": "private",
+         "type": "String",
+         "isUnique": true
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000140",
+         "_parent": {
+          "$ref": "SCOLIX0000000133"
+         },
+         "name": "telephone",
+         "visibility": "private",
+         "type": "String"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000141",
+         "_parent": {
+          "$ref": "SCOLIX0000000133"
+         },
+         "name": "specialite",
+         "visibility": "private",
+         "type": "String"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000142",
+         "_parent": {
+          "$ref": "SCOLIX0000000133"
+         },
+         "name": "estActif",
+         "visibility": "private",
+         "type": "Boolean"
+        }
+       ],
+       "operations": [
+        {
+         "_type": "UMLOperation",
+         "_id": "SCOLIX0000000143",
+         "_parent": {
+          "$ref": "SCOLIX0000000133"
+         },
+         "name": "nomComplet",
+         "visibility": "public",
+         "parameters": [
+          {
+           "_type": "UMLParameter",
+           "_id": "SCOLIX0000000144",
+           "_parent": {
+            "$ref": "SCOLIX0000000143"
+           },
+           "name": "",
+           "type": "String",
+           "direction": "return"
+          }
+         ]
+        }
+       ],
+       "ownedElements": [
+        {
+         "_type": "UMLAssociation",
+         "_id": "SCOLIX0000000433",
+         "_parent": {
+          "$ref": "SCOLIX0000000133"
+         },
+         "name": "pointe",
+         "end1": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000434",
+          "_parent": {
+           "$ref": "SCOLIX0000000433"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000133"
+          },
+          "multiplicity": "1"
+         },
+         "end2": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000435",
+          "_parent": {
+           "$ref": "SCOLIX0000000433"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000252"
+          },
+          "multiplicity": "0..*"
+         }
+        },
+        {
+         "_type": "UMLAssociation",
+         "_id": "SCOLIX0000000439",
+         "_parent": {
+          "$ref": "SCOLIX0000000133"
+         },
+         "name": "reçoit",
+         "end1": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000440",
+          "_parent": {
+           "$ref": "SCOLIX0000000439"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000133"
+          },
+          "multiplicity": "1"
+         },
+         "end2": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000441",
+          "_parent": {
+           "$ref": "SCOLIX0000000439"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000263"
+          },
+          "multiplicity": "0..*"
+         }
+        }
+       ]
+      },
+      {
+       "_type": "UMLClass",
+       "_id": "SCOLIX0000000159",
+       "_parent": {
+        "$ref": "SCOLIX0000000112"
+       },
+       "name": "Cours",
+       "attributes": [
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000160",
+         "_parent": {
+          "$ref": "SCOLIX0000000159"
+         },
+         "name": "id",
+         "visibility": "private",
+         "type": "UUID",
+         "isID": true
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000161",
+         "_parent": {
+          "$ref": "SCOLIX0000000159"
+         },
+         "name": "identifiantUniversite",
+         "visibility": "private",
+         "type": "String",
+         "isUnique": true
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000162",
+         "_parent": {
+          "$ref": "SCOLIX0000000159"
+         },
+         "name": "code",
+         "visibility": "private",
+         "type": "String",
+         "isUnique": true
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000163",
+         "_parent": {
+          "$ref": "SCOLIX0000000159"
+         },
+         "name": "intitule",
+         "visibility": "private",
+         "type": "String"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000164",
+         "_parent": {
+          "$ref": "SCOLIX0000000159"
+         },
+         "name": "description",
+         "visibility": "private",
+         "type": "Text"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000165",
+         "_parent": {
+          "$ref": "SCOLIX0000000159"
+         },
+         "name": "niveau",
+         "visibility": "private",
+         "type": {
+          "$ref": "SCOLIX0000000009"
+         }
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000166",
+         "_parent": {
+          "$ref": "SCOLIX0000000159"
+         },
+         "name": "cohorte",
+         "visibility": "private",
+         "type": "String"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000167",
+         "_parent": {
+          "$ref": "SCOLIX0000000159"
+         },
+         "name": "credits",
+         "visibility": "private",
+         "type": "Integer"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000168",
+         "_parent": {
+          "$ref": "SCOLIX0000000159"
+         },
+         "name": "estActif",
+         "visibility": "private",
+         "type": "Boolean"
+        }
+       ],
+       "operations": [],
+       "ownedElements": [
+        {
+         "_type": "UMLAssociation",
+         "_id": "SCOLIX0000000436",
+         "_parent": {
+          "$ref": "SCOLIX0000000159"
+         },
+         "name": "séance de",
+         "end1": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000437",
+          "_parent": {
+           "$ref": "SCOLIX0000000436"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000159"
+          },
+          "multiplicity": "1"
+         },
+         "end2": {
+          "_type": "UMLAssociationEnd",
+          "_id": "SCOLIX0000000438",
+          "_parent": {
+           "$ref": "SCOLIX0000000436"
+          },
+          "reference": {
+           "$ref": "SCOLIX0000000252"
+          },
+          "multiplicity": "0..*"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "_type": "UMLPackage",
+     "_id": "SCOLIX0000000251",
+     "_parent": {
+      "$ref": "SCOLIX0000000002"
+     },
+     "name": "Assiduité",
+     "ownedElements": [
+      {
+       "_type": "UMLClass",
+       "_id": "SCOLIX0000000252",
+       "_parent": {
+        "$ref": "SCOLIX0000000251"
+       },
+       "name": "Presence",
+       "attributes": [
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000253",
+         "_parent": {
+          "$ref": "SCOLIX0000000252"
+         },
+         "name": "id",
+         "visibility": "private",
+         "type": "UUID",
+         "isID": true
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000254",
+         "_parent": {
+          "$ref": "SCOLIX0000000252"
+         },
+         "name": "heurePrevue",
+         "visibility": "private",
+         "type": "DateTime"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000255",
+         "_parent": {
+          "$ref": "SCOLIX0000000252"
+         },
+         "name": "heureReelle",
+         "visibility": "private",
+         "type": "DateTime"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000256",
+         "_parent": {
+          "$ref": "SCOLIX0000000252"
+         },
+         "name": "statut",
+         "visibility": "private",
+         "type": {
+          "$ref": "SCOLIX0000000029"
+         }
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000257",
+         "_parent": {
+          "$ref": "SCOLIX0000000252"
+         },
+         "name": "minutesRetard",
+         "visibility": "private",
+         "type": "Integer"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000258",
+         "_parent": {
+          "$ref": "SCOLIX0000000252"
+         },
+         "name": "justification",
+         "visibility": "private",
+         "type": "Text"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000259",
+         "_parent": {
+          "$ref": "SCOLIX0000000252"
+         },
+         "name": "estJustifiee",
+         "visibility": "private",
+         "type": "Boolean"
+        }
+       ],
+       "operations": [
+        {
+         "_type": "UMLOperation",
+         "_id": "SCOLIX0000000260",
+         "_parent": {
+          "$ref": "SCOLIX0000000252"
+         },
+         "name": "calculerRetard",
+         "visibility": "public",
+         "parameters": [
+          {
+           "_type": "UMLParameter",
+           "_id": "SCOLIX0000000261",
+           "_parent": {
+            "$ref": "SCOLIX0000000260"
+           },
+           "name": "",
+           "type": "Integer",
+           "direction": "return"
+          }
+         ]
+        },
+        {
+         "_type": "UMLOperation",
+         "_id": "SCOLIX0000000262",
+         "_parent": {
+          "$ref": "SCOLIX0000000252"
+         },
+         "name": "validerCoherence",
+         "visibility": "public",
+         "parameters": []
+        }
+       ],
+       "ownedElements": []
+      },
+      {
+       "_type": "UMLClass",
+       "_id": "SCOLIX0000000263",
+       "_parent": {
+        "$ref": "SCOLIX0000000251"
+       },
+       "name": "AlertePresence",
+       "attributes": [
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000264",
+         "_parent": {
+          "$ref": "SCOLIX0000000263"
+         },
+         "name": "id",
+         "visibility": "private",
+         "type": "UUID",
+         "isID": true
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000265",
+         "_parent": {
+          "$ref": "SCOLIX0000000263"
+         },
+         "name": "typeAlerte",
+         "visibility": "private",
+         "type": {
+          "$ref": "SCOLIX0000000033"
+         }
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000266",
+         "_parent": {
+          "$ref": "SCOLIX0000000263"
+         },
+         "name": "statut",
+         "visibility": "private",
+         "type": {
+          "$ref": "SCOLIX0000000036"
+         }
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000267",
+         "_parent": {
+          "$ref": "SCOLIX0000000263"
+         },
+         "name": "periode",
+         "visibility": "private",
+         "type": "String"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000268",
+         "_parent": {
+          "$ref": "SCOLIX0000000263"
+         },
+         "name": "nombre",
+         "visibility": "private",
+         "type": "Integer"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000269",
+         "_parent": {
+          "$ref": "SCOLIX0000000263"
+         },
+         "name": "message",
+         "visibility": "private",
+         "type": "Text"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000270",
+         "_parent": {
+          "$ref": "SCOLIX0000000263"
+         },
+         "name": "dateCreation",
+         "visibility": "private",
+         "type": "DateTime"
+        },
+        {
+         "_type": "UMLAttribute",
+         "_id": "SCOLIX0000000271",
+         "_parent": {
+          "$ref": "SCOLIX0000000263"
+         },
+         "name": "dateResolution",
+         "visibility": "private",
+         "type": "DateTime"
+        }
+       ],
+       "operations": [],
+       "ownedElements": []
+      }
+     ]
+    },
+    {
+     "_type": "UMLClassDiagram",
+     "_id": "SCOLIX0000000670",
+     "_parent": {
+      "$ref": "SCOLIX0000000002"
+     },
+     "name": "Classes — Assiduité",
+     "ownedViews": [
+      {
+       "_type": "UMLPackageView",
+       "_id": "SCOLIX0000000671",
+       "_parent": {
+        "$ref": "SCOLIX0000000670"
+       },
+       "model": {
+        "$ref": "SCOLIX0000000251"
+       },
+       "left": 103,
+       "top": 301,
+       "width": 541,
+       "height": 341,
+       "fillColor": "#FAFBFC",
+       "containedViews": [
+        {
+         "$ref": "SCOLIX0000000674"
+        },
+        {
+         "$ref": "SCOLIX0000000675"
+        }
+       ]
+      },
+      {
+       "_type": "UMLPackageView",
+       "_id": "SCOLIX0000000672",
+       "_parent": {
+        "$ref": "SCOLIX0000000670"
+       },
+       "model": {
+        "$ref": "SCOLIX0000000112"
+       },
+       "left": 206,
+       "top": 86,
+       "width": 235,
+       "height": 127,
+       "fillColor": "#FAFBFC",
+       "containedViews": [
+        {
+         "$ref": "SCOLIX0000000676"
+        },
+        {
+         "$ref": "SCOLIX0000000677"
+        }
+       ]
+      },
+      {
+       "_type": "UMLPackageView",
+       "_id": "SCOLIX0000000673",
+       "_parent": {
+        "$ref": "SCOLIX0000000670"
+       },
+       "model": {
+        "$ref": "SCOLIX0000000003"
+       },
+       "left": 670,
+       "top": 40,
+       "width": 382,
+       "height": 530,
+       "fillColor": "#FAFBFC",
+       "containedViews": [
+        {
+         "$ref": "SCOLIX0000000678"
+        },
+        {
+         "$ref": "SCOLIX0000000679"
+        },
+        {
+         "$ref": "SCOLIX0000000680"
+        }
+       ]
+      },
+      {
+       "_type": "UMLClassView",
+       "_id": "SCOLIX0000000674",
+       "_parent": {
+        "$ref": "SCOLIX0000000670"
+       },
+       "model": {
+        "$ref": "SCOLIX0000000252"
+       },
+       "left": 130,
+       "top": 363,
+       "width": 226,
+       "height": 253,
+       "fillColor": "#FFFFFF",
+       "autoResize": true,
+       "containerView": {
+        "$ref": "SCOLIX0000000671"
+       }
+      },
+      {
+       "_type": "UMLClassView",
+       "_id": "SCOLIX0000000675",
+       "_parent": {
+        "$ref": "SCOLIX0000000670"
+       },
+       "model": {
+        "$ref": "SCOLIX0000000263"
+       },
+       "left": 385,
+       "top": 374,
+       "width": 233,
+       "height": 232,
+       "fillColor": "#FFFFFF",
+       "autoResize": true,
+       "containerView": {
+        "$ref": "SCOLIX0000000671"
+       }
+      },
+      {
+       "_type": "UMLClassView",
+       "_id": "SCOLIX0000000676",
+       "_parent": {
+        "$ref": "SCOLIX0000000670"
+       },
+       "model": {
+        "$ref": "SCOLIX0000000159"
+       },
+       "left": 232,
+       "top": 149,
+       "width": 57,
+       "height": 36,
+       "fillColor": "#F1F2F4",
+       "lineColor": "#9AA3B2",
+       "fontColor": "#5A6477",
+       "suppressAttributes": true,
+       "suppressOperations": true,
+       "autoResize": true,
+       "containerView": {
+        "$ref": "SCOLIX0000000672"
+       }
+      },
+      {
+       "_type": "UMLClassView",
+       "_id": "SCOLIX0000000677",
+       "_parent": {
+        "$ref": "SCOLIX0000000670"
+       },
+       "model": {
+        "$ref": "SCOLIX0000000133"
+       },
+       "left": 317,
+       "top": 149,
+       "width": 97,
+       "height": 36,
+       "fillColor": "#F1F2F4",
+       "lineColor": "#9AA3B2",
+       "fontColor": "#5A6477",
+       "suppressAttributes": true,
+       "suppressOperations": true,
+       "autoResize": true,
+       "containerView": {
+        "$ref": "SCOLIX0000000672"
+       }
+      },
+      {
+       "_type": "UMLEnumerationView",
+       "_id": "SCOLIX0000000678",
+       "_parent": {
+        "$ref": "SCOLIX0000000670"
+       },
+       "model": {
+        "$ref": "SCOLIX0000000036"
+       },
+       "left": 696,
+       "top": 102,
+       "width": 137,
+       "height": 132,
+       "fillColor": "#FFF8E8",
+       "suppressAttributes": true,
+       "suppressOperations": true,
+       "autoResize": true,
+       "containerView": {
+        "$ref": "SCOLIX0000000673"
+       }
+      },
+      {
+       "_type": "UMLEnumerationView",
+       "_id": "SCOLIX0000000679",
+       "_parent": {
+        "$ref": "SCOLIX0000000670"
+       },
+       "model": {
+        "$ref": "SCOLIX0000000029"
+       },
+       "left": 861,
+       "top": 102,
+       "width": 165,
+       "height": 132,
+       "fillColor": "#FFF8E8",
+       "suppressAttributes": true,
+       "suppressOperations": true,
+       "autoResize": true,
+       "containerView": {
+        "$ref": "SCOLIX0000000673"
+       }
+      },
+      {
+       "_type": "UMLEnumerationView",
+       "_id": "SCOLIX0000000680",
+       "_parent": {
+        "$ref": "SCOLIX0000000670"
+       },
+       "model": {
+        "$ref": "SCOLIX0000000033"
+       },
+       "left": 696,
+       "top": 434,
+       "width": 222,
+       "height": 111,
+       "fillColor": "#FFF8E8",
+       "suppressAttributes": true,
+       "suppressOperations": true,
+       "autoResize": true,
+       "containerView": {
+        "$ref": "SCOLIX0000000673"
+       }
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "SCOLIX0000000681",
+       "_parent": {
+        "$ref": "SCOLIX0000000670"
+       },
+       "tail": {
+        "$ref": "SCOLIX0000000677"
+       },
+       "head": {
+        "$ref": "SCOLIX0000000674"
+       },
+       "lineStyle": 1,
+       "model": {
+        "$ref": "SCOLIX0000000433"
+       },
+       "points": "361:187;330:288;300:363"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "SCOLIX0000000682",
+       "_parent": {
+        "$ref": "SCOLIX0000000670"
+       },
+       "tail": {
+        "$ref": "SCOLIX0000000676"
+       },
+       "head": {
+        "$ref": "SCOLIX0000000674"
+       },
+       "lineStyle": 1,
+       "model": {
+        "$ref": "SCOLIX0000000436"
+       },
+       "points": "256:187;244:262;240:363"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "SCOLIX0000000683",
+       "_parent": {
+        "$ref": "SCOLIX0000000670"
+       },
+       "tail": {
+        "$ref": "SCOLIX0000000677"
+       },
+       "head": {
+        "$ref": "SCOLIX0000000675"
+       },
+       "lineStyle": 1,
+       "model": {
+        "$ref": "SCOLIX0000000439"
+       },
+       "points": "373:188;453:373"
+      },
+      {
+       "_type": "UMLNoteView",
+       "_id": "SCOLIX0000000684",
+       "_parent": {
+        "$ref": "SCOLIX0000000670"
+       },
+       "left": 40,
+       "top": 684,
+       "width": 400,
+       "height": 58,
+       "text": "{statut = ABSENT => heureReelle vide}\n{statut = LATE => heureReelle > heurePrevue}"
+      },
+      {
+       "_type": "UMLNoteLinkView",
+       "_id": "SCOLIX0000000685",
+       "_parent": {
+        "$ref": "SCOLIX0000000670"
+       },
+       "tail": {
+        "$ref": "SCOLIX0000000684"
+       },
+       "head": {
+        "$ref": "SCOLIX0000000674"
+       },
+       "lineStyle": 1,
+       "points": "240:713;243:489"
+      }
+     ],
+     "defaultDiagram": true
+    }
+   ]
+  }
+ ]
+}

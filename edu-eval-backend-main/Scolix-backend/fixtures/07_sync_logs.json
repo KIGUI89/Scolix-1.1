@@ -1,0 +1,17 @@
+[
+  {
+    "model": "sync.synclog",
+    "pk": "da59c3e7-73ee-4e7f-8496-dbc6f537aef1",
+    "fields": {
+      "sync_type": "MANUAL",
+      "status": "SUCCESS",
+      "teachers_count": 20,
+      "students_count": 100,
+      "courses_count": 20,
+      "enrollments_count": 197,
+      "message": "Import initial des données ERP simulées pour l’environnement de développement.",
+      "errors": null,
+      "ended_at": "2026-05-06T20:47:50.244118Z"
+    }
+  }
+]

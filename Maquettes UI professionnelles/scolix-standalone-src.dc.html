@@ -1,0 +1,2018 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#FBFBFC">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#FBFBFC"></rect>
+    <g fill="#1A1B1D">
+      <path d="M470 160c-95 55-150 145-150 240s55 185 150 240c-55-70-82-152-82-240s27-170 82-240z"></path>
+      <ellipse cx="600" cy="400" rx="95" ry="240"></ellipse>
+      <ellipse cx="600" cy="400" rx="42" ry="150" fill="#FBFBFC"></ellipse>
+      <ellipse cx="742" cy="400" rx="70" ry="185"></ellipse>
+      <ellipse cx="742" cy="400" rx="30" ry="110" fill="#FBFBFC"></ellipse>
+      <ellipse cx="862" cy="400" rx="26" ry="62"></ellipse>
+    </g>
+  </svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/industry-5102597c-e069-4b68-8d7e-e7892ad97490/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<script src="_ds/industry-5102597c-e069-4b68-8d7e-e7892ad97490/_ds_bundle.js"></script>
+<style>
+body { margin: 0; }
+a { color: var(--color-accent); }
+a:hover { color: var(--color-accent-700); }
+:root {
+  --radius-md: 8px; --radius-lg: 10px;
+  --font-heading: Inter, -apple-system, system-ui, "Segoe UI", sans-serif;
+  --font-body: Inter, -apple-system, system-ui, "Segoe UI", sans-serif;
+  --font-heading-weight: 500;
+  --font-mono: Inter, -apple-system, system-ui, sans-serif;
+}
+
+[data-theme="dark"] {
+  --shadow-panel: 0 4px 28px rgba(0, 0, 0, 0.55);
+  --shadow-tile: 0 2px 12px rgba(0, 0, 0, 0.45);
+  --color-tile: #161616;
+  --color-bg: #0A0A0A;
+  --color-surface: #161616;
+  --color-text: #F2F2F2;
+  --color-divider: #242424;
+  --color-accent: #3B82F6;
+
+  --color-neutral-100: #111213;
+  --color-neutral-200: #232323;
+  --color-neutral-300: #2E2E2E;
+  --color-neutral-400: #3A3A3A;
+  --color-neutral-500: #5C5C5C;
+  --color-neutral-600: #8A8A8A;
+  --color-neutral-700: #A8A8A8;
+  --color-neutral-800: #D0D0D0;
+  --color-neutral-900: #F2F2F2;
+
+  --color-accent-100: #131C2E;
+  --color-accent-200: #1A2740;
+  --color-accent-300: #24375C;
+  --color-accent-400: #3B82F6;
+  --color-accent-500: #5B96F8;
+  --color-accent-600: #7EAEFA;
+  --color-accent-700: #9CC0FB;
+  --color-accent-800: #C3D9FD;
+  --color-accent-900: #E7EFFE;
+
+  --color-accent-2-100: #131C2E;
+  --color-accent-2-200: #1A2740;
+  --color-accent-2-300: #24375C;
+  --color-accent-2-700: #A5B4FC;
+  --color-accent-2-800: #C7D2FE;
+  --color-accent-2-900: #E0E7FF;
+}
+[data-theme="light"] {
+  --shadow-panel: 0 4px 24px rgba(0, 0, 0, 0.08);
+  --shadow-tile: 0 2px 12px rgba(0, 0, 0, 0.05);
+  --color-tile: #F8F8F9;
+  --color-bg: #FFFFFF;
+  --color-surface: #F8F8F9;
+  --color-text: #16181D;
+  --color-divider: #E6E7EB;
+  --color-accent: #3B82F6;
+
+  --color-neutral-100: #F5F6F8;
+  --color-neutral-200: #F1F2F4;
+  --color-neutral-300: #E3E4E8;
+  --color-neutral-400: #C9CBD2;
+  --color-neutral-500: #9BA0AA;
+  --color-neutral-600: #6E7480;
+  --color-neutral-700: #4E535D;
+  --color-neutral-800: #33373F;
+  --color-neutral-900: #16181D;
+
+  --color-accent-100: #EFF5FF;
+  --color-accent-200: #DEEAFE;
+  --color-accent-300: #C3DAFD;
+  --color-accent-400: #3B82F6;
+  --color-accent-500: #2F73E0;
+  --color-accent-600: #2864C4;
+  --color-accent-700: #1F53A5;
+  --color-accent-800: #17407F;
+  --color-accent-900: #102D59;
+
+  --color-accent-2-100: #EEF0FF;
+  --color-accent-2-200: #DFE3FE;
+  --color-accent-2-300: #C7CEFD;
+  --color-accent-2-700: #4E56C8;
+  --color-accent-2-800: #3A419E;
+  --color-accent-2-900: #2A2F73;
+}
+body, button, input, select, textarea, h1, h2, h3, h4, h5, h6 { font-family: Inter, -apple-system, system-ui, "Segoe UI", sans-serif; }
+body { background: var(--color-bg); color: var(--color-text); font-size: 13px; letter-spacing: -0.006em; }
+h1, h2, h3, h4, h5, h6 { letter-spacing: -0.02em; font-weight: 500; }
+h3 { font-size: 20px; }
+h4 { font-size: 14px; }
+[style*="font-weight: 700"] { font-weight: 500 !important; }
+[style*="text-transform: uppercase"] { text-transform: none !important; letter-spacing: 0 !important; }
+.card-kicker, .table th { text-transform: none; letter-spacing: 0; font-size: 12px; font-weight: 400; }
+* { scrollbar-width: thin; scrollbar-color: transparent transparent; }
+*:hover, *:focus-within { scrollbar-color: color-mix(in srgb, var(--color-text) 22%, transparent) transparent; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: transparent; border-radius: 999px; border: 2px solid transparent; background-clip: content-box; }
+:hover::-webkit-scrollbar-thumb { background: color-mix(in srgb, var(--color-text) 20%, transparent); background-clip: content-box; }
+::-webkit-scrollbar-thumb:hover { background: color-mix(in srgb, var(--color-text) 34%, transparent); background-clip: content-box; }
+.card, .dialog, .blueprint { border-radius: var(--radius-lg); border-color: var(--color-divider); }
+.card { background: var(--color-surface); }
+.btn { border-radius: 7px; padding: 5px 10px; font-size: 13px; font-weight: 400; gap: 6px; color: var(--color-neutral-800); border-color: transparent; background: transparent; }
+.btn-secondary { border-color: var(--color-divider); }
+.btn-secondary:hover { background: color-mix(in srgb, var(--color-text) 7%, transparent); }
+.btn-ghost { color: var(--color-neutral-600); }
+.btn-ghost:hover { background: color-mix(in srgb, var(--color-text) 7%, transparent); color: var(--color-neutral-900); }
+.btn-icon { width: 28px; height: 28px; padding: 0; font-size: 15px; }
+.input, .seg { border-radius: 7px; }
+.input { background: var(--color-surface); border-color: var(--color-divider); color: var(--color-text); min-height: 32px; font-size: 13px; }
+.input::placeholder { color: var(--color-neutral-500); }
+.seg { border: none; background: var(--color-neutral-200); padding: 2px; gap: 2px; }
+.seg-opt { padding: 4px 10px; font-size: 12px; border-radius: 5px; color: var(--color-neutral-600); }
+.seg-opt:has(input:checked) { background: var(--color-neutral-400); color: var(--color-neutral-900); }
+.seg-opt + .seg-opt { border-left: none; }
+.seg-opt:not(:has(input:checked)):hover { background: color-mix(in srgb, var(--color-text) 7%, transparent); }
+.table { font-size: 13px; }
+.table th { font-size: 10px; font-weight: 400; color: var(--color-neutral-600); border-bottom-color: var(--color-divider); }
+.table thead th { background: transparent; }
+.table td { padding: 9px var(--space-2); border-bottom-color: var(--color-divider); }
+.table tbody tr:hover { background: color-mix(in srgb, var(--color-text) 4%, transparent); }
+.card-title { font-size: 14px; font-weight: 500; }
+.card-kicker { color: var(--color-accent-600); }
+.text-muted { color: var(--color-neutral-600); }
+.tag { font-size: 11px; padding: 3px 9px; font-weight: 400; border-radius: 999px; white-space: nowrap; background: var(--color-neutral-200); color: var(--color-neutral-800); border: none; display: inline-flex; align-items: center; gap: 6px; }
+.tag::before { content: ""; width: 6px; height: 6px; border-radius: 999px; background: var(--dot-all, var(--dot-color, currentColor)); flex: none; }
+.tag-accent { --dot-color: var(--dot-accent, #3B82F6); }
+.tag-accent-2 { --dot-color: var(--dot-accent-2, #818CF8); }
+.tag-neutral { --dot-color: var(--dot-neutral, #9CA3AF); }
+.tag-outline { --dot-color: var(--dot-urgent, #F97316); }
+.tag-rank { --dot-color: var(--dot-rank, #22C55E); }
+.tag-sem { --dot-color: var(--dot-sem, #F97316); }
+.tag-exc { --dot-color: var(--dot-exc, #3B82F6); }
+.tag-prog { --dot-color: var(--dot-prog, #818CF8); }
+.tag-watch { --dot-color: var(--dot-watch, #F97316); }
+.tag-info { --dot-color: var(--dot-info, #22C55E); }
+.tag-count { --dot-color: var(--dot-count, #22C55E); }
+.tag-verif { --dot-color: var(--dot-verif, #F97316); }
+.tag-method { --dot-color: var(--dot-method, #F97316); }
+.tag-zscore { --dot-color: var(--dot-zscore, #22C55E); }
+.tag-crit { --dot-color: var(--dot-crit, #F97316); }
+.tag-watch2 { --dot-color: var(--dot-watch2, #22C55E); }
+.tag-surv { --dot-color: var(--dot-surv, #EAB308); }
+.tag-outline { color: var(--color-neutral-800); }
+.radio { color: var(--color-neutral-800); }
+.radio .dot { border-color: var(--color-neutral-400); }
+textarea.input { border-radius: var(--radius-md); }
+.tag { border-radius: 999px; white-space: nowrap; }
+.blueprint > .corner { display: none; }
+.card { background: var(--color-neutral-100); }
+main [style*="border: 1px solid var(--color-divider)"],
+main [style*="border: 1px solid var(--color-accent-300)"],
+aside [style*="border: 1px solid var(--color-divider)"] { border-radius: var(--radius-md); }
+.table { border-collapse: separate; border-spacing: 0; }
+.table th { border-bottom: 1px solid var(--color-divider); }
+.table thead th:first-child { border-top-left-radius: var(--radius-md); border-bottom-left-radius: var(--radius-md); }
+.table thead th:last-child { border-top-right-radius: var(--radius-md); border-bottom-right-radius: var(--radius-md); }
+.table thead th { background: var(--color-neutral-200); }
+.table tbody tr:last-child td { border-bottom: none; }
+main svg polygon, main svg polyline { stroke-linejoin: round; stroke-linecap: round; }
+</style>
+</helmet>
+
+<sc-if value="{{ isLogin }}" hint-placeholder-val="{{ true }}">
+<div data-theme="{{ theme }}" style="min-height: 100vh; display: grid; grid-template-columns: 1.15fr 1fr; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); --dot-accent: {{ dotAccent }}; --dot-accent-2: {{ dotAccent2 }}; --dot-neutral: {{ dotNeutral }}; --dot-urgent: {{ dotUrgent }}; --dot-rank: {{ dotRank }}; --dot-sem: {{ dotSem }}; --dot-exc: {{ dotExc }}; --dot-prog: {{ dotProg }}; --dot-watch: {{ dotWatch }}; --dot-info: {{ dotInfo }}; --dot-count: {{ dotCount }}; --dot-verif: {{ dotVerif }}; --dot-method: {{ dotMethod }}; --dot-zscore: {{ dotZscore }}; --dot-surv: {{ dotSurv }}; --dot-crit: {{ dotCrit }}; --dot-watch2: {{ dotWatch2 }}; --dot-all: {{ dotAll }}">
+  <div style="padding: 64px 72px; display: flex; flex-direction: column; justify-content: space-between; background: var(--color-neutral-100); color: var(--color-text); border-right: 1px solid var(--color-divider)">
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px; margin-bottom: 32px">
+      <img src="brand/scolix-icon-light.png" alt="Scolix" style="height: 86px; width: auto; align-self: flex-start; object-fit: contain; filter: {{ logoFilter }}">
+      <img src="brand/scolix-wordmark-light.png" alt="Scolix" style="height: 62px; width: auto; align-self: flex-start; object-fit: contain; filter: {{ logoFilter }}">
+      <span style="font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-neutral-600)">Pilotez votre école, libérez leur potentiel</span>
+    </div>
+    <div style="max-width: 520px; display: flex; flex-direction: column; gap: 24px">
+      <h1 style="font-size: 44px; margin: 0; text-wrap: pretty; color: var(--color-text)">Évaluation multicritère des enseignants</h1>
+      <p style="font-size: 15px; margin: 0; max-width: 44ch; color: var(--color-neutral-600)">Collecte anonyme, scores pondérés, analyse comparative et recommandations de formation — sur une seule plateforme.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 1px; background: var(--color-divider); border: 1px solid var(--color-divider); margin-top: 16px; border-radius: var(--radius-md); overflow: hidden">
+        <div style="background: var(--color-surface); padding: 16px 18px">
+          <div style="font-family: var(--font-heading); font-size: 26px">6</div>
+          <div style="font-size: 12px; letter-spacing: 0; text-transform: none; color: var(--color-neutral-600)">critères</div>
+        </div>
+        <div style="background: var(--color-surface); padding: 16px 18px">
+          <div style="font-family: var(--font-heading); font-size: 26px">8</div>
+          <div style="font-size: 12px; letter-spacing: 0; text-transform: none; color: var(--color-neutral-600)">modules</div>
+        </div>
+        <div style="background: var(--color-surface); padding: 16px 18px">
+          <div style="font-family: var(--font-heading); font-size: 26px">100 %</div>
+          <div style="font-size: 12px; letter-spacing: 0; text-transform: none; color: var(--color-neutral-600)">anonyme</div>
+        </div>
+      </div>
+    </div>
+    <div style="font-size: 12px; display: flex; gap: 20px; color: var(--color-neutral-600)">
+      <span>Conformité RGPD</span><span>Hash SHA-256</span><span>HTTPS / TLS</span>
+    </div>
+  </div>
+
+  <div style="padding: 64px 72px; display: flex; align-items: center; position: relative">
+    <button class="btn btn-ghost btn-icon" onClick="{{ toggleTheme }}" title="{{ themeLabel }}" aria-label="{{ themeLabel }}" style="position: absolute; top: 24px; right: 28px">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="{{ themeIcon }}"></path></svg>
+    </button>
+    <div style="width: 100%; max-width: 380px; display: flex; flex-direction: column; gap: 20px">
+      <sc-if value="{{ mfaStep }}" hint-placeholder-val="{{ false }}">
+        <div style="display: flex; flex-direction: column; gap: 20px">
+          <div>
+            <div class="text-muted" style="font-size: 12px; letter-spacing: 0; text-transform: none; margin-bottom: 6px">Étape 2 sur 2</div>
+            <h3 style="margin: 0 0 6px">Vérification en deux étapes</h3>
+            <p class="text-muted" style="font-size: 13px; margin: 0">Saisissez le code à 6 chiffres généré par votre application d'authentification.</p>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px">
+            <input class="input" style="text-align: center; font-size: 18px; min-height: 52px" value="4" readonly="">
+            <input class="input" style="text-align: center; font-size: 18px; min-height: 52px" value="1" readonly="">
+            <input class="input" style="text-align: center; font-size: 18px; min-height: 52px" value="8" readonly="">
+            <input class="input" style="text-align: center; font-size: 18px; min-height: 52px" value="0" readonly="">
+            <input class="input" style="text-align: center; font-size: 18px; min-height: 52px" value="" readonly="">
+            <input class="input" style="text-align: center; font-size: 18px; min-height: 52px" value="" readonly="">
+          </div>
+          <button class="btn btn-secondary btn-block" onClick="{{ enterApp }}">Vérifier et se connecter</button>
+          <div style="display: flex; justify-content: space-between; align-items: center">
+            <button class="btn btn-ghost" onClick="{{ backToPassword }}">Retour</button>
+            <button class="btn btn-ghost">Recevoir un code par e-mail</button>
+          </div>
+        </div>
+      </sc-if>
+      <sc-if value="{{ passwordStep }}" hint-placeholder-val="{{ true }}">
+        <div style="display: flex; flex-direction: column; gap: 20px">
+          <div>
+            <div class="text-muted" style="font-size: 12px; letter-spacing: 0; text-transform: none; margin-bottom: 6px">Espace administration</div>
+            <h3 style="margin: 0 0 6px">Connexion</h3>
+            <p class="text-muted" style="font-size: 13px; margin: 0">Accès réservé aux comptes de l'annuaire universitaire.</p>
+          </div>
+          <div class="field">
+            <label>Adresse e-mail institutionnelle</label>
+            <input class="input" style="min-height: 44px" value="a.benali@univ.exemple.fr" readonly="">
+          </div>
+          <div class="field">
+            <label>Mot de passe</label>
+            <input class="input" style="min-height: 44px" type="password" value="............" readonly="">
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center">
+            <label class="radio"><input type="checkbox"><span class="dot"></span>Se souvenir de moi</label>
+            <a href="#" style="font-size: 13px">Mot de passe oublié</a>
+          </div>
+          <button class="btn btn-secondary btn-block" onClick="{{ toMfa }}">Continuer</button>
+          <div style="border-top: 1px solid var(--color-divider); padding-top: 16px; display: flex; flex-direction: column; gap: 8px">
+            <button class="btn btn-secondary btn-block" style="margin: 0">Se connecter via l'annuaire (SSO)</button>
+            <span class="text-muted" style="font-size: 11px">Disponible en v2 — LDAP / SAML</span>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isApp }}" hint-placeholder-val="{{ false }}">
+<div data-theme="{{ theme }}" style="min-height: 100vh; background: var(--color-neutral-100); color: var(--color-text); font-family: var(--font-body); display: flex; flex-direction: column; --dot-accent: {{ dotAccent }}; --dot-accent-2: {{ dotAccent2 }}; --dot-neutral: {{ dotNeutral }}; --dot-urgent: {{ dotUrgent }}; --dot-rank: {{ dotRank }}; --dot-sem: {{ dotSem }}; --dot-exc: {{ dotExc }}; --dot-prog: {{ dotProg }}; --dot-watch: {{ dotWatch }}; --dot-info: {{ dotInfo }}; --dot-count: {{ dotCount }}; --dot-verif: {{ dotVerif }}; --dot-method: {{ dotMethod }}; --dot-zscore: {{ dotZscore }}; --dot-surv: {{ dotSurv }}; --dot-crit: {{ dotCrit }}; --dot-watch2: {{ dotWatch2 }}; --dot-all: {{ dotAll }}">
+
+  <sc-if value="{{ isTop }}" hint-placeholder-val="{{ false }}">
+    <header style="border-bottom: 1px solid var(--color-divider); background: var(--color-bg); position: sticky; top: 14px; z-index: 5; margin: 14px 14px 0; border-radius: 14px; box-shadow: var(--shadow-panel)">
+      <div style="display: flex; align-items: center; gap: 14px; padding: 9px 16px">
+        <img src="brand/scolix-icon-light.png" alt="" style="height: 17px; width: auto; align-self: center; object-fit: contain; filter: {{ logoFilter }}">
+        
+        <img src="brand/scolix-wordmark-light.png" alt="Scolix" style="height: 15px; width: auto; align-self: center; object-fit: contain; filter: {{ logoFilter }}"><div style="display: flex; align-items: center; gap: 2px">
+          <button class="btn btn-ghost btn-icon" onClick="{{ goBack }}" disabled="{{ noBack }}" title="Retour" aria-label="Retour">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12H4M10 6l-6 6 6 6"></path></svg>
+          </button>
+          <button class="btn btn-ghost btn-icon" onClick="{{ goFwd }}" disabled="{{ noFwd }}" title="Suivant" aria-label="Suivant">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"></path></svg>
+          </button>
+        </div>
+        <nav style="display: flex; align-items: center; gap: 2px; margin-right: auto">
+          <sc-for list="{{ topItems }}" as="it" hint-placeholder-count="6">
+            <a href="#" onClick="{{ it.go }}" aria-current="{{ it.cur }}" style="display: flex; align-items: center; gap: 7px; font-size: 13px; text-decoration: none; color: {{ it.topFg }}; padding: 5px 10px; border-radius: 7px; background: {{ it.topBg }}">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.85"><path d="{{ it.d }}"></path></svg>
+              {{ it.label }}
+            </a>
+          </sc-for>
+          <select class="input" style="width: auto; min-height: 28px; margin-left: 4px" value="{{ moreValue }}" onChange="{{ goSelect }}">
+            <option value="">Plus…</option>
+            <sc-for list="{{ moreItems }}" as="m" hint-placeholder-count="6">
+              <option value="{{ m.id }}">{{ m.label }}</option>
+            </sc-for>
+          </select>
+        </nav>
+        <div style="display: flex; align-items: center; gap: 8px">
+          <button class="btn btn-ghost btn-icon" onClick="{{ toggleTheme }}" title="{{ themeLabel }}" aria-label="{{ themeLabel }}">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="{{ themeIcon }}"></path></svg>
+          </button>
+          <span class="text-muted" style="font-size: 12px">A. Benali</span>
+          <span style="width: 24px; height: 24px; border-radius: 999px; background: var(--color-accent); color: var(--color-bg); display: grid; place-items: center; font-size: 10px; font-weight: 600">AB</span>
+          <button class="btn btn-ghost btn-icon" onClick="{{ logout }}" title="Déconnexion" aria-label="Déconnexion">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4h4v16h-4M11 8l4 4-4 4M4 12h11"></path></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+  </sc-if>
+
+  <div style="display: flex; align-items: center; gap: 10px; padding: 7px 14px; background: var(--color-neutral-100)">
+    <div style="display: flex; align-items: center; gap: 2px; position: relative; left: 100px; flex-grow: 0">
+      <button class="btn btn-ghost btn-icon" onClick="{{ goBack }}" disabled="{{ noBack }}" title="Retour" aria-label="Retour">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12H4M10 6l-6 6 6 6"></path></svg>
+      </button>
+      <button class="btn btn-ghost btn-icon" onClick="{{ goFwd }}" disabled="{{ noFwd }}" title="Suivant" aria-label="Suivant">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"></path></svg>
+      </button>
+      <button class="btn btn-ghost btn-icon" onClick="{{ toggleHist }}" title="Historique" aria-label="Historique" style="width: 28px; height: 26px">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4a8 8 0 108 8M12 8v4l3 2M12 4V2"></path></svg>
+      </button>
+      <sc-if value="{{ histOpen }}" hint-placeholder-val="{{ false }}">
+        <div style="position: absolute; top: 32px; left: 0; z-index: 30; min-width: 220px; padding: 6px; background: var(--color-bg); border: 1px solid var(--color-divider); border-radius: 10px; box-shadow: var(--shadow-panel)">
+          <div class="text-muted" style="font-size: 12px; letter-spacing: 0; text-transform: none; padding: 4px 10px 6px">Pages visitées</div>
+          <sc-for list="{{ histItems }}" as="hi" hint-placeholder-count="3">
+            <a href="#" onClick="{{ hi.go }}" style="display: block; padding: 6px 10px; font-size: 12px; border-radius: 6px; text-decoration-line: none; color: var(--color-text); background: {{ hi.bg }}" style-hover="background: color-mix(in srgb, var(--color-text) 6%, transparent)">{{ hi.label }}</a>
+          </sc-for>
+        </div>
+      </sc-if>
+    </div>
+    <div style="display: flex; align-items: center; gap: 8px; margin: 0 auto">
+      <img src="brand/scolix-icon-light.png" alt="" style="height: 16px; width: auto; align-self: center; object-fit: contain; filter: {{ logoFilter }}">
+      <img src="brand/scolix-wordmark-light.png" alt="Scolix" style="height: 13px; width: auto; align-self: center; object-fit: contain; filter: {{ logoFilter }}">
+      <span class="text-muted" style="font-size: 13px">›</span>
+      <span style="font-size: 13px">{{ title }}</span>
+    </div>
+    <div class="seg" style="width: 139px; height: 18px">
+              <label class="seg-opt"><input type="radio" name="navmode" checked="{{ isSide }}" onChange="{{ setSide }}">Latéral</label>
+              <label class="seg-opt"><input type="radio" name="navmode" checked="{{ isTop }}" onChange="{{ setTop }}">Horizontal</label>
+            </div><div style="display: flex; align-items: center; gap: 4px">
+      <button class="btn btn-ghost btn-icon" onClick="{{ toggleTheme }}" title="{{ themeLabel }}" aria-label="{{ themeLabel }}">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="{{ themeIcon }}"></path></svg>
+      </button>
+      <button class="btn btn-ghost btn-icon" title="Créer" aria-label="Créer">+</button>
+    </div>
+  </div>
+
+  <div style="display: flex; flex: 1; align-items: stretch; padding: 14px 0 0 14px; gap: 10px">
+    <sc-if value="{{ isSide }}" hint-placeholder-val="{{ true }}">
+      <aside style="width: {{ sidebarW }}; flex: none; background: var(--color-neutral-100); border-radius: 14px 14px 0 0; display: flex; flex-direction: column; position: sticky; top: 14px; align-self: flex-start; height: calc(100vh - 14px)">
+        <div style="padding: 14px 14px 12px">
+          <div style="display: flex; align-items: center; gap: 9px; width: 147px; height: 24px">
+            <img src="brand/scolix-icon-light.png" alt="" style="height: 20px; width: auto; flex: none; align-self: center; object-fit: contain; filter: {{ logoFilter }}">
+            <sc-if value="{{ expanded }}" hint-placeholder-val="{{ true }}">
+              <span class="text-muted" style="font-size: 11px; margin-left: auto">Admin</span>
+            </sc-if>
+            <button class="btn btn-ghost btn-icon" title="Rechercher" aria-label="Rechercher" style="margin-left: {{ collapseMargin }}">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M11 4a7 7 0 100 14 7 7 0 000-14M16 16l4 4"></path></svg>
+            </button>
+            <button class="btn btn-ghost btn-icon" onClick="{{ toggleSidebar }}" title="{{ collapseLabel }}" aria-label="{{ collapseLabel }}">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v14H4zM10 5v14"></path></svg>
+            </button>
+          </div>
+        </div>
+
+        <div style="flex: 1; overflow-y: auto; padding: 18px 0 10px">
+          <sc-for list="{{ groups }}" as="g" hint-placeholder-count="2">
+            <div style="display: flex; flex-direction: column; gap: 2px; padding-bottom: 14px">
+              <div class="text-muted" style="font-size: 12px; letter-spacing: 0; text-transform: none; padding: 2px 16px 6px; display: {{ labelDisplay }}">{{ g.title }}</div>
+              <sc-for list="{{ g.items }}" as="it" hint-placeholder-count="8">
+                <a href="#" onClick="{{ it.go }}" title="{{ it.label }}" style="display: flex; align-items: center; justify-content: {{ navJustify }}; gap: 10px; font-size: 13px; text-decoration-line: none; color: var(--color-text); font-weight: {{ it.weight }}; padding: 6px 10px; background: {{ it.bg }}; border-radius: var(--radius-md); margin: 0 8px; position: static; font-style: normal" style-hover="background: color-mix(in srgb, var(--color-text) 5%, transparent)">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex: none; opacity: 0.85; height: 20px; width: 20px">
+                    <path d="{{ it.d }}"></path>
+                  </svg>
+                  <span style="display: {{ labelDisplay }}">{{ it.label }}</span>
+                </a>
+              </sc-for>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="padding: 10px 14px; display: flex; align-items: center; gap: 10px">
+          <div style="width: 26px; height: 26px; border-radius: 999px; background: var(--color-accent); color: #FFFFFF; display: grid; place-items: center; font-size: 11px; flex: none">AB</div>
+          <div style="line-height: 1.2; display: {{ labelDisplay }}">
+            <div style="font-size: 12px; font-weight: 700">A. Benali</div>
+            <div class="text-muted" style="font-size: 10px">Administrateur</div>
+          </div>
+          <button class="btn btn-ghost btn-icon" style="margin-left: {{ collapseMargin }}; border-radius: var(--radius-md)" onClick="{{ logout }}" title="Déconnexion" aria-label="Déconnexion">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 4h4v16h-4M11 8l4 4-4 4M4 12h11"></path>
+            </svg>
+          </button>
+        </div>
+      </aside>
+    </sc-if>
+
+    <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; background: var(--color-bg); border-radius: 0; box-shadow: var(--shadow-panel); overflow: hidden">
+      <div style="position: sticky; top: 0; z-index: 4; background: var(--color-bg)">
+        
+        <div style="display: flex; align-items: center; gap: 10px; padding: 9px 16px; border-bottom: 1px solid var(--color-divider); width: 100%; box-sizing: border-box; min-height: 40px">
+          <img src="brand/scolix-icon-light.png" alt="" style="height: 16px; width: auto; align-self: center; object-fit: contain; filter: {{ logoFilter }}">
+          <span class="text-muted" style="font-size: 13px">›</span>
+          <span style="font-size: 13px">{{ title }}</span>
+          <div style="display: flex; align-items: center; gap: 4px; margin-left: auto">
+            
+            
+            <button class="btn btn-ghost btn-icon" title="Notifications" aria-label="Notifications">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 10a6 6 0 0112 0v5l2 3H4l2-3zM10 21h4"></path></svg>
+            </button>
+            
+            <button class="btn btn-secondary btn-icon" title="Créer" aria-label="Créer" style="border-color: var(--color-bg)">+</button>
+          </div>
+        </div><div style="display: flex; align-items: center; gap: 8px; padding: 7px 16px; border-bottom: 1px solid var(--color-divider)">
+          <button class="btn btn-ghost" style="color: var(--color-neutral-800); width: 74px; height: 14px">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 6h16M7 12h10M10 18h4"></path></svg>
+            Filtre
+          </button>
+          <button class="btn btn-secondary" style="margin-left: auto; width: 102px; height: 16px">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 8h10M18 8h2M4 16h4M12 16h8M14 6v4M8 14v4"></path></svg>
+            Affichage
+          </button>
+        </div>
+      </div>
+
+    <main style="flex: 1; min-width: 0; padding: 20px 16px 56px; display: flex; flex-direction: column; gap: 20px">
+
+      <div style="display: flex; align-items: flex-end; gap: 24px; flex-wrap: wrap; border-bottom: 1px solid var(--color-divider); padding-bottom: 14px">
+        <div style="margin-right: auto">
+          <div style="font-size: 12px; letter-spacing: 0; text-transform: none; margin-bottom: 5px; color: var(--color-neutral-700)">{{ kicker }}</div>
+          <h3 style="margin: 0 0 3px">{{ title }}</h3>
+          <p class="text-muted" style="font-size: 13px; margin: 0; max-width: 80ch">{{ subtitle }}</p>
+        </div>
+      </div>
+
+      <sc-if value="{{ scAdmin }}" hint-placeholder-val="{{ true }}">
+      <div style="display: flex; flex-direction: column; gap: 32px">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: 20px">
+          <sc-for list="{{ kpis }}" as="k" hint-placeholder-count="4">
+            <div class="card blueprint" style="padding: 20px 22px; gap: 10px; background: var(--color-tile); border-color: var(--color-divider); box-shadow: var(--shadow-tile); min-width: 0; min-height: 134px">
+              <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+              <div class="card-kicker" style="color: var(--color-neutral-900)">{{ k.label }}</div>
+              <div style="font-family: var(--font-heading); font-size: 32px; line-height: 1; color: var(--color-neutral-900)">{{ k.value }}</div>
+              <div style="font-size: 12px; color: var(--color-neutral-900)">{{ k.note }}</div>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 24px; align-items: start">
+          <div class="card blueprint" style="padding: 24px 26px; gap: 18px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="display: flex; align-items: baseline; gap: 16px">
+              <h4 style="margin: 0; margin-right: auto">Classement des enseignants</h4>
+              <select class="input" style="width: auto; min-height: 32px">
+                <option>Tous les départements</option>
+                <option>Informatique</option>
+                <option>Gestion</option>
+              </select>
+              <button class="btn btn-secondary">Exporter</button>
+            </div>
+            <table class="table">
+              <thead>
+                <tr><th>Enseignant</th><th>Département</th><th>Score global</th><th>Ponctualité</th><th>Profil</th><th></th></tr>
+              </thead>
+              <tbody>
+                <sc-for list="{{ ranking }}" as="r" hint-placeholder-count="6">
+                  <tr>
+                    <td>{{ r.name }}</td>
+                    <td class="text-muted">{{ r.dept }}</td>
+                    <td>
+                      <div style="display: flex; align-items: center; gap: 10px">
+                        <span style="font-family: var(--font-heading); font-size: 16px; min-width: 42px">{{ r.score }}</span>
+                        <span style="display: block; width: 96px; height: 5px; background: var(--color-neutral-200)"><span style="display: block; height: 5px; background: var(--color-accent); width: {{ r.w }}"></span></span>
+                      </div>
+                    </td>
+                    <td class="text-muted">{{ r.punct }}</td>
+                    <td><span class="tag {{ r.tag }}">{{ r.profile }}</span></td>
+                    <td style="text-align: right"><button class="btn btn-ghost" onClick="{{ goTeacher }}">Voir</button></td>
+                  </tr>
+                </sc-for>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 24px">
+            <div class="card blueprint" style="padding: 24px 26px; gap: 16px">
+              <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+              <h4 style="margin: 0">Taux de réponse par département</h4>
+              <sc-for list="{{ response }}" as="d" hint-placeholder-count="5">
+                <div style="display: flex; flex-direction: column; gap: 6px">
+                  <div style="display: flex; font-size: 13px"><span style="margin-right: auto">{{ d.name }}</span><span class="text-muted">{{ d.pct }}</span></div>
+                  <div style="height: 6px; background: var(--color-neutral-200)"><div style="height: 6px; background: var(--color-accent); width: {{ d.pct }}"></div></div>
+                </div>
+              </sc-for>
+            </div>
+            <div class="card blueprint" style="padding: 24px 26px; gap: 14px">
+              <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+              <h4 style="margin: 0">Score moyen — 6 derniers semestres</h4>
+              <svg viewBox="0 0 320 120" style="width: 100%; height: auto; overflow: visible">
+                <line x1="0" y1="110" x2="320" y2="110" stroke="var(--color-divider)"></line>
+                <line x1="0" y1="60" x2="320" y2="60" stroke="var(--color-divider)" stroke-dasharray="3 4"></line>
+                <polyline points="{{ trendLine }}" fill="none" stroke="var(--color-accent)" stroke-width="1.5"></polyline>
+                <sc-for list="{{ trendDots }}" as="p" hint-placeholder-count="6">
+                  <circle cx="{{ p.x }}" cy="{{ p.y }}" r="2.5" fill="var(--color-accent)"></circle>
+                </sc-for>
+              </svg>
+              <div class="text-muted" style="display: flex; justify-content: space-between; font-size: 11px">
+                <span>S1 23</span><span>S2 23</span><span>S1 24</span><span>S2 24</span><span>S1 25</span><span>S2 25</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scDirection }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 32px">
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px">
+          <sc-for list="{{ alerts }}" as="a" hint-placeholder-count="3">
+            <div class="card blueprint" style="padding: 20px 22px; gap: 10px; background: {{ a.bg }}; border-color: {{ a.bd }}">
+              <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+              <div style="display: flex; align-items: center; gap: 10px">
+                <span class="tag {{ a.tag }}">{{ a.level }}</span>
+                <span class="text-muted" style="font-size: 11px">{{ a.when }}</span>
+              </div>
+              <div class="card-title">{{ a.title }}</div>
+              <p class="card-body">{{ a.body }}</p>
+              <div style="display: flex; gap: 8px">
+                <button class="btn btn-secondary">Traiter</button>
+                <button class="btn btn-ghost">Ignorer</button>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+
+        <div class="card blueprint" style="padding: 24px 26px; gap: 18px">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div style="display: flex; align-items: baseline; gap: 12px">
+            <h4 style="margin: 0; margin-right: auto">Performance par département et semestre</h4>
+            <span class="text-muted" style="font-size: 12px">Score global pondéré, sur 5</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 160px repeat(6, 1fr); gap: 6px; align-items: center">
+            <div></div>
+            <sc-for list="{{ semesters }}" as="s" hint-placeholder-count="6">
+              <div class="text-muted" style="font-size: 11px; text-align: center">{{ s }}</div>
+            </sc-for>
+            <sc-for list="{{ heatRows }}" as="row" hint-placeholder-count="5">
+              <div style="display: contents">
+                <div style="font-size: 13px">{{ row.name }}</div>
+                <sc-for list="{{ row.cells }}" as="c" hint-placeholder-count="6">
+                  <div style="height: 42px; display: grid; place-items: center; font-size: 12px; background: {{ c.bg }}; color: {{ c.fg }}">{{ c.v }}</div>
+                </sc-for>
+              </div>
+            </sc-for>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; margin-top: 4px">
+            <span class="text-muted" style="font-size: 11px">3,0</span>
+            <div style="flex: 1; height: 6px; background: linear-gradient(90deg, var(--color-accent-100), var(--color-accent-800))"></div>
+            <span class="text-muted" style="font-size: 11px">5,0</span>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px">
+          <div class="card blueprint" style="padding: 24px 26px; gap: 14px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <h4 style="margin: 0">Répartition des profils</h4>
+            <sc-for list="{{ profiles }}" as="p" hint-placeholder-count="3">
+              <div style="display: flex; flex-direction: column; gap: 6px">
+                <div style="display: flex; font-size: 13px"><span style="margin-right: auto">{{ p.name }}</span><span class="text-muted">{{ p.count }} enseignants</span></div>
+                <div style="height: 6px; background: var(--color-neutral-200)"><div style="height: 6px; background: var(--color-accent); width: {{ p.w }}"></div></div>
+              </div>
+            </sc-for>
+          </div>
+          <div class="card blueprint" style="padding: 24px 26px; gap: 14px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <h4 style="margin: 0">Corrélation ponctualité / satisfaction</h4>
+            <p class="card-body">Coefficient de Pearson calculé sur 5 semestres, 412 séances horodatées.</p>
+            <div style="display: flex; align-items: baseline; gap: 12px">
+              <span style="font-family: var(--font-heading); font-size: 40px; line-height: 1">r = 0,62</span>
+              <span class="tag tag-accent">corrélation modérée</span>
+            </div>
+            <button class="btn btn-secondary" style="align-self: flex-start" onClick="{{ goMl }}">Voir l'analyse détaillée</button>
+          </div>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scTeacher }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 32px">
+        <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 24px; align-items: start">
+          <div class="card blueprint" style="padding: 24px 26px; gap: 18px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="display: flex; align-items: center; gap: 16px">
+              <div style="width: 56px; height: 56px; border: 1px solid var(--color-divider); display: grid; place-items: center; font-family: var(--font-heading); font-size: 20px">SM</div>
+              <div>
+                <h4 style="margin: 0">S. Meddah</h4>
+                <div class="text-muted" style="font-size: 13px">Informatique — Algorithmique, Bases de données</div>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 1px; background: var(--color-accent-300); border: 1px solid var(--color-accent-300); border-radius: var(--radius-md); overflow: hidden">
+              <div style="background: var(--color-tile); padding: 14px 16px">
+                <div style="font-family: var(--font-heading); font-size: 24px; color: var(--color-accent-900)">4,12</div>
+                <div style="font-size: 11px; color: var(--color-accent-700)">Score global</div>
+              </div>
+              <div style="background: var(--color-tile); padding: 14px 16px">
+                <div style="font-family: var(--font-heading); font-size: 24px; color: var(--color-accent-900)">78ᵉ</div>
+                <div style="font-size: 11px; color: var(--color-accent-700)">Percentile dépt.</div>
+              </div>
+              <div style="background: var(--color-tile); padding: 14px 16px">
+                <div style="font-family: var(--font-heading); font-size: 24px; color: var(--color-accent-900)">143</div>
+                <div style="font-size: 11px; color: var(--color-accent-700)">Évaluations</div>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 10px">
+              <div class="text-muted" style="font-size: 12px; letter-spacing: 0; text-transform: none">Comparaison triple</div>
+              <sc-for list="{{ triple }}" as="t" hint-placeholder-count="3">
+                <div style="display: flex; flex-direction: column; gap: 6px">
+                  <div style="display: flex; font-size: 13px"><span style="margin-right: auto">{{ t.name }}</span><span>{{ t.val }}</span></div>
+                  <div style="height: 8px; background: var(--color-neutral-200)"><div style="height: 8px; background: {{ t.color }}; width: {{ t.w }}"></div></div>
+                </div>
+              </sc-for>
+            </div>
+            <div style="display: flex; gap: 8px">
+              <button class="btn btn-secondary">Export PDF</button>
+              <button class="btn btn-secondary">Historique</button>
+            </div>
+          </div>
+
+          <div class="card blueprint" style="padding: 24px 26px; gap: 12px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="display: flex; align-items: baseline; gap: 12px">
+              <h4 style="margin: 0; margin-right: auto">Profil sur les 6 critères</h4>
+              <div style="display: flex; gap: 14px; font-size: 11px">
+                <span style="display: flex; align-items: center; gap: 6px"><span style="width: 10px; height: 2px; background: var(--color-accent-800)"></span>Étudiants</span>
+                <span style="display: flex; align-items: center; gap: 6px"><span style="width: 10px; height: 2px; background: var(--color-accent-400)"></span>Auto-éval.</span>
+                <span style="display: flex; align-items: center; gap: 6px"><span style="width: 10px; height: 2px; background: var(--color-neutral-600)"></span>Audit</span>
+              </div>
+            </div>
+            <div style="display: flex; justify-content: center; padding: 8px 0 24px">
+              <svg viewBox="0 0 340 300" style="width: 100%; max-width: 420px; height: auto">
+                <g>
+                  <sc-for list="{{ radarRings }}" as="g" hint-placeholder-count="4">
+                    <polygon points="{{ g.pts }}" fill="none" stroke="var(--color-divider)"></polygon>
+                  </sc-for>
+                  <sc-for list="{{ radarAxes }}" as="a" hint-placeholder-count="6">
+                    <line x1="170" y1="140" x2="{{ a.x }}" y2="{{ a.y }}" stroke="var(--color-divider)"></line>
+                  </sc-for>
+                  <polygon points="{{ radarAudit }}" fill="none" stroke="var(--color-neutral-600)" stroke-width="1.2" stroke-dasharray="4 3"></polygon>
+                  <polygon points="{{ radarAuto }}" fill="none" stroke="var(--color-accent-400)" stroke-width="1.4"></polygon>
+                  <polygon points="{{ radarStudents }}" fill="color-mix(in srgb, var(--color-accent) 14%, transparent)" stroke="var(--color-accent-800)" stroke-width="1.8"></polygon>
+                  <sc-for list="{{ radarLabels }}" as="l" hint-placeholder-count="6">
+                    <text x="{{ l.x }}" y="{{ l.y }}" text-anchor="{{ l.anchor }}" font-size="11" font-family="Barlow, sans-serif" fill="var(--color-text)">{{ l.label }}</text>
+                  </sc-for>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 24px; align-items: start">
+          <div class="card blueprint" style="padding: 24px 26px; gap: 16px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="display: flex; align-items: baseline; gap: 12px">
+              <h4 style="margin: 0; margin-right: auto">Commentaires étudiants — anonymisés</h4>
+              <span class="tag tag-neutral">143 réponses</span>
+            </div>
+            <sc-for list="{{ comments }}" as="c" hint-placeholder-count="3">
+              <div style="border-left: 2px solid var(--color-divider); padding: 4px 0 4px 16px; display: flex; flex-direction: column; gap: 6px">
+                <p style="margin: 0; font-size: 14px">{{ c.text }}</p>
+                <div class="text-muted" style="font-size: 11px">{{ c.meta }}</div>
+              </div>
+            </sc-for>
+          </div>
+          <div class="card blueprint" style="padding: 24px 26px; gap: 14px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <h4 style="margin: 0">Recommandations de formation</h4>
+            <sc-for list="{{ recos }}" as="r" hint-placeholder-count="3">
+              <div style="display: flex; flex-direction: column; gap: 4px; padding: 12px 0; border-bottom: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent)">
+                <div style="display: flex; align-items: center; gap: 10px">
+                  <span class="card-title" style="margin-right: auto">{{ r.title }}</span>
+                  <span class="tag tag-accent">{{ r.crit }}</span>
+                </div>
+                <div class="text-muted" style="font-size: 12px">{{ r.meta }}</div>
+              </div>
+            </sc-for>
+            <button class="btn btn-secondary" style="align-self: flex-start">Proposer à l'enseignant</button>
+          </div>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scEval }}" hint-placeholder-val="{{ false }}">
+      <div style="max-width: 820px; display: flex; flex-direction: column; gap: 24px">
+        <div class="card blueprint" style="padding: 24px 26px; gap: 14px">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div style="display: flex; align-items: baseline; gap: 12px">
+            <h4 style="margin: 0; margin-right: auto">Bases de données — S. Meddah</h4>
+            <span class="tag tag-outline">Anonyme</span>
+          </div>
+          <p class="card-body">Vos réponses sont hachées côté serveur (SHA-256 + sel). Ni l'enseignant ni l'administration ne peuvent vous identifier.</p>
+          <div style="display: flex; align-items: center; gap: 12px">
+            <div style="flex: 1; height: 6px; background: var(--color-neutral-200)"><div style="height: 6px; background: var(--color-accent); width: {{ formPct }}"></div></div>
+            <span class="text-muted" style="font-size: 12px">{{ formLabel }}</span>
+          </div>
+        </div>
+
+        <sc-for list="{{ criteriaForm }}" as="c" hint-placeholder-count="6">
+          <div class="card blueprint" style="padding: 20px 26px; gap: 14px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div>
+              <div style="display: flex; align-items: baseline; gap: 10px">
+                <span class="card-title" style="margin-right: auto">{{ c.label }}</span>
+                <span class="text-muted" style="font-size: 11px">Poids {{ c.weight }} %</span>
+              </div>
+              <div class="text-muted" style="font-size: 13px">{{ c.hint }}</div>
+            </div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap">
+              <sc-for list="{{ c.options }}" as="o" hint-placeholder-count="5">
+                <button class="btn btn-secondary" onClick="{{ o.pick }}" style="min-width: 118px; flex-direction: column; align-items: flex-start; gap: 2px; padding: 10px 14px; border-color: {{ o.border }}; background: {{ o.bg }}">
+                  <span style="font-size: 15px">{{ o.n }}</span>
+                  <span class="text-muted" style="font-size: 11px; font-family: var(--font-body)">{{ o.label }}</span>
+                </button>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+
+        <div class="card blueprint" style="padding: 20px 26px; gap: 12px">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="field">
+            <label>Commentaire libre (facultatif)</label>
+            <textarea class="input" placeholder="Ce qui a bien fonctionné, ce qui pourrait être amélioré…"></textarea>
+          </div>
+          <div style="display: flex; gap: 10px; align-items: center">
+            <button class="btn btn-secondary">Envoyer l'évaluation</button>
+            <button class="btn btn-ghost">Enregistrer et reprendre plus tard</button>
+            <span class="text-muted" style="font-size: 11px; margin-left: auto">Lien valable 7 jours — usage unique</span>
+          </div>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scImport }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 28px">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: 1px; background: var(--color-divider); border: 1px solid var(--color-divider)">
+          <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
+            <div style="background: {{ s.bg }}; padding: 16px 18px; display: flex; gap: 12px; align-items: baseline">
+              <span style="font-family: var(--font-heading); font-size: 20px; color: {{ s.num }}">{{ s.i }}</span>
+              <div>
+                <div style="font-size: 14px">{{ s.label }}</div>
+                <div class="text-muted" style="font-size: 11px">{{ s.note }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; align-items: start">
+          <div class="card blueprint" style="padding: 24px 26px; gap: 18px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="display: flex; align-items: baseline; gap: 12px">
+              <h4 style="margin: 0; margin-right: auto">Mapping des colonnes</h4>
+              <span class="text-muted" style="font-size: 12px">enseignants_2026.xlsx — 1 204 lignes, UTF-8</span>
+            </div>
+            <table class="table">
+              <thead><tr><th>Colonne du fichier</th><th>Exemple</th><th>Champ de la plateforme</th><th>Confiance</th></tr></thead>
+              <tbody>
+                <sc-for list="{{ mapping }}" as="m" hint-placeholder-count="5">
+                  <tr>
+                    <td style="font-family: var(--font-heading)">{{ m.src }}</td>
+                    <td class="text-muted">{{ m.sample }}</td>
+                    <td>
+                      <select class="input" style="min-height: 32px">
+                        <option>{{ m.target }}</option>
+                        <option>— ignorer cette colonne —</option>
+                      </select>
+                    </td>
+                    <td><span class="tag {{ m.tag }}">{{ m.conf }}</span></td>
+                  </tr>
+                </sc-for>
+              </tbody>
+            </table>
+            <div style="display: flex; gap: 10px; align-items: center">
+              <button class="btn btn-secondary" onClick="{{ nextStep }}">Valider le mapping</button>
+              <button class="btn btn-ghost">Réinitialiser</button>
+              <label class="radio" style="margin-left: auto"><input type="checkbox" checked=""><span class="dot"></span>Import partiel : ignorer les lignes en erreur</label>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 24px">
+            <div class="card blueprint" style="padding: 24px 26px; gap: 14px">
+              <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+              <div style="display: flex; align-items: baseline; gap: 12px">
+                <h4 style="margin: 0; margin-right: auto">Contrôles de validation</h4>
+                <span class="tag tag-outline">17 anomalies</span>
+              </div>
+              <sc-for list="{{ errors }}" as="e" hint-placeholder-count="4">
+                <div style="display: flex; gap: 12px; align-items: baseline; padding: 10px 0; border-bottom: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent)">
+                  <span style="font-family: var(--font-heading); font-size: 15px; min-width: 28px">{{ e.n }}</span>
+                  <div>
+                    <div style="font-size: 14px">{{ e.label }}</div>
+                    <div class="text-muted" style="font-size: 12px">{{ e.rows }}</div>
+                  </div>
+                  <button class="btn btn-ghost" style="margin-left: auto">Corriger</button>
+                </div>
+              </sc-for>
+              <button class="btn btn-secondary" style="align-self: flex-start">Télécharger le rapport d'erreurs</button>
+            </div>
+            <div class="card blueprint" style="padding: 24px 26px; gap: 12px">
+              <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+              <h4 style="margin: 0">Historique des imports</h4>
+              <table class="table">
+                <thead><tr><th>Date</th><th>Fichier</th><th>Statut</th><th></th></tr></thead>
+                <tbody>
+                  <sc-for list="{{ history }}" as="h" hint-placeholder-count="4">
+                    <tr>
+                      <td class="text-muted">{{ h.date }}</td>
+                      <td>{{ h.file }}</td>
+                      <td><span class="tag {{ h.tag }}">{{ h.status }}</span></td>
+                      <td style="text-align: right"><button class="btn btn-ghost">Annuler</button></td>
+                    </tr>
+                  </sc-for>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scCampaigns }}" hint-placeholder-val="{{ false }}">
+      <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 24px; align-items: start">
+        <div style="display: flex; flex-direction: column; gap: 24px">
+          <div class="card blueprint" style="padding: 24px 26px; gap: 18px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="display: flex; align-items: baseline; gap: 12px">
+              <h4 style="margin: 0; margin-right: auto">Campagnes en cours</h4>
+              <button class="btn btn-secondary btn-icon" title="Nouvelle campagne" aria-label="Nouvelle campagne">+</button>
+            </div>
+            <sc-for list="{{ campaigns }}" as="c" hint-placeholder-count="3">
+              <div style="display: flex; flex-direction: column; gap: 10px; padding: 16px 0; border-bottom: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent)">
+                <div style="display: flex; align-items: baseline; gap: 12px">
+                  <span class="card-title" style="margin-right: auto">{{ c.name }}</span>
+                  <span class="tag {{ c.tag }}">{{ c.status }}</span>
+                  <span class="text-muted" style="font-size: 12px">Clôture {{ c.close }}</span>
+                </div>
+                <div class="text-muted" style="font-size: 13px">{{ c.scope }}</div>
+                <div style="display: flex; align-items: center; gap: 12px">
+                  <div style="flex: 1; height: 6px; background: var(--color-neutral-200)"><div style="height: 6px; background: var(--color-accent); width: {{ c.pct }}"></div></div>
+                  <span style="font-size: 13px; min-width: 128px; text-align: right">{{ c.resp }}</span>
+                </div>
+                <div style="display: flex; gap: 8px">
+                  <button class="btn btn-ghost">Relancer maintenant</button>
+                  <button class="btn btn-ghost">Suivi détaillé</button>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 24px">
+          <div class="card blueprint" style="padding: 24px 26px; gap: 16px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <h4 style="margin: 0">Séquence d'envoi</h4>
+            <sc-for list="{{ sequence }}" as="s" hint-placeholder-count="4">
+              <div style="display: flex; gap: 14px; align-items: baseline">
+                <span style="font-family: var(--font-heading); font-size: 13px; min-width: 44px; color: #1B9B00">{{ s.when }}</span>
+                <div>
+                  <div style="font-size: 14px">{{ s.label }}</div>
+                  <div class="text-muted" style="font-size: 12px">{{ s.note }}</div>
+                </div>
+              </div>
+            </sc-for>
+            <div class="text-muted" style="font-size: 12px; border-top: 1px solid var(--color-divider); padding-top: 12px">File asynchrone Celery + Redis — jusqu'à 1 000 e-mails / minute.</div>
+          </div>
+          <div class="card blueprint" style="padding: 24px 26px; gap: 14px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <h4 style="margin: 0">Canaux et calendrier</h4>
+            <div style="display: flex; flex-direction: column; gap: 10px">
+              <label class="radio"><input type="checkbox" checked=""><span class="dot"></span>E-mail institutionnel</label>
+              <label class="radio"><input type="checkbox" checked=""><span class="dot"></span>Notification push (application mobile)</label>
+              <label class="radio"><input type="checkbox"><span class="dot"></span>SMS — v2</label>
+            </div>
+            <div class="field">
+              <label>Périodes exclues</label>
+              <input class="input" value="Examens 12–23 janv. · Vacances 20 déc.–3 janv." readonly="">
+            </div>
+          </div>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scMl }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 28px">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start">
+          <div class="card blueprint" style="padding: 24px 26px; gap: 16px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="display: flex; align-items: baseline; gap: 12px">
+              <h4 style="margin: 0; margin-right: auto">Détection de biais des évaluateurs</h4>
+              <span class="tag tag-zscore">z-score</span>
+            </div>
+            <p class="card-body">32 évaluateurs s'écartent de plus de 2 σ de la moyenne de leur promotion. La normalisation par évaluateur est réversible.</p>
+            <table class="table">
+              <thead><tr><th>Évaluateur (haché)</th><th>Moyenne</th><th>z-score</th><th>Tendance</th></tr></thead>
+              <tbody>
+                <sc-for list="{{ bias }}" as="b" hint-placeholder-count="4">
+                  <tr>
+                    <td style="font-family: var(--font-heading); font-size: 12px">{{ b.hash }}</td>
+                    <td>{{ b.avg }}</td>
+                    <td>{{ b.z }}</td>
+                    <td><span class="tag tag-neutral">{{ b.kind }}</span></td>
+                  </tr>
+                </sc-for>
+              </tbody>
+            </table>
+            <div style="display: flex; gap: 10px; align-items: center">
+              <button class="btn btn-secondary">Appliquer la normalisation</button>
+              <span class="text-muted" style="font-size: 12px">Impact estimé : ±0,08 sur les scores globaux</span>
+            </div>
+          </div>
+
+          <div class="card blueprint" style="padding: 24px 26px; gap: 16px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="display: flex; align-items: baseline; gap: 12px">
+              <h4 style="margin: 0; margin-right: auto">Prédiction du score — S1 2026</h4>
+              <span class="tag tag-method">régression linéaire</span>
+            </div>
+            <svg viewBox="0 0 340 150" style="width: 100%; height: auto">
+              <line x1="0" y1="140" x2="340" y2="140" stroke="var(--color-divider)"></line>
+              <polyline points="{{ predPast }}" fill="none" stroke="var(--color-accent-800)" stroke-width="1.8"></polyline>
+              <polyline points="{{ predFuture }}" fill="none" stroke="var(--color-accent-400)" stroke-width="1.8" stroke-dasharray="5 4"></polyline>
+              <polygon points="{{ predBand }}" fill="color-mix(in srgb, var(--color-accent) 12%, transparent)"></polygon>
+            </svg>
+            <div style="display: flex; gap: 20px; font-size: 12px" class="text-muted">
+              <span>Historique 5 semestres</span><span>Projection ± intervalle de confiance</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px; border-top: 1px solid var(--color-divider); padding-top: 14px">
+              <div class="text-muted" style="font-size: 12px; letter-spacing: 0; text-transform: none">Facteurs déterminants</div>
+              <sc-for list="{{ features }}" as="f" hint-placeholder-count="4">
+                <div style="display: flex; align-items: center; gap: 12px">
+                  <span style="font-size: 13px; min-width: 132px">{{ f.name }}</span>
+                  <div style="flex: 1; height: 6px; background: var(--color-neutral-200)"><div style="height: 6px; background: var(--color-accent); width: {{ f.w }}"></div></div>
+                  <span class="text-muted" style="font-size: 12px">{{ f.w }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+
+        <div class="card blueprint" style="padding: 24px 26px; gap: 18px">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div style="display: flex; align-items: baseline; gap: 12px">
+            <h4 style="margin: 0; margin-right: auto">Clusters d'enseignants — K-Means, k = 4</h4>
+            <button class="btn btn-secondary">Relancer l'entraînement</button>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: 20px">
+            <sc-for list="{{ clusters }}" as="c" hint-placeholder-count="4">
+              <div style="border: 1px solid var(--color-divider); padding: 18px; display: flex; flex-direction: column; gap: 8px">
+                <div class="card-kicker">{{ c.size }} enseignants</div>
+                <div class="card-title">{{ c.name }}</div>
+                <p class="card-body" style="font-size: 13px">{{ c.body }}</p>
+                <div class="text-muted" style="font-size: 12px">Critère fort : {{ c.strong }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scCriteria }}" hint-placeholder-val="{{ false }}">
+      <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; align-items: start">
+        <div class="card blueprint" style="padding: 24px 26px; gap: 20px">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div style="display: flex; align-items: baseline; gap: 12px">
+            <h4 style="margin: 0; margin-right: auto">Pondération des critères</h4>
+            <select class="input" style="width: auto; min-height: 32px">
+              <option>Département Informatique</option>
+              <option>Département Gestion</option>
+            </select>
+          </div>
+          <sc-for list="{{ weights }}" as="w" hint-placeholder-count="6">
+            <div style="display: flex; flex-direction: column; gap: 8px">
+              <div style="display: flex; align-items: baseline; gap: 12px">
+                <span style="font-size: 15px; margin-right: auto">{{ w.label }}</span>
+                <span style="font-family: var(--font-heading); font-size: 17px; min-width: 52px; text-align: right">{{ w.pct }}</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 14px">
+                <input type="range" min="0" max="40" value="{{ w.value }}" onChange="{{ w.set }}" style="flex: 1; accent-color: var(--color-accent)">
+                <button class="btn btn-ghost" onClick="{{ w.dec }}">−</button>
+                <button class="btn btn-ghost" onClick="{{ w.inc }}">+</button>
+              </div>
+            </div>
+          </sc-for>
+          <div style="display: flex; align-items: center; gap: 14px; border-top: 1px solid var(--color-divider); padding-top: 16px">
+            <span style="font-family: var(--font-heading); font-size: 17px">Total {{ weightTotal }} %</span>
+            <span class="tag {{ weightTag }}">{{ weightMsg }}</span>
+            <button class="btn btn-secondary btn-icon" style="margin-left: auto" disabled="{{ weightInvalid }}" title="Enregistrer la version" aria-label="Enregistrer la version">+</button>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 24px">
+          <div class="card blueprint" style="padding: 24px 26px; gap: 14px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <h4 style="margin: 0">Seuils de classification</h4>
+            <sc-for list="{{ thresholds }}" as="t" hint-placeholder-count="3">
+              <div style="display: flex; align-items: center; gap: 12px">
+                <span style="font-size: 14px; margin-right: auto">{{ t.name }}</span>
+                <input class="input" style="width: 96px; min-height: 32px" value="{{ t.range }}" readonly="">
+              </div>
+            </sc-for>
+          </div>
+          <div class="card blueprint" style="padding: 24px 26px; gap: 14px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <h4 style="margin: 0">Historique des versions</h4>
+            <sc-for list="{{ versions }}" as="v" hint-placeholder-count="3">
+              <div style="display: flex; gap: 12px; align-items: baseline; padding: 10px 0; border-bottom: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent)">
+                <span style="font-family: var(--font-heading); font-size: 13px; min-width: 58px">{{ v.tag }}</span>
+                <div>
+                  <div style="font-size: 13px">{{ v.label }}</div>
+                  <div class="text-muted" style="font-size: 11px">{{ v.meta }}</div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scMobile }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; gap: 40px; flex-wrap: wrap">
+        <div style="display: flex; flex-direction: column; gap: 12px">
+          <div class="text-muted" style="font-size: 12px; letter-spacing: 0; text-transform: none">Étudiant — évaluation</div>
+          <div class="blueprint" style="width: 380px; height: 760px; padding: 20px 18px; display: flex; flex-direction: column; gap: 16px; overflow: hidden">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--color-divider); padding-bottom: 12px">
+              <img src="brand/scolix-wordmark-light.png" alt="Scolix" style="height: 15px; width: auto; margin-right: auto; align-self: center; object-fit: contain; filter: {{ logoFilter }}">
+              <span class="tag tag-outline">Anonyme</span>
+            </div>
+            <div>
+              <h4 style="margin: 0 0 2px">Bases de données</h4>
+              <div class="text-muted" style="font-size: 13px">S. Meddah — Semestre 1</div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px">
+              <div style="flex: 1; height: 5px; background: var(--color-neutral-200)"><div style="height: 5px; background: var(--color-accent); width: 50%"></div></div>
+              <span class="text-muted" style="font-size: 11px">3 / 6</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px">
+              <div style="font-size: 16px; font-family: var(--font-heading)">Clarté des explications</div>
+              <div class="text-muted" style="font-size: 13px">Les notions sont-elles exposées de façon compréhensible ?</div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 10px">
+              <sc-for list="{{ mobileScale }}" as="m" hint-placeholder-count="5">
+                <button class="btn btn-secondary" style="justify-content: flex-start; gap: 14px; min-height: 52px; border-color: {{ m.border }}; background: {{ m.bg }}">
+                  <span style="font-family: var(--font-heading); font-size: 16px; min-width: 18px">{{ m.n }}</span>
+                  <span style="font-family: var(--font-body); font-size: 14px">{{ m.label }}</span>
+                </button>
+              </sc-for>
+            </div>
+            <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px">
+              <div class="text-muted" style="font-size: 11px">Mode hors ligne : réponses mises en file, synchronisées à la reconnexion.</div>
+              <div style="display: flex; gap: 10px">
+                <button class="btn btn-secondary" style="flex: 1; min-height: 48px">Précédent</button>
+                <button class="btn btn-secondary" style="flex: 1; min-height: 48px">Suivant</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 12px">
+          <div class="text-muted" style="font-size: 12px; letter-spacing: 0; text-transform: none">Enseignant — mon profil</div>
+          <div class="blueprint" style="width: 380px; height: 760px; padding: 20px 18px; display: flex; flex-direction: column; gap: 16px; overflow: hidden">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--color-divider); padding-bottom: 12px">
+              <img src="brand/scolix-wordmark-light.png" alt="Scolix" style="height: 15px; width: auto; margin-right: auto; align-self: center; object-fit: contain; filter: {{ logoFilter }}">
+              <span class="text-muted" style="font-size: 12px">S. Meddah</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1px; border: 1px solid var(--color-accent-300); border-radius: var(--radius-md); overflow: hidden; background-color: var(--color-neutral-900); border-color: var(--color-neutral-900)">
+              <div style="background: var(--color-tile); padding: 14px 16px">
+                <div style="font-family: var(--font-heading); font-size: 26px; color: var(--color-accent-900)">4,12</div>
+                <div style="font-size: 11px; color: var(--color-neutral-900)">Score global</div>
+              </div>
+              <div style="background: var(--color-tile); padding: 14px 16px">
+                <div style="font-family: var(--font-heading); font-size: 26px; color: var(--color-accent-900)">78ᵉ</div>
+                <div style="font-size: 11px; color: var(--color-neutral-900)">Percentile</div>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 12px">
+              <div class="text-muted" style="font-size: 12px; letter-spacing: 0; text-transform: none">Par critère</div>
+              <sc-for list="{{ mobileCriteria }}" as="c" hint-placeholder-count="6">
+                <div style="display: flex; flex-direction: column; gap: 5px">
+                  <div style="display: flex; font-size: 13px"><span style="margin-right: auto">{{ c.label }}</span><span class="text-muted">{{ c.val }}</span></div>
+                  <div style="height: 5px; background: var(--color-neutral-200)"><div style="height: 5px; background: var(--color-accent); width: {{ c.w }}"></div></div>
+                </div>
+              </sc-for>
+            </div>
+            <div style="border: 1px solid var(--color-divider); padding: 14px; display: flex; flex-direction: column; gap: 6px">
+              <div class="card-kicker" style="color: var(--color-neutral-900)">Recommandation</div>
+              <div style="font-size: 14px">Atelier « Rythme et gestion du temps de cours » — 6 h, en interne.</div>
+            </div>
+            <div style="margin-top: auto; display: flex; gap: 10px">
+              <button class="btn btn-secondary" style="flex: 1; min-height: 48px">Commentaires</button>
+              <button class="btn btn-secondary" style="flex: 1; min-height: 48px">Rapport PDF</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scTeacherList }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 24px">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 20px">
+          <div class="card blueprint" style="padding: 20px 22px; gap: 6px; background: var(--color-tile); border-color: var(--color-divider); box-shadow: var(--shadow-tile)">
+            <div style="font-size: 12px; color: var(--color-neutral-600)">Total enseignants</div>
+            <div style="font-family: var(--font-heading); font-size: 30px; line-height: 1; color: var(--color-neutral-900)">21</div>
+          </div>
+          <div class="card blueprint" style="padding: 20px 22px; gap: 6px; background: var(--color-tile); border-color: var(--color-divider); box-shadow: var(--shadow-tile)">
+            <div style="font-size: 12px; color: var(--color-neutral-600)">Actifs</div>
+            <div style="font-family: var(--font-heading); font-size: 30px; line-height: 1; color: var(--color-neutral-900)">21</div>
+          </div>
+          <div class="card blueprint" style="padding: 20px 22px; gap: 6px">
+            <div class="text-muted" style="font-size: 12px">Inactifs</div>
+            <div style="font-family: var(--font-heading); font-size: 30px; line-height: 1">0</div>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap">
+          <input class="input" style="max-width: 380px" placeholder="Rechercher un enseignant (nom, matricule…)">
+          <div class="seg" style="margin-left: auto">
+            <label class="seg-opt"><input type="radio" name="ens" checked="">Tous</label>
+            <label class="seg-opt"><input type="radio" name="ens">Actifs</label>
+            <label class="seg-opt"><input type="radio" name="ens">Inactifs</label>
+          </div>
+          <button class="btn btn-secondary">Trier par nom</button>
+          <button class="btn btn-secondary btn-icon" title="Nouvel enseignant" aria-label="Nouvel enseignant">+</button>
+        </div>
+
+        <div class="card blueprint" style="padding: 8px 26px 20px">
+          <table class="table">
+            <thead><tr><th>Nom &amp; prénom</th><th>Matricule</th><th>Département</th><th>Grade / spécialité</th><th>Statut</th><th>Actions</th></tr></thead>
+            <tbody>
+              <sc-for list="{{ teacherRows }}" as="t" hint-placeholder-count="7">
+                <tr>
+                  <td>
+                    <div style="display: flex; align-items: center; gap: 12px">
+                      <span style="width: 34px; height: 34px; border-radius: 999px; color: var(--color-accent-900); display: grid; place-items: center; font-family: var(--font-heading); font-size: 12px; background-color: var(--color-bg)">{{ t.initials }}</span>
+                      <span style="font-weight: 700">{{ t.name }}</span>
+                    </div>
+                  </td>
+                  <td style="font-family: var(--font-heading)">{{ t.mat }}</td>
+                  <td class="text-muted">{{ t.dept }}</td>
+                  <td>
+                    <div style="font-weight: 700; font-size: 13px">{{ t.grade }}</div>
+                    <div class="text-muted" style="font-size: 12px">{{ t.spec }}</div>
+                  </td>
+                  <td>
+                    <span style="display: inline-flex; width: 40px; height: 22px; border-radius: 999px; padding: 3px; background: {{ t.t.bg }}">
+                      <span style="width: 16px; height: 16px; border-radius: 999px; background: #F2F2F2; margin-left: {{ t.t.align }}"></span>
+                    </span>
+                  </td>
+                  <td style="text-align: right">
+                    <div style="display: flex; gap: 6px; justify-content: flex-end">
+                      <button class="btn btn-secondary" style="border-color: var(--color-neutral-500); color: var(--color-accent-800)" onClick="{{ goTeacher }}">Analyser</button>
+                      <button class="btn btn-ghost">Modifier</button>
+                    </div>
+                  </td>
+                </tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scGrades }}" hint-placeholder-val="{{ false }}">
+      <div class="card blueprint" style="padding: 8px 26px 20px; gap: 12px">
+        <table class="table">
+          <thead><tr><th>Grade</th><th>Rang</th><th>Description</th><th>Enseignants</th><th></th></tr></thead>
+          <tbody>
+            <sc-for list="{{ gradesRows }}" as="g" hint-placeholder-count="8">
+              <tr>
+                <td style="display: flex; align-items: center; gap: 12px">
+                  <span style="width: 32px; height: 32px; border-radius: var(--radius-md); color: var(--color-bg); display: grid; place-items: center; font-family: var(--font-heading); font-size: 12px; background-color: var(--color-neutral-800)">GR</span>
+                  {{ g.label }}
+                </td>
+                <td><span class="tag tag-rank">{{ g.rank }}</span></td>
+                <td class="text-muted" style="font-style: italic">Aucune description fournie</td>
+                <td>{{ g.n }}</td>
+                <td style="text-align: right"><button class="btn btn-ghost">Modifier</button></td>
+              </tr>
+            </sc-for>
+          </tbody>
+        </table>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scSemestres }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 20px">
+        <div style="display: flex; align-items: center; gap: 16px">
+          <input class="input" style="max-width: 420px" placeholder="Rechercher par libellé ou année…">
+          <label class="radio" style="margin-left: auto"><input type="checkbox" checked=""><span class="dot"></span>Actifs uniquement</label>
+          <button class="btn btn-secondary btn-icon" title="Nouveau semestre" aria-label="Nouveau semestre">+</button>
+        </div>
+        <div class="card blueprint" style="padding: 8px 26px 20px">
+          <table class="table">
+            <thead><tr><th>Semestre</th><th>Année académique</th><th>Durée de la période</th><th>Statut</th><th></th></tr></thead>
+            <tbody>
+              <sc-for list="{{ semRows }}" as="s" hint-placeholder-count="2">
+                <tr>
+                  <td style="font-family: var(--font-heading); font-size: 15px">{{ s.label }}</td>
+                  <td>{{ s.year }}</td>
+                  <td class="text-muted">{{ s.period }}</td>
+                  <td>
+                    <span style="display: inline-flex; width: 40px; height: 22px; border-radius: 999px; padding: 3px; background: {{ s.t.bg }}">
+                      <span style="width: 16px; height: 16px; border-radius: 999px; background: #F2F2F2; margin-left: {{ s.t.align }}"></span>
+                    </span>
+                  </td>
+                  <td style="text-align: right"><button class="btn btn-ghost">Modifier</button></td>
+                </tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scEtudiants }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 24px">
+        <input class="input" style="max-width: 520px" placeholder="Rechercher un étudiant par nom, matricule ou e-mail…">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 20px">
+          <sc-for list="{{ levels }}" as="l" hint-placeholder-count="5">
+            <div class="card blueprint" style="padding: 20px 22px; gap: 4px; flex-direction: row; align-items: center" style-hover="border-color: var(--color-accent)">
+              <span style="width: 42px; height: 42px; border-radius: var(--radius-md); color: var(--color-neutral-900); display: grid; place-items: center; font-family: var(--font-heading); font-size: 14px; background-color: var(--color-bg)">{{ l.code }}</span>
+              <div style="margin-left: 14px; margin-right: auto">
+                <div class="card-title">{{ l.label }}</div>
+                <div class="text-muted" style="font-size: 12px">{{ l.n }} étudiants</div>
+              </div>
+              <span style="color: var(--color-accent-700); font-size: 18px">→</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scCours }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 24px">
+        <input class="input" style="max-width: 520px" placeholder="Rechercher un département (nom ou code)…">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 20px">
+          <sc-for list="{{ depts }}" as="d" hint-placeholder-count="4">
+            <div class="card blueprint" style="padding: 20px 22px; gap: 12px" style-hover="border-color: var(--color-accent)">
+              <div style="display: flex; align-items: center; gap: 14px">
+                <span style="width: 42px; height: 42px; border-radius: var(--radius-md); color: var(--color-neutral-900); display: grid; place-items: center; font-family: var(--font-heading); font-size: 13px; background-color: var(--color-bg)">{{ d.code }}</span>
+                <div style="margin-right: auto">
+                  <div class="card-title" style="color: var(--color-neutral-900)">{{ d.label }}</div>
+                  <div class="text-muted" style="font-size: 11px; letter-spacing: 0.08em">{{ d.code }}</div>
+                </div>
+                <span style="color: var(--color-accent-900); font-size: 18px">→</span>
+              </div>
+              <div style="display: flex; gap: 8px">
+                <span class="tag tag-count">{{ d.courses }} cours</span>
+                <span class="tag tag-count">{{ d.teachers }} enseignants</span>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scEnroll }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 20px">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap">
+          <input class="input" style="max-width: 340px" placeholder="Rechercher un étudiant ou un cours…">
+          <select class="input" style="width: auto"><option>Tous les départements</option></select>
+          <select class="input" style="width: auto"><option>2025/2026</option></select>
+          <div class="seg">
+            <label class="seg-opt"><input type="radio" name="enr" checked="">Tous</label>
+            <label class="seg-opt"><input type="radio" name="enr">Actifs</label>
+            <label class="seg-opt"><input type="radio" name="enr">Inactifs</label>
+          </div>
+          <button class="btn btn-secondary btn-icon" style="margin-left: auto" title="Nouvelle inscription" aria-label="Nouvelle inscription">+</button>
+        </div>
+        <div class="card blueprint" style="padding: 8px 26px 20px">
+          <table class="table">
+            <thead><tr><th>Étudiant</th><th>Cours affecté</th><th>Département</th><th>Semestre</th><th>Statut</th><th></th></tr></thead>
+            <tbody>
+              <sc-for list="{{ enrollRows }}" as="e" hint-placeholder-count="7">
+                <tr>
+                  <td>
+                    <div style="font-weight: 700">{{ e.name }}</div>
+                    <div class="text-muted" style="font-size: 12px; font-family: var(--font-heading)">{{ e.mat }}</div>
+                  </td>
+                  <td>
+                    <div>{{ e.course }}</div>
+                    <div style="margin-top: 4px"><span class="tag tag-rank">{{ e.code }}</span></div>
+                  </td>
+                  <td class="text-muted">{{ e.dept }}</td>
+                  <td><span class="tag tag-sem">{{ e.sem }}</span></td>
+                  <td>
+                    <span style="display: inline-flex; width: 40px; height: 22px; border-radius: 999px; padding: 3px; background: {{ e.t.bg }}">
+                      <span style="width: 16px; height: 16px; border-radius: 999px; background: #F2F2F2; margin-left: {{ e.t.align }}"></span>
+                    </span>
+                  </td>
+                  <td style="text-align: right"><button class="btn btn-ghost">Modifier</button></td>
+                </tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scUsers }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 20px">
+        <div style="display: flex; align-items: center; gap: 16px">
+          <input class="input" style="max-width: 420px" placeholder="Rechercher par e-mail ou privilège…">
+          <button class="btn btn-secondary btn-icon" style="margin-left: auto" title="Nouvel utilisateur" aria-label="Nouvel utilisateur">+</button>
+        </div>
+        <div class="card blueprint" style="padding: 8px 26px 20px">
+          <table class="table">
+            <thead><tr><th>E-mail / identifiant</th><th>Rôle de sécurité</th><th>Profil associé</th><th>État du compte</th><th>Création</th><th></th></tr></thead>
+            <tbody>
+              <sc-for list="{{ userRows }}" as="u" hint-placeholder-count="7">
+                <tr>
+                  <td style="font-family: var(--font-heading)">{{ u.mail }}</td>
+                  <td><span class="tag {{ u.tag }}">{{ u.role }}</span></td>
+                  <td class="text-muted">{{ u.profile }}</td>
+                  <td>
+                    <div style="display: flex; gap: 6px">
+                      <span class="tag tag-accent">Actif</span>
+                      <span class="tag tag-verif">Vérifié</span>
+                    </div>
+                  </td>
+                  <td class="text-muted">{{ u.created }}</td>
+                  <td style="text-align: right"><button class="btn btn-ghost">Supprimer</button></td>
+                </tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scAnalytics }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 28px">
+        <div style="display: flex; align-items: center; gap: 12px">
+          <select class="input" style="width: auto"><option>Tous les semestres</option></select>
+          <select class="input" style="width: auto"><option>Tous les départements</option></select>
+          <button class="btn btn-secondary" style="margin-left: auto">Export CSV</button>
+          <button class="btn btn-secondary">Export Excel</button>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: 18px">
+          <sc-for list="{{ analyticsKpis }}" as="k" hint-placeholder-count="8">
+            <div class="card blueprint" style="padding: 18px 20px; gap: 8px; background: var(--color-tile); border-color: var(--color-divider); box-shadow: var(--shadow-tile)">
+              <div style="font-size: 12px; color: var(--color-neutral-900)">{{ k.label }}</div>
+              <div style="display: flex; align-items: baseline; gap: 4px">
+                <span style="font-family: var(--font-heading); font-size: 30px; line-height: 1; color: var(--color-neutral-900)">{{ k.value }}</span>
+                <span style="font-size: 13px; color: var(--color-neutral-900)">{{ k.unit }}</span>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+        <div class="card blueprint" style="padding: 24px 26px; gap: 18px">
+          <div style="display: flex; align-items: baseline; gap: 12px">
+            <h4 style="margin: 0; margin-right: auto">Classement complet — 8 enseignants</h4>
+            <span class="tag tag-method">Score global pondéré</span>
+          </div>
+          <table class="table">
+            <thead><tr><th>Rang</th><th>Enseignant</th><th>Département</th><th>Score</th><th></th></tr></thead>
+            <tbody>
+              <sc-for list="{{ classRows }}" as="c" hint-placeholder-count="8">
+                <tr>
+                  <td><span class="tag tag-rank">{{ c.rank }}</span></td>
+                  <td style="font-weight: 700">{{ c.name }}</td>
+                  <td class="text-muted">{{ c.dept }}</td>
+                  <td>
+                    <div style="display: flex; align-items: center; gap: 10px">
+                      <span style="display: block; width: 110px; height: 6px; background: var(--color-neutral-200); border-radius: 999px"><span style="display: block; height: 6px; border-radius: 999px; background: var(--color-accent); width: {{ c.w }}"></span></span>
+                      <span style="font-family: var(--font-heading)">{{ c.score }}</span>
+                    </div>
+                  </td>
+                  <td style="text-align: right"><button class="btn btn-ghost" onClick="{{ goTeacher }}">Voir l'analyse</button></td>
+                </tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scBiais }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 20px">
+        <div style="display: flex; align-items: center; gap: 16px">
+          <div class="seg">
+            <label class="seg-opt"><input type="radio" name="biais" checked="">Enseignants</label>
+            <label class="seg-opt"><input type="radio" name="biais">Étudiants évaluateurs</label>
+          </div>
+          <label class="radio" style="margin-left: auto"><input type="checkbox" checked=""><span class="dot"></span>Anomalies critiques uniquement</label>
+          <button class="btn btn-secondary">Actualiser</button>
+        </div>
+        <div class="card blueprint" style="padding: 8px 26px 20px">
+          <table class="table">
+            <thead><tr><th>Enseignant</th><th>Critère audité</th><th>Note moyenne</th><th>Indice de déviation (z-score)</th><th>Gravité</th></tr></thead>
+            <tbody>
+              <sc-for list="{{ biaisTeachers }}" as="b" hint-placeholder-count="4">
+                <tr>
+                  <td style="font-weight: 700">{{ b.name }}</td>
+                  <td class="text-muted">{{ b.crit }}</td>
+                  <td>{{ b.avg }}</td>
+                  <td style="font-family: var(--font-heading); color: var(--color-neutral-900)">{{ b.z }}</td>
+                  <td><span class="tag {{ b.tag }}">{{ b.sev }}</span></td>
+                </tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+        <div class="card blueprint" style="padding: 20px 26px; gap: 10px; background: var(--color-tile); border-color: var(--color-divider); box-shadow: var(--shadow-tile); max-width: 620px">
+          <div class="card-kicker" style="color: var(--color-neutral-900)">Correction</div>
+          <div style="font-size: 14px; color: var(--color-neutral-900)">La normalisation par évaluateur ramène les notes sur une même échelle. Impact estimé : ±0,08 sur les scores globaux.</div>
+          <button class="btn btn-secondary" style="align-self: flex-start; border-color: var(--color-neutral-500); color: var(--color-bg); background-color: var(--color-neutral-900)">Appliquer la normalisation</button>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scClass }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 24px">
+        <div style="display: flex; align-items: center; gap: 12px">
+          <select class="input" style="width: auto"><option>Tous les semestres</option></select>
+          <select class="input" style="width: auto"><option>Tous les départements</option></select>
+          <button class="btn btn-secondary" style="margin-left: auto" onClick="{{ goCriteria }}">Seuils</button>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 20px">
+          <sc-for list="{{ classKpis }}" as="k" hint-placeholder-count="3">
+            <div class="card blueprint" style="padding: 20px 22px; gap: 8px; background: {{ k.bg }}; border-color: var(--color-accent-300)">
+              <div style="font-size: 12px; color: var(--color-neutral-900)">{{ k.label }}</div>
+              <div style="font-family: var(--font-heading); font-size: 34px; line-height: 1; color: var(--color-neutral-900)">{{ k.value }}</div>
+              <div style="font-size: 12px; color: var(--color-neutral-800); opacity: 0.75">{{ k.note }}</div>
+            </div>
+          </sc-for>
+        </div>
+        <div class="card blueprint" style="padding: 8px 26px 20px">
+          <table class="table">
+            <thead><tr><th>Enseignant</th><th>Département</th><th>Score moyen</th><th>Catégorie</th></tr></thead>
+            <tbody>
+              <sc-for list="{{ classRows }}" as="c" hint-placeholder-count="8">
+                <tr>
+                  <td style="font-weight: 700">{{ c.name }}</td>
+                  <td class="text-muted">{{ c.dept }}</td>
+                  <td style="font-family: var(--font-heading)">{{ c.score }}</td>
+                  <td><span class="tag {{ c.catTag }}">{{ c.catLabel }}</span></td>
+                </tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scAlertes }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 18px; max-width: 1000px">
+        <sc-for list="{{ alerteRows }}" as="a" hint-placeholder-count="4">
+          <div class="card blueprint" style="padding: 20px 24px; gap: 10px; background: {{ a.bg }}; border-color: {{ a.bd }}">
+            <div style="display: flex; align-items: center; gap: 12px">
+              <span class="tag {{ a.tag }}">{{ a.level }}</span>
+              <span class="card-title" style="margin-right: auto">{{ a.title }}</span>
+              <span class="text-muted" style="font-size: 12px">{{ a.when }}</span>
+            </div>
+            <p class="card-body" style="font-size: 14px">{{ a.body }}</p>
+            <div style="display: flex; gap: 8px">
+              <button class="btn btn-secondary" style="border-color: var(--color-accent); color: var(--color-accent-800)">Traiter</button>
+              <button class="btn btn-ghost">Ignorer</button>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scTodo }}" hint-placeholder-val="{{ false }}">
+      <div class="card blueprint" style="padding: 44px 48px; gap: 14px; max-width: 720px">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <div class="card-kicker" style="color: var(--color-accent-700)">Écran à maquetter</div>
+        <h4 style="margin: 0">{{ todoLabel }}</h4>
+        <p class="card-body" style="font-size: 14px">Envoyez la capture de cette interface et je la maquette dans le même système : même barre latérale, mêmes cartes, même palette.</p>
+      </div>
+      </sc-if>
+
+    </main>
+    </div>
+  </div>
+</div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1440, &quot;height&quot;: 960},
+&quot;dotAllOn&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: false, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Points — global&quot;},
+&quot;dotAll&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#3B82F6&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Points — global&quot;, &quot;options&quot;: [&quot;#3B82F6&quot;, &quot;#22C55E&quot;, &quot;#F97316&quot;, &quot;#818CF8&quot;]},
+&quot;dotExc&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#22C55E&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Points — profils&quot;, &quot;options&quot;: [&quot;#22C55E&quot;, &quot;#3B82F6&quot;, &quot;#818CF8&quot;, &quot;#EAB308&quot;]},
+&quot;dotProg&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#EAB308&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Points — profils&quot;, &quot;options&quot;: [&quot;#EAB308&quot;, &quot;#818CF8&quot;, &quot;#3B82F6&quot;, &quot;#22C55E&quot;]},
+&quot;dotWatch&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#F97316&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Points — profils&quot;, &quot;options&quot;: [&quot;#F97316&quot;, &quot;#F43F5E&quot;, &quot;#EAB308&quot;, &quot;#9CA3AF&quot;]},
+&quot;dotCrit&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#F97316&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Points — gravité&quot;, &quot;options&quot;: [&quot;#F97316&quot;, &quot;#F43F5E&quot;, &quot;#EAB308&quot;, &quot;#3B82F6&quot;]},
+&quot;dotSurv&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#EAB308&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Points — gravité&quot;, &quot;options&quot;: [&quot;#EAB308&quot;, &quot;#22C55E&quot;, &quot;#F97316&quot;, &quot;#3B82F6&quot;]},
+&quot;dotWatch2&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#22C55E&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Points — gravité&quot;, &quot;options&quot;: [&quot;#22C55E&quot;, &quot;#EAB308&quot;, &quot;#818CF8&quot;, &quot;#3B82F6&quot;]},
+&quot;dotInfo&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#22C55E&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Points — gravité&quot;, &quot;options&quot;: [&quot;#22C55E&quot;, &quot;#3B82F6&quot;, &quot;#9CA3AF&quot;, &quot;#EAB308&quot;]},
+&quot;dotRank&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#22C55E&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Points — données&quot;, &quot;options&quot;: [&quot;#22C55E&quot;, &quot;#3B82F6&quot;, &quot;#F97316&quot;, &quot;#818CF8&quot;]},
+&quot;dotSem&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#F97316&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Points — données&quot;, &quot;options&quot;: [&quot;#F97316&quot;, &quot;#EAB308&quot;, &quot;#3B82F6&quot;, &quot;#22C55E&quot;]},
+&quot;dotCount&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#22C55E&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Points — données&quot;, &quot;options&quot;: [&quot;#22C55E&quot;, &quot;#3B82F6&quot;, &quot;#818CF8&quot;, &quot;#9CA3AF&quot;]},
+&quot;dotMethod&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#F97316&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Points — méthodes&quot;, &quot;options&quot;: [&quot;#F97316&quot;, &quot;#3B82F6&quot;, &quot;#22C55E&quot;, &quot;#818CF8&quot;]},
+&quot;dotZscore&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#22C55E&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Points — méthodes&quot;, &quot;options&quot;: [&quot;#22C55E&quot;, &quot;#EAB308&quot;, &quot;#F97316&quot;, &quot;#3B82F6&quot;]},
+&quot;dotVerif&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#F97316&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Points — statuts&quot;, &quot;options&quot;: [&quot;#F97316&quot;, &quot;#22C55E&quot;, &quot;#818CF8&quot;, &quot;#3B82F6&quot;]},
+&quot;dotAccent&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#3B82F6&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Points — statuts&quot;, &quot;options&quot;: [&quot;#3B82F6&quot;, &quot;#22C55E&quot;, &quot;#F97316&quot;, &quot;#818CF8&quot;]},
+&quot;dotAccent2&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#818CF8&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Points — statuts&quot;, &quot;options&quot;: [&quot;#818CF8&quot;, &quot;#3B82F6&quot;, &quot;#22C55E&quot;, &quot;#EAB308&quot;]},
+&quot;dotNeutral&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#9CA3AF&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Points — statuts&quot;, &quot;options&quot;: [&quot;#9CA3AF&quot;, &quot;#5C5C5C&quot;, &quot;#22C55E&quot;, &quot;#3B82F6&quot;]},
+&quot;dotUrgent&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#F43F5E&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Points — statuts&quot;, &quot;options&quot;: [&quot;#F43F5E&quot;, &quot;#F97316&quot;, &quot;#EAB308&quot;, &quot;#3B82F6&quot;]}}">
+const CRIT = [
+  { key: 'pedago', label: 'Pédagogie', hint: "Structure du cours, progression, supports." },
+  { key: 'clarte', label: 'Clarté', hint: "Les notions sont-elles exposées de façon compréhensible ?" },
+  { key: 'ponct', label: 'Ponctualité', hint: "Respect des horaires et du volume horaire prévu." },
+  { key: 'innov', label: 'Innovation', hint: "Méthodes, outils et supports renouvelés." },
+  { key: 'inter', label: 'Interaction', hint: "Écoute, réponses aux questions, participation." },
+  { key: 'dispo', label: 'Disponibilité', hint: "Accessibilité hors séance, réactivité." }
+];
+const LIKERT = ['Insuffisant', 'Perfectible', 'Satisfaisant', 'Bien', 'Excellent'];
+const NAV = [
+  { g: 'Navigation', items: [
+    { id: 'admin', label: 'Dashboard' },
+    { id: 'teacher', label: 'Enseignants' },
+    { id: 'grades', label: 'Grades' },
+    { id: 'direction', label: 'Départements' },
+    { id: 'semestres', label: 'Semestres' },
+    { id: 'etudiants', label: 'Étudiants' },
+    { id: 'cours', label: 'Cours' },
+    { id: 'enrollment', label: 'Enrollment' },
+    { id: 'campaigns', label: 'Campagnes' },
+    { id: 'criteria', label: 'Critères' },
+    { id: 'utilisateurs', label: 'Utilisateurs' },
+    { id: 'analytics', label: 'Analytics' },
+    { id: 'ml', label: 'IA & Clusters' },
+    { id: 'biais', label: 'Biais détectés' },
+    { id: 'classification', label: 'Classification' },
+    { id: 'alertes', label: 'Alertes' }
+  ]},
+  { g: 'Maquettes', items: [
+    { id: 'import', label: 'Import de données' },
+    { id: 'eval', label: 'Formulaire étudiant' },
+    { id: 'mobile', label: 'Vues mobiles' }
+  ]}
+];
+const TODO = {
+  grades: ['Module M2', 'Grades', "11 grades académiques enregistrés"],
+  semestres: ['Module M2', 'Semestres académiques', "Historique et cycles configurés"],
+  etudiants: ['Module M1', 'Étudiants', "Recherchez un étudiant directement, ou choisissez un niveau pour parcourir la liste"],
+  cours: ['Module M1', 'Cours', "Choisissez un département pour consulter ses cours"],
+  enrollment: ['Module M1', 'Inscriptions', "197 inscriptions · année sélectionnée"],
+  utilisateurs: ['Module M8', 'Gestion des utilisateurs', "121 comptes d'accès répertoriés sur la plateforme"],
+  analytics: ['Module M5', 'Analyse avancée', "Analyse multicritère · classements détaillés"],
+  biais: ['Module M6', 'Détection des anomalies et biais', "Analyse statistique (z-score) identifiant les notations anormalement divergentes"],
+  classification: ['Module M5', 'Classification des enseignants', "Exceptionnel (> 80 %) · En progression (60–80 %) · À accompagner (< 60 %)"],
+  alertes: ['Module M3 · M5', 'Alertes', "Seuils de ponctualité dépassés et écarts d'indicateurs à traiter"]
+};
+const HEAD = {
+  admin: ['Module M5 · M7', 'Tableau de bord administration', "Vue d'ensemble des scores pondérés, du classement et des taux de réponse pour l'année en cours."],
+  direction: ['Module M5 · M7', 'Vue direction', "Alertes prioritaires, comparaison inter-département et tendances historiques sur six semestres."],
+  teacher: ['Module M1 · M2', 'Enseignants', "Gérez le registre des enseignants de l'établissement."],
+  teacherDetail: ['Module M2 · M7', 'Fiche enseignant', "Profil sur les six critères, comparaison auto-évaluation / étudiants / audit interne, commentaires anonymisés."],
+  eval: ['Module M2', "Formulaire d'évaluation étudiant", "Échelle Likert 1–5 sur les six critères pondérés, réponses anonymisées par hachage SHA-256."],
+  import: ['Module M1', 'Import et intégration de données', "Mapping intelligent des colonnes, validation ligne à ligne, import partiel et historique avec rollback."],
+  campaigns: ['Module M4', 'Campagnes et notifications', "Envoi automatique selon le calendrier académique, relances espacées et suivi du taux de réponse."],
+  ml: ['Module M6', 'Analyse et intelligence artificielle', "Détection des biais d'évaluateur, prédiction des scores et regroupement des profils d'enseignants."],
+  criteria: ['Module M2', 'Critères et pondérations', "Six critères par défaut, pondération par département avec validation de la somme à 100 % et versionnement."],
+  mobile: ['Applications mobiles', 'Vues mobiles', "Formulaire étudiant et profil enseignant en format téléphone, avec file de synchronisation hors ligne."]
+};
+const ACC = '#5980a6';
+const ICONS = {
+  admin: 'M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z',
+  teacher: 'M4 20c0-3 2.7-5 6-5s6 2 6 5M10 5a3 3 0 100 6 3 3 0 000-6',
+  grades: 'M12 4a4 4 0 100 8 4 4 0 000-8M9 13l-1 7 4-2 4 2-1-7',
+  direction: 'M5 21V5h9v16M9 21v-4M14 10h5v11M8 8h2M8 12h2',
+  semestres: 'M4 6h16v14H4zM4 10h16M8 3v4M16 3v4',
+  etudiants: 'M3 9l9-4 9 4-9 4-9-4M7 12v4c0 1.5 2.2 3 5 3s5-1.5 5-3v-4',
+  cours: 'M4 5h7v14H4zM13 5h7v14h-7',
+  enrollment: 'M3 20c0-3 2.7-5 6-5s6 2 6 5M9 5a3 3 0 100 6 3 3 0 000-6M19 8v6M16 11h6',
+  campaigns: 'M4 11l12-5v10L4 13zM4 11v3M17 9a3 3 0 010 5',
+  criteria: 'M4 7l2 2 3-3M4 16l2 2 3-3M13 8h7M13 17h7',
+  utilisateurs: 'M3 20c0-3 2.7-5 6-5s6 2 6 5M9 5a3 3 0 100 6 3 3 0 000-6M18 12a2 2 0 100 4 2 2 0 000-4',
+  analytics: 'M5 20V11M11 20V4M17 20v-6M3 20h18',
+  ml: 'M6 6a2 2 0 100 4 2 2 0 000-4M18 6a2 2 0 100 4 2 2 0 000-4M12 15a2 2 0 100 4 2 2 0 000-4M7.6 9.6l3.4 4.2M16.4 9.6L13 13.8M8 8h8',
+  biais: 'M3 12h4l2 6 4-14 2 8h6',
+  classification: 'M12 4a8 8 0 100 16 8 8 0 000-16M12 8a4 4 0 100 8 4 4 0 000-8M12 11.2a.8.8 0 100 1.6.8.8 0 000-1.6',
+  alertes: 'M12 4l9 16H3zM12 10v4M12 17h.01',
+  import: 'M12 16V4M8 8l4-4 4 4M4 18v2h16v-2',
+  eval: 'M9 4h6v3H9zM6 6h12v14H6zM9 12h6M9 16h6',
+  mobile: 'M8 3h8v18H8zM11 18h2'
+};
+
+class Component extends DCLogic {
+  state = {
+    screen: 'login', nav: 'sidebar', mfa: false, theme: 'light', collapsed: false,
+    hist: ['admin'], hidx: 0, histOpen: false,
+    answers: { clarte: 4 },
+    weights: { pedago: 25, clarte: 20, ponct: 15, innov: 15, inter: 15, dispo: 10 }
+  };
+
+  navTo = (id) => this.setState(s => {
+    if (s.screen === id) return { histOpen: false };
+    const hist = s.hist.slice(0, s.hidx + 1).concat(id);
+    return { screen: id, hist, hidx: hist.length - 1, histOpen: false };
+  });
+
+  go = (id) => (e) => { if (e) e.preventDefault(); this.navTo(id); };
+
+  poly(vals, r0) {
+    return vals.map((v, i) => {
+      const a = (-90 + i * 60) * Math.PI / 180, r = r0 * v / 5;
+      return (170 + r * Math.cos(a)).toFixed(1) + ',' + (140 + r * Math.sin(a)).toFixed(1);
+    }).join(' ');
+  }
+
+  extraVals() {
+    const scr = this.state.screen;
+    const tog = (on) => ({ bg: on ? 'var(--color-accent)' : 'var(--color-neutral-300)', align: on ? 'auto' : '0' });
+    const cat = (s) => s >= 80 ? { label: 'Exceptionnel', tag: 'tag-exc' } : (s >= 60 ? { label: 'En progression', tag: 'tag-prog' } : { label: 'À accompagner', tag: 'tag-watch' });
+    return {
+      scGrades: scr === 'grades', scSemestres: scr === 'semestres', scEtudiants: scr === 'etudiants',
+      scCours: scr === 'cours', scEnroll: scr === 'enrollment', scUsers: scr === 'utilisateurs',
+      scAnalytics: scr === 'analytics', scBiais: scr === 'biais', scClass: scr === 'classification',
+      scAlertes: scr === 'alertes',
+
+      gradesRows: [
+        ['Professeur Titulaire', 1, 0], ['Professeur', 2, 2], ['Maître de Conférences', 3, 0],
+        ['Maître Assistant', 4, 4], ['Chargé de Cours', 5, 0], ['Assistant', 6, 8],
+        ["Attaché Temporaire d'Enseignement et de Recherche (ATER)", 7, 0], ['Docteur', 8, 4],
+        ['Doctorant Enseignant', 9, 0], ['Ingénieur Enseignant', 10, 3], ['Vacataire', 11, 0]
+      ].map(([label, rank, n]) => ({ label, rank: '#' + rank, n })),
+
+      semRows: [
+        { label: 'Semestre 2 — 2025/2026', year: '2025/2026', period: '01/03/2026 — 31/07/2026', on: true, t: tog(true) },
+        { label: 'Semestre 1 — 2025/2026', year: '2025/2026', period: '01/10/2025 — 28/02/2026', on: false, t: tog(false) }
+      ],
+
+      levels: [
+        { label: 'Licence 1', code: 'L1', n: 20 }, { label: 'Licence 2', code: 'L2', n: 20 },
+        { label: 'Licence 3', code: 'L3', n: 20 }, { label: 'Master 1', code: 'M1', n: 20 },
+        { label: 'Master 2', code: 'M2', n: 20 }
+      ],
+      depts: [
+        { label: 'Génie Logiciel', code: 'GL', courses: 5, teachers: 6 },
+        { label: 'Intelligence Artificielle', code: 'IA', courses: 4, teachers: 6 },
+        { label: 'Réseaux et Systèmes', code: 'RS', courses: 5, teachers: 7 },
+        { label: "Systèmes d'Information", code: 'SI', courses: 6, teachers: 2 }
+      ],
+
+      enrollRows: [
+        ['Sena ADJETE', 'SI-M2-0100', 'Gouvernance SI', 'GOV501', "Systèmes d'Information", 'Semestre 1 — 2025/2026'],
+        ['Samuel AKAKPO', 'IA-M1-0099', 'Deep Learning', 'DL401', 'Intelligence Artificielle', 'Semestre 2 — 2025/2026'],
+        ['Samuel AKAKPO', 'IA-M1-0099', 'MLOps', 'MLOPS501', 'Intelligence Artificielle', 'Semestre 1 — 2025/2026'],
+        ['Patrick KOMI', 'RS-L3-0098', 'Administration Système Linux', 'LIN301', 'Réseaux et Systèmes', 'Semestre 1 — 2025/2026'],
+        ['Patrick KOMI', 'RS-L3-0098', 'Sécurité Réseaux', 'SEC302', 'Réseaux et Systèmes', 'Semestre 2 — 2025/2026'],
+        ['Mensah DOGBE', 'GL-L2-0097', 'Programmation Orientée Objet', 'POO201', 'Génie Logiciel', 'Semestre 1 — 2025/2026'],
+        ['Emefa LAWSON', 'SI-L1-0096', 'Gestion de Projet SI', 'GPSI302', "Systèmes d'Information", 'Semestre 1 — 2025/2026']
+      ].map(([name, mat, course, code, dept, sem]) => ({ name, mat, course, code, dept, sem, t: tog(true) })),
+
+      userRows: [
+        ['abla.mensah6@edu-eval.local', 'Enseignant', 'Abla MENSAH'],
+        ['abla.nika3@edu-eval.local', 'Enseignant', 'Abla NIKA'],
+        ['afi.boko16@edu-eval.local', 'Enseignant', 'Afi BOKO'],
+        ['daniel.tete17@edu-eval.local', 'Enseignant', 'Daniel TETE'],
+        ['david.adjovi4@edu-eval.local', 'Enseignant', 'David ADJOVI'],
+        ['a.benali@univ.exemple.fr', 'Administrateur', '—'],
+        ['marie.allode1@edu-eval.local', 'Enseignant', 'Marie ALLODE']
+      ].map(([mail, role, profile]) => ({
+        mail, role, profile, created: '12/08/2026',
+        tag: role === 'Administrateur' ? 'tag-outline' : 'tag-accent'
+      })),
+
+      teacherRows: [
+        ['David ADJETE', 'ENS-015', 'Intelligence Artificielle', 'Ingénieur Enseignant', 'Réseaux Cisco'],
+        ['David ADJOVI', 'ENS-004', 'Réseaux et Systèmes', 'Ingénieur Enseignant', 'Django REST'],
+        ['Yao AGBODJAN', 'ENS-008', 'Génie Logiciel', 'Assistant', 'Génie logiciel'],
+        ['Eric AKAKPO', 'ENS-007', 'Intelligence Artificielle', 'Maître Assistant', 'Génie logiciel'],
+        ['Grace AKPABIE', 'ENS-012', 'Réseaux et Systèmes', 'Assistant', 'Base de données'],
+        ['Marie ALLODE', 'ENS-001', 'Génie Logiciel', 'Docteur', 'Base de données'],
+        ['Patrick AYITE', 'ENS-020', "Systèmes d'Information", 'Docteur', 'Réseaux Cisco']
+      ].map(([name, mat, dept, grade, spec]) => ({
+        name, mat, dept, grade, spec, t: tog(true),
+        initials: name.split(' ').map(p => p[0]).join('').slice(0, 2)
+      })),
+
+      classRows: [
+        ['Marie ALLODE', 'Génie Logiciel', 74.4], ['Ruth KOMI', 'Génie Logiciel', 71.8],
+        ['Grace AKPABIE', 'Réseaux et Systèmes', 63.6], ['Patrick AYITE', "Systèmes d'Information", 63.4],
+        ['Eric AKAKPO', 'Intelligence Artificielle', 63.4], ['Samuel KPODAR', 'Intelligence Artificielle', 61.3],
+        ['Abla NIKA', "Systèmes d'Information", 59.3], ['David ADJOVI', 'Réseaux et Systèmes', 53.4]
+      ].map(([name, dept, score], i) => ({
+        name, dept, rank: i + 1, score: score.toFixed(1).replace('.', ',') + '/100',
+        w: score + '%', ...cat(score), catLabel: cat(score).label, catTag: cat(score).tag
+      })),
+      classKpis: [
+        { label: 'Exceptionnel', value: 0, note: 'score > 80 %', bg: 'var(--color-tile)', fg: 'var(--color-accent-800)' },
+        { label: 'En progression', value: 6, note: '60 à 80 %', bg: 'var(--color-tile)', fg: 'var(--color-accent-900)' },
+        { label: 'À accompagner', value: 2, note: '< 60 %', bg: 'var(--color-tile)', fg: 'var(--color-neutral-900)' }
+      ],
+
+      analyticsKpis: [
+        { label: 'Total soumissions', value: '163' }, { label: 'Enseignants évalués', value: '8' },
+        { label: 'Score moyen global', value: '65,1', unit: '/100' }, { label: 'Taux de participation', value: '38,1', unit: '%' },
+        { label: 'Étudiants ayant évalué', value: '58' }, { label: "Étudiants n'ayant pas évalué", value: '16' },
+        { label: 'NPS', value: '100' }, { label: 'Taux de satisfaction', value: '41,1', unit: '%' }
+      ],
+      biaisTeachers: [
+        ['Abla NIKA', 'Ponctualité', '2,4', '−2,6', 'Critique'],
+        ['David ADJOVI', 'Clarté des explications', '2,6', '−2,3', 'Critique'],
+        ['Marie ALLODE', 'Disponibilité', '4,9', '+2,4', 'À surveiller'],
+        ['Eric AKAKPO', 'Organisation du cours', '2,9', '−2,1', 'À surveiller']
+      ].map(([name, crit, avg, z, sev]) => ({
+        name, crit, avg, z, sev, tag: sev === 'Critique' ? 'tag-crit' : 'tag-watch2'
+      })),
+      alerteRows: [
+        { level: 'Critique', title: 'Trois retards en un mois — T. AMRANI', body: 'Seuil configuré dépassé (3 retards / mois). Direction et RH notifiés automatiquement.', when: 'il y a 2 h', bg: 'var(--color-tile)', bd: 'var(--color-divider)', tag: 'tag-crit' },
+        { level: 'Critique', title: 'Score sous le seuil — D. ADJOVI', body: 'Score global 53,4/100, sous le seuil « À accompagner ». Un plan de formation est proposé.', when: 'il y a 5 h', bg: 'var(--color-tile)', bd: 'var(--color-divider)', tag: 'tag-crit' },
+        { level: 'À surveiller', title: 'Taux de réponse insuffisant — Systèmes d\u2019Information', body: '47 % à quatre jours de la clôture de la campagne. Une relance ciblée est proposée.', when: 'hier', bg: 'var(--color-tile)', bd: 'var(--color-divider)', tag: 'tag-surv' },
+        { level: 'Information', title: 'Écart anormal détecté — Génie Logiciel', body: 'Baisse de 0,34 sur le critère Clarté par rapport à la tendance des trois derniers semestres.', when: 'il y a 3 j', bg: 'transparent', bd: 'var(--color-divider)', tag: 'tag-info' }
+      ]
+    };
+  }
+
+  renderVals() {
+    const s = this.state, R = 110;
+    const scr = s.screen;
+    const head = HEAD[scr] || TODO[scr] || HEAD.admin;
+    const w = s.weights;
+    const total = Object.values(w).reduce((a, b) => a + b, 0);
+    const answered = CRIT.filter(c => s.answers[c.key]).length;
+
+    const items = NAV.flatMap(g => g.items).map(it => ({
+      ...it, go: this.go(it.id), d: ICONS[it.id],
+      cur: it.id === scr ? 'page' : undefined,
+      line: it.id === scr ? ACC : 'transparent',
+      fg: it.id === scr ? 'var(--color-text)' : 'var(--color-neutral-600)',
+      weight: it.id === scr ? 500 : 400,
+      bg: it.id === scr ? 'var(--color-neutral-200)' : 'transparent',
+      topFg: it.id === scr ? 'var(--color-text)' : 'var(--color-neutral-600)',
+      topBg: it.id === scr ? 'var(--color-neutral-200)' : 'transparent'
+    }));
+    const groups = NAV.map(g => ({ title: g.g, items: g.items.map(it => items.find(i => i.id === it.id)) }));
+
+    const trend = [3.62, 3.74, 3.81, 3.95, 4.02, 4.12];
+    const tx = i => (i * 62).toFixed(0);
+    const ty = v => (110 - (v - 3.4) * 100).toFixed(1);
+
+    const heat = [
+      ['Informatique', [3.8, 3.9, 4.0, 4.1, 4.2, 4.3]],
+      ['Gestion', [3.5, 3.6, 3.6, 3.8, 3.9, 3.9]],
+      ['Génie civil', [4.0, 4.1, 4.0, 4.2, 4.4, 4.4]],
+      ['Lettres', [3.3, 3.4, 3.6, 3.5, 3.7, 3.8]],
+      ['Sciences éco.', [3.9, 3.9, 4.1, 4.1, 4.0, 4.2]]
+    ];
+    const ramp = ['#eef6ff', '#d6ebff', '#b5d9fd', '#94bce3', '#749dc4', '#597ea3', '#416180', '#2c455d'];
+
+    return {
+      isLogin: scr === 'login', isApp: scr !== 'login',
+      passwordStep: scr === 'login' && !s.mfa, mfaStep: scr === 'login' && s.mfa,
+      toMfa: (e) => { e.preventDefault(); this.setState({ mfa: true }); },
+      backToPassword: (e) => { e.preventDefault(); this.setState({ mfa: false }); },
+      enterApp: (e) => { e.preventDefault(); this.setState({ screen: 'admin' }); },
+      logout: (e) => { e.preventDefault(); this.setState({ screen: 'login', mfa: false }); },
+
+      expanded: !s.collapsed,
+      labelDisplay: s.collapsed ? 'none' : 'block',
+      navJustify: s.collapsed ? 'center' : 'flex-start',
+      sidebarW: s.collapsed ? '64px' : '206px',
+      collapseMargin: s.collapsed ? '0' : 'auto',
+      collapseLabel: s.collapsed ? 'Étendre le menu' : 'Réduire le menu',
+      toggleSidebar: (e) => { if (e) e.preventDefault(); this.setState(st => ({ collapsed: !st.collapsed })); },
+      dotAccent: this.props.dotAccent ?? '#3B82F6',
+      dotAccent2: this.props.dotAccent2 ?? '#818CF8',
+      dotNeutral: this.props.dotNeutral ?? '#9CA3AF',
+      dotUrgent: this.props.dotUrgent ?? '#F97316',
+      dotRank: this.props.dotRank ?? '#22C55E',
+      dotSem: this.props.dotSem ?? '#F97316',
+      dotExc: this.props.dotExc ?? '#3B82F6',
+      dotProg: this.props.dotProg ?? '#818CF8',
+      dotWatch: this.props.dotWatch ?? '#F97316',
+      dotInfo: this.props.dotInfo ?? '#22C55E',
+      dotCount: this.props.dotCount ?? '#22C55E',
+      dotVerif: this.props.dotVerif ?? '#F97316',
+      dotMethod: this.props.dotMethod ?? '#F97316',
+      dotZscore: this.props.dotZscore ?? '#22C55E',
+      dotSurv: this.props.dotSurv ?? '#EAB308',
+      dotCrit: this.props.dotCrit ?? '#F97316',
+      dotWatch2: this.props.dotWatch2 ?? '#22C55E',
+      dotAll: this.props.dotAllOn ? (this.props.dotAll ?? '#3B82F6') : 'initial',
+      theme: s.theme || 'dark',
+      logoFilter: (s.theme || 'dark') === 'dark' ? 'invert(1)' : 'none',
+      themeLabel: (s.theme || 'dark') === 'dark' ? 'Passer en thème jour' : 'Passer en thème nuit',
+      themeIcon: (s.theme || 'dark') === 'dark'
+        ? 'M12 5V3M12 21v-2M5 12H3M21 12h-2M6.5 6.5L5 5M19 19l-1.5-1.5M6.5 17.5L5 19M19 5l-1.5 1.5M12 8a4 4 0 100 8 4 4 0 000-8'
+        : 'M20 14.5A8 8 0 019.5 4 8.2 8.2 0 1020 14.5',
+      toggleTheme: (e) => { if (e) e.preventDefault(); this.setState(st => ({ theme: (st.theme || 'dark') === 'dark' ? 'light' : 'dark' })); },
+      isSide: s.nav === 'sidebar', isTop: s.nav === 'top',
+      setSide: () => this.setState({ nav: 'sidebar' }),
+      setTop: () => this.setState({ nav: 'top' }),
+      items, groups,
+      topItems: items.slice(0, 7),
+      moreItems: items.slice(7),
+      moreValue: items.slice(7).some(i => i.id === scr) ? scr : '',
+      goSelect: (e) => { const v = e.target.value; if (v) this.navTo(v); },
+      kicker: head[0], title: head[1], subtitle: head[2],
+      noBack: s.hidx <= 0 ? true : undefined,
+      noFwd: s.hidx >= s.hist.length - 1 ? true : undefined,
+      goBack: (e) => { if (e) e.preventDefault(); this.setState(st => st.hidx > 0 ? { hidx: st.hidx - 1, screen: st.hist[st.hidx - 1], histOpen: false } : { histOpen: false }); },
+      goFwd: (e) => { if (e) e.preventDefault(); this.setState(st => st.hidx < st.hist.length - 1 ? { hidx: st.hidx + 1, screen: st.hist[st.hidx + 1], histOpen: false } : { histOpen: false }); },
+      toggleHist: (e) => { if (e) e.preventDefault(); this.setState(st => ({ histOpen: !st.histOpen })); },
+      histOpen: s.histOpen,
+      histItems: s.hist.map((id, i) => ({
+        label: (items.find(x => x.id === id) || { label: id }).label,
+        bg: i === s.hidx ? 'var(--color-neutral-200)' : 'transparent',
+        go: (e) => { if (e) e.preventDefault(); this.setState({ hidx: i, screen: id, histOpen: false }); }
+      })),
+
+      scAdmin: scr === 'admin', scDirection: scr === 'direction',
+      scTeacher: scr === 'teacherDetail', scTeacherList: scr === 'teacher',
+      scEval: scr === 'eval', scImport: scr === 'import', scCampaigns: scr === 'campaigns',
+      scMl: scr === 'ml', scCriteria: scr === 'criteria', scMobile: scr === 'mobile',
+      scTodo: false, todoLabel: (TODO[scr] || ['', ''])[1],
+      ...this.extraVals(),
+      goTeacher: this.go('teacherDetail'), goMl: this.go('ml'), goCriteria: this.go('criteria'),
+
+      kpis: [
+        { label: 'Score global moyen', value: '4,12', note: '+0,10 vs S2 2025 · sur 5' },
+        { label: 'Taux de réponse', value: '68 %', note: '3 214 réponses sur 4 720 invitations' },
+        { label: 'Enseignants suivis', value: '104', note: '7 départements, 312 cours' },
+        { label: 'Alertes ouvertes', value: '9', note: '4 ponctualité · 5 performance' }
+      ],
+      ranking: [
+        { name: 'K. Haddad', dept: 'Génie civil', score: '4,58', punct: '98 %', profile: 'Exceptionnel', w: '92%' },
+        { name: 'L. Ferrand', dept: 'Informatique', score: '4,41', punct: '95 %', profile: 'Exceptionnel', w: '88%' },
+        { name: 'S. Meddah', dept: 'Informatique', score: '4,12', punct: '91 %', profile: 'En progression', w: '82%' },
+        { name: 'N. Ouali', dept: 'Sciences éco.', score: '3,94', punct: '88 %', profile: 'En progression', w: '79%' },
+        { name: 'R. Delmas', dept: 'Gestion', score: '3,61', punct: '76 %', profile: 'En progression', w: '72%' },
+        { name: 'T. Amrani', dept: 'Lettres', score: '2,88', punct: '64 %', profile: 'À accompagner', w: '58%' }
+      ].map(r => ({ ...r, tag: r.profile === 'Exceptionnel' ? 'tag-exc' : (r.profile === 'En progression' ? 'tag-prog' : 'tag-watch') })),
+      response: [
+        { name: 'Informatique', pct: '81%' }, { name: 'Génie civil', pct: '74%' },
+        { name: 'Sciences éco.', pct: '69%' }, { name: 'Gestion', pct: '58%' },
+        { name: 'Lettres', pct: '47%' }
+      ],
+      trendLine: trend.map((v, i) => tx(i) + ',' + ty(v)).join(' '),
+      trendDots: trend.map((v, i) => ({ x: tx(i), y: ty(v) })),
+
+      alerts: [
+        { level: 'Critique', when: 'il y a 2 h', title: 'Trois retards en un mois — T. Amrani', body: "Seuil configuré dépassé (3 retards / mois). Direction et RH notifiés automatiquement.", bg: 'var(--color-tile)', bd: 'var(--color-divider)', tag: 'tag-crit' },
+        { level: 'À surveiller', when: 'hier', title: 'Taux de réponse insuffisant — Lettres', body: "47 % à quatre jours de la clôture. Une relance ciblée est proposée.", bg: 'var(--color-tile)', bd: 'var(--color-divider)', tag: 'tag-surv' },
+        { level: 'Information', when: 'il y a 3 j', title: 'Écart anormal détecté — Gestion', body: "Baisse de 0,34 sur le critère Clarté par rapport à la tendance des trois derniers semestres.", bg: 'transparent', bd: 'var(--color-divider)', tag: 'tag-info' }
+      ],
+      semesters: ['S1 23', 'S2 23', 'S1 24', 'S2 24', 'S1 25', 'S2 25'],
+      heatRows: heat.map(([name, cells]) => ({
+        name,
+        cells: cells.map(v => {
+          const step = Math.min(7, Math.max(0, Math.round((v - 3.2) / 1.3 * 7)));
+          return { v: v.toFixed(1).replace('.', ','), bg: ramp[step], fg: step > 4 ? '#f2f2f3' : '#1d1f20' };
+        })
+      })),
+      profiles: [
+        { name: 'Exceptionnel — score > 80 %', count: 21, w: '20%' },
+        { name: 'En progression — 60 à 80 %', count: 68, w: '65%' },
+        { name: 'À accompagner — < 60 %', count: 15, w: '15%' }
+      ],
+
+      triple: [
+        { name: 'Notes étudiants', val: '4,12', w: '82%', color: '#2c455d' },
+        { name: 'Auto-évaluation', val: '4,38', w: '88%', color: '#94bce3' },
+        { name: 'Audit interne', val: '3,86', w: '77%', color: '#7a7a7d' }
+      ],
+      radarRings: [1, 2, 3, 4].map(k => ({ pts: this.poly([5, 5, 5, 5, 5, 5], R * k / 4) })),
+      radarAxes: CRIT.map((c, i) => {
+        const a = (-90 + i * 60) * Math.PI / 180;
+        return { x: (170 + R * Math.cos(a)).toFixed(1), y: (140 + R * Math.sin(a)).toFixed(1) };
+      }),
+      radarLabels: CRIT.map((c, i) => {
+        const a = (-90 + i * 60) * Math.PI / 180, r = R + 24;
+        const x = 170 + r * Math.cos(a), y = 140 + r * Math.sin(a);
+        return { label: c.label, x: x.toFixed(0), y: (y + 4).toFixed(0), anchor: x > 178 ? 'start' : (x < 162 ? 'end' : 'middle') };
+      }),
+      radarStudents: this.poly([4.2, 4.5, 3.6, 3.9, 4.4, 3.4], R),
+      radarAuto: this.poly([4.6, 4.4, 4.2, 4.5, 4.3, 4.0], R),
+      radarAudit: this.poly([4.0, 4.2, 3.8, 3.5, 4.1, 3.6], R),
+      comments: [
+        { text: "Les travaux pratiques sont très bien préparés, on voit la progression d'une séance à l'autre.", meta: 'M1 Informatique · 14 commentaires similaires' },
+        { text: "Le rythme est parfois trop rapide sur la fin du cours, il manque un temps de synthèse.", meta: 'L3 Informatique · 9 commentaires similaires' },
+        { text: "Toujours joignable par courriel, réponses en moins de 24 h.", meta: 'M1 Informatique · 6 commentaires similaires' }
+      ],
+      recos: [
+        { title: 'Gestion du temps de séance', crit: 'Ponctualité', meta: 'Atelier interne · 6 h · prochaine session 12 mars' },
+        { title: 'Classe inversée et outils numériques', crit: 'Innovation', meta: 'Catalogue externe · 14 h · certifiant' },
+        { title: 'Techniques de synthèse en fin de cours', crit: 'Clarté', meta: 'Auto-formation · 2 h · vidéo' }
+      ],
+
+      formPct: Math.round(answered / 6 * 100) + '%',
+      formLabel: answered + ' critères sur 6',
+      criteriaForm: CRIT.map(c => ({
+        label: c.label, hint: c.hint, weight: w[c.key],
+        options: LIKERT.map((lab, i) => {
+          const n = i + 1, on = s.answers[c.key] === n;
+          return {
+            n, label: lab,
+            border: on ? ACC : 'var(--color-divider)',
+            bg: on ? 'color-mix(in srgb, ' + ACC + ' 12%, transparent)' : 'transparent',
+            pick: () => this.setState(st => ({ answers: { ...st.answers, [c.key]: n } }))
+          };
+        })
+      })),
+
+      steps: [
+        ['1', 'Fichier', 'enseignants_2026.xlsx'], ['2', 'Mapping', 'en cours'],
+        ['3', 'Validation', '17 anomalies'], ['4', 'Import', 'en attente']
+      ].map(([i, label, note], k) => ({
+        i, label, note,
+        bg: k === 1 ? 'color-mix(in srgb, ' + ACC + ' 10%, transparent)' : 'var(--color-bg)',
+        num: k <= 1 ? ACC : 'var(--color-neutral-500)'
+      })),
+      nextStep: () => this.setState({ screen: 'import' }),
+      mapping: [
+        { src: 'Nom_Ens', sample: 'Meddah', target: 'nom_enseignant', conf: '98 %', tag: 'tag-accent' },
+        { src: 'Prenom', sample: 'Samir', target: 'prenom_enseignant', conf: '96 %', tag: 'tag-accent' },
+        { src: 'Mail', sample: 's.meddah@univ.fr', target: 'email', conf: '91 %', tag: 'tag-accent' },
+        { src: 'Dept', sample: 'INFO', target: 'departement', conf: '74 %', tag: 'tag-neutral' },
+        { src: 'Charge_H', sample: '128', target: 'volume_horaire', conf: '52 %', tag: 'tag-outline' }
+      ],
+      errors: [
+        { n: '7', label: 'Adresses e-mail invalides', rows: 'lignes 44, 91, 132, 187, 340, 512, 908' },
+        { n: '5', label: 'Doublons détectés', rows: 'même e-mail sur deux lignes' },
+        { n: '3', label: 'Champ obligatoire manquant', rows: 'département absent' },
+        { n: '2', label: 'Format de date invalide', rows: 'date_recrutement' }
+      ],
+      history: [
+        { date: '18 août 2026', file: 'cours_S1_2026.csv', status: 'Succès', tag: 'tag-accent' },
+        { date: '02 août 2026', file: 'etudiants_L3.xlsx', status: 'Partiel', tag: 'tag-neutral' },
+        { date: '21 juil. 2026', file: 'enseignants_v2.xlsx', status: 'Échec', tag: 'tag-outline' },
+        { date: '30 juin 2026', file: 'export_erp.csv', status: 'Succès', tag: 'tag-accent' }
+      ],
+
+      campaigns: [
+        { name: 'Évaluation fin de semestre — S1 2026', status: 'En cours', tag: 'tag-accent', close: '28 août', scope: '7 départements · 312 cours · 4 720 invitations', pct: '68%', resp: '3 214 / 4 720 · 68 %' },
+        { name: 'Évaluation à mi-parcours — Informatique', status: 'Clôturée', tag: 'tag-neutral', close: '12 juin', scope: '1 département · 42 cours · 890 invitations', pct: '81%', resp: '721 / 890 · 81 %' },
+        { name: 'Audit interne — Gestion', status: 'Programmée', tag: 'tag-outline', close: '15 sept.', scope: '1 département · 6 auditeurs · 28 séances', pct: '0%', resp: 'démarrage 1ᵉʳ sept.' }
+      ],
+      sequence: [
+        { when: 'J+0', label: 'Envoi initial', note: 'lien unique par étudiant, TTL 7 jours' },
+        { when: 'J+3', label: 'Première relance', note: 'uniquement aux non-répondants' },
+        { when: 'J+5', label: 'Seconde relance', note: 'dernier rappel, plafonné à 2' },
+        { when: 'J+7', label: 'Clôture automatique', note: 'calcul des scores et mise en cache' }
+      ],
+
+      bias: [
+        { hash: 'a91f…3c7', avg: '2,1', z: '−2,8', kind: 'sévère' },
+        { hash: 'c04b…9e1', avg: '4,9', z: '+2,6', kind: 'indulgent' },
+        { hash: '7d2e…41a', avg: '2,3', z: '−2,3', kind: 'sévère' },
+        { hash: 'f38c…0b5', avg: '4,8', z: '+2,1', kind: 'indulgent' }
+      ],
+      predPast: [3.62, 3.74, 3.81, 3.95, 4.02].map((v, i) => (i * 48) + ',' + (140 - (v - 3.4) * 120).toFixed(0)).join(' '),
+      predFuture: '192,66 240,54 288,44 336,36',
+      predBand: '192,66 240,44 288,28 336,16 336,56 288,60 240,66 192,66',
+      features: [
+        { name: 'Ponctualité', w: '34%' }, { name: 'Clarté', w: '27%' },
+        { name: 'Interaction', w: '21%' }, { name: 'Taux de réponse', w: '18%' }
+      ],
+      clusters: [
+        { size: 24, name: 'Innovants', body: "Notes élevées en innovation et interaction, ponctualité moyenne.", strong: 'Innovation' },
+        { size: 31, name: 'Méthodiques', body: "Ponctualité et structure fortes, innovation plus basse.", strong: 'Ponctualité' },
+        { size: 34, name: 'Pédagogues', body: "Clarté et disponibilité au-dessus de la médiane du département.", strong: 'Clarté' },
+        { size: 15, name: 'À accompagner', body: "Écarts sur au moins trois critères, tendance en baisse.", strong: '—' }
+      ],
+
+      weights: CRIT.map(c => ({
+        label: c.label, pct: w[c.key] + ' %', value: w[c.key],
+        set: (e) => { const v = +e.target.value; this.setState(st => ({ weights: { ...st.weights, [c.key]: v } })); },
+        inc: () => this.setState(st => ({ weights: { ...st.weights, [c.key]: Math.min(40, st.weights[c.key] + 5) } })),
+        dec: () => this.setState(st => ({ weights: { ...st.weights, [c.key]: Math.max(0, st.weights[c.key] - 5) } }))
+      })),
+      weightTotal: total,
+      weightInvalid: total !== 100,
+      weightTag: total === 100 ? 'tag-accent' : 'tag-outline',
+      weightMsg: total === 100 ? 'somme valide' : 'la somme doit faire 100 %',
+      thresholds: [
+        { name: 'Exceptionnel', range: '> 80 %' },
+        { name: 'En progression', range: '60 – 80 %' },
+        { name: 'À accompagner', range: '< 60 %' }
+      ],
+      versions: [
+        { tag: 'v3 · actif', label: 'Pédagogie 25 % · Clarté 20 %', meta: 'A. Benali — 14 août 2026' },
+        { tag: 'v2', label: 'Pédagogie 30 % · Ponctualité 10 %', meta: 'A. Benali — 3 févr. 2026' },
+        { tag: 'v1', label: 'Pondération uniforme', meta: 'Import initial — 12 sept. 2025' }
+      ],
+
+      mobileScale: LIKERT.map((lab, i) => ({
+        n: i + 1, label: lab,
+        border: i === 3 ? ACC : 'var(--color-divider)',
+        bg: i === 3 ? 'color-mix(in srgb, ' + ACC + ' 12%, transparent)' : 'transparent'
+      })),
+      mobileCriteria: [
+        { label: 'Pédagogie', val: '4,2', w: '84%' }, { label: 'Clarté', val: '4,5', w: '90%' },
+        { label: 'Ponctualité', val: '3,6', w: '72%' }, { label: 'Innovation', val: '3,9', w: '78%' },
+        { label: 'Interaction', val: '4,4', w: '88%' }, { label: 'Disponibilité', val: '3,4', w: '68%' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

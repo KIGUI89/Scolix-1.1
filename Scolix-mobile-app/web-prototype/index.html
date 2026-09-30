@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scolix — Plateforme d'évaluation des enseignants</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="app"></div>
+<script type="text/plain" id="tpl">
+<sc-if value="{{ isLogin }}" hint-placeholder-val="{{ true }}">
+<div data-theme="{{ theme }}" style="min-height: 100vh; display: grid; grid-template-columns: 1.15fr 1fr; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); --dot-accent: {{ dotAccent }}; --dot-accent-2: {{ dotAccent2 }}; --dot-neutral: {{ dotNeutral }}; --dot-urgent: {{ dotUrgent }}; --dot-rank: {{ dotRank }}; --dot-sem: {{ dotSem }}; --dot-exc: {{ dotExc }}; --dot-prog: {{ dotProg }}; --dot-watch: {{ dotWatch }}; --dot-info: {{ dotInfo }}; --dot-count: {{ dotCount }}; --dot-verif: {{ dotVerif }}; --dot-method: {{ dotMethod }}; --dot-zscore: {{ dotZscore }}; --dot-surv: {{ dotSurv }}; --dot-crit: {{ dotCrit }}; --dot-watch2: {{ dotWatch2 }}; --dot-all: {{ dotAll }}">
+  <div style="padding: 64px 72px; display: flex; flex-direction: column; justify-content: space-between; background: var(--color-neutral-100); color: var(--color-text); border-right: 1px solid var(--color-divider)">
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px; margin-bottom: 32px">
+      <img src="brand/scolix-icon-light.png" alt="Scolix" style="height: 86px; width: auto; align-self: flex-start; object-fit: contain; filter: {{ logoFilter }}">
+      <img src="brand/scolix-wordmark-light.png" alt="Scolix" style="height: 62px; width: auto; align-self: flex-start; object-fit: contain; filter: {{ logoFilter }}">
+      <span style="font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-neutral-600)">Pilotez votre école, libérez leur potentiel</span>
+    </div>
+    <div style="max-width: 520px; display: flex; flex-direction: column; gap: 24px">
+      <h1 style="font-size: 44px; margin: 0; text-wrap: pretty; color: var(--color-text)">Évaluation multicritère des enseignants</h1>
+      <p style="font-size: 15px; margin: 0; max-width: 44ch; color: var(--color-neutral-600)">Collecte anonyme, scores pondérés, analyse comparative et recommandations de formation — sur une seule plateforme.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 1px; background: var(--color-divider); border: 1px solid var(--color-divider); margin-top: 16px; border-radius: var(--radius-md); overflow: hidden">
+        <div style="background: var(--color-surface); padding: 16px 18px">
+          <div style="font-family: var(--font-heading); font-size: 26px">6</div>
+          <div style="font-size: 12px; letter-spacing: 0; text-transform: none; color: var(--color-neutral-600)">critères</div>
+        </div>
+        <div style="background: var(--color-surface); padding: 16px 18px">
+          <div style="font-family: var(--font-heading); font-size: 26px">8</div>
+          <div style="font-size: 12px; letter-spacing: 0; text-transform: none; color: var(--color-neutral-600)">modules</div>
+        </div>
+        <div style="background: var(--color-surface); padding: 16px 18px">
+          <div style="font-family: var(--font-heading); font-size: 26px">100 %</div>
+          <div style="font-size: 12px; letter-spacing: 0; text-transform: none; color: var(--color-neutral-600)">anonyme</div>
+        </div>
+      </div>
+    </div>
+    <div style="font-size: 12px; display: flex; gap: 20px; color: var(--color-neutral-600)">
+      <span>Conformité RGPD</span><span>Hash SHA-256</span><span>HTTPS / TLS</span>
+    </div>
+  </div>
+
+  <div style="padding: 64px 72px; display: flex; align-items: center; position: relative">
+    <button class="btn btn-ghost btn-icon" onClick="{{ toggleTheme }}" title="{{ themeLabel }}" aria-label="{{ themeLabel }}" style="position: absolute; top: 24px; right: 28px">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="{{ themeIcon }}"></path></svg>
+    </button>
+    <div style="width: 100%; max-width: 380px; display: flex; flex-direction: column; gap: 20px">
+      <sc-if value="{{ mfaStep }}" hint-placeholder-val="{{ false }}">
+        <div style="display: flex; flex-direction: column; gap: 20px">
+          <div>
+            <div class="text-muted" style="font-size: 12px; letter-spacing: 0; text-transform: none; margin-bottom: 6px">Étape 2 sur 2</div>
+            <h3 style="margin: 0 0 6px">Vérification en deux étapes</h3>
+            <p class="text-muted" style="font-size: 13px; margin: 0">Saisissez le code à 6 chiffres généré par votre application d'authentification.</p>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px">
+            <input class="input" style="text-align: center; font-size: 18px; min-height: 52px" value="4" readonly="">
+            <input class="input" style="text-align: center; font-size: 18px; min-height: 52px" value="1" readonly="">
+            <input class="input" style="text-align: center; font-size: 18px; min-height: 52px" value="8" readonly="">
+            <input class="input" style="text-align: center; font-size: 18px; min-height: 52px" value="0" readonly="">
+            <input class="input" style="text-align: center; font-size: 18px; min-height: 52px" value="" readonly="">
+            <input class="input" style="text-align: center; font-size: 18px; min-height: 52px" value="" readonly="">
+          </div>
+          <button class="btn btn-secondary btn-block" onClick="{{ enterApp }}">Vérifier et se connecter</button>
+          <div style="display: flex; justify-content: space-between; align-items: center">
+            <button class="btn btn-ghost" onClick="{{ backToPassword }}">Retour</button>
+            <button class="btn btn-ghost">Recevoir un code par e-mail</button>
+          </div>
+        </div>
+      </sc-if>
+      <sc-if value="{{ passwordStep }}" hint-placeholder-val="{{ true }}">
+        <div style="display: flex; flex-direction: column; gap: 20px">
+          <div>
+            <div class="text-muted" style="font-size: 12px; letter-spacing: 0; text-transform: none; margin-bottom: 6px">Espace administration</div>
+            <h3 style="margin: 0 0 6px">Connexion</h3>
+            <p class="text-muted" style="font-size: 13px; margin: 0">Accès réservé aux comptes de l'annuaire universitaire.</p>
+          </div>
+          <div class="field">
+            <label>Adresse e-mail institutionnelle</label>
+            <input class="input" style="min-height: 44px" value="a.benali@univ.exemple.fr" readonly="">
+          </div>
+          <div class="field">
+            <label>Mot de passe</label>
+            <input class="input" style="min-height: 44px" type="password" value="............" readonly="">
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center">
+            <label class="radio"><input type="checkbox"><span class="dot"></span>Se souvenir de moi</label>
+            <a href="#" style="font-size: 13px">Mot de passe oublié</a>
+          </div>
+          <button class="btn btn-secondary btn-block" onClick="{{ toMfa }}">Continuer</button>
+          <div style="border-top: 1px solid var(--color-divider); padding-top: 16px; display: flex; flex-direction: column; gap: 8px">
+            <button class="btn btn-secondary btn-block" style="margin: 0">Se connecter via l'annuaire (SSO)</button>
+            <span class="text-muted" style="font-size: 11px">Disponible en v2 — LDAP / SAML</span>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isApp }}" hint-placeholder-val="{{ false }}">
+<div data-theme="{{ theme }}" style="min-height: 100vh; background: var(--color-neutral-100); color: var(--color-text); font-family: var(--font-body); display: flex; flex-direction: column; --dot-accent: {{ dotAccent }}; --dot-accent-2: {{ dotAccent2 }}; --dot-neutral: {{ dotNeutral }}; --dot-urgent: {{ dotUrgent }}; --dot-rank: {{ dotRank }}; --dot-sem: {{ dotSem }}; --dot-exc: {{ dotExc }}; --dot-prog: {{ dotProg }}; --dot-watch: {{ dotWatch }}; --dot-info: {{ dotInfo }}; --dot-count: {{ dotCount }}; --dot-verif: {{ dotVerif }}; --dot-method: {{ dotMethod }}; --dot-zscore: {{ dotZscore }}; --dot-surv: {{ dotSurv }}; --dot-crit: {{ dotCrit }}; --dot-watch2: {{ dotWatch2 }}; --dot-all: {{ dotAll }}">
+
+  <sc-if value="{{ isTop }}" hint-placeholder-val="{{ false }}">
+    <header style="border-bottom: 1px solid var(--color-divider); background: var(--color-bg); position: sticky; top: 14px; z-index: 5; margin: 14px 14px 0; border-radius: 14px; box-shadow: var(--shadow-panel)">
+      <div style="display: flex; align-items: center; gap: 14px; padding: 9px 16px">
+        <img src="brand/scolix-icon-light.png" alt="" style="height: 17px; width: auto; align-self: center; object-fit: contain; filter: {{ logoFilter }}">
+        
+        <img src="brand/scolix-wordmark-light.png" alt="Scolix" style="height: 15px; width: auto; align-self: center; object-fit: contain; filter: {{ logoFilter }}"><div style="display: flex; align-items: center; gap: 2px">
+          <button class="btn btn-ghost btn-icon" onClick="{{ goBack }}" disabled="{{ noBack }}" title="Retour" aria-label="Retour">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12H4M10 6l-6 6 6 6"></path></svg>
+          </button>
+          <button class="btn btn-ghost btn-icon" onClick="{{ goFwd }}" disabled="{{ noFwd }}" title="Suivant" aria-label="Suivant">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"></path></svg>
+          </button>
+        </div>
+        <nav style="display: flex; align-items: center; gap: 2px; margin-right: auto">
+          <sc-for list="{{ topItems }}" as="it" hint-placeholder-count="6">
+            <a href="#" onClick="{{ it.go }}" aria-current="{{ it.cur }}" style="display: flex; align-items: center; gap: 7px; font-size: 13px; text-decoration: none; color: {{ it.topFg }}; padding: 5px 10px; border-radius: 7px; background: {{ it.topBg }}">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.85"><path d="{{ it.d }}"></path></svg>
+              {{ it.label }}
+            </a>
+          </sc-for>
+          <select class="input" style="width: auto; min-height: 28px; margin-left: 4px" value="{{ moreValue }}" onChange="{{ goSelect }}">
+            <option value="">Plus…</option>
+            <sc-for list="{{ moreItems }}" as="m" hint-placeholder-count="6">
+              <option value="{{ m.id }}">{{ m.label }}</option>
+            </sc-for>
+          </select>
+        </nav>
+        <div style="display: flex; align-items: center; gap: 8px">
+          <button class="btn btn-ghost btn-icon" onClick="{{ toggleTheme }}" title="{{ themeLabel }}" aria-label="{{ themeLabel }}">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="{{ themeIcon }}"></path></svg>
+          </button>
+          <span class="text-muted" style="font-size: 12px">A. Benali</span>
+          <span style="width: 24px; height: 24px; border-radius: 999px; background: var(--color-accent); color: var(--color-bg); display: grid; place-items: center; font-size: 10px; font-weight: 600">AB</span>
+          <button class="btn btn-ghost btn-icon" onClick="{{ logout }}" title="Déconnexion" aria-label="Déconnexion">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4h4v16h-4M11 8l4 4-4 4M4 12h11"></path></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+  </sc-if>
+
+  <div style="display: flex; align-items: center; gap: 10px; padding: 7px 14px; background: var(--color-neutral-100)">
+    <div style="display: flex; align-items: center; gap: 2px; position: relative; left: 100px; flex-grow: 0">
+      <button class="btn btn-ghost btn-icon" onClick="{{ goBack }}" disabled="{{ noBack }}" title="Retour" aria-label="Retour">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12H4M10 6l-6 6 6 6"></path></svg>
+      </button>
+      <button class="btn btn-ghost btn-icon" onClick="{{ goFwd }}" disabled="{{ noFwd }}" title="Suivant" aria-label="Suivant">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"></path></svg>
+      </button>
+      <button class="btn btn-ghost btn-icon" onClick="{{ toggleHist }}" title="Historique" aria-label="Historique" style="width: 28px; height: 26px">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4a8 8 0 108 8M12 8v4l3 2M12 4V2"></path></svg>
+      </button>
+      <sc-if value="{{ histOpen }}" hint-placeholder-val="{{ false }}">
+        <div style="position: absolute; top: 32px; left: 0; z-index: 30; min-width: 220px; padding: 6px; background: var(--color-bg); border: 1px solid var(--color-divider); border-radius: 10px; box-shadow: var(--shadow-panel)">
+          <div class="text-muted" style="font-size: 12px; letter-spacing: 0; text-transform: none; padding: 4px 10px 6px">Pages visitées</div>
+          <sc-for list="{{ histItems }}" as="hi" hint-placeholder-count="3">
+            <a href="#" onClick="{{ hi.go }}" style="display: block; padding: 6px 10px; font-size: 12px; border-radius: 6px; text-decoration-line: none; color: var(--color-text); background: {{ hi.bg }}" style-hover="background: color-mix(in srgb, var(--color-text) 6%, transparent)">{{ hi.label }}</a>
+          </sc-for>
+        </div>
+      </sc-if>
+    </div>
+    <div style="display: flex; align-items: center; gap: 8px; margin: 0 auto">
+      <img src="brand/scolix-icon-light.png" alt="" style="height: 16px; width: auto; align-self: center; object-fit: contain; filter: {{ logoFilter }}">
+      <img src="brand/scolix-wordmark-light.png" alt="Scolix" style="height: 13px; width: auto; align-self: center; object-fit: contain; filter: {{ logoFilter }}">
+      <span class="text-muted" style="font-size: 13px">›</span>
+      <span style="font-size: 13px">{{ title }}</span>
+    </div>
+    <div class="seg" style="width: 139px; height: 18px">
+              <label class="seg-opt"><input type="radio" name="navmode" checked="{{ isSide }}" onChange="{{ setSide }}">Latéral</label>
+              <label class="seg-opt"><input type="radio" name="navmode" checked="{{ isTop }}" onChange="{{ setTop }}">Horizontal</label>
+            </div><div style="display: flex; align-items: center; gap: 4px">
+      <button class="btn btn-ghost btn-icon" onClick="{{ toggleTheme }}" title="{{ themeLabel }}" aria-label="{{ themeLabel }}">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="{{ themeIcon }}"></path></svg>
+      </button>
+      <button class="btn btn-ghost btn-icon" title="Créer" aria-label="Créer">+</button>
+    </div>
+  </div>
+
+  <div style="display: flex; flex: 1; align-items: stretch; padding: 14px 0 0 14px; gap: 10px">
+    <sc-if value="{{ isSide }}" hint-placeholder-val="{{ true }}">
+      <aside style="width: {{ sidebarW }}; flex: none; background: var(--color-neutral-100); border-radius: 14px 14px 0 0; display: flex; flex-direction: column; position: sticky; top: 14px; align-self: flex-start; height: calc(100vh - 14px)">
+        <div style="padding: 14px 14px 12px">
+          <div style="display: flex; align-items: center; gap: 9px; width: 147px; height: 24px">
+            <img src="brand/scolix-icon-light.png" alt="" style="height: 20px; width: auto; flex: none; align-self: center; object-fit: contain; filter: {{ logoFilter }}">
+            <sc-if value="{{ expanded }}" hint-placeholder-val="{{ true }}">
+              <span class="text-muted" style="font-size: 11px; margin-left: auto">Admin</span>
+            </sc-if>
+            <button class="btn btn-ghost btn-icon" title="Rechercher" aria-label="Rechercher" style="margin-left: {{ collapseMargin }}">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M11 4a7 7 0 100 14 7 7 0 000-14M16 16l4 4"></path></svg>
+            </button>
+            <button class="btn btn-ghost btn-icon" onClick="{{ toggleSidebar }}" title="{{ collapseLabel }}" aria-label="{{ collapseLabel }}">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v14H4zM10 5v14"></path></svg>
+            </button>
+          </div>
+        </div>
+
+        <div style="flex: 1; overflow-y: auto; padding: 18px 0 10px">
+          <sc-for list="{{ groups }}" as="g" hint-placeholder-count="2">
+            <div style="display: flex; flex-direction: column; gap: 2px; padding-bottom: 14px">
+              <div class="text-muted" style="font-size: 12px; letter-spacing: 0; text-transform: none; padding: 2px 16px 6px; display: {{ labelDisplay }}">{{ g.title }}</div>
+              <sc-for list="{{ g.items }}" as="it" hint-placeholder-count="8">
+                <a href="#" onClick="{{ it.go }}" title="{{ it.label }}" style="display: flex; align-items: center; justify-content: {{ navJustify }}; gap: 10px; font-size: 13px; text-decoration-line: none; color: var(--color-text); font-weight: {{ it.weight }}; padding: 6px 10px; background: {{ it.bg }}; border-radius: var(--radius-md); margin: 0 8px; position: static; font-style: normal" style-hover="background: color-mix(in srgb, var(--color-text) 5%, transparent)">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex: none; opacity: 0.85; height: 20px; width: 20px">
+                    <path d="{{ it.d }}"></path>
+                  </svg>
+                  <span style="display: {{ labelDisplay }}">{{ it.label }}</span>
+                </a>
+              </sc-for>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="padding: 10px 14px; display: flex; align-items: center; gap: 10px">
+          <div style="width: 26px; height: 26px; border-radius: 999px; background: var(--color-accent); color: #FFFFFF; display: grid; place-items: center; font-size: 11px; flex: none">AB</div>
+          <div style="line-height: 1.2; display: {{ labelDisplay }}">
+            <div style="font-size: 12px; font-weight: 700">A. Benali</div>
+            <div class="text-muted" style="font-size: 10px">Administrateur</div>
+          </div>
+          <button class="btn btn-ghost btn-icon" style="margin-left: {{ collapseMargin }}; border-radius: var(--radius-md)" onClick="{{ logout }}" title="Déconnexion" aria-label="Déconnexion">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 4h4v16h-4M11 8l4 4-4 4M4 12h11"></path>
+            </svg>
+          </button>
+        </div>
+      </aside>
+    </sc-if>
+
+    <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; background: var(--color-bg); border-radius: 0; box-shadow: var(--shadow-panel); overflow: hidden">
+      <div style="position: sticky; top: 0; z-index: 4; background: var(--color-bg)">
+        
+        <div style="display: flex; align-items: center; gap: 10px; padding: 9px 16px; border-bottom: 1px solid var(--color-divider); width: 100%; box-sizing: border-box; min-height: 40px">
+          <img src="brand/scolix-icon-light.png" alt="" style="height: 16px; width: auto; align-self: center; object-fit: contain; filter: {{ logoFilter }}">
+          <span class="text-muted" style="font-size: 13px">›</span>
+          <span style="font-size: 13px">{{ title }}</span>
+          <div style="display: flex; align-items: center; gap: 4px; margin-left: auto">
+            
+            
+            <button class="btn btn-ghost btn-icon" title="Notifications" aria-label="Notifications">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 10a6 6 0 0112 0v5l2 3H4l2-3zM10 21h4"></path></svg>
+            </button>
+            
+            <button class="btn btn-secondary btn-icon" title="Créer" aria-label="Créer" style="border-color: var(--color-bg)">+</button>
+          </div>
+        </div><div style="display: flex; align-items: center; gap: 8px; padding: 7px 16px; border-bottom: 1px solid var(--color-divider)">
+          <button class="btn btn-ghost" style="color: var(--color-neutral-800); width: 74px; height: 14px">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 6h16M7 12h10M10 18h4"></path></svg>
+            Filtre
+          </button>
+          <button class="btn btn-secondary" style="margin-left: auto; width: 102px; height: 16px">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 8h10M18 8h2M4 16h4M12 16h8M14 6v4M8 14v4"></path></svg>
+            Affichage
+          </button>
+        </div>
+      </div>
+
+    <main style="flex: 1; min-width: 0; padding: 20px 16px 56px; display: flex; flex-direction: column; gap: 20px">
+
+      <div style="display: flex; align-items: flex-end; gap: 24px; flex-wrap: wrap; border-bottom: 1px solid var(--color-divider); padding-bottom: 14px">
+        <div style="margin-right: auto">
+          <div style="font-size: 12px; letter-spacing: 0; text-transform: none; margin-bottom: 5px; color: var(--color-neutral-700)">{{ kicker }}</div>
+          <h3 style="margin: 0 0 3px">{{ title }}</h3>
+          <p class="text-muted" style="font-size: 13px; margin: 0; max-width: 80ch">{{ subtitle }}</p>
+        </div>
+      </div>
+
+      <sc-if value="{{ scAdmin }}" hint-placeholder-val="{{ true }}">
+      <div style="display: flex; flex-direction: column; gap: 32px">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: 20px">
+          <sc-for list="{{ kpis }}" as="k" hint-placeholder-count="4">
+            <div class="card blueprint" style="padding: 20px 22px; gap: 10px; background: var(--color-tile); border-color: var(--color-divider); box-shadow: var(--shadow-tile); min-width: 0; min-height: 134px">
+              <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+              <div class="card-kicker" style="color: var(--color-neutral-900)">{{ k.label }}</div>
+              <div style="font-family: var(--font-heading); font-size: 32px; line-height: 1; color: var(--color-neutral-900)">{{ k.value }}</div>
+              <div style="font-size: 12px; color: var(--color-neutral-900)">{{ k.note }}</div>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 24px; align-items: start">
+          <div class="card blueprint" style="padding: 24px 26px; gap: 18px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="display: flex; align-items: baseline; gap: 16px">
+              <h4 style="margin: 0; margin-right: auto">Classement des enseignants</h4>
+              <select class="input" style="width: auto; min-height: 32px">
+                <option>Tous les départements</option>
+                <option>Informatique</option>
+                <option>Gestion</option>
+              </select>
+              <button class="btn btn-secondary">Exporter</button>
+            </div>
+            <table class="table">
+              <thead>
+                <tr><th>Enseignant</th><th>Département</th><th>Score global</th><th>Ponctualité</th><th>Profil</th><th></th></tr>
+              </thead>
+              <tbody>
+                <sc-for list="{{ ranking }}" as="r" hint-placeholder-count="6">
+                  <tr>
+                    <td>{{ r.name }}</td>
+                    <td class="text-muted">{{ r.dept }}</td>
+                    <td>
+                      <div style="display: flex; align-items: center; gap: 10px">
+                        <span style="font-family: var(--font-heading); font-size: 16px; min-width: 42px">{{ r.score }}</span>
+                        <span style="display: block; width: 96px; height: 5px; background: var(--color-neutral-200)"><span style="display: block; height: 5px; background: var(--color-accent); width: {{ r.w }}"></span></span>
+                      </div>
+                    </td>
+                    <td class="text-muted">{{ r.punct }}</td>
+                    <td><span class="tag {{ r.tag }}">{{ r.profile }}</span></td>
+                    <td style="text-align: right"><button class="btn btn-ghost" onClick="{{ goTeacher }}">Voir</button></td>
+                  </tr>
+                </sc-for>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 24px">
+            <div class="card blueprint" style="padding: 24px 26px; gap: 16px">
+              <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+              <h4 style="margin: 0">Taux de réponse par département</h4>
+              <sc-for list="{{ response }}" as="d" hint-placeholder-count="5">
+                <div style="display: flex; flex-direction: column; gap: 6px">
+                  <div style="display: flex; font-size: 13px"><span style="margin-right: auto">{{ d.name }}</span><span class="text-muted">{{ d.pct }}</span></div>
+                  <div style="height: 6px; background: var(--color-neutral-200)"><div style="height: 6px; background: var(--color-accent); width: {{ d.pct }}"></div></div>
+                </div>
+              </sc-for>
+            </div>
+            <div class="card blueprint" style="padding: 24px 26px; gap: 14px">
+              <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+              <h4 style="margin: 0">Score moyen — 6 derniers semestres</h4>
+              <svg viewBox="0 0 320 120" style="width: 100%; height: auto; overflow: visible">
+                <line x1="0" y1="110" x2="320" y2="110" stroke="var(--color-divider)"></line>
+                <line x1="0" y1="60" x2="320" y2="60" stroke="var(--color-divider)" stroke-dasharray="3 4"></line>
+                <polyline points="{{ trendLine }}" fill="none" stroke="var(--color-accent)" stroke-width="1.5"></polyline>
+                <sc-for list="{{ trendDots }}" as="p" hint-placeholder-count="6">
+                  <circle cx="{{ p.x }}" cy="{{ p.y }}" r="2.5" fill="var(--color-accent)"></circle>
+                </sc-for>
+              </svg>
+              <div class="text-muted" style="display: flex; justify-content: space-between; font-size: 11px">
+                <span>S1 23</span><span>S2 23</span><span>S1 24</span><span>S2 24</span><span>S1 25</span><span>S2 25</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scDirection }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 32px">
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px">
+          <sc-for list="{{ alerts }}" as="a" hint-placeholder-count="3">
+            <div class="card blueprint" style="padding: 20px 22px; gap: 10px; background: {{ a.bg }}; border-color: {{ a.bd }}">
+              <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+              <div style="display: flex; align-items: center; gap: 10px">
+                <span class="tag {{ a.tag }}">{{ a.level }}</span>
+                <span class="text-muted" style="font-size: 11px">{{ a.when }}</span>
+              </div>
+              <div class="card-title">{{ a.title }}</div>
+              <p class="card-body">{{ a.body }}</p>
+              <div style="display: flex; gap: 8px">
+                <button class="btn btn-secondary">Traiter</button>
+                <button class="btn btn-ghost">Ignorer</button>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+
+        <div class="card blueprint" style="padding: 24px 26px; gap: 18px">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div style="display: flex; align-items: baseline; gap: 12px">
+            <h4 style="margin: 0; margin-right: auto">Performance par département et semestre</h4>
+            <span class="text-muted" style="font-size: 12px">Score global pondéré, sur 5</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 160px repeat(6, 1fr); gap: 6px; align-items: center">
+            <div></div>
+            <sc-for list="{{ semesters }}" as="s" hint-placeholder-count="6">
+              <div class="text-muted" style="font-size: 11px; text-align: center">{{ s }}</div>
+            </sc-for>
+            <sc-for list="{{ heatRows }}" as="row" hint-placeholder-count="5">
+              <div style="display: contents">
+                <div style="font-size: 13px">{{ row.name }}</div>
+                <sc-for list="{{ row.cells }}" as="c" hint-placeholder-count="6">
+                  <div style="height: 42px; display: grid; place-items: center; font-size: 12px; background: {{ c.bg }}; color: {{ c.fg }}">{{ c.v }}</div>
+                </sc-for>
+              </div>
+            </sc-for>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; margin-top: 4px">
+            <span class="text-muted" style="font-size: 11px">3,0</span>
+            <div style="flex: 1; height: 6px; background: linear-gradient(90deg, var(--color-accent-100), var(--color-accent-800))"></div>
+            <span class="text-muted" style="font-size: 11px">5,0</span>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px">
+          <div class="card blueprint" style="padding: 24px 26px; gap: 14px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <h4 style="margin: 0">Répartition des profils</h4>
+            <sc-for list="{{ profiles }}" as="p" hint-placeholder-count="3">
+              <div style="display: flex; flex-direction: column; gap: 6px">
+                <div style="display: flex; font-size: 13px"><span style="margin-right: auto">{{ p.name }}</span><span class="text-muted">{{ p.count }} enseignants</span></div>
+                <div style="height: 6px; background: var(--color-neutral-200)"><div style="height: 6px; background: var(--color-accent); width: {{ p.w }}"></div></div>
+              </div>
+            </sc-for>
+          </div>
+          <div class="card blueprint" style="padding: 24px 26px; gap: 14px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <h4 style="margin: 0">Corrélation ponctualité / satisfaction</h4>
+            <p class="card-body">Coefficient de Pearson calculé sur 5 semestres, 412 séances horodatées.</p>
+            <div style="display: flex; align-items: baseline; gap: 12px">
+              <span style="font-family: var(--font-heading); font-size: 40px; line-height: 1">r = 0,62</span>
+              <span class="tag tag-accent">corrélation modérée</span>
+            </div>
+            <button class="btn btn-secondary" style="align-self: flex-start" onClick="{{ goMl }}">Voir l'analyse détaillée</button>
+          </div>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scTeacher }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 32px">
+        <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 24px; align-items: start">
+          <div class="card blueprint" style="padding: 24px 26px; gap: 18px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="display: flex; align-items: center; gap: 16px">
+              <div style="width: 56px; height: 56px; border: 1px solid var(--color-divider); display: grid; place-items: center; font-family: var(--font-heading); font-size: 20px">SM</div>
+              <div>
+                <h4 style="margin: 0">S. Meddah</h4>
+                <div class="text-muted" style="font-size: 13px">Informatique — Algorithmique, Bases de données</div>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 1px; background: var(--color-accent-300); border: 1px solid var(--color-accent-300); border-radius: var(--radius-md); overflow: hidden">
+              <div style="background: var(--color-tile); padding: 14px 16px">
+                <div style="font-family: var(--font-heading); font-size: 24px; color: var(--color-accent-900)">4,12</div>
+                <div style="font-size: 11px; color: var(--color-accent-700)">Score global</div>
+              </div>
+              <div style="background: var(--color-tile); padding: 14px 16px">
+                <div style="font-family: var(--font-heading); font-size: 24px; color: var(--color-accent-900)">78ᵉ</div>
+                <div style="font-size: 11px; color: var(--color-accent-700)">Percentile dépt.</div>
+              </div>
+              <div style="background: var(--color-tile); padding: 14px 16px">
+                <div style="font-family: var(--font-heading); font-size: 24px; color: var(--color-accent-900)">143</div>
+                <div style="font-size: 11px; color: var(--color-accent-700)">Évaluations</div>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 10px">
+              <div class="text-muted" style="font-size: 12px; letter-spacing: 0; text-transform: none">Comparaison triple</div>
+              <sc-for list="{{ triple }}" as="t" hint-placeholder-count="3">
+                <div style="display: flex; flex-direction: column; gap: 6px">
+                  <div style="display: flex; font-size: 13px"><span style="margin-right: auto">{{ t.name }}</span><span>{{ t.val }}</span></div>
+                  <div style="height: 8px; background: var(--color-neutral-200)"><div style="height: 8px; background: {{ t.color }}; width: {{ t.w }}"></div></div>
+                </div>
+              </sc-for>
+            </div>
+            <div style="display: flex; gap: 8px">
+              <button class="btn btn-secondary">Export PDF</button>
+              <button class="btn btn-secondary">Historique</button>
+            </div>
+          </div>
+
+          <div class="card blueprint" style="padding: 24px 26px; gap: 12px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="display: flex; align-items: baseline; gap: 12px">
+              <h4 style="margin: 0; margin-right: auto">Profil sur les 6 critères</h4>
+              <div style="display: flex; gap: 14px; font-size: 11px">
+                <span style="display: flex; align-items: center; gap: 6px"><span style="width: 10px; height: 2px; background: var(--color-accent-800)"></span>Étudiants</span>
+                <span style="display: flex; align-items: center; gap: 6px"><span style="width: 10px; height: 2px; background: var(--color-accent-400)"></span>Auto-éval.</span>
+                <span style="display: flex; align-items: center; gap: 6px"><span style="width: 10px; height: 2px; background: var(--color-neutral-600)"></span>Audit</span>
+              </div>
+            </div>
+            <div style="display: flex; justify-content: center; padding: 8px 0 24px">
+              <svg viewBox="0 0 340 300" style="width: 100%; max-width: 420px; height: auto">
+                <g>
+                  <sc-for list="{{ radarRings }}" as="g" hint-placeholder-count="4">
+                    <polygon points="{{ g.pts }}" fill="none" stroke="var(--color-divider)"></polygon>
+                  </sc-for>
+                  <sc-for list="{{ radarAxes }}" as="a" hint-placeholder-count="6">
+                    <line x1="170" y1="140" x2="{{ a.x }}" y2="{{ a.y }}" stroke="var(--color-divider)"></line>
+                  </sc-for>
+                  <polygon points="{{ radarAudit }}" fill="none" stroke="var(--color-neutral-600)" stroke-width="1.2" stroke-dasharray="4 3"></polygon>
+                  <polygon points="{{ radarAuto }}" fill="none" stroke="var(--color-accent-400)" stroke-width="1.4"></polygon>
+                  <polygon points="{{ radarStudents }}" fill="color-mix(in srgb, var(--color-accent) 14%, transparent)" stroke="var(--color-accent-800)" stroke-width="1.8"></polygon>
+                  <sc-for list="{{ radarLabels }}" as="l" hint-placeholder-count="6">
+                    <text x="{{ l.x }}" y="{{ l.y }}" text-anchor="{{ l.anchor }}" font-size="11" font-family="Barlow, sans-serif" fill="var(--color-text)">{{ l.label }}</text>
+                  </sc-for>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 24px; align-items: start">
+          <div class="card blueprint" style="padding: 24px 26px; gap: 16px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="display: flex; align-items: baseline; gap: 12px">
+              <h4 style="margin: 0; margin-right: auto">Commentaires étudiants — anonymisés</h4>
+              <span class="tag tag-neutral">143 réponses</span>
+            </div>
+            <sc-for list="{{ comments }}" as="c" hint-placeholder-count="3">
+              <div style="border-left: 2px solid var(--color-divider); padding: 4px 0 4px 16px; display: flex; flex-direction: column; gap: 6px">
+                <p style="margin: 0; font-size: 14px">{{ c.text }}</p>
+                <div class="text-muted" style="font-size: 11px">{{ c.meta }}</div>
+              </div>
+            </sc-for>
+          </div>
+          <div class="card blueprint" style="padding: 24px 26px; gap: 14px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <h4 style="margin: 0">Recommandations de formation</h4>
+            <sc-for list="{{ recos }}" as="r" hint-placeholder-count="3">
+              <div style="display: flex; flex-direction: column; gap: 4px; padding: 12px 0; border-bottom: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent)">
+                <div style="display: flex; align-items: center; gap: 10px">
+                  <span class="card-title" style="margin-right: auto">{{ r.title }}</span>
+                  <span class="tag tag-accent">{{ r.crit }}</span>
+                </div>
+                <div class="text-muted" style="font-size: 12px">{{ r.meta }}</div>
+              </div>
+            </sc-for>
+            <button class="btn btn-secondary" style="align-self: flex-start">Proposer à l'enseignant</button>
+          </div>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scEval }}" hint-placeholder-val="{{ false }}">
+      <div style="max-width: 820px; display: flex; flex-direction: column; gap: 24px">
+        <div class="card blueprint" style="padding: 24px 26px; gap: 14px">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div style="display: flex; align-items: baseline; gap: 12px">
+            <h4 style="margin: 0; margin-right: auto">Bases de données — S. Meddah</h4>
+            <span class="tag tag-outline">Anonyme</span>
+          </div>
+          <p class="card-body">Vos réponses sont hachées côté serveur (SHA-256 + sel). Ni l'enseignant ni l'administration ne peuvent vous identifier.</p>
+          <div style="display: flex; align-items: center; gap: 12px">
+            <div style="flex: 1; height: 6px; background: var(--color-neutral-200)"><div style="height: 6px; background: var(--color-accent); width: {{ formPct }}"></div></div>
+            <span class="text-muted" style="font-size: 12px">{{ formLabel }}</span>
+          </div>
+        </div>
+
+        <sc-for list="{{ criteriaForm }}" as="c" hint-placeholder-count="6">
+          <div class="card blueprint" style="padding: 20px 26px; gap: 14px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div>
+              <div style="display: flex; align-items: baseline; gap: 10px">
+                <span class="card-title" style="margin-right: auto">{{ c.label }}</span>
+                <span class="text-muted" style="font-size: 11px">Poids {{ c.weight }} %</span>
+              </div>
+              <div class="text-muted" style="font-size: 13px">{{ c.hint }}</div>
+            </div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap">
+              <sc-for list="{{ c.options }}" as="o" hint-placeholder-count="5">
+                <button class="btn btn-secondary" onClick="{{ o.pick }}" style="min-width: 118px; flex-direction: column; align-items: flex-start; gap: 2px; padding: 10px 14px; border-color: {{ o.border }}; background: {{ o.bg }}">
+                  <span style="font-size: 15px">{{ o.n }}</span>
+                  <span class="text-muted" style="font-size: 11px; font-family: var(--font-body)">{{ o.label }}</span>
+                </button>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+
+        <div class="card blueprint" style="padding: 20px 26px; gap: 12px">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="field">
+            <label>Commentaire libre (facultatif)</label>
+            <textarea class="input" placeholder="Ce qui a bien fonctionné, ce qui pourrait être amélioré…"></textarea>
+          </div>
+          <div style="display: flex; gap: 10px; align-items: center">
+            <button class="btn btn-secondary">Envoyer l'évaluation</button>
+            <button class="btn btn-ghost">Enregistrer et reprendre plus tard</button>
+            <span class="text-muted" style="font-size: 11px; margin-left: auto">Lien valable 7 jours — usage unique</span>
+          </div>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scImport }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 28px">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: 1px; background: var(--color-divider); border: 1px solid var(--color-divider)">
+          <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
+            <div style="background: {{ s.bg }}; padding: 16px 18px; display: flex; gap: 12px; align-items: baseline">
+              <span style="font-family: var(--font-heading); font-size: 20px; color: {{ s.num }}">{{ s.i }}</span>
+              <div>
+                <div style="font-size: 14px">{{ s.label }}</div>
+                <div class="text-muted" style="font-size: 11px">{{ s.note }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; align-items: start">
+          <div class="card blueprint" style="padding: 24px 26px; gap: 18px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="display: flex; align-items: baseline; gap: 12px">
+              <h4 style="margin: 0; margin-right: auto">Mapping des colonnes</h4>
+              <span class="text-muted" style="font-size: 12px">enseignants_2026.xlsx — 1 204 lignes, UTF-8</span>
+            </div>
+            <table class="table">
+              <thead><tr><th>Colonne du fichier</th><th>Exemple</th><th>Champ de la plateforme</th><th>Confiance</th></tr></thead>
+              <tbody>
+                <sc-for list="{{ mapping }}" as="m" hint-placeholder-count="5">
+                  <tr>
+                    <td style="font-family: var(--font-heading)">{{ m.src }}</td>
+                    <td class="text-muted">{{ m.sample }}</td>
+                    <td>
+                      <select class="input" style="min-height: 32px">
+                        <option>{{ m.target }}</option>
+                        <option>— ignorer cette colonne —</option>
+                      </select>
+                    </td>
+                    <td><span class="tag {{ m.tag }}">{{ m.conf }}</span></td>
+                  </tr>
+                </sc-for>
+              </tbody>
+            </table>
+            <div style="display: flex; gap: 10px; align-items: center">
+              <button class="btn btn-secondary" onClick="{{ nextStep }}">Valider le mapping</button>
+              <button class="btn btn-ghost">Réinitialiser</button>
+              <label class="radio" style="margin-left: auto"><input type="checkbox" checked=""><span class="dot"></span>Import partiel : ignorer les lignes en erreur</label>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 24px">
+            <div class="card blueprint" style="padding: 24px 26px; gap: 14px">
+              <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+              <div style="display: flex; align-items: baseline; gap: 12px">
+                <h4 style="margin: 0; margin-right: auto">Contrôles de validation</h4>
+                <span class="tag tag-outline">17 anomalies</span>
+              </div>
+              <sc-for list="{{ errors }}" as="e" hint-placeholder-count="4">
+                <div style="display: flex; gap: 12px; align-items: baseline; padding: 10px 0; border-bottom: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent)">
+                  <span style="font-family: var(--font-heading); font-size: 15px; min-width: 28px">{{ e.n }}</span>
+                  <div>
+                    <div style="font-size: 14px">{{ e.label }}</div>
+                    <div class="text-muted" style="font-size: 12px">{{ e.rows }}</div>
+                  </div>
+                  <button class="btn btn-ghost" style="margin-left: auto">Corriger</button>
+                </div>
+              </sc-for>
+              <button class="btn btn-secondary" style="align-self: flex-start">Télécharger le rapport d'erreurs</button>
+            </div>
+            <div class="card blueprint" style="padding: 24px 26px; gap: 12px">
+              <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+              <h4 style="margin: 0">Historique des imports</h4>
+              <table class="table">
+                <thead><tr><th>Date</th><th>Fichier</th><th>Statut</th><th></th></tr></thead>
+                <tbody>
+                  <sc-for list="{{ history }}" as="h" hint-placeholder-count="4">
+                    <tr>
+                      <td class="text-muted">{{ h.date }}</td>
+                      <td>{{ h.file }}</td>
+                      <td><span class="tag {{ h.tag }}">{{ h.status }}</span></td>
+                      <td style="text-align: right"><button class="btn btn-ghost">Annuler</button></td>
+                    </tr>
+                  </sc-for>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scCampaigns }}" hint-placeholder-val="{{ false }}">
+      <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 24px; align-items: start">
+        <div style="display: flex; flex-direction: column; gap: 24px">
+          <div class="card blueprint" style="padding: 24px 26px; gap: 18px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="display: flex; align-items: baseline; gap: 12px">
+              <h4 style="margin: 0; margin-right: auto">Campagnes en cours</h4>
+              <button class="btn btn-secondary btn-icon" title="Nouvelle campagne" aria-label="Nouvelle campagne">+</button>
+            </div>
+            <sc-for list="{{ campaigns }}" as="c" hint-placeholder-count="3">
+              <div style="display: flex; flex-direction: column; gap: 10px; padding: 16px 0; border-bottom: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent)">
+                <div style="display: flex; align-items: baseline; gap: 12px">
+                  <span class="card-title" style="margin-right: auto">{{ c.name }}</span>
+                  <span class="tag {{ c.tag }}">{{ c.status }}</span>
+                  <span class="text-muted" style="font-size: 12px">Clôture {{ c.close }}</span>
+                </div>
+                <div class="text-muted" style="font-size: 13px">{{ c.scope }}</div>
+                <div style="display: flex; align-items: center; gap: 12px">
+                  <div style="flex: 1; height: 6px; background: var(--color-neutral-200)"><div style="height: 6px; background: var(--color-accent); width: {{ c.pct }}"></div></div>
+                  <span style="font-size: 13px; min-width: 128px; text-align: right">{{ c.resp }}</span>
+                </div>
+                <div style="display: flex; gap: 8px">
+                  <button class="btn btn-ghost">Relancer maintenant</button>
+                  <button class="btn btn-ghost">Suivi détaillé</button>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 24px">
+          <div class="card blueprint" style="padding: 24px 26px; gap: 16px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <h4 style="margin: 0">Séquence d'envoi</h4>
+            <sc-for list="{{ sequence }}" as="s" hint-placeholder-count="4">
+              <div style="display: flex; gap: 14px; align-items: baseline">
+                <span style="font-family: var(--font-heading); font-size: 13px; min-width: 44px; color: #1B9B00">{{ s.when }}</span>
+                <div>
+                  <div style="font-size: 14px">{{ s.label }}</div>
+                  <div class="text-muted" style="font-size: 12px">{{ s.note }}</div>
+                </div>
+              </div>
+            </sc-for>
+            <div class="text-muted" style="font-size: 12px; border-top: 1px solid var(--color-divider); padding-top: 12px">File asynchrone Celery + Redis — jusqu'à 1 000 e-mails / minute.</div>
+          </div>
+          <div class="card blueprint" style="padding: 24px 26px; gap: 14px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <h4 style="margin: 0">Canaux et calendrier</h4>
+            <div style="display: flex; flex-direction: column; gap: 10px">
+              <label class="radio"><input type="checkbox" checked=""><span class="dot"></span>E-mail institutionnel</label>
+              <label class="radio"><input type="checkbox" checked=""><span class="dot"></span>Notification push (application mobile)</label>
+              <label class="radio"><input type="checkbox"><span class="dot"></span>SMS — v2</label>
+            </div>
+            <div class="field">
+              <label>Périodes exclues</label>
+              <input class="input" value="Examens 12–23 janv. · Vacances 20 déc.–3 janv." readonly="">
+            </div>
+          </div>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scMl }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 28px">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start">
+          <div class="card blueprint" style="padding: 24px 26px; gap: 16px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="display: flex; align-items: baseline; gap: 12px">
+              <h4 style="margin: 0; margin-right: auto">Détection de biais des évaluateurs</h4>
+              <span class="tag tag-zscore">z-score</span>
+            </div>
+            <p class="card-body">32 évaluateurs s'écartent de plus de 2 σ de la moyenne de leur promotion. La normalisation par évaluateur est réversible.</p>
+            <table class="table">
+              <thead><tr><th>Évaluateur (haché)</th><th>Moyenne</th><th>z-score</th><th>Tendance</th></tr></thead>
+              <tbody>
+                <sc-for list="{{ bias }}" as="b" hint-placeholder-count="4">
+                  <tr>
+                    <td style="font-family: var(--font-heading); font-size: 12px">{{ b.hash }}</td>
+                    <td>{{ b.avg }}</td>
+                    <td>{{ b.z }}</td>
+                    <td><span class="tag tag-neutral">{{ b.kind }}</span></td>
+                  </tr>
+                </sc-for>
+              </tbody>
+            </table>
+            <div style="display: flex; gap: 10px; align-items: center">
+              <button class="btn btn-secondary">Appliquer la normalisation</button>
+              <span class="text-muted" style="font-size: 12px">Impact estimé : ±0,08 sur les scores globaux</span>
+            </div>
+          </div>
+
+          <div class="card blueprint" style="padding: 24px 26px; gap: 16px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="display: flex; align-items: baseline; gap: 12px">
+              <h4 style="margin: 0; margin-right: auto">Prédiction du score — S1 2026</h4>
+              <span class="tag tag-method">régression linéaire</span>
+            </div>
+            <svg viewBox="0 0 340 150" style="width: 100%; height: auto">
+              <line x1="0" y1="140" x2="340" y2="140" stroke="var(--color-divider)"></line>
+              <polyline points="{{ predPast }}" fill="none" stroke="var(--color-accent-800)" stroke-width="1.8"></polyline>
+              <polyline points="{{ predFuture }}" fill="none" stroke="var(--color-accent-400)" stroke-width="1.8" stroke-dasharray="5 4"></polyline>
+              <polygon points="{{ predBand }}" fill="color-mix(in srgb, var(--color-accent) 12%, transparent)"></polygon>
+            </svg>
+            <div style="display: flex; gap: 20px; font-size: 12px" class="text-muted">
+              <span>Historique 5 semestres</span><span>Projection ± intervalle de confiance</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px; border-top: 1px solid var(--color-divider); padding-top: 14px">
+              <div class="text-muted" style="font-size: 12px; letter-spacing: 0; text-transform: none">Facteurs déterminants</div>
+              <sc-for list="{{ features }}" as="f" hint-placeholder-count="4">
+                <div style="display: flex; align-items: center; gap: 12px">
+                  <span style="font-size: 13px; min-width: 132px">{{ f.name }}</span>
+                  <div style="flex: 1; height: 6px; background: var(--color-neutral-200)"><div style="height: 6px; background: var(--color-accent); width: {{ f.w }}"></div></div>
+                  <span class="text-muted" style="font-size: 12px">{{ f.w }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+
+        <div class="card blueprint" style="padding: 24px 26px; gap: 18px">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div style="display: flex; align-items: baseline; gap: 12px">
+            <h4 style="margin: 0; margin-right: auto">Clusters d'enseignants — K-Means, k = 4</h4>
+            <button class="btn btn-secondary">Relancer l'entraînement</button>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: 20px">
+            <sc-for list="{{ clusters }}" as="c" hint-placeholder-count="4">
+              <div style="border: 1px solid var(--color-divider); padding: 18px; display: flex; flex-direction: column; gap: 8px">
+                <div class="card-kicker">{{ c.size }} enseignants</div>
+                <div class="card-title">{{ c.name }}</div>
+                <p class="card-body" style="font-size: 13px">{{ c.body }}</p>
+                <div class="text-muted" style="font-size: 12px">Critère fort : {{ c.strong }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scCriteria }}" hint-placeholder-val="{{ false }}">
+      <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; align-items: start">
+        <div class="card blueprint" style="padding: 24px 26px; gap: 20px">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div style="display: flex; align-items: baseline; gap: 12px">
+            <h4 style="margin: 0; margin-right: auto">Pondération des critères</h4>
+            <select class="input" style="width: auto; min-height: 32px">
+              <option>Département Informatique</option>
+              <option>Département Gestion</option>
+            </select>
+          </div>
+          <sc-for list="{{ weights }}" as="w" hint-placeholder-count="6">
+            <div style="display: flex; flex-direction: column; gap: 8px">
+              <div style="display: flex; align-items: baseline; gap: 12px">
+                <span style="font-size: 15px; margin-right: auto">{{ w.label }}</span>
+                <span style="font-family: var(--font-heading); font-size: 17px; min-width: 52px; text-align: right">{{ w.pct }}</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 14px">
+                <input type="range" min="0" max="40" value="{{ w.value }}" onChange="{{ w.set }}" style="flex: 1; accent-color: var(--color-accent)">
+                <button class="btn btn-ghost" onClick="{{ w.dec }}">−</button>
+                <button class="btn btn-ghost" onClick="{{ w.inc }}">+</button>
+              </div>
+            </div>
+          </sc-for>
+          <div style="display: flex; align-items: center; gap: 14px; border-top: 1px solid var(--color-divider); padding-top: 16px">
+            <span style="font-family: var(--font-heading); font-size: 17px">Total {{ weightTotal }} %</span>
+            <span class="tag {{ weightTag }}">{{ weightMsg }}</span>
+            <button class="btn btn-secondary btn-icon" style="margin-left: auto" disabled="{{ weightInvalid }}" title="Enregistrer la version" aria-label="Enregistrer la version">+</button>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 24px">
+          <div class="card blueprint" style="padding: 24px 26px; gap: 14px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <h4 style="margin: 0">Seuils de classification</h4>
+            <sc-for list="{{ thresholds }}" as="t" hint-placeholder-count="3">
+              <div style="display: flex; align-items: center; gap: 12px">
+                <span style="font-size: 14px; margin-right: auto">{{ t.name }}</span>
+                <input class="input" style="width: 96px; min-height: 32px" value="{{ t.range }}" readonly="">
+              </div>
+            </sc-for>
+          </div>
+          <div class="card blueprint" style="padding: 24px 26px; gap: 14px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <h4 style="margin: 0">Historique des versions</h4>
+            <sc-for list="{{ versions }}" as="v" hint-placeholder-count="3">
+              <div style="display: flex; gap: 12px; align-items: baseline; padding: 10px 0; border-bottom: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent)">
+                <span style="font-family: var(--font-heading); font-size: 13px; min-width: 58px">{{ v.tag }}</span>
+                <div>
+                  <div style="font-size: 13px">{{ v.label }}</div>
+                  <div class="text-muted" style="font-size: 11px">{{ v.meta }}</div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scMobile }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; gap: 40px; flex-wrap: wrap">
+        <div style="display: flex; flex-direction: column; gap: 12px">
+          <div class="text-muted" style="font-size: 12px; letter-spacing: 0; text-transform: none">Étudiant — évaluation</div>
+          <div class="blueprint" style="width: 380px; height: 760px; padding: 20px 18px; display: flex; flex-direction: column; gap: 16px; overflow: hidden">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--color-divider); padding-bottom: 12px">
+              <img src="brand/scolix-wordmark-light.png" alt="Scolix" style="height: 15px; width: auto; margin-right: auto; align-self: center; object-fit: contain; filter: {{ logoFilter }}">
+              <span class="tag tag-outline">Anonyme</span>
+            </div>
+            <div>
+              <h4 style="margin: 0 0 2px">Bases de données</h4>
+              <div class="text-muted" style="font-size: 13px">S. Meddah — Semestre 1</div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px">
+              <div style="flex: 1; height: 5px; background: var(--color-neutral-200)"><div style="height: 5px; background: var(--color-accent); width: 50%"></div></div>
+              <span class="text-muted" style="font-size: 11px">3 / 6</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px">
+              <div style="font-size: 16px; font-family: var(--font-heading)">Clarté des explications</div>
+              <div class="text-muted" style="font-size: 13px">Les notions sont-elles exposées de façon compréhensible ?</div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 10px">
+              <sc-for list="{{ mobileScale }}" as="m" hint-placeholder-count="5">
+                <button class="btn btn-secondary" style="justify-content: flex-start; gap: 14px; min-height: 52px; border-color: {{ m.border }}; background: {{ m.bg }}">
+                  <span style="font-family: var(--font-heading); font-size: 16px; min-width: 18px">{{ m.n }}</span>
+                  <span style="font-family: var(--font-body); font-size: 14px">{{ m.label }}</span>
+                </button>
+              </sc-for>
+            </div>
+            <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px">
+              <div class="text-muted" style="font-size: 11px">Mode hors ligne : réponses mises en file, synchronisées à la reconnexion.</div>
+              <div style="display: flex; gap: 10px">
+                <button class="btn btn-secondary" style="flex: 1; min-height: 48px">Précédent</button>
+                <button class="btn btn-secondary" style="flex: 1; min-height: 48px">Suivant</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 12px">
+          <div class="text-muted" style="font-size: 12px; letter-spacing: 0; text-transform: none">Enseignant — mon profil</div>
+          <div class="blueprint" style="width: 380px; height: 760px; padding: 20px 18px; display: flex; flex-direction: column; gap: 16px; overflow: hidden">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--color-divider); padding-bottom: 12px">
+              <img src="brand/scolix-wordmark-light.png" alt="Scolix" style="height: 15px; width: auto; margin-right: auto; align-self: center; object-fit: contain; filter: {{ logoFilter }}">
+              <span class="text-muted" style="font-size: 12px">S. Meddah</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1px; border: 1px solid var(--color-accent-300); border-radius: var(--radius-md); overflow: hidden; background-color: var(--color-neutral-900); border-color: var(--color-neutral-900)">
+              <div style="background: var(--color-tile); padding: 14px 16px">
+                <div style="font-family: var(--font-heading); font-size: 26px; color: var(--color-accent-900)">4,12</div>
+                <div style="font-size: 11px; color: var(--color-neutral-900)">Score global</div>
+              </div>
+              <div style="background: var(--color-tile); padding: 14px 16px">
+                <div style="font-family: var(--font-heading); font-size: 26px; color: var(--color-accent-900)">78ᵉ</div>
+                <div style="font-size: 11px; color: var(--color-neutral-900)">Percentile</div>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 12px">
+              <div class="text-muted" style="font-size: 12px; letter-spacing: 0; text-transform: none">Par critère</div>
+              <sc-for list="{{ mobileCriteria }}" as="c" hint-placeholder-count="6">
+                <div style="display: flex; flex-direction: column; gap: 5px">
+                  <div style="display: flex; font-size: 13px"><span style="margin-right: auto">{{ c.label }}</span><span class="text-muted">{{ c.val }}</span></div>
+                  <div style="height: 5px; background: var(--color-neutral-200)"><div style="height: 5px; background: var(--color-accent); width: {{ c.w }}"></div></div>
+                </div>
+              </sc-for>
+            </div>
+            <div style="border: 1px solid var(--color-divider); padding: 14px; display: flex; flex-direction: column; gap: 6px">
+              <div class="card-kicker" style="color: var(--color-neutral-900)">Recommandation</div>
+              <div style="font-size: 14px">Atelier « Rythme et gestion du temps de cours » — 6 h, en interne.</div>
+            </div>
+            <div style="margin-top: auto; display: flex; gap: 10px">
+              <button class="btn btn-secondary" style="flex: 1; min-height: 48px">Commentaires</button>
+              <button class="btn btn-secondary" style="flex: 1; min-height: 48px">Rapport PDF</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scTeacherList }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 24px">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 20px">
+          <div class="card blueprint" style="padding: 20px 22px; gap: 6px; background: var(--color-tile); border-color: var(--color-divider); box-shadow: var(--shadow-tile)">
+            <div style="font-size: 12px; color: var(--color-neutral-600)">Total enseignants</div>
+            <div style="font-family: var(--font-heading); font-size: 30px; line-height: 1; color: var(--color-neutral-900)">21</div>
+          </div>
+          <div class="card blueprint" style="padding: 20px 22px; gap: 6px; background: var(--color-tile); border-color: var(--color-divider); box-shadow: var(--shadow-tile)">
+            <div style="font-size: 12px; color: var(--color-neutral-600)">Actifs</div>
+            <div style="font-family: var(--font-heading); font-size: 30px; line-height: 1; color: var(--color-neutral-900)">21</div>
+          </div>
+          <div class="card blueprint" style="padding: 20px 22px; gap: 6px">
+            <div class="text-muted" style="font-size: 12px">Inactifs</div>
+            <div style="font-family: var(--font-heading); font-size: 30px; line-height: 1">0</div>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap">
+          <input class="input" style="max-width: 380px" placeholder="Rechercher un enseignant (nom, matricule…)">
+          <div class="seg" style="margin-left: auto">
+            <label class="seg-opt"><input type="radio" name="ens" checked="">Tous</label>
+            <label class="seg-opt"><input type="radio" name="ens">Actifs</label>
+            <label class="seg-opt"><input type="radio" name="ens">Inactifs</label>
+          </div>
+          <button class="btn btn-secondary">Trier par nom</button>
+          <button class="btn btn-secondary btn-icon" title="Nouvel enseignant" aria-label="Nouvel enseignant">+</button>
+        </div>
+
+        <div class="card blueprint" style="padding: 8px 26px 20px">
+          <table class="table">
+            <thead><tr><th>Nom &amp; prénom</th><th>Matricule</th><th>Département</th><th>Grade / spécialité</th><th>Statut</th><th>Actions</th></tr></thead>
+            <tbody>
+              <sc-for list="{{ teacherRows }}" as="t" hint-placeholder-count="7">
+                <tr>
+                  <td>
+                    <div style="display: flex; align-items: center; gap: 12px">
+                      <span style="width: 34px; height: 34px; border-radius: 999px; color: var(--color-accent-900); display: grid; place-items: center; font-family: var(--font-heading); font-size: 12px; background-color: var(--color-bg)">{{ t.initials }}</span>
+                      <span style="font-weight: 700">{{ t.name }}</span>
+                    </div>
+                  </td>
+                  <td style="font-family: var(--font-heading)">{{ t.mat }}</td>
+                  <td class="text-muted">{{ t.dept }}</td>
+                  <td>
+                    <div style="font-weight: 700; font-size: 13px">{{ t.grade }}</div>
+                    <div class="text-muted" style="font-size: 12px">{{ t.spec }}</div>
+                  </td>
+                  <td>
+                    <span style="display: inline-flex; width: 40px; height: 22px; border-radius: 999px; padding: 3px; background: {{ t.t.bg }}">
+                      <span style="width: 16px; height: 16px; border-radius: 999px; background: #F2F2F2; margin-left: {{ t.t.align }}"></span>
+                    </span>
+                  </td>
+                  <td style="text-align: right">
+                    <div style="display: flex; gap: 6px; justify-content: flex-end">
+                      <button class="btn btn-secondary" style="border-color: var(--color-neutral-500); color: var(--color-accent-800)" onClick="{{ goTeacher }}">Analyser</button>
+                      <button class="btn btn-ghost">Modifier</button>
+                    </div>
+                  </td>
+                </tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scGrades }}" hint-placeholder-val="{{ false }}">
+      <div class="card blueprint" style="padding: 8px 26px 20px; gap: 12px">
+        <table class="table">
+          <thead><tr><th>Grade</th><th>Rang</th><th>Description</th><th>Enseignants</th><th></th></tr></thead>
+          <tbody>
+            <sc-for list="{{ gradesRows }}" as="g" hint-placeholder-count="8">
+              <tr>
+                <td style="display: flex; align-items: center; gap: 12px">
+                  <span style="width: 32px; height: 32px; border-radius: var(--radius-md); color: var(--color-bg); display: grid; place-items: center; font-family: var(--font-heading); font-size: 12px; background-color: var(--color-neutral-800)">GR</span>
+                  {{ g.label }}
+                </td>
+                <td><span class="tag tag-rank">{{ g.rank }}</span></td>
+                <td class="text-muted" style="font-style: italic">Aucune description fournie</td>
+                <td>{{ g.n }}</td>
+                <td style="text-align: right"><button class="btn btn-ghost">Modifier</button></td>
+              </tr>
+            </sc-for>
+          </tbody>
+        </table>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scSemestres }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 20px">
+        <div style="display: flex; align-items: center; gap: 16px">
+          <input class="input" style="max-width: 420px" placeholder="Rechercher par libellé ou année…">
+          <label class="radio" style="margin-left: auto"><input type="checkbox" checked=""><span class="dot"></span>Actifs uniquement</label>
+          <button class="btn btn-secondary btn-icon" title="Nouveau semestre" aria-label="Nouveau semestre">+</button>
+        </div>
+        <div class="card blueprint" style="padding: 8px 26px 20px">
+          <table class="table">
+            <thead><tr><th>Semestre</th><th>Année académique</th><th>Durée de la période</th><th>Statut</th><th></th></tr></thead>
+            <tbody>
+              <sc-for list="{{ semRows }}" as="s" hint-placeholder-count="2">
+                <tr>
+                  <td style="font-family: var(--font-heading); font-size: 15px">{{ s.label }}</td>
+                  <td>{{ s.year }}</td>
+                  <td class="text-muted">{{ s.period }}</td>
+                  <td>
+                    <span style="display: inline-flex; width: 40px; height: 22px; border-radius: 999px; padding: 3px; background: {{ s.t.bg }}">
+                      <span style="width: 16px; height: 16px; border-radius: 999px; background: #F2F2F2; margin-left: {{ s.t.align }}"></span>
+                    </span>
+                  </td>
+                  <td style="text-align: right"><button class="btn btn-ghost">Modifier</button></td>
+                </tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scEtudiants }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 24px">
+        <input class="input" style="max-width: 520px" placeholder="Rechercher un étudiant par nom, matricule ou e-mail…">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 20px">
+          <sc-for list="{{ levels }}" as="l" hint-placeholder-count="5">
+            <div class="card blueprint" style="padding: 20px 22px; gap: 4px; flex-direction: row; align-items: center" style-hover="border-color: var(--color-accent)">
+              <span style="width: 42px; height: 42px; border-radius: var(--radius-md); color: var(--color-neutral-900); display: grid; place-items: center; font-family: var(--font-heading); font-size: 14px; background-color: var(--color-bg)">{{ l.code }}</span>
+              <div style="margin-left: 14px; margin-right: auto">
+                <div class="card-title">{{ l.label }}</div>
+                <div class="text-muted" style="font-size: 12px">{{ l.n }} étudiants</div>
+              </div>
+              <span style="color: var(--color-accent-700); font-size: 18px">→</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scCours }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 24px">
+        <input class="input" style="max-width: 520px" placeholder="Rechercher un département (nom ou code)…">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 20px">
+          <sc-for list="{{ depts }}" as="d" hint-placeholder-count="4">
+            <div class="card blueprint" style="padding: 20px 22px; gap: 12px" style-hover="border-color: var(--color-accent)">
+              <div style="display: flex; align-items: center; gap: 14px">
+                <span style="width: 42px; height: 42px; border-radius: var(--radius-md); color: var(--color-neutral-900); display: grid; place-items: center; font-family: var(--font-heading); font-size: 13px; background-color: var(--color-bg)">{{ d.code }}</span>
+                <div style="margin-right: auto">
+                  <div class="card-title" style="color: var(--color-neutral-900)">{{ d.label }}</div>
+                  <div class="text-muted" style="font-size: 11px; letter-spacing: 0.08em">{{ d.code }}</div>
+                </div>
+                <span style="color: var(--color-accent-900); font-size: 18px">→</span>
+              </div>
+              <div style="display: flex; gap: 8px">
+                <span class="tag tag-count">{{ d.courses }} cours</span>
+                <span class="tag tag-count">{{ d.teachers }} enseignants</span>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scEnroll }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 20px">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap">
+          <input class="input" style="max-width: 340px" placeholder="Rechercher un étudiant ou un cours…">
+          <select class="input" style="width: auto"><option>Tous les départements</option></select>
+          <select class="input" style="width: auto"><option>2025/2026</option></select>
+          <div class="seg">
+            <label class="seg-opt"><input type="radio" name="enr" checked="">Tous</label>
+            <label class="seg-opt"><input type="radio" name="enr">Actifs</label>
+            <label class="seg-opt"><input type="radio" name="enr">Inactifs</label>
+          </div>
+          <button class="btn btn-secondary btn-icon" style="margin-left: auto" title="Nouvelle inscription" aria-label="Nouvelle inscription">+</button>
+        </div>
+        <div class="card blueprint" style="padding: 8px 26px 20px">
+          <table class="table">
+            <thead><tr><th>Étudiant</th><th>Cours affecté</th><th>Département</th><th>Semestre</th><th>Statut</th><th></th></tr></thead>
+            <tbody>
+              <sc-for list="{{ enrollRows }}" as="e" hint-placeholder-count="7">
+                <tr>
+                  <td>
+                    <div style="font-weight: 700">{{ e.name }}</div>
+                    <div class="text-muted" style="font-size: 12px; font-family: var(--font-heading)">{{ e.mat }}</div>
+                  </td>
+                  <td>
+                    <div>{{ e.course }}</div>
+                    <div style="margin-top: 4px"><span class="tag tag-rank">{{ e.code }}</span></div>
+                  </td>
+                  <td class="text-muted">{{ e.dept }}</td>
+                  <td><span class="tag tag-sem">{{ e.sem }}</span></td>
+                  <td>
+                    <span style="display: inline-flex; width: 40px; height: 22px; border-radius: 999px; padding: 3px; background: {{ e.t.bg }}">
+                      <span style="width: 16px; height: 16px; border-radius: 999px; background: #F2F2F2; margin-left: {{ e.t.align }}"></span>
+                    </span>
+                  </td>
+                  <td style="text-align: right"><button class="btn btn-ghost">Modifier</button></td>
+                </tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scUsers }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 20px">
+        <div style="display: flex; align-items: center; gap: 16px">
+          <input class="input" style="max-width: 420px" placeholder="Rechercher par e-mail ou privilège…">
+          <button class="btn btn-secondary btn-icon" style="margin-left: auto" title="Nouvel utilisateur" aria-label="Nouvel utilisateur">+</button>
+        </div>
+        <div class="card blueprint" style="padding: 8px 26px 20px">
+          <table class="table">
+            <thead><tr><th>E-mail / identifiant</th><th>Rôle de sécurité</th><th>Profil associé</th><th>État du compte</th><th>Création</th><th></th></tr></thead>
+            <tbody>
+              <sc-for list="{{ userRows }}" as="u" hint-placeholder-count="7">
+                <tr>
+                  <td style="font-family: var(--font-heading)">{{ u.mail }}</td>
+                  <td><span class="tag {{ u.tag }}">{{ u.role }}</span></td>
+                  <td class="text-muted">{{ u.profile }}</td>
+                  <td>
+                    <div style="display: flex; gap: 6px">
+                      <span class="tag tag-accent">Actif</span>
+                      <span class="tag tag-verif">Vérifié</span>
+                    </div>
+                  </td>
+                  <td class="text-muted">{{ u.created }}</td>
+                  <td style="text-align: right"><button class="btn btn-ghost">Supprimer</button></td>
+                </tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scAnalytics }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 28px">
+        <div style="display: flex; align-items: center; gap: 12px">
+          <select class="input" style="width: auto"><option>Tous les semestres</option></select>
+          <select class="input" style="width: auto"><option>Tous les départements</option></select>
+          <button class="btn btn-secondary" style="margin-left: auto">Export CSV</button>
+          <button class="btn btn-secondary">Export Excel</button>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: 18px">
+          <sc-for list="{{ analyticsKpis }}" as="k" hint-placeholder-count="8">
+            <div class="card blueprint" style="padding: 18px 20px; gap: 8px; background: var(--color-tile); border-color: var(--color-divider); box-shadow: var(--shadow-tile)">
+              <div style="font-size: 12px; color: var(--color-neutral-900)">{{ k.label }}</div>
+              <div style="display: flex; align-items: baseline; gap: 4px">
+                <span style="font-family: var(--font-heading); font-size: 30px; line-height: 1; color: var(--color-neutral-900)">{{ k.value }}</span>
+                <span style="font-size: 13px; color: var(--color-neutral-900)">{{ k.unit }}</span>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+        <div class="card blueprint" style="padding: 24px 26px; gap: 18px">
+          <div style="display: flex; align-items: baseline; gap: 12px">
+            <h4 style="margin: 0; margin-right: auto">Classement complet — 8 enseignants</h4>
+            <span class="tag tag-method">Score global pondéré</span>
+          </div>
+          <table class="table">
+            <thead><tr><th>Rang</th><th>Enseignant</th><th>Département</th><th>Score</th><th></th></tr></thead>
+            <tbody>
+              <sc-for list="{{ classRows }}" as="c" hint-placeholder-count="8">
+                <tr>
+                  <td><span class="tag tag-rank">{{ c.rank }}</span></td>
+                  <td style="font-weight: 700">{{ c.name }}</td>
+                  <td class="text-muted">{{ c.dept }}</td>
+                  <td>
+                    <div style="display: flex; align-items: center; gap: 10px">
+                      <span style="display: block; width: 110px; height: 6px; background: var(--color-neutral-200); border-radius: 999px"><span style="display: block; height: 6px; border-radius: 999px; background: var(--color-accent); width: {{ c.w }}"></span></span>
+                      <span style="font-family: var(--font-heading)">{{ c.score }}</span>
+                    </div>
+                  </td>
+                  <td style="text-align: right"><button class="btn btn-ghost" onClick="{{ goTeacher }}">Voir l'analyse</button></td>
+                </tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scBiais }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 20px">
+        <div style="display: flex; align-items: center; gap: 16px">
+          <div class="seg">
+            <label class="seg-opt"><input type="radio" name="biais" checked="">Enseignants</label>
+            <label class="seg-opt"><input type="radio" name="biais">Étudiants évaluateurs</label>
+          </div>
+          <label class="radio" style="margin-left: auto"><input type="checkbox" checked=""><span class="dot"></span>Anomalies critiques uniquement</label>
+          <button class="btn btn-secondary">Actualiser</button>
+        </div>
+        <div class="card blueprint" style="padding: 8px 26px 20px">
+          <table class="table">
+            <thead><tr><th>Enseignant</th><th>Critère audité</th><th>Note moyenne</th><th>Indice de déviation (z-score)</th><th>Gravité</th></tr></thead>
+            <tbody>
+              <sc-for list="{{ biaisTeachers }}" as="b" hint-placeholder-count="4">
+                <tr>
+                  <td style="font-weight: 700">{{ b.name }}</td>
+                  <td class="text-muted">{{ b.crit }}</td>
+                  <td>{{ b.avg }}</td>
+                  <td style="font-family: var(--font-heading); color: var(--color-neutral-900)">{{ b.z }}</td>
+                  <td><span class="tag {{ b.tag }}">{{ b.sev }}</span></td>
+                </tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+        <div class="card blueprint" style="padding: 20px 26px; gap: 10px; background: var(--color-tile); border-color: var(--color-divider); box-shadow: var(--shadow-tile); max-width: 620px">
+          <div class="card-kicker" style="color: var(--color-neutral-900)">Correction</div>
+          <div style="font-size: 14px; color: var(--color-neutral-900)">La normalisation par évaluateur ramène les notes sur une même échelle. Impact estimé : ±0,08 sur les scores globaux.</div>
+          <button class="btn btn-secondary" style="align-self: flex-start; border-color: var(--color-neutral-500); color: var(--color-bg); background-color: var(--color-neutral-900)">Appliquer la normalisation</button>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scClass }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 24px">
+        <div style="display: flex; align-items: center; gap: 12px">
+          <select class="input" style="width: auto"><option>Tous les semestres</option></select>
+          <select class="input" style="width: auto"><option>Tous les départements</option></select>
+          <button class="btn btn-secondary" style="margin-left: auto" onClick="{{ goCriteria }}">Seuils</button>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 20px">
+          <sc-for list="{{ classKpis }}" as="k" hint-placeholder-count="3">
+            <div class="card blueprint" style="padding: 20px 22px; gap: 8px; background: {{ k.bg }}; border-color: var(--color-accent-300)">
+              <div style="font-size: 12px; color: var(--color-neutral-900)">{{ k.label }}</div>
+              <div style="font-family: var(--font-heading); font-size: 34px; line-height: 1; color: var(--color-neutral-900)">{{ k.value }}</div>
+              <div style="font-size: 12px; color: var(--color-neutral-800); opacity: 0.75">{{ k.note }}</div>
+            </div>
+          </sc-for>
+        </div>
+        <div class="card blueprint" style="padding: 8px 26px 20px">
+          <table class="table">
+            <thead><tr><th>Enseignant</th><th>Département</th><th>Score moyen</th><th>Catégorie</th></tr></thead>
+            <tbody>
+              <sc-for list="{{ classRows }}" as="c" hint-placeholder-count="8">
+                <tr>
+                  <td style="font-weight: 700">{{ c.name }}</td>
+                  <td class="text-muted">{{ c.dept }}</td>
+                  <td style="font-family: var(--font-heading)">{{ c.score }}</td>
+                  <td><span class="tag {{ c.catTag }}">{{ c.catLabel }}</span></td>
+                </tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scAlertes }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 18px; max-width: 1000px">
+        <sc-for list="{{ alerteRows }}" as="a" hint-placeholder-count="4">
+          <div class="card blueprint" style="padding: 20px 24px; gap: 10px; background: {{ a.bg }}; border-color: {{ a.bd }}">
+            <div style="display: flex; align-items: center; gap: 12px">
+              <span class="tag {{ a.tag }}">{{ a.level }}</span>
+              <span class="card-title" style="margin-right: auto">{{ a.title }}</span>
+              <span class="text-muted" style="font-size: 12px">{{ a.when }}</span>
+            </div>
+            <p class="card-body" style="font-size: 14px">{{ a.body }}</p>
+            <div style="display: flex; gap: 8px">
+              <button class="btn btn-secondary" style="border-color: var(--color-accent); color: var(--color-accent-800)">Traiter</button>
+              <button class="btn btn-ghost">Ignorer</button>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ scTodo }}" hint-placeholder-val="{{ false }}">
+      <div class="card blueprint" style="padding: 44px 48px; gap: 14px; max-width: 720px">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <div class="card-kicker" style="color: var(--color-accent-700)">Écran à maquetter</div>
+        <h4 style="margin: 0">{{ todoLabel }}</h4>
+        <p class="card-body" style="font-size: 14px">Envoyez la capture de cette interface et je la maquette dans le même système : même barre latérale, mêmes cartes, même palette.</p>
+      </div>
+      </sc-if>
+
+    </main>
+    </div>
+  </div>
+</div>
+</sc-if>
+</script>
+<script src="app.js"></script>
+</body>
+</html>

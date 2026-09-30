@@ -1,0 +1,993 @@
+{
+ "_type": "Project",
+ "_id": "SCOLIX0000000001",
+ "name": "Scolix — Activité — S'authentifier",
+ "documentation": "Modélisation UML de Scolix (plateforme d'évaluation des enseignants).",
+ "ownedElements": [
+  {
+   "_type": "UMLModel",
+   "_id": "SCXDYN0000000101",
+   "_parent": {
+    "$ref": "SCOLIX0000000001"
+   },
+   "name": "Modèle dynamique",
+   "ownedElements": [
+    {
+     "_type": "UMLActivity",
+     "_id": "SCXDYN0000000102",
+     "_parent": {
+      "$ref": "SCXDYN0000000101"
+     },
+     "name": "Activité — S'authentifier",
+     "nodes": [
+      {
+       "_type": "UMLInitialNode",
+       "_id": "SCXDYN0000000110",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "name": ""
+      },
+      {
+       "_type": "UMLAction",
+       "_id": "SCXDYN0000000112",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "name": "Saisir e-mail et mot de passe"
+      },
+      {
+       "_type": "UMLAction",
+       "_id": "SCXDYN0000000114",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "name": "Envoyer POST /api/auth/login/"
+      },
+      {
+       "_type": "UMLAction",
+       "_id": "SCXDYN0000000116",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "name": "Vérifier les identifiants"
+      },
+      {
+       "_type": "UMLDecisionNode",
+       "_id": "SCXDYN0000000118",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "name": ""
+      },
+      {
+       "_type": "UMLAction",
+       "_id": "SCXDYN0000000120",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "name": "Répondre 400 (identifiants refusés)"
+      },
+      {
+       "_type": "UMLAction",
+       "_id": "SCXDYN0000000122",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "name": "Afficher le message d'erreur"
+      },
+      {
+       "_type": "UMLAction",
+       "_id": "SCXDYN0000000124",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "name": "Générer les jetons JWT"
+      },
+      {
+       "_type": "UMLAction",
+       "_id": "SCXDYN0000000126",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "name": "Stocker les jetons (sécurisé)"
+      },
+      {
+       "_type": "UMLDecisionNode",
+       "_id": "SCXDYN0000000128",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "name": ""
+      },
+      {
+       "_type": "UMLAction",
+       "_id": "SCXDYN0000000130",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "name": "Afficher « rôle non pris en charge »"
+      },
+      {
+       "_type": "UMLAction",
+       "_id": "SCXDYN0000000132",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "name": "Ouvrir l'espace du rôle"
+      },
+      {
+       "_type": "UMLActivityFinalNode",
+       "_id": "SCXDYN0000000134",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "name": ""
+      },
+      {
+       "_type": "UMLActivityFinalNode",
+       "_id": "SCXDYN0000000136",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "name": ""
+      }
+     ],
+     "edges": [
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000138",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000110"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000112"
+       },
+       "guard": ""
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000140",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000112"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000114"
+       },
+       "guard": ""
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000142",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000114"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000116"
+       },
+       "guard": ""
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000144",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000116"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000118"
+       },
+       "guard": ""
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000146",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000118"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000120"
+       },
+       "guard": "identifiants invalides ou compte désactivé"
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000148",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000120"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000122"
+       },
+       "guard": ""
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000150",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000122"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000112"
+       },
+       "guard": ""
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000152",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000118"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000124"
+       },
+       "guard": "identifiants valides"
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000154",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000124"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000126"
+       },
+       "guard": ""
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000156",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000126"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000128"
+       },
+       "guard": ""
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000158",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000128"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000130"
+       },
+       "guard": "mobile et rôle ADMIN / DIRECTOR"
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000160",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000130"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000134"
+       },
+       "guard": ""
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000162",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000128"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000132"
+       },
+       "guard": "sinon"
+      },
+      {
+       "_type": "UMLControlFlow",
+       "_id": "SCXDYN0000000164",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "source": {
+        "$ref": "SCXDYN0000000132"
+       },
+       "target": {
+        "$ref": "SCXDYN0000000136"
+       },
+       "guard": ""
+      }
+     ],
+     "groups": [
+      {
+       "_type": "UMLActivityPartition",
+       "_id": "SCXDYN0000000104",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "name": "Utilisateur"
+      },
+      {
+       "_type": "UMLActivityPartition",
+       "_id": "SCXDYN0000000106",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "name": "Application (web / mobile)"
+      },
+      {
+       "_type": "UMLActivityPartition",
+       "_id": "SCXDYN0000000108",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "name": "API Scolix"
+      }
+     ],
+     "ownedElements": [
+      {
+       "_type": "UMLActivityDiagram",
+       "_id": "SCXDYN0000000103",
+       "_parent": {
+        "$ref": "SCXDYN0000000102"
+       },
+       "name": "Activité — S'authentifier",
+       "ownedViews": [
+        {
+         "_type": "UMLSwimlaneView",
+         "_id": "SCXDYN0000000105",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "left": 20,
+         "top": 20,
+         "width": 320,
+         "height": 970,
+         "model": {
+          "$ref": "SCXDYN0000000104"
+         },
+         "containedViews": [
+          {
+           "$ref": "SCXDYN0000000111"
+          },
+          {
+           "$ref": "SCXDYN0000000113"
+          },
+          {
+           "$ref": "SCXDYN0000000133"
+          },
+          {
+           "$ref": "SCXDYN0000000137"
+          }
+         ],
+         "fillColor": "#FAFBFC"
+        },
+        {
+         "_type": "UMLSwimlaneView",
+         "_id": "SCXDYN0000000107",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "left": 340,
+         "top": 20,
+         "width": 320,
+         "height": 970,
+         "model": {
+          "$ref": "SCXDYN0000000106"
+         },
+         "containedViews": [
+          {
+           "$ref": "SCXDYN0000000115"
+          },
+          {
+           "$ref": "SCXDYN0000000123"
+          },
+          {
+           "$ref": "SCXDYN0000000127"
+          },
+          {
+           "$ref": "SCXDYN0000000129"
+          },
+          {
+           "$ref": "SCXDYN0000000131"
+          },
+          {
+           "$ref": "SCXDYN0000000135"
+          }
+         ],
+         "fillColor": "#FAFBFC"
+        },
+        {
+         "_type": "UMLSwimlaneView",
+         "_id": "SCXDYN0000000109",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "left": 660,
+         "top": 20,
+         "width": 320,
+         "height": 970,
+         "model": {
+          "$ref": "SCXDYN0000000108"
+         },
+         "containedViews": [
+          {
+           "$ref": "SCXDYN0000000117"
+          },
+          {
+           "$ref": "SCXDYN0000000119"
+          },
+          {
+           "$ref": "SCXDYN0000000121"
+          },
+          {
+           "$ref": "SCXDYN0000000125"
+          }
+         ],
+         "fillColor": "#FAFBFC"
+        },
+        {
+         "_type": "UMLControlNodeView",
+         "_id": "SCXDYN0000000111",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "left": 169,
+         "top": 91,
+         "width": 22,
+         "height": 22,
+         "model": {
+          "$ref": "SCXDYN0000000110"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000105"
+         }
+        },
+        {
+         "_type": "UMLActionView",
+         "_id": "SCXDYN0000000113",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "left": 55,
+         "top": 160,
+         "width": 250,
+         "height": 44,
+         "model": {
+          "$ref": "SCXDYN0000000112"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000105"
+         },
+         "fillColor": "#FFFFFF"
+        },
+        {
+         "_type": "UMLActionView",
+         "_id": "SCXDYN0000000115",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "left": 375,
+         "top": 240,
+         "width": 250,
+         "height": 44,
+         "model": {
+          "$ref": "SCXDYN0000000114"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000107"
+         },
+         "fillColor": "#FFFFFF"
+        },
+        {
+         "_type": "UMLActionView",
+         "_id": "SCXDYN0000000117",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "left": 695,
+         "top": 320,
+         "width": 250,
+         "height": 44,
+         "model": {
+          "$ref": "SCXDYN0000000116"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000109"
+         },
+         "fillColor": "#FFFFFF"
+        },
+        {
+         "_type": "UMLControlNodeView",
+         "_id": "SCXDYN0000000119",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "left": 800,
+         "top": 407,
+         "width": 40,
+         "height": 30,
+         "model": {
+          "$ref": "SCXDYN0000000118"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000109"
+         }
+        },
+        {
+         "_type": "UMLActionView",
+         "_id": "SCXDYN0000000121",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "left": 665,
+         "top": 480,
+         "width": 250,
+         "height": 44,
+         "model": {
+          "$ref": "SCXDYN0000000120"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000109"
+         },
+         "fillColor": "#FFFFFF"
+        },
+        {
+         "_type": "UMLActionView",
+         "_id": "SCXDYN0000000123",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "left": 375,
+         "top": 480,
+         "width": 250,
+         "height": 44,
+         "model": {
+          "$ref": "SCXDYN0000000122"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000107"
+         },
+         "fillColor": "#FFFFFF"
+        },
+        {
+         "_type": "UMLActionView",
+         "_id": "SCXDYN0000000125",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "left": 665,
+         "top": 560,
+         "width": 250,
+         "height": 44,
+         "model": {
+          "$ref": "SCXDYN0000000124"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000109"
+         },
+         "fillColor": "#FFFFFF"
+        },
+        {
+         "_type": "UMLActionView",
+         "_id": "SCXDYN0000000127",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "left": 375,
+         "top": 640,
+         "width": 250,
+         "height": 44,
+         "model": {
+          "$ref": "SCXDYN0000000126"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000107"
+         },
+         "fillColor": "#FFFFFF"
+        },
+        {
+         "_type": "UMLControlNodeView",
+         "_id": "SCXDYN0000000129",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "left": 480,
+         "top": 727,
+         "width": 40,
+         "height": 30,
+         "model": {
+          "$ref": "SCXDYN0000000128"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000107"
+         }
+        },
+        {
+         "_type": "UMLActionView",
+         "_id": "SCXDYN0000000131",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "left": 375,
+         "top": 800,
+         "width": 250,
+         "height": 44,
+         "model": {
+          "$ref": "SCXDYN0000000130"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000107"
+         },
+         "fillColor": "#FFFFFF"
+        },
+        {
+         "_type": "UMLActionView",
+         "_id": "SCXDYN0000000133",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "left": 55,
+         "top": 800,
+         "width": 250,
+         "height": 44,
+         "model": {
+          "$ref": "SCXDYN0000000132"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000105"
+         },
+         "fillColor": "#FFFFFF"
+        },
+        {
+         "_type": "UMLControlNodeView",
+         "_id": "SCXDYN0000000135",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "left": 487,
+         "top": 889,
+         "width": 26,
+         "height": 26,
+         "model": {
+          "$ref": "SCXDYN0000000134"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000107"
+         }
+        },
+        {
+         "_type": "UMLControlNodeView",
+         "_id": "SCXDYN0000000137",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "left": 167,
+         "top": 889,
+         "width": 26,
+         "height": 26,
+         "model": {
+          "$ref": "SCXDYN0000000136"
+         },
+         "containerView": {
+          "$ref": "SCXDYN0000000105"
+         }
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000139",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000111"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000113"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000138"
+         },
+         "points": "180:102;180:182"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000141",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000113"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000115"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000140"
+         },
+         "points": "180:182;500:182;500:262"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000143",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000115"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000117"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000142"
+         },
+         "points": "500:262;500:342;820:342"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000145",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000117"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000119"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000144"
+         },
+         "points": "820:342;820:422"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000147",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000119"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000121"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000146"
+         },
+         "points": "820:422;820:502;790:502"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000149",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000121"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000123"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000148"
+         },
+         "points": "790:502;500:502"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000151",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000123"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000113"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000150"
+         },
+         "points": "500:502;180:502;180:182"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000153",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000119"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000125"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000152"
+         },
+         "points": "820:422;955:422;955:582;790:582"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000155",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000125"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000127"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000154"
+         },
+         "points": "790:582;820:662;500:662"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000157",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000127"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000129"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000156"
+         },
+         "points": "500:662;500:742"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000159",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000129"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000131"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000158"
+         },
+         "points": "500:742;500:822"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000161",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000131"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000135"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000160"
+         },
+         "points": "500:822;500:902"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000163",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000129"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000133"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000162"
+         },
+         "points": "500:742;180:742;180:822"
+        },
+        {
+         "_type": "UMLControlFlowView",
+         "_id": "SCXDYN0000000165",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "tail": {
+          "$ref": "SCXDYN0000000133"
+         },
+         "head": {
+          "$ref": "SCXDYN0000000137"
+         },
+         "lineStyle": 1,
+         "model": {
+          "$ref": "SCXDYN0000000164"
+         },
+         "points": "180:822;180:902"
+        },
+        {
+         "_type": "UMLNoteView",
+         "_id": "SCXDYN0000000166",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "left": 1050,
+         "top": 140,
+         "width": 260,
+         "height": 70,
+         "text": "Réponse 200 : jeton d'accès (30 min), jeton de rafraîchissement et profil. L'application mobile réserve l'accès aux rôles STUDENT et TEACHER."
+        },
+        {
+         "_type": "UMLNoteView",
+         "_id": "SCXDYN0000000167",
+         "_parent": {
+          "$ref": "SCXDYN0000000103"
+         },
+         "left": 1050,
+         "top": 460,
+         "width": 260,
+         "height": 44,
+         "text": "Message renvoyé : « Email ou mot de passe incorrect » ou « Ce compte est désactivé »."
+        }
+       ],
+       "defaultDiagram": true
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

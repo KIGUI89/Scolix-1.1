@@ -1,0 +1,1447 @@
+{
+ "_type": "Project",
+ "_id": "SCOLIX0000000001",
+ "name": "Scolix — Séquence — Soumettre une évaluation",
+ "documentation": "Modélisation UML de Scolix (plateforme d'évaluation des enseignants).",
+ "ownedElements": [
+  {
+   "_type": "UMLModel",
+   "_id": "SCOLIX0000000723",
+   "_parent": {
+    "$ref": "SCOLIX0000000001"
+   },
+   "name": "Modèle des cas d'utilisation",
+   "ownedElements": [
+    {
+     "_type": "UMLPackage",
+     "_id": "SCOLIX0000000724",
+     "_parent": {
+      "$ref": "SCOLIX0000000723"
+     },
+     "name": "Acteurs",
+     "ownedElements": [
+      {
+       "_type": "UMLActor",
+       "_id": "SCOLIX0000000726",
+       "_parent": {
+        "$ref": "SCOLIX0000000724"
+       },
+       "name": "Étudiant",
+       "documentation": "Compte de rôle STUDENT, lié à un profil Étudiant.",
+       "ownedElements": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "_type": "UMLModel",
+   "_id": "SCXDYN0000000101",
+   "_parent": {
+    "$ref": "SCOLIX0000000001"
+   },
+   "name": "Modèle dynamique",
+   "ownedElements": [
+    {
+     "_type": "UMLPackage",
+     "_id": "SCXDYN0000000407",
+     "_parent": {
+      "$ref": "SCXDYN0000000101"
+     },
+     "name": "Participants des séquences",
+     "ownedElements": [
+      {
+       "_type": "UMLClass",
+       "_id": "SCXDYN0000000408",
+       "_parent": {
+        "$ref": "SCXDYN0000000407"
+       },
+       "name": "Application Scolix",
+       "documentation": "Interface web (React) ou mobile (Flutter)."
+      },
+      {
+       "_type": "UMLClass",
+       "_id": "SCXDYN0000000412",
+       "_parent": {
+        "$ref": "SCXDYN0000000407"
+       },
+       "name": "EvaluationSubmissionViewSet",
+       "documentation": "Vue DRF POST /api/evaluations/submissions/."
+      },
+      {
+       "_type": "UMLClass",
+       "_id": "SCXDYN0000000413",
+       "_parent": {
+        "$ref": "SCXDYN0000000407"
+       },
+       "name": "EvaluationSubmissionService",
+       "documentation": "Règles métier de la soumission (transaction atomique)."
+      },
+      {
+       "_type": "UMLClass",
+       "_id": "SCXDYN0000000419",
+       "_parent": {
+        "$ref": "SCXDYN0000000407"
+       },
+       "name": "Base de données PostgreSQL",
+       "documentation": "Persistance via l'ORM Django."
+      }
+     ]
+    },
+    {
+     "_type": "UMLCollaboration",
+     "_id": "SCXDYN0000000491",
+     "_parent": {
+      "$ref": "SCXDYN0000000101"
+     },
+     "name": "Séquence — Soumettre une évaluation",
+     "attributes": [
+      {
+       "_type": "UMLAttribute",
+       "_id": "SCXDYN0000000494",
+       "_parent": {
+        "$ref": "SCXDYN0000000491"
+       },
+       "name": "étudiant",
+       "type": {
+        "$ref": "SCOLIX0000000726"
+       }
+      },
+      {
+       "_type": "UMLAttribute",
+       "_id": "SCXDYN0000000496",
+       "_parent": {
+        "$ref": "SCXDYN0000000491"
+       },
+       "name": "app",
+       "type": {
+        "$ref": "SCXDYN0000000408"
+       }
+      },
+      {
+       "_type": "UMLAttribute",
+       "_id": "SCXDYN0000000498",
+       "_parent": {
+        "$ref": "SCXDYN0000000491"
+       },
+       "name": "vue",
+       "type": {
+        "$ref": "SCXDYN0000000412"
+       }
+      },
+      {
+       "_type": "UMLAttribute",
+       "_id": "SCXDYN0000000500",
+       "_parent": {
+        "$ref": "SCXDYN0000000491"
+       },
+       "name": "service",
+       "type": {
+        "$ref": "SCXDYN0000000413"
+       }
+      },
+      {
+       "_type": "UMLAttribute",
+       "_id": "SCXDYN0000000502",
+       "_parent": {
+        "$ref": "SCXDYN0000000491"
+       },
+       "name": "bd",
+       "type": {
+        "$ref": "SCXDYN0000000419"
+       }
+      }
+     ],
+     "ownedElements": [
+      {
+       "_type": "UMLInteraction",
+       "_id": "SCXDYN0000000492",
+       "_parent": {
+        "$ref": "SCXDYN0000000491"
+       },
+       "name": "Séquence — Soumettre une évaluation",
+       "messages": [
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000514",
+         "_parent": {
+          "$ref": "SCXDYN0000000492"
+         },
+         "name": "soumettreEvaluation",
+         "source": {
+          "$ref": "SCXDYN0000000495"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000497"
+         },
+         "messageSort": "synchCall",
+         "arguments": "notes, commentaires"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000515",
+         "_parent": {
+          "$ref": "SCXDYN0000000492"
+         },
+         "name": "POST /api/evaluations/submissions/",
+         "source": {
+          "$ref": "SCXDYN0000000497"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000499"
+         },
+         "messageSort": "synchCall",
+         "arguments": "campaign_id, course_id, teacher_id, responses, recommendation_score"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000516",
+         "_parent": {
+          "$ref": "SCXDYN0000000492"
+         },
+         "name": "submit_evaluation",
+         "source": {
+          "$ref": "SCXDYN0000000499"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000501"
+         },
+         "messageSort": "synchCall",
+         "arguments": "étudiant, campagne, cours, enseignant, réponses"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000517",
+         "_parent": {
+          "$ref": "SCXDYN0000000492"
+         },
+         "name": "vérifier l'inscription au cours",
+         "source": {
+          "$ref": "SCXDYN0000000501"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000503"
+         },
+         "messageSort": "synchCall"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000518",
+         "_parent": {
+          "$ref": "SCXDYN0000000492"
+         },
+         "name": "inscription",
+         "source": {
+          "$ref": "SCXDYN0000000503"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000501"
+         },
+         "messageSort": "reply"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000519",
+         "_parent": {
+          "$ref": "SCXDYN0000000492"
+         },
+         "name": "rechercher une soumission existante",
+         "source": {
+          "$ref": "SCXDYN0000000501"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000503"
+         },
+         "messageSort": "synchCall"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000520",
+         "_parent": {
+          "$ref": "SCXDYN0000000492"
+         },
+         "name": "soumission ou null",
+         "source": {
+          "$ref": "SCXDYN0000000503"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000501"
+         },
+         "messageSort": "reply"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000521",
+         "_parent": {
+          "$ref": "SCXDYN0000000492"
+         },
+         "name": "charger les critères de la campagne",
+         "source": {
+          "$ref": "SCXDYN0000000501"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000503"
+         },
+         "messageSort": "synchCall"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000522",
+         "_parent": {
+          "$ref": "SCXDYN0000000492"
+         },
+         "name": "critères et pourcentages",
+         "source": {
+          "$ref": "SCXDYN0000000503"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000501"
+         },
+         "messageSort": "reply"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000523",
+         "_parent": {
+          "$ref": "SCXDYN0000000492"
+         },
+         "name": "ValidationError",
+         "source": {
+          "$ref": "SCXDYN0000000501"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000499"
+         },
+         "messageSort": "reply"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000524",
+         "_parent": {
+          "$ref": "SCXDYN0000000492"
+         },
+         "name": "400 {detail}",
+         "source": {
+          "$ref": "SCXDYN0000000499"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000497"
+         },
+         "messageSort": "reply"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000525",
+         "_parent": {
+          "$ref": "SCXDYN0000000492"
+         },
+         "name": "afficherErreur",
+         "source": {
+          "$ref": "SCXDYN0000000497"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000495"
+         },
+         "messageSort": "reply"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000526",
+         "_parent": {
+          "$ref": "SCXDYN0000000492"
+         },
+         "name": "calculer le score global pondéré",
+         "source": {
+          "$ref": "SCXDYN0000000501"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000501"
+         },
+         "messageSort": "synchCall"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000527",
+         "_parent": {
+          "$ref": "SCXDYN0000000492"
+         },
+         "name": "enregistrer la soumission (SUBMITTED) et les réponses",
+         "source": {
+          "$ref": "SCXDYN0000000501"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000503"
+         },
+         "messageSort": "synchCall"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000528",
+         "_parent": {
+          "$ref": "SCXDYN0000000492"
+         },
+         "name": "ok",
+         "source": {
+          "$ref": "SCXDYN0000000503"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000501"
+         },
+         "messageSort": "reply"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000529",
+         "_parent": {
+          "$ref": "SCXDYN0000000492"
+         },
+         "name": "soumission",
+         "source": {
+          "$ref": "SCXDYN0000000501"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000499"
+         },
+         "messageSort": "reply"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000530",
+         "_parent": {
+          "$ref": "SCXDYN0000000492"
+         },
+         "name": "201 soumission",
+         "source": {
+          "$ref": "SCXDYN0000000499"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000497"
+         },
+         "messageSort": "reply"
+        },
+        {
+         "_type": "UMLMessage",
+         "_id": "SCXDYN0000000531",
+         "_parent": {
+          "$ref": "SCXDYN0000000492"
+         },
+         "name": "afficherConfirmation",
+         "source": {
+          "$ref": "SCXDYN0000000497"
+         },
+         "target": {
+          "$ref": "SCXDYN0000000495"
+         },
+         "messageSort": "reply"
+        }
+       ],
+       "participants": [
+        {
+         "_type": "UMLLifeline",
+         "_id": "SCXDYN0000000495",
+         "_parent": {
+          "$ref": "SCXDYN0000000492"
+         },
+         "name": "étudiant",
+         "represent": {
+          "$ref": "SCXDYN0000000494"
+         }
+        },
+        {
+         "_type": "UMLLifeline",
+         "_id": "SCXDYN0000000497",
+         "_parent": {
+          "$ref": "SCXDYN0000000492"
+         },
+         "name": "app",
+         "represent": {
+          "$ref": "SCXDYN0000000496"
+         }
+        },
+        {
+         "_type": "UMLLifeline",
+         "_id": "SCXDYN0000000499",
+         "_parent": {
+          "$ref": "SCXDYN0000000492"
+         },
+         "name": "vue",
+         "represent": {
+          "$ref": "SCXDYN0000000498"
+         }
+        },
+        {
+         "_type": "UMLLifeline",
+         "_id": "SCXDYN0000000501",
+         "_parent": {
+          "$ref": "SCXDYN0000000492"
+         },
+         "name": "service",
+         "represent": {
+          "$ref": "SCXDYN0000000500"
+         }
+        },
+        {
+         "_type": "UMLLifeline",
+         "_id": "SCXDYN0000000503",
+         "_parent": {
+          "$ref": "SCXDYN0000000492"
+         },
+         "name": "bd",
+         "represent": {
+          "$ref": "SCXDYN0000000502"
+         }
+        }
+       ],
+       "fragments": [
+        {
+         "_type": "UMLCombinedFragment",
+         "_id": "SCXDYN0000000568",
+         "_parent": {
+          "$ref": "SCXDYN0000000492"
+         },
+         "name": "",
+         "interactionOperator": "alt",
+         "operands": [
+          {
+           "_type": "UMLInteractionOperand",
+           "_id": "SCXDYN0000000570",
+           "_parent": {
+            "$ref": "SCXDYN0000000568"
+           },
+           "name": "",
+           "guard": "une règle n'est pas respectée"
+          },
+          {
+           "_type": "UMLInteractionOperand",
+           "_id": "SCXDYN0000000572",
+           "_parent": {
+            "$ref": "SCXDYN0000000568"
+           },
+           "name": "",
+           "guard": "toutes les règles sont respectées"
+          }
+         ]
+        }
+       ],
+       "ownedElements": [
+        {
+         "_type": "UMLSequenceDiagram",
+         "_id": "SCXDYN0000000493",
+         "_parent": {
+          "$ref": "SCXDYN0000000492"
+         },
+         "name": "Séquence — Soumettre une évaluation",
+         "ownedViews": [
+          {
+           "_type": "UMLFrameView",
+           "_id": "SCXDYN0000000575",
+           "_parent": {
+            "$ref": "SCXDYN0000000493"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000492"
+           },
+           "left": 10,
+           "top": 10,
+           "width": 1422,
+           "height": 942
+          },
+          {
+           "_type": "UMLSeqLifelineView",
+           "_id": "SCXDYN0000000505",
+           "_parent": {
+            "$ref": "SCXDYN0000000493"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000495"
+           },
+           "left": 40,
+           "top": 40,
+           "width": 161,
+           "height": 902,
+           "subViews": [
+            {
+             "_type": "UMLLinePartView",
+             "_id": "SCXDYN0000000504",
+             "model": {
+              "$ref": "SCXDYN0000000495"
+             },
+             "_parent": {
+              "$ref": "SCXDYN0000000505"
+             }
+            }
+           ],
+           "linePart": {
+            "$ref": "SCXDYN0000000504"
+           },
+           "fillColor": "#FFFFFF",
+           "stereotypeDisplay": "icon"
+          },
+          {
+           "_type": "UMLSeqLifelineView",
+           "_id": "SCXDYN0000000507",
+           "_parent": {
+            "$ref": "SCXDYN0000000493"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000497"
+           },
+           "left": 256,
+           "top": 40,
+           "width": 199,
+           "height": 902,
+           "subViews": [
+            {
+             "_type": "UMLLinePartView",
+             "_id": "SCXDYN0000000506",
+             "model": {
+              "$ref": "SCXDYN0000000497"
+             },
+             "_parent": {
+              "$ref": "SCXDYN0000000507"
+             }
+            }
+           ],
+           "linePart": {
+            "$ref": "SCXDYN0000000506"
+           },
+           "fillColor": "#FFFFFF"
+          },
+          {
+           "_type": "UMLSeqLifelineView",
+           "_id": "SCXDYN0000000509",
+           "_parent": {
+            "$ref": "SCXDYN0000000493"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000499"
+           },
+           "left": 495,
+           "top": 40,
+           "width": 267,
+           "height": 902,
+           "subViews": [
+            {
+             "_type": "UMLLinePartView",
+             "_id": "SCXDYN0000000508",
+             "model": {
+              "$ref": "SCXDYN0000000499"
+             },
+             "_parent": {
+              "$ref": "SCXDYN0000000509"
+             }
+            }
+           ],
+           "linePart": {
+            "$ref": "SCXDYN0000000508"
+           },
+           "fillColor": "#FFFFFF"
+          },
+          {
+           "_type": "UMLSeqLifelineView",
+           "_id": "SCXDYN0000000511",
+           "_parent": {
+            "$ref": "SCXDYN0000000493"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000501"
+           },
+           "left": 802,
+           "top": 40,
+           "width": 298,
+           "height": 902,
+           "subViews": [
+            {
+             "_type": "UMLLinePartView",
+             "_id": "SCXDYN0000000510",
+             "model": {
+              "$ref": "SCXDYN0000000501"
+             },
+             "_parent": {
+              "$ref": "SCXDYN0000000511"
+             }
+            }
+           ],
+           "linePart": {
+            "$ref": "SCXDYN0000000510"
+           },
+           "fillColor": "#FFFFFF"
+          },
+          {
+           "_type": "UMLSeqLifelineView",
+           "_id": "SCXDYN0000000513",
+           "_parent": {
+            "$ref": "SCXDYN0000000493"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000503"
+           },
+           "left": 1140,
+           "top": 40,
+           "width": 252,
+           "height": 902,
+           "subViews": [
+            {
+             "_type": "UMLLinePartView",
+             "_id": "SCXDYN0000000512",
+             "model": {
+              "$ref": "SCXDYN0000000503"
+             },
+             "_parent": {
+              "$ref": "SCXDYN0000000513"
+             }
+            }
+           ],
+           "linePart": {
+            "$ref": "SCXDYN0000000512"
+           },
+           "fillColor": "#FFFFFF"
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000533",
+           "_parent": {
+            "$ref": "SCXDYN0000000493"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000514"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000504"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000506"
+           },
+           "lineStyle": 0,
+           "points": "120:140;356:140",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000532",
+             "model": {
+              "$ref": "SCXDYN0000000514"
+             },
+             "left": 348.5,
+             "top": 140,
+             "width": 14,
+             "height": 474,
+             "_parent": {
+              "$ref": "SCXDYN0000000533"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000532"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000535",
+           "_parent": {
+            "$ref": "SCXDYN0000000493"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000515"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000506"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000508"
+           },
+           "lineStyle": 0,
+           "points": "356:178;628:178",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000534",
+             "model": {
+              "$ref": "SCXDYN0000000515"
+             },
+             "left": 621.5,
+             "top": 178,
+             "width": 14,
+             "height": 398,
+             "_parent": {
+              "$ref": "SCXDYN0000000535"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000534"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000537",
+           "_parent": {
+            "$ref": "SCXDYN0000000493"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000516"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000508"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000510"
+           },
+           "lineStyle": 0,
+           "points": "628:216;951:216",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000536",
+             "model": {
+              "$ref": "SCXDYN0000000516"
+             },
+             "left": 944.0,
+             "top": 216,
+             "width": 14,
+             "height": 322,
+             "_parent": {
+              "$ref": "SCXDYN0000000537"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000536"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000539",
+           "_parent": {
+            "$ref": "SCXDYN0000000493"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000517"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000510"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000512"
+           },
+           "lineStyle": 0,
+           "points": "951:254;1266:254",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000538",
+             "model": {
+              "$ref": "SCXDYN0000000517"
+             },
+             "left": 1259.0,
+             "top": 254,
+             "width": 14,
+             "height": 38,
+             "_parent": {
+              "$ref": "SCXDYN0000000539"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000538"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000541",
+           "_parent": {
+            "$ref": "SCXDYN0000000493"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000518"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000512"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000510"
+           },
+           "lineStyle": 0,
+           "points": "1266:292;951:292",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000540",
+             "model": {
+              "$ref": "SCXDYN0000000518"
+             },
+             "left": 944.0,
+             "top": 292,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000541"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000540"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000543",
+           "_parent": {
+            "$ref": "SCXDYN0000000493"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000519"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000510"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000512"
+           },
+           "lineStyle": 0,
+           "points": "951:330;1266:330",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000542",
+             "model": {
+              "$ref": "SCXDYN0000000519"
+             },
+             "left": 1259.0,
+             "top": 330,
+             "width": 14,
+             "height": 38,
+             "_parent": {
+              "$ref": "SCXDYN0000000543"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000542"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000545",
+           "_parent": {
+            "$ref": "SCXDYN0000000493"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000520"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000512"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000510"
+           },
+           "lineStyle": 0,
+           "points": "1266:368;951:368",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000544",
+             "model": {
+              "$ref": "SCXDYN0000000520"
+             },
+             "left": 944.0,
+             "top": 368,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000545"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000544"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000547",
+           "_parent": {
+            "$ref": "SCXDYN0000000493"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000521"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000510"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000512"
+           },
+           "lineStyle": 0,
+           "points": "951:406;1266:406",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000546",
+             "model": {
+              "$ref": "SCXDYN0000000521"
+             },
+             "left": 1259.0,
+             "top": 406,
+             "width": 14,
+             "height": 38,
+             "_parent": {
+              "$ref": "SCXDYN0000000547"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000546"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000549",
+           "_parent": {
+            "$ref": "SCXDYN0000000493"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000522"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000512"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000510"
+           },
+           "lineStyle": 0,
+           "points": "1266:444;951:444",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000548",
+             "model": {
+              "$ref": "SCXDYN0000000522"
+             },
+             "left": 944.0,
+             "top": 444,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000549"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000548"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000551",
+           "_parent": {
+            "$ref": "SCXDYN0000000493"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000523"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000510"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000508"
+           },
+           "lineStyle": 0,
+           "points": "951:538;628:538",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000550",
+             "model": {
+              "$ref": "SCXDYN0000000523"
+             },
+             "left": 621.5,
+             "top": 538,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000551"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000550"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000553",
+           "_parent": {
+            "$ref": "SCXDYN0000000493"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000524"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000508"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000506"
+           },
+           "lineStyle": 0,
+           "points": "628:576;356:576",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000552",
+             "model": {
+              "$ref": "SCXDYN0000000524"
+             },
+             "left": 348.5,
+             "top": 576,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000553"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000552"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000555",
+           "_parent": {
+            "$ref": "SCXDYN0000000493"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000525"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000506"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000504"
+           },
+           "lineStyle": 0,
+           "points": "356:614;120:614",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000554",
+             "model": {
+              "$ref": "SCXDYN0000000525"
+             },
+             "left": 113.5,
+             "top": 614,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000555"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000554"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000557",
+           "_parent": {
+            "$ref": "SCXDYN0000000493"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000526"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000510"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000510"
+           },
+           "lineStyle": 0,
+           "points": "951:666;981:666;981:684;951:684",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000556",
+             "model": {
+              "$ref": "SCXDYN0000000526"
+             },
+             "left": 944.0,
+             "top": 666,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000557"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000556"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000559",
+           "_parent": {
+            "$ref": "SCXDYN0000000493"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000527"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000510"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000512"
+           },
+           "lineStyle": 0,
+           "points": "951:722;1266:722",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000558",
+             "model": {
+              "$ref": "SCXDYN0000000527"
+             },
+             "left": 1259.0,
+             "top": 722,
+             "width": 14,
+             "height": 38,
+             "_parent": {
+              "$ref": "SCXDYN0000000559"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000558"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000561",
+           "_parent": {
+            "$ref": "SCXDYN0000000493"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000528"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000512"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000510"
+           },
+           "lineStyle": 0,
+           "points": "1266:760;951:760",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000560",
+             "model": {
+              "$ref": "SCXDYN0000000528"
+             },
+             "left": 944.0,
+             "top": 760,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000561"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000560"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000563",
+           "_parent": {
+            "$ref": "SCXDYN0000000493"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000529"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000510"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000508"
+           },
+           "lineStyle": 0,
+           "points": "951:798;628:798",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000562",
+             "model": {
+              "$ref": "SCXDYN0000000529"
+             },
+             "left": 621.5,
+             "top": 798,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000563"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000562"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000565",
+           "_parent": {
+            "$ref": "SCXDYN0000000493"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000530"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000508"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000506"
+           },
+           "lineStyle": 0,
+           "points": "628:836;356:836",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000564",
+             "model": {
+              "$ref": "SCXDYN0000000530"
+             },
+             "left": 348.5,
+             "top": 836,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000565"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000564"
+           }
+          },
+          {
+           "_type": "UMLSeqMessageView",
+           "_id": "SCXDYN0000000567",
+           "_parent": {
+            "$ref": "SCXDYN0000000493"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000531"
+           },
+           "tail": {
+            "$ref": "SCXDYN0000000506"
+           },
+           "head": {
+            "$ref": "SCXDYN0000000504"
+           },
+           "lineStyle": 0,
+           "points": "356:874;120:874",
+           "subViews": [
+            {
+             "_type": "UMLActivationView",
+             "_id": "SCXDYN0000000566",
+             "model": {
+              "$ref": "SCXDYN0000000531"
+             },
+             "left": 113.5,
+             "top": 874,
+             "width": 14,
+             "height": 26,
+             "_parent": {
+              "$ref": "SCXDYN0000000567"
+             }
+            }
+           ],
+           "activation": {
+            "$ref": "SCXDYN0000000566"
+           }
+          },
+          {
+           "_type": "UMLCombinedFragmentView",
+           "_id": "SCXDYN0000000574",
+           "_parent": {
+            "$ref": "SCXDYN0000000493"
+           },
+           "model": {
+            "$ref": "SCXDYN0000000568"
+           },
+           "left": 25.5,
+           "top": 478,
+           "width": 1335.5,
+           "height": 412,
+           "subViews": [
+            {
+             "_type": "UMLInteractionOperandCompartmentView",
+             "_id": "SCXDYN0000000569",
+             "model": {
+              "$ref": "SCXDYN0000000568"
+             },
+             "subViews": [
+              {
+               "_type": "UMLInteractionOperandView",
+               "_id": "SCXDYN0000000571",
+               "_parent": {
+                "$ref": "SCXDYN0000000569"
+               },
+               "model": {
+                "$ref": "SCXDYN0000000570"
+               },
+               "left": 25.5,
+               "top": 502,
+               "width": 1335.5,
+               "height": 128
+              },
+              {
+               "_type": "UMLInteractionOperandView",
+               "_id": "SCXDYN0000000573",
+               "_parent": {
+                "$ref": "SCXDYN0000000569"
+               },
+               "model": {
+                "$ref": "SCXDYN0000000572"
+               },
+               "left": 25.5,
+               "top": 630,
+               "width": 1335.5,
+               "height": 260
+              }
+             ],
+             "_parent": {
+              "$ref": "SCXDYN0000000574"
+             }
+            }
+           ],
+           "operandCompartment": {
+            "$ref": "SCXDYN0000000569"
+           }
+          },
+          {
+           "_type": "UMLNoteView",
+           "_id": "SCXDYN0000000576",
+           "_parent": {
+            "$ref": "SCXDYN0000000493"
+           },
+           "left": 20,
+           "top": 972,
+           "width": 560,
+           "height": 44,
+           "text": "Règles contrôlées : rôle STUDENT, compte actif, campagne ouverte, inscription au cours, évaluation non déjà soumise, tous les critères notés. Le service s'exécute dans une transaction atomique."
+          }
+         ],
+         "defaultDiagram": true
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
