@@ -13,7 +13,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN python manage.py collectstatic --noinput
+RUN SECRET_KEY=build-only-dummy DEBUG=0 \
+    DB_NAME=build DB_USER=build DB_PASSWORD=build DB_HOST=localhost DB_PORT=5432 \
+    python manage.py collectstatic --noinput
 
 # Render injecte la variable PORT (10000 par défaut)
 EXPOSE 10000
