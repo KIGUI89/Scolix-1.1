@@ -88,17 +88,28 @@ TEMPLATES = [
 WSGI_APPLICATION = "config.wsgi.application"
 
 
-# DATABASE — SUPABASE POSTGRESQL
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": config("DB_NAME"),
-        "USER": config("DB_USER"),
-        "PASSWORD": config("DB_PASSWORD"),
-        "HOST": config("DB_HOST"),
-        "PORT": config("DB_PORT", default="5432"),
+# DATABASE — POSTGRESQL
+# Priorité à DATABASE_URL (ex. "Internal Database URL" fournie par Render),
+# sinon repli sur les variables séparées DB_NAME / DB_USER / ... (local).
+DATABASE_URL = config("DATABASE_URL", default="")
+
+if DATABASE_URL:
+    import dj_database_url
+
+    DATABASES = {
+        "default": dj_database_url.parse(DATABASE_URL, conn_max_age=600)
     }
-}
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": config("DB_NAME"),
+            "USER": config("DB_USER"),
+            "PASSWORD": config("DB_PASSWORD"),
+            "HOST": config("DB_HOST"),
+            "PORT": config("DB_PORT", default="5432"),
+        }
+    }
 
 
 # CUSTOM USER MODEL
